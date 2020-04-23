@@ -12,6 +12,7 @@ variables:
   CLUSTER_REGION: us-central1
   RELEASE_NAME: payiddocumentation
   RELEASE_ENV: dev
+  CICD_ICON: https://i.imgur.com/nxYui1j.png
 
 include:
   - project: 'xpring/xpring-ci-templates'
