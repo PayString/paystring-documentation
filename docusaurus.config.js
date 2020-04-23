@@ -20,7 +20,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/xpring-eng/payid',
           label: 'GitHub',
@@ -85,7 +85,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/xpring-eng/payid-documentation/',
+            'https://github.com/xpring-eng/payid-documentation/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -93,4 +93,4 @@ module.exports = {
       },
     ],
   ],
-};
+}
