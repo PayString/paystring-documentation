@@ -21,6 +21,11 @@ module.exports = {
           position: 'left',
         },
         {
+          href: 'https://documenter.getpostman.com/view/11189344/Szf9XTDi',
+          label: 'API Reference',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/xpring-eng/payid',
           label: 'GitHub',
           position: 'right',
@@ -40,6 +45,10 @@ module.exports = {
             {
               label: 'Second Doc',
               to: 'docs/doc2',
+            },
+            {
+              label: 'API Reference',
+              href: 'https://documenter.getpostman.com/view/11189344/Szf9XTDi',
             },
           ],
         },
