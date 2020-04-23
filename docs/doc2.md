@@ -1,6 +1,6 @@
 ---
 id: doc2
-title: Document Number 2
+title: PayID documentation on Postman
 ---
 
-This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com)
+See the Postman [PayID documentation](https://strata.postman.co/collections/6172260-742f79d9-651e-4a4e-84c2-6814d2b326d7?version=latest&workspace=f72c21b3-3248-4159-b6a9-0617f227281e). You may need to ask for access.
