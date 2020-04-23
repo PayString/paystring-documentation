@@ -9,6 +9,7 @@
     "deploy": "docusaurus deploy"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.34",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-airbnb-typescript": "^7.0.0",
