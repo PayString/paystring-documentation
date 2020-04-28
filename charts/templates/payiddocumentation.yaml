@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ .Release.Name }}
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: {{ .Release.Name }}
   ports:
@@ -11,26 +11,6 @@ spec:
     port: 80
     targetPort: 80
     name: public
----
-apiVersion: networking.gke.io/v1beta1
-kind: ManagedCertificate
-metadata:
-  name: {{ .Release.Name }}-certificate
-spec:
-  domains:
-    - {{ .Values.releaseEnv }}.{{ .Values.publicdomain }}
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: {{ .Release.Name }}-ingress
-  annotations:
-    networking.gke.io/managed-certificates: {{ .Release.Name }}-certificate
-    external-dns.alpha.kubernetes.io/hostname: {{ .Values.releaseEnv }}.{{ .Values.publicdomain }}
-spec:
-  backend:
-    serviceName: {{ .Release.Name }}
-    servicePort: 80
 ---
 apiVersion: apps/v1
 kind: Deployment
