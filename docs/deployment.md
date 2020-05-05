@@ -1,7 +1,7 @@
 ---
-id: deployment
+id: local-deployment
 title: Deploy a PayID Server Without Docker
-sidebar_label: Local Deployment
+sidebar_label: Local
 ---
 
 If you want to set up and run a PayID server, you have several options. This document describes how to run a PayID server without using Docker.

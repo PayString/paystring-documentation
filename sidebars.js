@@ -1,11 +1,6 @@
 module.exports = {
   someSidebar: {
-    Docusaurus: [
-      'getting-started',
-      'api-reference',
-      'remote-deployment',
-      'deployment',
-      'metrics',
-    ],
+    PayID: ['getting-started', 'api-reference', 'metrics'],
+    Deployment: ['remote-deployment', 'local-deployment'],
   },
 }
