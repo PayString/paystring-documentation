@@ -55,10 +55,10 @@ module.exports = {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/questions/tagged/payid',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/payid',
-            },
+            // {
+            //   label: 'Discord',
+            //   href: 'https://discordapp.com/invite/payid',
+            // },
           ],
         },
         {
