@@ -14,10 +14,7 @@ const Home: React.FC = () => {
   const context = useDocusaurusContext()
   const { siteConfig = {} } = context
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout description="PayID allows the use of human-readable addresses to transmit value in the currency of your choice.">
       <header className="hero hero--primary heroBanner">
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
