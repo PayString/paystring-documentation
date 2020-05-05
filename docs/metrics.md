@@ -1,6 +1,7 @@
 ---
-id: doc5
+id: metrics
 title: Obtain and Analyze PayID Metrics With Prometheus and Grafana
+sidebar_label: Metrics
 ---
 
 To use PayID, you deploy a PayID server. A PayID server automatically collects metrics. This tutorial describes how to import these metrics into [Prometheus](https://prometheus.io/) and analyze them with [Grafana](https://grafana.com/).
@@ -36,7 +37,7 @@ This data can be used to generate real-time charts. For example, this chart show
 
 Here is a sample `prometheus.yml` configuration file set up to pull metrics from a PayID server running locally.
 
-```
+```yml
 # my global config
 global:
   scrape_interval:     5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
@@ -97,7 +98,7 @@ By default, a PayID server will push metrics every 15 seconds to the configured 
 
 Run these commands to build a Docker container for a PayID server.
 
-```
+```bash
 git clone git@github.com:xpring-eng/payid.git
 cd payid
 docker build -t payid-server .
@@ -106,28 +107,28 @@ docker build -t payid-server .
 ### Create Docker network for PayID
 You will run several containers in Docker that must talk to each other. To set up these containers, create a docker network called `payid-network`.
 
-```
+```bash
 docker network create payid-network
 ```
 
 ### Start a Postgres Database
 To have a PayID server, you require a Postgres database to store PayID accounts and address mappings. To do this, run the postgres database in docker with a default password of `password`, and tell the database to use the `payid-network` that you previously created. Name this docker container `payid-postgres`, so that you can reference the container by name when you connect your PayID server. Note that both the default database and the user are named `postgres`, as described at [Postgres Docker Official Images](https://hub.docker.com/_/postgres).
 
-```
+```bash
 docker run -d --rm --name payid-postgres --network payid-network -e POSTGRES_PASSWORD=password postgres
 ```
 
 ### Start and test the PayID server
 To start the PayID server, run the PayID server in docker using the image you created. You must also use the docker network `payid-network` so that it can connect to the `payid-postgres` container.
 
-```
-docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-network -e DB_PASSWORD=password -e  
+```bash
+docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-network -e DB_PASSWORD=password -e
     DB_NAME=postgres -e DB_HOSTNAME=payid-postgres payid-server
 ```
 
 Test whether the PayID server is running by creating a PayID with this cURL command.
 
-```
+```bash
  curl --location --request POST 'http://127.0.0.1:8081/v1/users' --header 'Content-Type: application/json' --header 'Content-Type: text/plain' --data-raw '{
      "pay_id": "alice$127.0.0.1",
      "addresses": [
@@ -153,7 +154,7 @@ In this step, you will run prometheus in docker and configure it to scrape the P
 
 Create a file named `prometheus.yml` with these contents.
 
-```
+```yml
  global:
    scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
    evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.

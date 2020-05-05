@@ -1,6 +1,7 @@
 ---
-id: doc4
+id: deployment
 title: Deploy a PayID Server Without Docker
+sidebar_label: Local Deployment
 ---
 
 If you want to set up and run a PayID server, you have several options. This document describes how to run a PayID server without using Docker.
@@ -21,7 +22,7 @@ Before you begin, make sure that you have installed Postgres locally, or in an o
    `npm run build`
 4. Start PayID. The `npm run start` command generates the schema if it does not yet exist.
 
-   ```
+   ```bash
    DB_HOSTNAME=localhost DB_NAME=dev_payid DB_USERNAME=payid_dev
 
    DB_PASSWORD='xxxxx' npm run start
@@ -31,7 +32,8 @@ Before you begin, make sure that you have installed Postgres locally, or in an o
    `npm install forever -g`
 6. Run PayID with `forever`.
 
-   ```
+   ```bash
    DB_HOSTNAME=localhost DB_NAME=dev_payid DB_USERNAME=payid_dev
 
    DB_PASSWORD='xxxxx' forever start build/src/index.js
+   ```

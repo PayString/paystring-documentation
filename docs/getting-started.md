@@ -1,7 +1,7 @@
 ---
-id: doc1
+id: getting-started
 title: PayID Protocol for Human-Readable, Travel-Rule-Compliant Addresses
-sidebar_label: PayID Docs
+sidebar_label: Getting Started
 ---
 
 ## What is PayID?
@@ -14,7 +14,7 @@ Each request must have a valid `Accept` request HTTP header. For example: `Accep
 
 PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own PayID server or integrate with a trustless blockchain solution so they have no counterparty risk.
 
-The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames.  Anyone with an existing username or address can get a PayID address that works across all platforms.  
+The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames.  Anyone with an existing username or address can get a PayID address that works across all platforms.
 
 Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/).
 
@@ -60,7 +60,7 @@ Participating institutions can use Xpring’s open source reference implementati
 
 To set up your own demo server, first ensure you have Docker installed, and then run these commands. You will create a local docker image.
 
-```
+```bash
 git clone git@github.com:xpring-eng/payid.git
 cd payid
 ./demo/run_payid_demo.sh
@@ -83,7 +83,7 @@ For demonstration purposes, once you have set up your PayID server, you can acce
 
 **Get user information for an existing user**
 
-```
+```bash
 curl --location --request GET 'bob$127.0.0.1:8080' \
 --header 'Accept: application/xrpl-testnet+json'
 ```
@@ -92,7 +92,7 @@ curl --location --request GET 'bob$127.0.0.1:8080' \
 
 First, run this command to create a user.
 
-```
+```bash
 curl --location --request POST 'http://127.0.0.1:8081/v1/users' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -111,7 +111,7 @@ curl --location --request POST 'http://127.0.0.1:8081/v1/users' \
 
 Then, run this command to get information about the newly-created user.
 
-```
+```bash
 curl --location --request GET 'http://127.0.0.1:8080/alice' --header 'Accept: application/xrpl-testnet+json'
 ```
 
@@ -130,7 +130,7 @@ Use `/v1`.
 
 This operation creates a single user.
 
-```
+```http
 POST {{https}}{{host}}/v1/users
 ```
 
@@ -138,7 +138,7 @@ Payload: [Single user schema](#example-single-user-schema)
 
 ##### Response
 
-```
+```http
 201 Created
 ```
 
@@ -169,7 +169,7 @@ See [Example error schema](#example-error-schema).
 
 ##### cURL example
 
-```
+```bash
 curl --location --request POST '127.0.0.1/v1/users' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -190,7 +190,7 @@ curl --location --request POST '127.0.0.1/v1/users' \
 
 You can query information about an existing user with the following request.
 
-```
+```http
 GET {{http(s)}}{{host}}/v1/users/{pay_id}
 ```
 
@@ -198,7 +198,7 @@ Example: `GET http://127.0.0.1:8081/v1/users/bob$xpring.money`
 
 ##### Response
 
-```
+```http
 200 OK
 ```
 
@@ -229,7 +229,7 @@ See [Example error schema](#example-error-schema).
 
 ##### cURL example
 
-```
+```bash
 curl --location --request GET '{{payid_private_host}}/v1/users/alice${{payid_private_host_no_transport}}' \
 --header 'Content-Type: application/json'
 ```
@@ -238,7 +238,7 @@ curl --location --request GET '{{payid_private_host}}/v1/users/alice${{payid_pri
 
 You can modify the user information associated with a particular PayID address.
 
-```
+```http
 PUT {{http(s)}}{{host}}/v1/users/{pay_id}
 ```
 
@@ -246,7 +246,7 @@ The request payload is the modified user schema for the specified PayID address.
 
 ##### Response
 
-```
+```http
 200 OK
 201 Created
 ```
@@ -280,7 +280,7 @@ The response body is the updated [user schema](#example-single-user-schema).
 
 ##### cURL example
 
-```
+```bash
 curl --location --request PUT '127.0.0.1/v1/users/alice${{payid_private_host_no_transport}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -299,13 +299,13 @@ curl --location --request PUT '127.0.0.1/v1/users/alice${{payid_private_host_no_
 
 #### Delete a user
 
-```
+```http
 {{http(s)://}{:pay_id}${{host}}{{private_port}}/v1/users/
 ```
 
 ##### Response
 
-```
+```http
 200 OK
 ```
 
@@ -332,31 +332,31 @@ curl --location --request PUT '127.0.0.1/v1/users/alice${{payid_private_host_no_
 
 ##### cURL example
 
-```
+```bash
 curl --location --request DELETE 'https://dev.payid.xpring.money/v1/users/alice$dev.payid.xpring.money/'
 ```
 
 ### Travel Rule compliance
 
-In a typical scenario that involves Travel Rule compliance, you, as the sender of the payment, first request an invoice. When you get the invoice, you notice the `complianceRequirements` field of the invoice, which any institution that is a VASP (Virtual Asset Service Provider) must adhere to. Because you originated the invoice, you then post the compliance data to the same URL to update the invoice with this compliance information, thus fulfilling the requirements of the Travel Rule. The beneficiary confirms that you have sent this information by sending an upgraded invoice.  
+In a typical scenario that involves Travel Rule compliance, you, as the sender of the payment, first request an invoice. When you get the invoice, you notice the `complianceRequirements` field of the invoice, which any institution that is a VASP (Virtual Asset Service Provider) must adhere to. Because you originated the invoice, you then post the compliance data to the same URL to update the invoice with this compliance information, thus fulfilling the requirements of the Travel Rule. The beneficiary confirms that you have sent this information by sending an upgraded invoice.
 
 #### Get an invoice
 
 Return an invoice for the specified user and nonce. The nonce used in this call is a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-```
+```http
 GET {{https}}{{host}}{{public_port}}/hbergren/invoice?nonce=<uuid>
 ```
 
 Example:
 
-```
+```http
 GET https://wallet.com/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000
 ```
 
 ##### Response
 
-```
+```http
 200 OK
 ```
 
@@ -387,22 +387,22 @@ See [Example error schema](#example-error-schema).
 
 ##### cURL example
 
-```
+```bash
 curl --location --request GET 'http://travel.payid.xpring.money/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000' \
 --header 'Accept: application/xrpl-testnet+json' \
 --header 'Content-Type: application/json'
 ```
 
-#### Send compliance information  
+#### Send compliance information
 
 If an invoice contains information in the `complianceRequirements` field, then upon receipt of the invoice, you must send back compliance information.
 
-```
+```http
 POST {{https}}{{host}}{{public_port}}/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000
 ```
 
 Example:
-```
+```http
 POST https://dev.payid.xpring.money/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000
 ```
 
@@ -410,7 +410,7 @@ The body contains the [compliance message](#example-compliance-message-schema). 
 
 ##### Response
 
-```
+```http
 200 OK
 201 Created
 ```
@@ -444,7 +444,7 @@ No response body.
 
 ##### cURL example
 
-```
+```bash
 curl --location --request POST 'https://dev.payid.xpring.money/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -480,24 +480,24 @@ curl --location --request POST 'https://dev.payid.xpring.money/dino/invoice?nonc
 
 The originator of the transaction sends a receipt after the XRP/BTC/ACH payment clears and settles.
 
-```
+```http
 POST {{https}}{{host}}{{public_port}}/dino/receipt
 ```
 
 Example:
-```
+```http
 POST https://travel.payid.xpring.money/dino/receipt
 ```
 
 ##### Response
 
-```
+```http
 200 OK
 ```
 
 ##### cURL example
 
-```
+```bash
 curl --location --request POST 'https://travel.payid.xpring.money/dino/receipt' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -547,7 +547,7 @@ A single user can have multiple destinations, because the same user can have add
 
 This example shows the format of an error payload.
 
-```
+```json
 {
     "statusCode": 422,
     "error": "Unprocessable Entity",
@@ -559,7 +559,7 @@ This example shows the format of an error payload.
 
 This example shows the format of an invoice.
 
-```
+```json
 {
    "messageType":"Invoice",
    "message":{
@@ -592,7 +592,7 @@ This example shows the format of an invoice.
 
 ### Example compliance message schema
 
-```
+```json
 {
    "messageType":"compliance",
    "message":{
@@ -629,7 +629,7 @@ PayID is a fundamentally neutral protocol. When you make a request, the HTTP `Ac
 
 An example request has this form.
 
-```
+```http
 GET /user HTTP/1.1
 HOST: wallet.com
 ```
@@ -687,7 +687,7 @@ The PayID Public API does not require authentication, as it is open to any user.
 
 The PayID Public API treats a PayID address as the base endpoint for all of the following requests. Therefore, if you are requesting from `alice$wallet.com` the following paths would be:
 
-```
+```http
 GET alice$wallet.com
 ```
 
@@ -699,17 +699,17 @@ You can get payment information for a PayID address.
 
 #### Request
 
-```
+```http
 Header: `Accept: <request header>`
 ```
 
-```
+```http
 GET <pay_ID-address>/
 ```
 
 #### Response
 
-```
+```http
 200 OK
 ```
 
@@ -738,30 +738,30 @@ Occurs if PayID address does not exist.</td>
 
 #### PaymentInformation type
 
-```
-Interface PaymentInformation {
+```typescript
+interface PaymentInformation {
   addressDetailType: AddressDetailType
   addressDetails: CryptoAddressDetails | AchAddressDetails
   proofOfControlSignature?: string
-  payId?: string                       
+  payId?: string
 }
 ```
 
 #### CryptoAddressDetails
 
-```
-Interface CryptoAddressDetails {
-	address: string
-      tag?: string
+```typescript
+interface CryptoAddressDetails {
+  address: string
+  tag?: string
 }
 ```
 
 #### AchAddressDetails
 
-```
+```typescript
 interface AchAddressDetails {
- accountNumber: string
- routingNumber: string
+  accountNumber: string
+  routingNumber: string
 }
 ```
 
@@ -784,20 +784,20 @@ View [index-payid.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/
 
 #### AchAddressDetails
 
-```
-Interface AchAddressDetails {
-	accountNumber: string
-	routingNumber: string
+```typescript
+interface AchAddressDetails {
+  accountNumber: string
+  routingNumber: string
 }
 ```
 
 ####
 
-```
-Interface Error {
-      statusCode: integer
-  	error: string
-      message: string
+```typescript
+interface Error {
+  statusCode: integer
+  error: string
+  message: string
 }
 ```
 
