@@ -39,7 +39,7 @@ publish:
     - helm upgrade --install --namespace ${RELEASE_NAME}-${RELEASE_ENV}
         --set releaseEnv=$RELEASE_ENV
         --set releaseImage="gcr.io/$GCR_PROJECT_ID/$CI_PROJECT_NAME:$IMAGE_UID"
-        --set proxyng.domainName="${RELEASE_ENV}.docs.payidorg.xpring.dev"
+        --set proxyng.domainName="${RELEASE_ENV}.docs.payid.org"
         --set proxyng.proxiedService="http://${RELEASE_NAME}-${RELEASE_ENV}:80"
         ${RELEASE_NAME}-${RELEASE_ENV} ./charts
 
@@ -53,7 +53,7 @@ deploy to stage:
   stage: deploy
   extends: .deploy_payiddocumentation
   variables:
-    RELEASE_ENV: stg
+    RELEASE_ENV: stage
 
 # Prod is being deployed to a different GCP project and cluster
 deploy to prod:
