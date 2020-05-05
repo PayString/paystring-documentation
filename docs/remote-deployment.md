@@ -1,6 +1,7 @@
 ---
-id: doc3
+id: remote-deployment
 title: Deploy a PayID Server on AWS
+sidebar_label: Remote Deployment
 ---
 
 You can set up a PayID server on AWS (Amazon Web Services).
@@ -27,7 +28,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
    `sudo apt-get install git`
 7. Link the git on your instance to your GitHub account, as described in [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh). Follow the instructions for [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 8. Install docker on your instance.
-   ```
+   ```bash
    sudo apt-get update
    sudo apt install docker.io
    ```
@@ -48,7 +49,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
     `{"statusCode":400,"error":"Bad Request","message":"Invalid Accept header. Must be of the form \"application/xrpl-{environment}+json\""}`
 13. Load up your desired PayID to the database using the [private PayID API](readme.md). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayIDs for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayID.
-    ```
+    ```bash
     curl --location --request POST 'http://127.0.0.1:8081/v1/users' \
     --header 'Content-Type: application/json' \
     --data-raw '{
@@ -63,7 +64,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
     }'
     ```
 14. From your local computer, run a cURL command to fetch your PayID. For example:
-  ```
+  ```bash
   curl --location --request GET 'http://pay.michael.zochow.ski/.well-known/pay' --header 'Accept: application/xrpl-mainnet+json'
   ```
   For other PayID API methods, see the [readme](readme.md).
@@ -84,7 +85,7 @@ Next, set up NGINX Reverse Proxy + SSL.
 1. Change the PayID server to run on port 8080 (default).
 2. Set up a Server Block on NGINX for your domain, following [these instructions](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04).
 3. Install Certbot, as follows.
-   ```
+   ```bash
    apt-get update
    apt-get install software-properties-common
    add-apt-repository ppa:certbot/certbot
@@ -96,7 +97,7 @@ Next, set up NGINX Reverse Proxy + SSL.
 5. Change the location parameter in the NGINX conf file to reverse proxy to the PayID server (running on port 8080):
    `try_files $uri $uri/ =404;`
     to:
-    ```
+    ```nginx
     proxy_pass http://127.0.0.1:8080;
     proxy_set_header Host $http_host;
     ```
@@ -106,15 +107,17 @@ Next, set up NGINX Reverse Proxy + SSL.
 6. Restart NGINX.
    `sudo systemctl restart nginx`
 7. [Optional] Update the NGINX configuration that catches PayID headers and forwards them to the PayID server; otherwise, send these headers to the web server.
-   ```
+   ```bash
    sudo nano /etc/nginx/sites-available/<your-site>
+   ```
+   ```nginx
    location / {
-                proxy_set_header Host $http_host;
+      proxy_set_header Host $http_host;
 
-                if ($http_accept ~ "application/xrpl-*") {
-                        proxy_pass http://127.0.0.1:8080;
-                }
+      if ($http_accept ~ "application/xrpl-*") {
+            proxy_pass http://127.0.0.1:8080;
+      }
 
-                try_files $uri $uri/ =404;
-        }
+      try_files $uri $uri/ =404;
+   }
     ```

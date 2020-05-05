@@ -15,7 +15,7 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/doc1',
+          to: 'docs/getting-started',
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'left',
@@ -39,12 +39,8 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/doc1',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2',
+              label: 'Getting Started',
+              to: 'docs/getting-started',
             },
             {
               label: 'API Reference',
@@ -69,16 +65,12 @@ module.exports = {
           title: 'Social',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
               label: 'GitHub',
               href: 'https://github.com/xpring-eng/payid',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/ripple',
+              href: 'https://twitter.com/xpringdev',
             },
           ],
         },
