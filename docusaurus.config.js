@@ -1,6 +1,6 @@
 module.exports = {
   title: 'PayID Documentation',
-  tagline: 'Testing PayID docs',
+  tagline: 'Deploy and use PayID',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
