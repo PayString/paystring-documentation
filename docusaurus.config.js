@@ -1,7 +1,7 @@
 module.exports = {
   title: 'PayID Documentation',
   tagline: 'Deploy and use PayID',
-  url: 'https://dev.docs.payidorg.xpring.dev/',
+  url: 'https://dev.docs.payidorg.xpring.dev',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'xpring-eng', // Usually your GitHub org/user name.
