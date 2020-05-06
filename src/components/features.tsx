@@ -3,22 +3,38 @@ import React from 'react'
 const Features: React.FC = () => {
   const features = [
     {
-      title: 'Easy to Use',
+      title: 'Open and free',
       imageUrl: '/img/undraw_docusaurus_mountain.svg',
-      description:
-        'Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.',
+      description: 'Any company is welcome to use this free and open standard',
     },
     {
-      title: 'Focus on What Matters',
+      title: 'Simple Universal Standard',
       imageUrl: '/img/undraw_docusaurus_tree.svg',
-      description:
-        'Docusaurus lets you focus on your docs, and we will do the chores. Go ahead and move your docs into the <code>docs</code> directory.',
+      description: 'Customers can use a single PayID across any network',
     },
     {
-      title: 'Powered by React',
+      title: 'Improved Experience',
       imageUrl: '/img/undraw_docusaurus_react.svg',
       description:
-        'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.',
+        'PayID is simpler, easier to use, and less prone to errors than existing payments IDs',
+    },
+    {
+      title: 'Currency Agnostic',
+      imageUrl: '/img/undraw_docusaurus_mountain.svg',
+      description:
+        'Supports payments in any currency from Bitcoin to ACH to credit networks',
+    },
+    {
+      title: 'Business Friendly',
+      imageUrl: '/img/undraw_docusaurus_tree.svg',
+      description:
+        'PayID increases network reach to more wallets, currencies, and payment scenarios',
+    },
+    {
+      title: 'Developer Friendly',
+      imageUrl: '/img/undraw_docusaurus_react.svg',
+      description:
+        'Built on existing secure web standards, and easy to deploy in a few lines of code',
     },
   ]
 
