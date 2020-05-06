@@ -1,8 +1,14 @@
 import React from 'react'
+import Open from '../../static/img/features/open.svg'
+import Standard from '../../static/img/features/standard.svg'
+import Experience from '../../static/img/features/experience.svg'
+import Currency from '../../static/img/features/currency.svg'
+import Business from '../../static/img/features/business.svg'
+import Developer from '../../static/img/features/developer.svg'
 
 interface Feature {
   title: string
-  imageUrl: string
+  image: React.StatelessComponent<React.SVGAttributes<SVGElement>>
   description: string
 }
 
@@ -10,35 +16,35 @@ const Features: React.FC = () => {
   const features = [
     {
       title: 'Open and free',
-      imageUrl: '/img/features/open.svg',
+      image: Open,
       description: 'Any company is welcome to use this free and open standard',
     },
     {
       title: 'Simple Universal Standard',
-      imageUrl: '/img/features/standard.svg',
+      image: Standard,
       description: 'Customers can use a single PayID across any network',
     },
     {
       title: 'Improved Experience',
-      imageUrl: '/img/features/experience.svg',
+      image: Experience,
       description:
         'PayID is simpler, easier to use, and less prone to errors than existing payments IDs',
     },
     {
       title: 'Currency Agnostic',
-      imageUrl: '/img/features/currency.svg',
+      image: Currency,
       description:
         'Supports payments in any currency from Bitcoin to ACH to credit networks',
     },
     {
       title: 'Business Friendly',
-      imageUrl: '/img/features/business.svg',
+      image: Business,
       description:
         'PayID increases network reach to more wallets, currencies, and payment scenarios',
     },
     {
       title: 'Developer Friendly',
-      imageUrl: '/img/features/developer.svg',
+      image: Developer,
       description:
         'Built on existing secure web standards, and easy to deploy in a few lines of code',
     },
@@ -53,11 +59,7 @@ const Features: React.FC = () => {
               {features.map((props: Feature) => (
                 <div key={props.title} className="col col--4 feature">
                   <div>
-                    <img
-                      className="featureImage"
-                      src={props.imageUrl}
-                      alt={props.title}
-                    />
+                    <props.image />
                   </div>
                   <h3>{props.title}</h3>
                   <p>{props.description}</p>

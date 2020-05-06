@@ -1,3 +1,4 @@
+const path = require('path')
 require('dotenv/config')
 
 module.exports = {
@@ -101,4 +102,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: [path.resolve(__dirname, './src/plugins/svg.js')],
 }
