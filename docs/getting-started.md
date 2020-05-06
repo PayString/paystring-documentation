@@ -1,16 +1,14 @@
 ---
 id: getting-started
-title: PayID Integration and the PayID Private API
-sidebar_label: PayID integration and the PayID Private API
+title: Getting Started With PayID
+sidebar_label: Getting Started With PayID
 ---
 
-## PayID integration and the PayID Private API
-
-You can deploy your own PayID server and then create PayIDs for your users using the PayID Private API. You can also query and modify this list of users. This API should be exposed internally only, so that only your company's systems can update PayID mappings.
+PayID provides both the PayID Private API and PayID Public API. You can deploy your own PayID server and then create PayIDs for your users using the PayID Private API. You can also query and modify this list of users. This API should be exposed internally only, so that only your company's systems can update PayID mappings.
 
 Once you have set up a PayID server, anyone can use the PayID Public API to query address information. This API is publicly accessible so that anyone can send payments to your users' PayID addresses.
 
-### Set up a PayID server
+## Set up a PayID server
 Participating institutions can use Xpring’s open source reference implementation of the PayID server. You might be able to ease the deployment process by connecting your PayID server to your existing user database so that it can respond to incoming GET requests.
 
 To set up your own demo server, first ensure you have Docker installed, and then run these commands. You will create a local docker image.
@@ -32,7 +30,7 @@ You can then use the Private PayID API to:
 
 ![Open Source](/img/open_source.png)
 
-#### Demo
+### Demo
 
 For demonstration purposes, once you have set up your PayID server, you can access the Private PayID API using these cURL commands.
 
@@ -70,18 +68,18 @@ Then, run this command to get information about the newly-created user.
 curl --location --request GET 'http://127.0.0.1:8080/alice' --header 'Accept: application/xrpl-testnet+json'
 ```
 
-### Create and manage users with the Private PayID API
+## Create and manage users with the Private PayID API
 
 When you have your open source server set up, you can create and manage users with the Private PayID API.
 
-#### API endpoint
+### API endpoint
 Substitute your own domain for `{{https}}{{host}}`. If running locally, you can use  `http://127.0.0.1:8081/`.
 
-#### API version
+### API version
 
 Use `/v1`.
 
-#### Create a user
+### Create a user
 
 This operation creates a single user.
 
@@ -91,7 +89,7 @@ POST {{https}}{{host}}/v1/users
 
 Payload: [Single user schema](#example-single-user-schema)
 
-##### Response
+#### Response
 
 ```http
 201 Created
@@ -99,7 +97,7 @@ Payload: [Single user schema](#example-single-user-schema)
 
 No response body.
 
-##### Error responses
+#### Error responses
 
 See [Example error schema](#example-error-schema).
 
@@ -122,7 +120,7 @@ See [Example error schema](#example-error-schema).
 </tr>
 </table>
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request POST '127.0.0.1/v1/users' \
@@ -141,7 +139,7 @@ curl --location --request POST '127.0.0.1/v1/users' \
 }'
 ```
 
-#### Retrieve PayID information for an existing user
+### Retrieve PayID information for an existing user
 
 You can query information about an existing user with the following request.
 
@@ -151,7 +149,7 @@ GET {{http(s)}}{{host}}/v1/users/{pay_id}
 
 Example: `GET http://127.0.0.1:8081/v1/users/bob$xpring.money`
 
-##### Response
+#### Response
 
 ```http
 200 OK
@@ -159,7 +157,7 @@ Example: `GET http://127.0.0.1:8081/v1/users/bob$xpring.money`
 
 The user that matches the specified PayID address is returned. See [Example single user schema](#example-single-user-schema).
 
-##### Error responses
+#### Error responses
 
 See [Example error schema](#example-error-schema).
 
@@ -182,14 +180,14 @@ See [Example error schema](#example-error-schema).
 </tr>
 </table>
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request GET '{{payid_private_host}}/v1/users/alice${{payid_private_host_no_transport}}' \
 --header 'Content-Type: application/json'
 ```
 
-#### Modify a user
+### Modify a user
 
 You can modify the user information associated with a particular PayID address.
 
@@ -199,7 +197,7 @@ PUT {{http(s)}}{{host}}/v1/users/{pay_id}
 
 The request payload is the modified user schema for the specified PayID address.
 
-##### Response
+#### Response
 
 ```http
 200 OK
@@ -208,7 +206,7 @@ The request payload is the modified user schema for the specified PayID address.
 
 The response body is the updated [user schema](#example-single-user-schema).
 
-##### Error responses
+#### Error responses
 
 <table>
 <tr>
@@ -233,7 +231,7 @@ The response body is the updated [user schema](#example-single-user-schema).
 </tr>
 </table>
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request PUT '127.0.0.1/v1/users/alice${{payid_private_host_no_transport}}' \
@@ -252,19 +250,19 @@ curl --location --request PUT '127.0.0.1/v1/users/alice${{payid_private_host_no_
 }'
 ```
 
-#### Delete a user
+### Delete a user
 
 ```http
 {{http(s)://}{:pay_id}${{host}}{{private_port}}/v1/users/
 ```
 
-##### Response
+#### Response
 
 ```http
 200 OK
 ```
 
-##### Error responses
+#### Error responses
 
 <table>
 <tr>
@@ -285,17 +283,17 @@ curl --location --request PUT '127.0.0.1/v1/users/alice${{payid_private_host_no_
 </tr>
 </table>
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request DELETE 'https://dev.payid.xpring.money/v1/users/alice$dev.payid.xpring.money/'
 ```
 
-### Travel Rule compliance
+## Travel Rule compliance
 
 In a typical scenario that involves Travel Rule compliance, you, as the sender of the payment, first request an invoice. When you get the invoice, you notice the `complianceRequirements` field of the invoice, which any institution that is a VASP (Virtual Asset Service Provider) must adhere to. Because you originated the invoice, you then post the compliance data to the same URL to update the invoice with this compliance information, thus fulfilling the requirements of the Travel Rule. The beneficiary confirms that you have sent this information by sending an upgraded invoice.
 
-#### Get an invoice
+### Get an invoice
 
 Return an invoice for the specified user and nonce. The nonce used in this call is a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
@@ -309,7 +307,7 @@ Example:
 GET https://wallet.com/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000
 ```
 
-##### Response
+#### Response
 
 ```http
 200 OK
@@ -317,7 +315,7 @@ GET https://wallet.com/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000
 
 The invoice that matches the specified user and nonce is returned. See [Example invoice schema](#example-invoice-schema).
 
-##### Error response
+#### Error response
 
 See [Example error schema](#example-error-schema).
 
@@ -340,7 +338,7 @@ See [Example error schema](#example-error-schema).
 </tr>
 </table>
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request GET 'http://travel.payid.xpring.money/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000' \
@@ -348,7 +346,7 @@ curl --location --request GET 'http://travel.payid.xpring.money/dino/invoice?non
 --header 'Content-Type: application/json'
 ```
 
-#### Send compliance information
+### Send compliance information
 
 If an invoice contains information in the `complianceRequirements` field, then upon receipt of the invoice, you must send back compliance information.
 
@@ -363,7 +361,7 @@ POST https://dev.payid.xpring.money/dino/invoice?nonce=123e4567-e89b-12d3-a456-4
 
 The body contains the [compliance message](#example-compliance-message-schema). This message contains information about the originator, the value of the transaction, and the beneficiary, and the message is signed cryptographically.
 
-##### Response
+#### Response
 
 ```http
 200 OK
@@ -372,7 +370,7 @@ The body contains the [compliance message](#example-compliance-message-schema). 
 
 No response body.
 
-##### Error responses
+#### Error responses
 
 <table>
 <tr>
@@ -397,7 +395,7 @@ No response body.
 </tr>
 </table>
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request POST 'https://dev.payid.xpring.money/dino/invoice?nonce=123e4567-e89b-12d3-a456-426655440000' \
@@ -431,7 +429,7 @@ curl --location --request POST 'https://dev.payid.xpring.money/dino/invoice?nonc
 }'
 ```
 
-#### Send receipt
+### Send receipt
 
 The originator of the transaction sends a receipt after the XRP/BTC/ACH payment clears and settles.
 
@@ -444,13 +442,13 @@ Example:
 POST https://travel.payid.xpring.money/dino/receipt
 ```
 
-##### Response
+#### Response
 
 ```http
 200 OK
 ```
 
-##### cURL example
+#### cURL example
 
 ```bash
 curl --location --request POST 'https://travel.payid.xpring.money/dino/receipt' \
@@ -461,11 +459,11 @@ curl --location --request POST 'https://travel.payid.xpring.money/dino/receipt' 
 }'
 ```
 
-### Schemas
+## Schemas
 
 These schemas are used for request or response payloads for various requests.
 
-#### Example single user schema
+### Example single user schema
 
 A single user can have multiple destinations, because the same user can have addresses on different networks for different currencies. This schema is used as a payload with a request to create a user, or as a response to a request to get information about a user.
 
@@ -498,7 +496,7 @@ A single user can have multiple destinations, because the same user can have add
 |`addresses.environment`| "Environment" of the payment network for this payment address. For example, the XPRL has MAINNET, TESTNET, and DEVNET.|
 |`address.details`| Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `AchAddressDetails`. See [Interfaces](#interfaces).|
 
-#### Example error schema
+### Example error schema
 
 This example shows the format of an error payload.
 
@@ -578,7 +576,7 @@ This example shows the format of an invoice.
 }
 ```
 
-### Request headers
+## Request headers
 
 PayID is a fundamentally neutral protocol. When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayID is therefore capable of returning a user's address information for any network in which that user participates.
 
@@ -598,9 +596,9 @@ The different header options are shown here, with example values.
 | ACH     | application/ach+json   | { account: '363023456079', routing: '011302838'}  |
 
 
-### Code examples
+## Code examples
 
-#### Payment
+### Payment
 
 This example demonstrates a payment to `alice$institution.com`.
 
@@ -622,7 +620,7 @@ async function pay(payId, amount) {
 pay('alice$institution.com', 0.63)
 ```
 
-#### Generate a seed-based wallet
+### Generate a seed-based wallet
 
 In this example, you generate a seed-based wallet using the Xpring SDK. See [Xpring SDK docs](https://xpring.io/docs).
 
@@ -756,11 +754,11 @@ interface Error {
 }
 ```
 
-### Headers for GET requests for PayID Public API
+## Headers for GET requests for PayID Public API
 
 This launch of PayID includes those headers specific to the Xpring ecosystem. Each payment network is free to establish its own standard headers. These headers should be submitted with every GET request, but not POST.
 
-#### Headers for XRP
+### Headers for XRP
 
 <table>
 <tr>
@@ -782,7 +780,7 @@ application/xrpl-testnet+json</td>
 </tr>
 </table>
 
-#### Headers for ACH
+### Headers for ACH
 
 <table>
 <tr>
@@ -796,7 +794,8 @@ application/ach+json</td>
 </tr>
 </table>
 
-#### Headers for ILP
+<!-- removing as seen on main payid site
+### Headers for ILP
 
 <table>
 <tr>
@@ -809,9 +808,9 @@ application/spsp4+json </td>
 <td>Returns destination address and shared secret</td>
 </tr>
 </table>
+-->
 
-
-#### Headers for BTC
+### Headers for BTC
 
 <table>
 <tr>
@@ -830,7 +829,7 @@ application/btc-testnet+json</td>
 </table>
 
 
-#### Headers for ETH
+### Headers for ETH
 
 <table>
 <tr>

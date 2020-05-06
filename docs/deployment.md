@@ -8,7 +8,7 @@ If you want to set up and run a PayID server, you have several options. This doc
 
 For other ways to deploy a PayID server, see:
 * [Run the demo script](https://github.com/xpring-eng/payid/blob/loisrp-no-docker-deploy/readme.md#set-up-a-payid-server)
-* [Set up PayID on AWS](doc3)
+* [Set up PayID on AWS](remote-deployment)
 
 Before you begin, make sure that you have installed Postgres locally, or in an otherwise accessible location.
 
