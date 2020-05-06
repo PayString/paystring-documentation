@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    PayID: ['getting-started', 'api-reference', 'metrics'],
+    PayID: ['payid-overview','getting-started', 'api-reference', 'metrics'],
     Deployment: ['remote-deployment', 'local-deployment'],
   },
 }

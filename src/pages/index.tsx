@@ -22,7 +22,7 @@ const Home: React.FC = () => {
           <div className="buttons">
             <Link
               className="button button--outline button--secondary button--lg"
-              to={useBaseUrl('docs/getting-started')}
+              to={useBaseUrl('docs/payid-overview')}
             >
               Get Started
             </Link>

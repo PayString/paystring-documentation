@@ -17,7 +17,7 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/getting-started',
+          to: 'docs/payid-overview',
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'left',
