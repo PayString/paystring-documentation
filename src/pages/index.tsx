@@ -8,7 +8,8 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 // @ts-expect-error
 import useBaseUrl from '@docusaurus/useBaseUrl'
-import Features from '../components/features'
+//We need to update these images
+//import Features from '../components/features'
 
 const Home: React.FC = () => {
   const context = useDocusaurusContext()
@@ -29,9 +30,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </header>
-      <main>
-        <Features />
-      </main>
     </Layout>
   )
 }
