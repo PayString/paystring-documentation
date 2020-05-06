@@ -1,5 +1,11 @@
 import React from 'react'
 
+interface Feature {
+  title: string
+  imageUrl: string
+  description: string
+}
+
 const Features: React.FC = () => {
   const features = [
     {
@@ -44,8 +50,8 @@ const Features: React.FC = () => {
         <section className="features">
           <div className="container">
             <div className="row">
-              {features.map((props) => (
-                <div className="col col--4 feature">
+              {features.map((props: Feature) => (
+                <div key={props.title} className="col col--4 feature">
                   <div className="text--center">
                     <img
                       className="featureImage"
