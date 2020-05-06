@@ -43,14 +43,18 @@
   justify-content: center;
 }
 
+.feature {
+  margin-bottom: 7rem;
+}
+
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 7rem 7rem 0rem 7rem;
+
   width: 100%;
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  margin-bottom: 2rem;
 }

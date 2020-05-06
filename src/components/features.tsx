@@ -10,35 +10,35 @@ const Features: React.FC = () => {
   const features = [
     {
       title: 'Open and free',
-      imageUrl: '/img/undraw_docusaurus_mountain.svg',
+      imageUrl: '/img/features/open.svg',
       description: 'Any company is welcome to use this free and open standard',
     },
     {
       title: 'Simple Universal Standard',
-      imageUrl: '/img/undraw_docusaurus_tree.svg',
+      imageUrl: '/img/features/standard.svg',
       description: 'Customers can use a single PayID across any network',
     },
     {
       title: 'Improved Experience',
-      imageUrl: '/img/undraw_docusaurus_react.svg',
+      imageUrl: '/img/features/experience.svg',
       description:
         'PayID is simpler, easier to use, and less prone to errors than existing payments IDs',
     },
     {
       title: 'Currency Agnostic',
-      imageUrl: '/img/undraw_docusaurus_mountain.svg',
+      imageUrl: '/img/features/currency.svg',
       description:
         'Supports payments in any currency from Bitcoin to ACH to credit networks',
     },
     {
       title: 'Business Friendly',
-      imageUrl: '/img/undraw_docusaurus_tree.svg',
+      imageUrl: '/img/features/business.svg',
       description:
         'PayID increases network reach to more wallets, currencies, and payment scenarios',
     },
     {
       title: 'Developer Friendly',
-      imageUrl: '/img/undraw_docusaurus_react.svg',
+      imageUrl: '/img/features/developer.svg',
       description:
         'Built on existing secure web standards, and easy to deploy in a few lines of code',
     },
@@ -52,7 +52,7 @@ const Features: React.FC = () => {
             <div className="row">
               {features.map((props: Feature) => (
                 <div key={props.title} className="col col--4 feature">
-                  <div className="text--center">
+                  <div>
                     <img
                       className="featureImage"
                       src={props.imageUrl}

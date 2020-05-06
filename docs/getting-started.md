@@ -28,7 +28,7 @@ You can then use the Private PayID API to:
 * Modify a user
 * Delete a user
 
-![Open Source](/img/open_source.png)
+![Open Source](/img/docs/open_source.png)
 
 ### Demo
 
@@ -853,4 +853,4 @@ You can send ETH to a PayID address, as shown in this demo using Xpring SDK. See
 
 ### Demo--Send XRP to a PayID address
 
-You can send XRP to a PayID address, as shown in this demo using Xpring SDK. See [index-xpring.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-xpring.js)  
+You can send XRP to a PayID address, as shown in this demo using Xpring SDK. See [index-xpring.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-xpring.js)

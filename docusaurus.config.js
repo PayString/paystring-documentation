@@ -12,8 +12,8 @@ module.exports = {
     navbar: {
       title: 'PayID',
       logo: {
-        alt: 'PayID Logo',
-        src: 'img/logo.svg',
+        alt: 'PayID icon',
+        src: 'img/icon.svg',
       },
       links: [
         {
@@ -78,6 +78,12 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Ripple.`,
+    },
+    algolia: {
+      apiKey: 'api-key',
+      indexName: 'index-name',
+      appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
+      algoliaOptions: {}, // Optional, if provided by Algolia
     },
   },
   presets: [
