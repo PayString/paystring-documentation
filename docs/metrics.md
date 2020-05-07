@@ -22,10 +22,10 @@ The PayID server captures these metrics:
         + `error` - there was an error in the PayID lookup request. For example, if the client provided an Accept that was invalid or missing.
 
 This data can be used to generate real-time charts. For example, this chart shows how many PayID address mappings exist in the system over time.
-![PayID address mappings in system over time](/img/payid_address_count.png)
+![PayID address mappings in system over time](/img/docs/payid_address_count.png)
 
  This chart shows the rate per minute of PayID lookup requests.
-![PayID lookups per minute](/img/payid_lookups.png)
+![PayID lookups per minute](/img/docs/payid_lookups.png)
 
  ## Import metrics from PayID server to Prometheus
 
@@ -78,7 +78,7 @@ By default, a PayID server will push metrics every 15 seconds to the configured 
 
  Prometheus has an admin web console with limited visualization capabilities on port 9090 (default), as shown in this example.
 
- ![PayID metrics on Prometheus](/img/prometheus-metrics.png)
+ ![PayID metrics on Prometheus](/img/docs/prometheus-metrics.png)
 
  To build dashboards with multiple charts, you can [use Grafana and configure Prometheus as a datasource](https://prometheus.io/docs/visualization/grafana/).
 
@@ -178,7 +178,7 @@ You can verify metrics collection metrics are being collected by entering the fo
 
 Click `Execute`. If successful, the results look like this:
 
-![PayID Metrics setup and configuration](/img/prometheus-sum.png)
+![PayID Metrics setup and configuration](/img/docs/prometheus-sum.png)
 
 Click the **Graph** tab to display the results in graph format.
 

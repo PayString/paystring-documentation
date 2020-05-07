@@ -28,6 +28,7 @@
     "src/**/*.tsx",
     "sidebars.js",
     "docusaurus.config.js",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "src/plugins/svg.js"
   ]
 }
