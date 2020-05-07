@@ -5,7 +5,7 @@ sidebar_label: Remote
 ---
 
 You can set up a PayID server on AWS (Amazon Web Services). For other ways to deploy a PayID server, see:
-* [Run the demo script](https://github.com/xpring-eng/payid/blob/loisrp-no-docker-deploy/readme.md#set-up-a-payid-server)
+* [Run a demo script for a local deployment with Docker](getting-started)
 * [Deploy a PayID server without Docker](local-deployment)
 
 1. Initialize a `t2.micro` instance on AWS running Ubuntu 18.04m with a minimum of 8 GB SSD. For the purposes of this demo, you can use AWS Free Tier.

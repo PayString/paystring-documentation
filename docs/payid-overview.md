@@ -16,7 +16,7 @@ PayID is fully peer-to-peer with no central counterparty. Anyone can set up thei
 
 The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames.  Anyone with an existing username or address can get a PayID address that works across all platforms.  
 
-Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/).
+Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 ## Web standards
 PayID uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayID server, as described in [Set up a PayID server](#set-up-a-payid-server).

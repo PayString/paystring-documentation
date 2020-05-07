@@ -718,17 +718,6 @@ interface AchAddressDetails {
 }
 ```
 
-
-
-#### AchAddressDetails
-
-```typescript
-interface AchAddressDetails {
-  accountNumber: string
-  routingNumber: string
-}
-```
-
 #### Error
 
 ```typescript

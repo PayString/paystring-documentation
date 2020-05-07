@@ -1,6 +1,6 @@
 ---
 id: local-deployment
-title: Deploy a PayID Server Without Docker
+title: Deploy a Local PayID Server Without Docker
 sidebar_label: Local
 ---
 
