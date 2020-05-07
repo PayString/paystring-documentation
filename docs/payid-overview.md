@@ -39,7 +39,7 @@ PayID provides an abstraction layer so that users can send payments to human-rea
 
 **Coming soon:** When a payment is sent to a PayID address, then if both entities are VASPs and must comply with the Travel Rule, they will exchange the user data in a secure handshake.
 
-![Travel Rule](/img/travel_rule.png)
+![Travel Rule](/img/docs/travel_rule.png)
 
 ## Future features and integrations
 Features and integrations on the roadmap include:
