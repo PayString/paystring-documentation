@@ -24,7 +24,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://documenter.getpostman.com/view/11189344/Szf9XTDi',
+          href: 'https://api.payid.org',
           label: 'API Reference',
           position: 'left',
         },
@@ -47,7 +47,7 @@ module.exports = {
             },
             {
               label: 'API Reference',
-              href: 'https://documenter.getpostman.com/view/11189344/Szf9XTDi',
+              href: 'https://api.payid.org',
             },
           ],
         },
