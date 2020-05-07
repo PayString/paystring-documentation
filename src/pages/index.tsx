@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   const { siteConfig = {} } = context
   return (
     <Layout description="PayID allows the use of human-readable addresses to transmit value in the currency of your choice.">
-      <header className="hero hero--primary heroBanner">
+      <header className="hero heroBanner">
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>

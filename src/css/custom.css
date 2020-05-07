@@ -24,23 +24,12 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
- .heroBanner {
+.heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: inherit;
 }
 
 .feature {
@@ -51,10 +40,30 @@
   display: flex;
   align-items: center;
   padding: 7rem 7rem 0rem 7rem;
-
   width: 100%;
 }
 
 .featureImage {
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 966px) {
+  .hero .hero__title {
+    font-size: 2rem;
+  }
+  .heroBanner {
+    padding: 2rem;
+  }
+  .feature {
+    margin-bottom: 2rem;
+  }
+  .features {
+    padding: 2rem 2rem 0rem 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
