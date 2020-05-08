@@ -78,7 +78,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ripple.`,
+      copyright: ``,
     },
     // algolia: {
     //   apiKey: 'api-key',
