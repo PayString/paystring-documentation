@@ -4,7 +4,7 @@ title: Use Xpring SDK With PayID
 sidebar_label: Use Xpring SDK With PayID
 ---
 
-[Xpring SDK](https://www.xpring.io/docs) can be used to simplify the process of developing with PayID. Currently only the Node.js version is available, and Java and Swift will soon be available.
+[Xpring SDK](https://xpring.io/docs) can be used to simplify the process of developing with PayID. Currently only the Node.js version is available, and Java and Swift will soon be available.
 
 ### Generate a seed-based wallet
 
