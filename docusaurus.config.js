@@ -4,7 +4,7 @@ require('dotenv/config')
 module.exports = {
   title: 'PayID Documentation',
   tagline: 'Deploy and use PayID',
-  url: `https://${process.env.RELEASE_ENV}.docs.payid.org`,
+  url: `https://docs.payid.org`,
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'xpring-eng', // Usually your GitHub org/user name.
@@ -80,12 +80,10 @@ module.exports = {
       ],
       copyright: ``,
     },
-    // algolia: {
-    //   apiKey: 'api-key',
-    //   indexName: 'index-name',
-    //   appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
-    //   algoliaOptions: {}, // Optional, if provided by Algolia
-    // },
+    algolia: {
+      apiKey: 'a88df26bddf797de70ffeb1e55475513',
+      indexName: 'payid',
+    },
   },
   presets: [
     [
