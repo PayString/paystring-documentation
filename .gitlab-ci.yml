@@ -13,6 +13,7 @@ variables:
   RELEASE_NAME: payiddocumentation
   RELEASE_ENV: dev
   CICD_ICON: https://i.imgur.com/nxYui1j.png
+  INSTALL_XPRING_PROXY: false
 
 include:
   - project: 'xpring/xpring-ci-templates'
@@ -41,6 +42,7 @@ publish:
         --set releaseImage="gcr.io/$GCR_PROJECT_ID/$CI_PROJECT_NAME:$IMAGE_UID"
         --set proxyng.domainName="${FULL_DNS_NAME}"
         --set proxyng.proxiedService="http://${RELEASE_NAME}-${RELEASE_ENV}:80"
+        --set proxyng.install=$INSTALL_XPRING_PROXY
         ${RELEASE_NAME}-${RELEASE_ENV} ./charts
 
 deploy to dev:
@@ -49,6 +51,7 @@ deploy to dev:
   variables:
     RELEASE_ENV: dev
     FULL_DNS_NAME: dev.docs.payid.org
+    INSTALL_XPRING_PROXY: true
 
 deploy to stage:
   stage: deploy
