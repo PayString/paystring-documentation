@@ -80,6 +80,12 @@ module.exports = {
       ],
       copyright: ``,
     },
+    gtag: {
+      trackingID: 'UA-148411216-7',
+      linker: {
+        domains: ['docs.payid.org', 'payid.org'],
+      },
+    },
     algolia: {
       apiKey: 'a88df26bddf797de70ffeb1e55475513',
       indexName: 'payid',
