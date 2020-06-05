@@ -892,12 +892,14 @@ Accept: application/xrpl-testnet+json
 
 The different header options are shown here, with example values.
 
+
 | Currency | Header                        | Address payload                                                        |
 | :------- | :---------------------------- | :--------------------------------------------------------------------- |
-| BTC      | application/btc+json          | { <br>address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2'<br> }                   |
-| XRP      | application/xrpl-mainnet+json | { <br>address: 'XV5sbjUmgPpvXv4ixFWZ5ptAYZ6PD28Sq49uo34VyjnmK5H'<br> } |
-| ACH      | application/ach+json          | { <br> account: '363023456079',<br>routing: '011302838'<br>}           |
+| BTC      | application/btc+json          | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                   |
+| XRP      | application/xrpl-mainnet+json | { address: 'XV5sbjUmgPpvXv4ixFWZ5ptAYZ6PD28Sq49uo34VyjnmK5H'} |
+| ACH      | application/ach+json          | {  account: '363023456079',routing: '011302838'}           |
 | All      | application/payid+json        | Variable depending on the contents of each address                     |
+
 
 ## Code examples
 
@@ -975,6 +977,7 @@ interface Error {
   error: string
   message: string
 }
+```
 
 ## Headers for GET requests for PayID Public API
 
