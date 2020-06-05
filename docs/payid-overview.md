@@ -37,7 +37,7 @@ PayID improves the user experience of sending cryptocurrency payments, and it al
 
 PayID provides an abstraction layer so that users can send payments to human-readable addresses while virtual asset service providers (VASPs) can meet the necessary compliance requirements in the background.
 
-**Coming soon:** When a payment is sent to a PayID address, then if both entities are VASPs and must comply with the Travel Rule, they will exchange the user data in a secure handshake.
+When a payment is sent to a PayID address, then if both entities are VASPs and must comply with the Travel Rule, they will exchange the user data in a secure handshake.
 
 ![Travel Rule](/img/docs/travel_rule.png)
 
