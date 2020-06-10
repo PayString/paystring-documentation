@@ -2,7 +2,7 @@ const path = require('path')
 require('dotenv/config')
 
 module.exports = {
-  title: 'PayID Documentation',
+  title: 'Documentation | PayID',
   tagline: 'Deploy and use PayID',
   url: `https://docs.payid.org`,
   baseUrl: '/',
@@ -106,5 +106,4 @@ module.exports = {
       },
     ],
   ],
-  plugins: [path.resolve(__dirname, './src/plugins/svg.js')],
 }
