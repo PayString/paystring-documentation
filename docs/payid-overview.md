@@ -23,6 +23,8 @@ PayID uses existing web standards and infrastructure, including HTTP and DNS. Ea
 
 PayID does not rely on any consensus protocols, which simplifies infrastructure demands.
 
+View RFCs related to PayID at [Draft RFCs](https://gitlab.com/xpring-eng/payid/-/tree/master/docs/rfc-proposals).
+
 ### Decentralized and trust-minimized
 PayID is built on the most successful decentralized network in history: the web. PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own personal PayID server so they have no counterparty risk.
 
