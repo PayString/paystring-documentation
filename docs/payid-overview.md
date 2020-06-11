@@ -22,7 +22,7 @@ Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/)
 PayID uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayID server, as described in [Set up a PayID server](#set-up-a-payid-server).
 
 PayID does not rely on any consensus protocols, which simplifies infrastructure demands.
-
+<!-- change URL -->
 View RFCs related to PayID at [Draft RFCs](https://gitlab.com/xpring-eng/payid/-/tree/master/docs/rfc-proposals).
 
 ### Decentralized and trust-minimized
