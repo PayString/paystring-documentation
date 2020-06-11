@@ -8,6 +8,8 @@ PayID provides both the PayID Private API and PayID Public API. You can deploy y
 
 Once you have set up a PayID server, anyone can use the PayID Public API to query address information. This API is publicly accessible so that anyone can send payments to, or receive payments at, your users' PayID addresses.
 
+For guidance on setting up a complete PayID workflow, see [PayID workflow](payid-workflow).
+
 ## Set up a PayID server for development purposes
 To ease the deployment of a development environment, the PayID application includes scripts to quickly deploy a Postgres database and a PayID server.
 
@@ -439,7 +441,7 @@ GET alice$wallet.com
 
 Substitute the appropriate URL for your PayID address.
 
-### Managing payments as an originator
+### Managing payments as an originator or beneficiary
 
 As a payments provider, your organization may be acting as an originator, or as a beneficiary. Your role determines how you interact with the PayID Public API.
 
@@ -447,7 +449,11 @@ As a payments provider, your organization may be acting as an originator, or as 
 
 **Description**
 
-In a typical scenario that involves Travel Rule compliance, you, as the sender of the payment, first request a payment setup details object. When you get the payment setup details, you notice the `complianceRequirements` field of the payment setup details, which any institution that is a VASP (Virtual Asset Service Provider) must adhere to. Because you originated the payment setup details, you then post the compliance data to the same URL to update the payment setup details with this compliance information, thus fulfilling the requirements of the Travel Rule. The beneficiary confirms that you have sent this information by sending an upgraded payment setup details object.
+In a typical scenario that involves Travel Rule compliance, you, as the originator of the payment, first request a payment setup details object. When you get the payment setup details, you notice the `complianceRequirements` field of the payment setup details, which any institution that is a VASP (Virtual Asset Service Provider) must adhere to. Because you originated the payment setup details, you then post the compliance data to the same URL to update the payment setup details with this compliance information, thus fulfilling the requirements of the Travel Rule.
+
+If you are the beneficiary, you confirm that you have sent this information by sending an upgraded payment setup details object.
+
+The originator and the beneficiary must both cooperate to meet these requirements.
 
 **API**
 
@@ -537,7 +543,7 @@ The following table lists the HTTP status codes and messages returned for this m
 
 ### Send compliance information
 
-If a payment setup details object contains information in the `complianceRequirements` field, then upon receipt of that object, the sender institution must send back compliance information.
+If a payment setup details object contains information in the `complianceRequirements` field, then upon receipt of that object, the originating institution must send back compliance information.
 
 **Request format**
 
@@ -756,7 +762,7 @@ Accept: application/xrpl-testnet+json
 
 Response (Success)
 
-A PaymentInformation type object is returned.
+A `PaymentInformation` type object is returned.
 
 ```json
 {
