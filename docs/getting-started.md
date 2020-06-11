@@ -35,7 +35,7 @@ To remove the full development environment (Postgres and PayID), or only Postgre
 npm run devAllDown
 ```
 
-You can also set up your PayID server using [AWS and NGINX][aws-deploy.md].
+You can also set up your PayID server using [AWS and NGINX][remote-deployment].
 
 Ensure that you follow the [recommended best practices](payid-best-practices) for security.
 
