@@ -29,9 +29,13 @@ PayID is built on the most successful decentralized network in history: the web.
 ### Protocol abstraction
 PayID fully abstracts away underlying payment rail details from end users. A user only needs to keep track of a single PayID rather than a complex address for each network. Service operators can manage the underlying addresses behind the scenes according to their own security and privacy best practices without requiring the end user to take any action.
 
-## Extensions and Travel Rule compliance
+## Extensions, future features and integrations
 
-PayID is an extensible and flexible open standard. PayID can be extended to provide a simple solution for [Travel Rule](https://www.fatf-gafi.org/media/fatf/documents/recommendations/RBA-VA-VASPs.pdf) compliance, a relevant capability for many crypto services. Financial institutions can communicate regulatory requirements and the corresponding necessary data by using the PayID Public API, which is a standard REST API.
+PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions.
+
+### PayID and Travel Rule compliance   
+
+PayID can be extended to provide a simple solution for [Travel Rule](https://www.fatf-gafi.org/media/fatf/documents/recommendations/RBA-VA-VASPs.pdf) compliance, a relevant capability for many crypto services. Financial institutions can communicate regulatory requirements and the corresponding necessary data by using the PayID Public API, which is a standard REST API.
 
 PayID improves the user experience of sending cryptocurrency payments, and it also provides a platform for present-day features like Travel Rule compliance and future features like subscriptions and pull payments. To achieve mainstream cryptocurrency adoption, we must build on top of PayID and other systems that integrate well with traditional financial infrastructure.
 
@@ -41,7 +45,8 @@ When a payment is sent to a PayID address, then if both entities are VASPs and m
 
 ![Travel Rule](/img/docs/travel_rule.png)
 
-## Future features and integrations
+### Upcoming features and integrations
+
 Features and integrations on the roadmap include:
 
 * Additional payment rail standards

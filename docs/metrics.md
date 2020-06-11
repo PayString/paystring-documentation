@@ -1,10 +1,21 @@
 ---
 id: metrics
-title: Obtain and Analyze PayID Metrics With Prometheus and Grafana
+title: PayID Metrics
 sidebar_label: Metrics
 ---
 
-To use PayID, you deploy a PayID server. A PayID server automatically collects metrics. This tutorial describes how to import these metrics into [Prometheus](https://prometheus.io/) and analyze them with [Grafana](https://grafana.com/).
+The reference implementation of PayID server automatically collects metrics using Prometheus. By default, metrics are
+not sent to any reporting server. This document describes how you can push these metrics to Xpring, or collect and analyze these metrics using your own metrics server.
+
+## Reporting metrics to Xpring
+Xpring runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with the Xpring allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place. You can configure your PayID server(s) to report metrics to Xpring by setting the following 2 environment variables on each PayID server:
+
+```
+PUSH_GATEWAY_URL=https://push00.mon.payid.tech
+PAYID_ORG=<your organization name>
+```
+
+You can also analyze your own PayID metrics by running your own [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) servers. The following sections describe what metrics are collected and how to collect metrics on your own servers.
 
 ## Available metrics
 
@@ -69,6 +80,8 @@ scrape_configs:
 For example, if the fictitious company Vandelay Industries wants to push metrics to a pushgateway running at `https://some-pushgateway.com`, then set these environment variables: `PUSH_GATEWAY_URL= https://some-pushgateway.com` and `PAYID_ORG='Vandelay Industries'`.
 
 By default, a PayID server will push metrics every 15 seconds to the configured pushgateway. To change this frequency, set the `PUSH_METRICS_INTERVAL` value. For example, to push every 5 minutes (300 seconds), set `PUSH_METRICS_INTERVAL=300`. This value must be a positive number.
+
+As mentioned above, you can also set `PUSH_GATEWAY_URL=https://push00.mon.payid.tech` to push the metrics from your PayID server to Xpring.
 
  ### Use push and pull methods together
 
