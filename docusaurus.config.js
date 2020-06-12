@@ -4,29 +4,31 @@ require('dotenv/config')
 module.exports = {
   title: 'Documentation | PayID',
   tagline: 'Deploy and use PayID',
-  url: `https://docs.payid.org`,
+  url: `https://docs.payid.org`, // TODO LOAD BASED ON ENV
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'xpring-eng', // Usually your GitHub org/user name.
   projectName: 'payid', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'PayID',
+      hideOnScroll: true,
       logo: {
         alt: 'PayID icon',
         src: 'img/icon.svg',
+        srcDark: 'img/icon-dark.svg',
+        href: 'https://dev.payid.org/', // TODO LOAD BASED ON ENV
       },
       links: [
         {
           to: 'docs/payid-overview',
           activeBasePath: 'docs',
           label: 'Documentation',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://api.payid.org',
           label: 'API Reference',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://github.com/xpring-eng/payid',
@@ -35,55 +37,10 @@ module.exports = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Getting Started',
-              to: 'docs/getting-started',
-            },
-            {
-              label: 'API Reference',
-              href: 'https://api.payid.org',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/payid',
-            },
-            // {
-            //   label: 'Discord',
-            //   href: 'https://discordapp.com/invite/payid',
-            // },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/xpring-eng/payid',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/xpringdev',
-            },
-          ],
-        },
-      ],
-      copyright: ``,
-    },
     gtag: {
       trackingID: 'UA-148411216-7',
       linker: {
-        domains: ['docs.payid.org', 'payid.org'],
+        domains: ['docs.payid.org', 'payid.org'], // TODO LOAD BASED ON ENV
       },
     },
     algolia: {

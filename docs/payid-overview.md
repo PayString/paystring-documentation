@@ -1,10 +1,8 @@
 ---
 id: payid-overview
-title: PayID Protocol for Human-Readable, Travel-Rule-Compliant Addresses
+title: What is PayID?
 sidebar_label: PayID Protocol Overview
 ---
-
-## What is PayID?
 
 With PayID, you can use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$wallet.com` maps to the corresponding URL `https://wallet.com/alice`.
 
@@ -14,7 +12,7 @@ Each request must have a valid `Accept` request HTTP header. For example: `Accep
 
 PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own PayID server or integrate with a trustless blockchain solution so they have no counterparty risk.
 
-The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames.  Anyone with an existing username or address can get a PayID address that works across all platforms.  
+The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames.  Anyone with an existing username or address can get a PayID address that works across all platforms.
 
 Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
@@ -35,7 +33,7 @@ PayID fully abstracts away underlying payment rail details from end users. A use
 
 PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions.
 
-### PayID and Travel Rule compliance   
+### PayID and Travel Rule compliance
 
 PayID can be extended to provide a simple solution for [Travel Rule](https://www.fatf-gafi.org/media/fatf/documents/recommendations/RBA-VA-VASPs.pdf) compliance, a relevant capability for many crypto services. Financial institutions can communicate regulatory requirements and the corresponding necessary data by using the PayID Public API, which is a standard REST API.
 
