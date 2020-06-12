@@ -65,10 +65,10 @@ The private APIs run by default on port 8081. Make sure to adjust this value if 
 
 | HTTP Method                              | Endpoint              |                     Description |
 | ---------------------------------------- | :-------------------- | ------------------------------: |
-| [GET](#421-get-a-payid-user-information) | /users/{user}\${host} |    Get a PayID user information |
-| [POST](#422-create-a-payid-user)         | /users                |             Create a PayID user |
-| [PUT](#423-update-a-payid-user)          | /users/{user}\${host} | Update a PayID user information |
-| [DELETE](#424-delete-a-payid-user)       | /users/{user}\${host} |             Delete a PayID user |
+| [GET](#get-a-payid-user-information) | /users/{user}\${host} |    Get a PayID user information |
+| [POST](#create-a-payid-user)         | /users                |             Create a PayID user |
+| [PUT](#update-a-payid-user)          | /users/{user}\${host} | Update a PayID user information |
+| [DELETE](#delete-a-payid-user)       | /users/{user}\${host} |             Delete a PayID user |
 
 Once you have set up your PayID server, you can access the Private PayID API endpoints using Postman or these cURL commands.
 
@@ -824,7 +824,7 @@ A single user can have multiple destinations, because the same user can have add
 | Field                        | Description      |
 | -------------------------- | ---------------------- |
 | `payId`      | PayID user address                  |
-| `addresses`  | Object that includes payment address information for one or more payment networks. |     
+| `addresses`  | Object that includes payment address information for one or more payment networks. |
 | `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.  |
 | `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                         |
 | `address.details`  | Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `AchAddressDetails`. See [Interfaces](#interfaces). |
