@@ -6,6 +6,10 @@ sidebar_label: PayID Security Best Practices
 
 The PayID protocol is flexible and supports a wide range of implementations. To ensure security, follow these best practices.
 
+## Private API
+
+The rivate API does not currently include authentication. Therefore, this API MUST only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
+
 ## Use TLS (Transport Layer Security) 1.3
 
 To ensure security, both the PayID client and the PayID server must use the latest TLS 1.3, as described in [RFC 8446](https://tools.ietf.org/html/rfc8446). TLS 1.3 is faster and safer than its predecessors, and offers these advantages:
