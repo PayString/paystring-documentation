@@ -37,46 +37,6 @@ module.exports = {
         },
       ],
     },
-    footer: {
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Getting Started',
-              to: 'docs/getting-started',
-            },
-            {
-              label: 'API Reference',
-              href: 'https://api.payid.org',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/payid',
-            },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/xpring-eng/payid',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/xpringdev',
-            },
-          ],
-        },
-      ],
-      copyright: ``,
-    },
     gtag: {
       trackingID: 'UA-148411216-7',
       linker: {
