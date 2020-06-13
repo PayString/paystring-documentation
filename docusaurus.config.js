@@ -43,6 +43,7 @@ module.exports = {
         src: 'img/icon.svg',
         srcDark: 'img/icon-dark.svg',
         href: getPayIDURL(),
+        target: '_self',
       },
       links: [
         {
