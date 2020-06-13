@@ -1,5 +1,8 @@
 FROM node:12-alpine
 
+ARG RELEASE_ENV
+ENV RELEASE_ENV=$RELEASE_ENV
+
 ADD . / payiddocumentation/
 
 RUN npm install --cache .npm --no-audit --prefer-offline --prefix ./payiddocumentation
