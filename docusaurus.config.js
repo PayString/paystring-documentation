@@ -1,10 +1,36 @@
 const path = require('path')
 require('dotenv/config')
 
+const getPayIDURL = () => {
+  switch (process.env.RELEASE_ENV) {
+    case 'dev':
+      return 'https://dev.payid.org'
+    case 'stage':
+      return 'https://stage.payid.org'
+    case 'prod':
+      return 'https://payid.org'
+    default:
+      return 'http://localhost:8000'
+  }
+}
+
+const getDocsURL = () => {
+  switch (process.env.RELEASE_ENV) {
+    case 'dev':
+      return 'https://dev.docs.payid.org'
+    case 'stage':
+      return 'https://stage.docs.payid.org'
+    case 'prod':
+      return 'https://docs.payid.org'
+    default:
+      return 'http://localhost:3000'
+  }
+}
+
 module.exports = {
   title: 'Documentation | PayID',
   tagline: 'Deploy and use PayID',
-  url: `https://docs.payid.org`, // TODO LOAD BASED ON ENV
+  url: getDocsURL(),
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'xpring-eng', // Usually your GitHub org/user name.
@@ -16,7 +42,8 @@ module.exports = {
         alt: 'PayID icon',
         src: 'img/icon.svg',
         srcDark: 'img/icon-dark.svg',
-        href: 'https://dev.payid.org/', // TODO LOAD BASED ON ENV
+        href: getPayIDURL(),
+        target: '_self',
       },
       links: [
         {
@@ -40,7 +67,7 @@ module.exports = {
     gtag: {
       trackingID: 'UA-148411216-7',
       linker: {
-        domains: ['docs.payid.org', 'payid.org'], // TODO LOAD BASED ON ENV
+        domains: [getDocsURL(), getPayIDURL()],
       },
     },
     algolia: {
