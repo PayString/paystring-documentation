@@ -7,12 +7,12 @@ sidebar_label: Local
 If you want to set up and run a PayID server, you have several options. This document describes how to run a PayID server without using Docker.
 
 For other ways to deploy a PayID server, see:
-* [Run the demo script](https://github.com/xpring-eng/payid/blob/loisrp-no-docker-deploy/readme.md#set-up-a-payid-server)
-* [Set up PayID on AWS](remote-deployment)
+* [Run the demo script](getting-started)
+* [Set up a PayID server on AWS](remote-deployment)
 
 ## Basic requirements
 
-Ensure your system meets these requirements before you set up a PayID server. 
+Ensure your system meets these requirements before you set up a PayID server.
 
 - RAM: Minimum of 100 MB
 - Postgres: 11.7 or later, with [pgpool-II](https://www.pgpool.net) in front

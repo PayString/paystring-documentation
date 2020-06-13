@@ -8,7 +8,7 @@ The PayID protocol is flexible and supports a wide range of implementations. To 
 
 ## Private API
 
-The rivate API does not currently include authentication. Therefore, this API MUST only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
+The Private PayID API does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
 
 ## Use TLS (Transport Layer Security) 1.3
 
@@ -33,7 +33,7 @@ Among the various options available, use an Elliptic-Curve Cryptography (ECC) im
 
 * Better performance: The smaller key size also makes possible more compact implementations for a given level of security. This means faster cryptographic operations. ECC has very fast key generation and signature algorithms.
 
-* Efficient implementations: There are extremely efficient, compact hardware implementations available for ECC exponentiation operations, offering potential reductions in implementation footprint even beyond those due to the smaller key length alone.
+* Efficient implementations: ECC exponentiation operations have extremely efficient, compact hardware implementations available, and these offer potential reductions in the implementation footprint even beyond those due to the smaller key length alone.
 
 #### Key exchange recommendations
 
@@ -43,7 +43,7 @@ Use the Elliptic-Curve-Diffie-Hellman (ECDH) key exchange in ephemeral mode as i
 
 * X25519 (should be supported for key exchange for any TLS-compliant application)
 
-Each of these curves provides 128 bits of security. For 192 bits security, use curve secp384r1.
+Each of these curves provides a 128-bit security level. For a 192-bit security level, use curve secp384r1.
 
 **Note:** Arguably, the extra security provided by P-384 is unnecessary, because the more efficient P-256 curve already provides security that cannot be broken through a sufficiently large accumulation of computing power.
 
