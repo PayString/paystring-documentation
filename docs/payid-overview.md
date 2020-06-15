@@ -38,15 +38,21 @@ PayID fully abstracts away underlying payment rail details from end users. A use
 
 PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions.
 
-### PayID and Travel Rule compliance
+### Verifiable PayID
 
-PayID can be extended to provide a simple solution for [Travel Rule](https://www.fatf-gafi.org/media/fatf/documents/recommendations/RBA-VA-VASPs.pdf) compliance, a relevant capability for many crypto services. Financial institutions can communicate regulatory requirements and the corresponding necessary data by using the PayID Public API, which is a standard REST API.
+Verifiable PayID is a suite of security enhancements to the base PayID request and response that adds in a variety of digital signature fields for linking external digital identities, proving control of the payment rail address, and providing non-repudiable messaging. It can be used to enable trust-minimized and trust-free security regimes and has applications in both custodial and non-custodial settings.
 
-PayID improves the user experience of sending cryptocurrency payments, and it also provides a platform for present-day features like Travel Rule compliance and future features like subscriptions and pull payments. To achieve mainstream cryptocurrency adoption, we must build on top of PayID and other systems that integrate well with traditional financial infrastructure.
+To learn more, please see the [Verifiable PayID RFC](https://github.com/xpring-eng/rfcs/blob/master/payid/dist/spec/verifiable-payid-protocol.txt).
 
-PayID provides an abstraction layer so that users can send payments to human-readable addresses while virtual asset service providers (VASPs) can meet the necessary compliance requirements in the background.
+### Compliance and Travel Rule
 
-When a payment is sent to a PayID address, then if both entities are VASPs and must comply with the Travel Rule, they will exchange the user data in a secure handshake.
+As a system designed for all payments, PayID needs to accommodate the variety of compliance requirements that may apply to any particular payment, whether over a crypto or traditional payment rail.
+
+Of particular relevance, PayID can be extended to provide an elegant solution for [Travel Rule](https://www.fatf-gafi.org/media/fatf/documents/recommendations/RBA-VA-VASPs.pdf) compliance with a focus on crypto transactions. Travel Rule has proven to be a tricky problem for crypto transactions, but it is greatly simplified when sending to a PayID. 
+
+The compliance extension to PayID provides an abstraction layer so that users can send payments to human-readable addresses while virtual asset service providers (VASPs) can meet the necessary compliance requirements in the background.  Financial institutions can communicate regulatory requirements and the corresponding necessary data by using the PayID Public API, which is a standard REST API.
+
+By default, data exchange in the Travel Rule extension is accomplished via the [TRISA protocol](https://trisa.io/). TRISA is a complentary protocol built on common principles shared by PayID, including simplicity, security, a commitment to free and open source tech, use of proven technology, and an emphasis on interoperability and scalability.
 
 ![Travel Rule](/img/docs/travel_rule.png)
 
