@@ -36,7 +36,7 @@ The reference implementation described in [Getting Started](getting-started) use
 
 ## Set environment variables
 
-PayID depends on environment variables. All of these environment variables are read in [src/config.ts](https://github.com/xpring-eng/payid/blob/master/src/config.ts) and assigned to variables. During integration, look through all of the environment variables used in [src/config.ts](https://github.com/xpring-eng/payid/blob/master/src/config.ts) and [example.production.env](https://github.com/xpring-eng/payid/blob/master/example.production.env) to ensure all are set properly for your environment.
+PayID depends on environment variables. All of these environment variables are read in [src/config.ts](https://github.com/xpring-eng/payid/blob/master/src/config.ts) and assigned to variables. During integration, look through all of the environment variables used in [src/config.ts](https://github.com/xpring-eng/payid/blob/master/src/config.ts) to ensure all are set properly for your environment.
 
 ## Update database migrations
 
