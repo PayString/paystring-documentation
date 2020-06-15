@@ -29,6 +29,6 @@
     "sidebars.js",
     "docusaurus.config.js",
     ".eslintrc.js",
-    "src/plugins/svg.js"
+    "src/plugins/heap.js"
   ]
 }

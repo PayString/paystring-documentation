@@ -27,6 +27,17 @@ const getDocsURL = () => {
   }
 }
 
+const getHeapAppID = () => {
+  switch (process.env.RELEASE_ENV) {
+    case 'stage':
+      return '3411953951'
+    case 'prod':
+      return '3069043076'
+    default:
+      return null
+  }
+}
+
 module.exports = {
   title: 'Documentation | PayID',
   tagline: 'Deploy and use PayID',
@@ -87,6 +98,14 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      require.resolve(path.resolve(__dirname, './src/plugins/heap.js')),
+      {
+        appId: getHeapAppID(),
       },
     ],
   ],
