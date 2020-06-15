@@ -11,6 +11,7 @@ Once you have set up a PayID server, anyone can use the PayID Public API to quer
 For guidance on setting up a complete PayID workflow, see [PayID workflow](payid-workflow).
 
 ## Set up a PayID server for development purposes
+
 To ease the deployment of a development environment, the PayID application includes scripts to quickly deploy a Postgres database and a PayID server.
 
 The Postgres Docker image used in these scripts is version
@@ -19,7 +20,6 @@ The Postgres Docker image used in these scripts is version
 If you want to run a PayID server without Docker, see [Local deployment of a PayID server without Docker](local-deployment). You can also set up your PayID server using [AWS and NGINX][remote-deployment].
 
 Ensure that you follow the [recommended best practices](payid-best-practices) for security.
-
 
 ### Set up a PayID server to develop some other server against
 
@@ -54,10 +54,10 @@ View the [PayID API documentation](https://api.payid.org/?version=latest).
 
 Use the Private PayID API to:
 
-* Create a user
-* Get user information
-* Modify a user
-* Delete a user
+- Create a user
+- Get user information
+- Modify a user
+- Delete a user
 
 ![Open Source](/img/docs/open_source.png)
 
@@ -65,12 +65,12 @@ Use the Private PayID API to:
 
 The private APIs run by default on port 8081. Make sure to adjust this value if needed. The list of private endpoints is:
 
-| HTTP Method                              | Endpoint              |                     Description |
-| ---------------------------------------- | :-------------------- | ------------------------------: |
-| [GET](https://api.payid.org/?version=latest#20082fed-0fb0-43ee-8f1d-eeeb1b33a7bb) | /users/{user}\${host} |    Get a PayID user information |
-| [POST](https://api.payid.org/?version=latest#924afd3e-4406-4dd1-89db-edd8d6180143)         | /users                |             Create a PayID user |
-| [PUT](https://api.payid.org/?version=latest#debf733f-5c85-4786-bbcb-43b95952f458)          | /users/{user}\${host} | Update a PayID user information |
-| [DELETE](https://api.payid.org/?version=latest#d5256da2-3b06-4d2f-b13b-3eaa174bd9b2)       | /users/{user}\${host} |             Delete a PayID user |
+| HTTP Method                                                                          | Endpoint              |                     Description |
+| ------------------------------------------------------------------------------------ | :-------------------- | ------------------------------: |
+| [GET](https://api.payid.org/?version=latest#20082fed-0fb0-43ee-8f1d-eeeb1b33a7bb)    | /users/{user}\${host} |    Get a PayID user information |
+| [POST](https://api.payid.org/?version=latest#924afd3e-4406-4dd1-89db-edd8d6180143)   | /users                |             Create a PayID user |
+| [PUT](https://api.payid.org/?version=latest#debf733f-5c85-4786-bbcb-43b95952f458)    | /users/{user}\${host} | Update a PayID user information |
+| [DELETE](https://api.payid.org/?version=latest#d5256da2-3b06-4d2f-b13b-3eaa174bd9b2) | /users/{user}\${host} |             Delete a PayID user |
 
 Once you have set up your PayID server, you can access the Private PayID API endpoints using Postman or these cURL commands.
 
@@ -87,9 +87,9 @@ The PayID Public API does not require authentication, as it is open to any user.
 
 The public APIs runs by default on port 8080. Make sure to update this value if needed. The list of public endpoints is shown in the table.
 
-| HTTP Method   | Endpoint  |  Description |
-| --------------------------------------------------------------------- | :---------------------------- | --------------------------------------------------------: |
-| [GET](https://api.payid.org/?version=latest#bf7137bc-d082-4d46-81b4-e76e4e0b8ddf) | /{user}                        | Get pay information |
+| HTTP Method                                                                       | Endpoint |         Description |
+| --------------------------------------------------------------------------------- | :------- | ------------------: |
+| [GET](https://api.payid.org/?version=latest#bf7137bc-d082-4d46-81b4-e76e4e0b8ddf) | /{user}  | Get pay information |
 
 For code examples, see [Use Xpring SDK With PayID](xpring-sdk-payid).
 
@@ -118,7 +118,6 @@ GET alice$wallet.com
 ```
 
 Substitute the appropriate URL for your PayID address.
-
 
 ## Schemas
 
@@ -150,13 +149,13 @@ A single user can have multiple destinations, because the same user can have add
 }
 ```
 
-| Field                        | Description      |
-| -------------------------- | ---------------------- |
-| `payId`      | PayID user address                  |
-| `addresses`  | Object that includes payment address information for one or more payment networks. |
-| `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.  |
-| `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                         |
-| `address.details`  | Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `AchAddressDetails`. See [Interfaces](#interfaces). |
+| Field                      | Description                                                                                                                                    |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `payId`                    | PayID user address                                                                                                                             |
+| `addresses`                | Object that includes payment address information for one or more payment networks.                                                             |
+| `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.                                                                                 |
+| `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                   |
+| `address.details`          | Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `AchAddressDetails`. See [Interfaces](#interfaces). |
 
 ### Example error schema
 
@@ -242,7 +241,7 @@ The values accepted for XRP are:
 | ----------------------------- | -----------------------: |
 | application/xrpl-mainnet+json | Returns mainnet xAddress |
 | application/xrpl-testnet+json | Returns testnet xAddress |
-| application/xrpl-devnet+json  | Returns devnet xAddress |
+| application/xrpl-devnet+json  |  Returns devnet xAddress |
 
 PayID is a fundamentally neutral protocol. When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayID is therefore capable of returning a user's address information for any network in which that user participates.
 
@@ -256,14 +255,12 @@ Accept: application/xrpl-testnet+json
 
 The different header options are shown here, with example values.
 
-
-| Currency | Header                        | Address payload                                                        |
-| :------- | :---------------------------- | :--------------------------------------------------------------------- |
-| BTC      | application/btc+json          | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                   |
+| Currency | Header                        | Address payload                                               |
+| :------- | :---------------------------- | :------------------------------------------------------------ |
+| BTC      | application/btc+json          | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                  |
 | XRP      | application/xrpl-mainnet+json | { address: 'XV5sbjUmgPpvXv4ixFWZ5ptAYZ6PD28Sq49uo34VyjnmK5H'} |
-| ACH      | application/ach+json          | {  account: '363023456079',routing: '011302838'}           |
-| All      | application/payid+json        | Variable depending on the contents of each address                     |
-
+| ACH      | application/ach+json          | { account: '363023456079',routing: '011302838'}               |
+| All      | application/payid+json        | Variable depending on the contents of each address            |
 
 ## Code examples
 
@@ -366,7 +363,6 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 |    Accept header     |            Description             |
 | :------------------: | :--------------------------------: |
 | application/ach+json | Returns account and routing number |
-
 
 ### Headers for BTC
 
