@@ -38,6 +38,17 @@ const getHeapAppID = () => {
   }
 }
 
+const getSentryDSN = () => {
+  switch (process.env.RELEASE_ENV) {
+    case 'stage':
+      return 'https://c15f0f6a453c444597c6a637a15273ab@o262339.ingest.sentry.io/5277565'
+    case 'prod':
+      return 'https://531c7661d68844239952e7c6d5cc5961@o262339.ingest.sentry.io/5277626'
+    default:
+      return null
+  }
+}
+
 module.exports = {
   title: 'Documentation | PayID',
   tagline: 'Deploy and use PayID',
@@ -107,6 +118,13 @@ module.exports = {
       require.resolve(path.resolve(__dirname, './src/plugins/heap.js')),
       {
         appId: getHeapAppID(),
+      },
+    ],
+    [
+      require.resolve(path.resolve(__dirname, './src/plugins/sentry.js')),
+      {
+        dsn: getSentryDSN(),
+        environment: process.env.RELEASE_ENV,
       },
     ],
     [require.resolve(path.resolve(__dirname, './src/plugins/fonts.js'))],
