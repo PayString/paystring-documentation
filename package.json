@@ -21,7 +21,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.20.0",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "url-loader": "^4.1.0"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.56",

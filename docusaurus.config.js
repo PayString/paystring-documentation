@@ -109,5 +109,6 @@ module.exports = {
         appId: getHeapAppID(),
       },
     ],
+    [require.resolve(path.resolve(__dirname, './src/plugins/fonts.js'))],
   ],
 }
