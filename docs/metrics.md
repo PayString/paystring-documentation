@@ -164,7 +164,7 @@ You should get a `Created` response.
 
 Query the PayID server to make sure it resolves, using this cURL command.
 
-`curl http://127.0.0.1:8080/alice -H "Accept: application/xrpl-testnet+json"`
+`curl http://127.0.0.1:8080/alice -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
 
 ### Start Prometheus
 
@@ -205,3 +205,52 @@ Here are some other example expressions:
 - `sum(payid_count) by (paymentNetwork)` - Sum of `payid` count by payment network, such as XRPL, BTC, and so forth.
 - `sum(payid_lookup_request)` - Total number of `payid` lookup requests.
 - `rate(payid_lookup_request[5m])` - Rate of `payid` lookup requests per second.
+
+
+# Running Prometheus Push Gateway Locally
+
+To run metrics collection locally using push method instead of pull, start a prometheus pushgateway container: 
+
+```
+docker run -d --network payid-network -p 9091:9091 --name pushgateway prom/pushgateway
+```
+
+## Run Prometheus server
+
+Instead of having prometheus pull metrics directly from a local payid server, we'll instead have it pull metrics from 
+the pushgateway server. Create a prometheus.yaml with the following content:
+
+```
+# my global config
+global:
+  scrape_interval:     5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 5s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+    honor_labels: true
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+    - targets: ['pushgateway:9091']
+```
+
+Start the prometheus docker container:
+
+```
+docker run -d --network payid-network -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+```
+
+## Start PayID server with metrics pushing enabled:
+
+Configure the PayID server to push metrics to the local pushgateway container running in docker. This is enabled by setting 
+the 2 env vars mentioned above (`PAYID_ORG` and `PUSH_GATEWAY_URL`):
+
+```
+docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-network -e DB_PASSWORD=password -e DB_NAME=postgres -e DB_HOSTNAME=payid-postgres -e "PAYID_ORG=demo-org" -e "PUSH_GATEWAY_URL=http://pushgateway:9091" payid-server
+```
