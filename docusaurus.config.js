@@ -70,8 +70,9 @@ module.exports = {
         },
         {
           href: 'https://github.com/xpring-eng/payid',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
