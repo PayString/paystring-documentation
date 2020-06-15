@@ -22,9 +22,11 @@ PayID uses existing web standards and infrastructure, including HTTP and DNS. Ea
 
 PayID does not rely on any consensus protocols, which simplifies infrastructure demands.
 
-<!-- change URL -->
+## RFCs
 
-View RFCs related to PayID at [Draft RFCs](https://gitlab.com/xpring-eng/payid/-/tree/master/docs/rfc-proposals).
+<!-- change URLs -->
+
+View RFCs related to PayID at [Draft RFCs](https://github.com/xpring-eng/rfcs).
 
 ### Decentralized and trust-minimized
 
