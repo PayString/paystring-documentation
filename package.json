@@ -1,12 +1,14 @@
 {
-  "name": "payid",
+  "name": "payid-documentation",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "docusaurus start",
+    "prebuild": "prettier --check '**/*.md'",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy"
+    "deploy": "docusaurus deploy",
+    "lint": "prettier --write '**/*.md'"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
@@ -18,7 +20,7 @@
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.20.0",
-    "prettier": "^2.0.2",
+    "prettier": "^2.0.5",
     "typescript": "^3.9.5"
   },
   "dependencies": {
