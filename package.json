@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "prettier --check '**/*.md' && docusaurus start",
+    "start": "docusaurus start",
+    "prebuild": "prettier --check '**/*.md'",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy"
+    "deploy": "docusaurus deploy",
+    "lint": "prettier --write '**/*.md'"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
