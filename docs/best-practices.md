@@ -67,6 +67,6 @@ Use one of the following cipher suites:
 Do not use the 0-RTT (Zero Round Trip Time Resumption (0-RTT) mode of operation. 0-RTT encryption keys do not provide
 full-forward secrecy, and the server cannot guarantee uniqueness of the handshake (non-replayability) without keeping potentially undue amounts of state. See [RFC 8446, Appendix E.1.3](https://tools.ietf.org/html/rfc8446#appendix-E.1.3).
 
-## Harden Docker 
+## Harden Docker
 
 Consider adding further Docker hardening steps, such as to use the `no-new-privileges` security option to help prevent privilege escalation attacks through the misuse of `setuid` and `setgid` programs.
