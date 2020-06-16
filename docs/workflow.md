@@ -10,7 +10,7 @@ For best security practices, see [Best Practices](payid-best-practices).
 
 ## PayID server setup
 
-Determine how you want to set up PayID. You can use the provided Docker-based deployment as described in [Getting Started](getting-started). You can set up a [local PayID server without Docker](local-deployment). You can use [AWS and nginx](remote-deployment) to set up your PayID server, or adapt those instructions to other cloud providers.
+Determine how you want to set up PayID. You can use the provided Docker-based deployment as described in [Getting Started](getting-started). You can set up a [local PayID server without Docker](local-deployment). You can use [AWS and nginx](remote-deployment) to set up your PayID server, or adapt those instructions to other cloud providers. See the [PayID server requirements](payid-server-requirements).
 
 ## PayID user setup
 

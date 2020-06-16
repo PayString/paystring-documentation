@@ -24,9 +24,7 @@ PayID does not rely on any consensus protocols, which simplifies infrastructure 
 
 ## RFCs
 
-<!-- change URLs -->
-
-View RFCs related to PayID at [Draft RFCs](https://github.com/xpring-eng/rfcs).
+View RFCs related to PayID at [Draft RFCs](https://github.com/payid-org/rfcs).
 
 ### Decentralized and trust-minimized
 
