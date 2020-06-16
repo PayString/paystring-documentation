@@ -146,7 +146,7 @@ docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-net
 Test whether the PayID server is running by creating a PayID with this cURL command.
 
 ```bash
- curl --location --request POST 'http://127.0.0.1:8081/v1/users' --header 'Content-Type: application/json' --header 'Content-Type: text/plain' --data-raw '{
+ curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayID-API-Version: 2020-06-16' --header 'Content-Type: application/json' --header 'Content-Type: text/plain' --data-raw '{
      "pay_id": "alice$127.0.0.1",
      "addresses": [
          {
@@ -164,7 +164,7 @@ You should get a `Created` response.
 
 Query the PayID server to make sure it resolves, using this cURL command.
 
-`curl http://127.0.0.1:8080/alice -H "Accept: application/xrpl-testnet+json"`
+`curl http://127.0.0.1:8080/alice -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
 
 ### Start Prometheus
 
