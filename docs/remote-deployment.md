@@ -33,7 +33,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
    sudo apt install docker.io
    ```
 9. Clone the payid Github repository.
-   `git clone git@github.com:xpring-eng/payid.git`
+   `git clone git@github.com:payid-org/payid.git`
 10. Set the docker port to 80 by modifying the demo script.
     - Open the script editor: `nano payid/demo/run_payid_demo.sh`
     - Change the line:
