@@ -1,7 +1,7 @@
 ---
 id: getting-started
-title: Getting Started With PayID
-sidebar_label: Getting Started With PayID
+title: Getting Started
+sidebar_label: Getting Started
 ---
 
 PayID provides both the PayID Private API and PayID Public API. You can deploy your own PayID server and then create PayIDs for your users using the PayID Private API. You can also query and modify this list of users. This API should be exposed internally only, so that only your company's systems can update PayID mappings.

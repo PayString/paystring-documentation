@@ -1,7 +1,7 @@
 ---
 id: payid-interfaces
-title: PayID Interfaces
-sidebar_label: PayID Interfaces
+title: Interfaces
+sidebar_label: Interfaces
 ---
 
 See also: [PayID API Reference](https://api.payid.org).

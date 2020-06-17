@@ -1,7 +1,7 @@
 ---
 id: payid-headers
-title: PayID Headers
-sidebar_label: PayID Headers
+title: Headers
+sidebar_label: Headers
 ---
 
 See also: [PayID API Reference](https://api.payid.org).

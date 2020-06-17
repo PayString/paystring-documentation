@@ -1,7 +1,7 @@
 ---
 id: payid-overview
-title: PayID Overview
-sidebar_label: PayID Overview
+title: Overview
+sidebar_label: Overview
 ---
 
 With PayID, you can use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$wallet.com` maps to the corresponding URL `https://wallet.com/alice`.
@@ -18,7 +18,7 @@ For using Xpring SDK with PayID, see [Xpring SDK repo](https://github.com/xpring
 
 ## Implementations
 
-You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a reference implementation for a PayID server. Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 If you want to contribute to PayID, see [Contributing to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md).
 

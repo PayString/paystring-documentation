@@ -1,7 +1,7 @@
 ---
 id: payid-schemas
-title: PayID Schemas
-sidebar_label: PayID Schemas
+title: Schemas
+sidebar_label: Schemas
 ---
 
 See also: [PayID API Reference](https://api.payid.org).

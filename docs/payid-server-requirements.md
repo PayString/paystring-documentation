@@ -1,7 +1,7 @@
 ---
 id: payid-server-requirements
-title: PayID Server Requirements
-sidebar_label: PayID Server Requirements
+title: Server Requirements
+sidebar_label: Server Requirements
 ---
 
 The reference PayID server is comprised of a simple Node.js HTTP server and a Postgres database.

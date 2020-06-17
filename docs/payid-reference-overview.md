@@ -1,7 +1,7 @@
 ---
 id: payid-reference-overview
-title: PayID Reference Implementation Overview
-sidebar_label: PayID Reference Implementation Overview
+title: Reference Implementation Overview
+sidebar_label: Reference Implementation Overview
 ---
 
 Xpring provides a reference implementation of the PayID server. You can implement it as described here, you can make your preferred modifications, and you can create your own implementation from scratch.
