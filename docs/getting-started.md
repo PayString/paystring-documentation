@@ -42,7 +42,7 @@ curl --location --request POST 'http://127.0.0.1:8081/users' \
 
 ## Request a PayID
 
-Now that we have a PayID on our server, we can request it using the PayID Protocol, the same way that other wallets would ask for our address. This is how you would send money using a PayID.
+Now that we have a PayID on our server, we can request it using the PayID Protocol, the same way that other wallets would ask for our address. This is how you would get account information for sending money using a PayID.
 
 ```bash
 curl --location --request GET 'http://127.0.0.1:8080/alice' \
