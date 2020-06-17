@@ -50,12 +50,12 @@ const getSentryDSN = () => {
 }
 
 module.exports = {
-  title: 'Documentation | PayID',
+  title: 'PayID',
   tagline: 'Deploy and use PayID',
   url: getDocsURL(),
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'xpring-eng', // Usually your GitHub org/user name.
+  organizationName: 'payid-org', // Usually your GitHub org/user name.
   projectName: 'payid', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -80,7 +80,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/xpring-eng/payid',
+          href: 'https://github.com/payid-org/payid',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
