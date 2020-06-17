@@ -1,7 +1,7 @@
 ---
 id: metrics
 title: PayID Metrics
-sidebar_label: Metrics
+sidebar_label: PayID Metrics
 ---
 
 The reference implementation of PayID server automatically collects metrics using Prometheus. By default, metrics are

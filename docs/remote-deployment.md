@@ -1,7 +1,7 @@
 ---
 id: remote-deployment
 title: Deploy a PayID Server on AWS
-sidebar_label: Remote
+sidebar_label: Deploy a PayID Server on AWS
 ---
 
 You can set up a PayID server on AWS (Amazon Web Services). For other ways to deploy a PayID server, see:

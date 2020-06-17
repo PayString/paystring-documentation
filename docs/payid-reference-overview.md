@@ -1,12 +1,10 @@
 ---
-id: payid-workflow
-title: PayID Workflow
-sidebar_label: PayID Workflow
+id: payid-reference-overview
+title: PayID Reference Implementation Overview
+sidebar_label: PayID Reference Implementation Overview
 ---
 
-For information about PayID, see the [overview](payid-overview).
-For a simple introduction, see [Getting Started](getting-started).
-For best security practices, see [Best Practices](payid-best-practices).
+Xpring provides a reference implementation of the PayID server. You can implement it as described here, you can make your preferred modifications, and you can create your own implementation from scratch.
 
 ## PayID server setup
 
@@ -23,3 +21,7 @@ You will act either as an originator of payments, or a beneficiary of payments. 
 ## PayID integration
 
 PayID is a flexible protocol that can be integrated into your existing systems. It does not substitute for your existing infrastructure and workflows.
+
+## PayID metrics
+
+The PayID reference implementation provides readily accessible [metrics](metrics).
