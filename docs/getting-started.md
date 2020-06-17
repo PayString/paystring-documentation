@@ -21,7 +21,7 @@ npm run devEnvUp
 
 ## Create a PayID
 
-Now we can create a PayID on our locally running PayID server. This will let us receive funds using our PayID, since other people would be able to query our PayID server for our account information.
+Now that you have a [PayID server running locally](#run-a-payid-server-locally), you can create a PayID and receive funds. Other people can query your account information from your PayID server.
 
 Let's create a PayID with an XRP Ledger Testnet account:
 
