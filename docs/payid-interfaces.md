@@ -8,7 +8,6 @@ See also: [PayID API Reference](https://api.payid.org).
 
 The PayID protocol includes the following interface definitions.
 
-
 ### PaymentInformation type
 
 ```ts
@@ -20,7 +19,6 @@ interface PaymentInformation {
   memo?: string
 }
 ```
-
 
 ### CryptoAddressDetails
 

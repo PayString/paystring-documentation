@@ -30,13 +30,12 @@ Accept: application/xrpl-testnet+json
 
 Some different header options are shown here, with example values.
 
-| Currency | Header                        | Address payload                                               |
-| :------- | :---------------------------- | :------------------------------------------------------------ |
-| BTC      | application/btc+json          | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                  |
+| Currency | Header                        | Address payload                                                   |
+| :------- | :---------------------------- | :---------------------------------------------------------------- |
+| BTC      | application/btc+json          | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                      |
 | XRP      | application/xrpl-mainnet+json | { address: "rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg", tag: "67298042"} |
-| ACH      | application/ach+json          | { account: '363023456079',routing: '011302838'}               |
-| All      | application/payid+json        | Variable depending on the contents of each address            |
-
+| ACH      | application/ach+json          | { account: '363023456079',routing: '011302838'}                   |
+| All      | application/payid+json        | Variable depending on the contents of each address                |
 
 ## Headers for GET requests for PayID Public API
 
@@ -71,9 +70,9 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Headers for ETH
 
-|        Accept header         |       Description       |
-| :--------------------------: | :---------------------: |
-| application/eth-mainnet+json | Returns mainnet address |
+|           Accept header           |       Description       |
+| :-------------------------------: | :---------------------: |
+|   application/eth-mainnet+json    | Returns mainnet address |
 | application/eth-testnet-name+json | Returns testnet address |
 
 Ethernet has a number of different testnets. Refer to <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP 155</a>.
