@@ -14,7 +14,7 @@ PayID is fully peer-to-peer with no central counterparty. Anyone can set up thei
 
 The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayID address that works across all platforms.
 
-Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 ## Web standards
 
@@ -42,7 +42,7 @@ PayID is an extensible and flexible open standard, and therefore can be used as 
 
 Verifiable PayID is a suite of security enhancements to the base PayID request and response that adds in a variety of digital signature fields for linking external digital identities, proving control of the payment rail address, and providing non-repudiable messaging. It can be used to enable trust-minimized and trust-free security regimes and has applications in both custodial and non-custodial settings.
 
-To learn more, please see the [Verifiable PayID RFC](https://github.com/xpring-eng/rfcs/blob/master/payid/dist/spec/verifiable-payid-protocol.txt).
+To learn more, please see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/payid/dist/spec/verifiable-payid-protocol.txt).
 
 ### Compliance and Travel Rule
 
