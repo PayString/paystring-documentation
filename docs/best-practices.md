@@ -10,6 +10,19 @@ The PayID protocol is flexible and supports a wide range of implementations. To 
 
 The Private PayID API does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
 
+## CORS (Cross-Origin Resource Sharing) Headers
+
+PayID servers should be easily accessible. To allow browser scripts to hit a PayID server, you should set the following CORS headers:
+
+```http
+Access-Control-Allow-Origin: '*'
+Access-Control-Allow-Methods: 'POST, GET, OPTIONS'
+Access-Control-Allow-Headers: 'PayID-Version'
+Access-Control-Expose-Headers: 'PayID-Version, PayID-Server-Version'
+```
+
+The PayID reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you will want to make sure these headers are set or passed through.
+
 ## Use TLS (Transport Layer Security) 1.3
 
 To ensure security, both the PayID client and the PayID server must use the latest TLS 1.3, as described in [RFC 8446](https://tools.ietf.org/html/rfc8446). TLS 1.3 is faster and safer than its predecessors, and offers these advantages:
