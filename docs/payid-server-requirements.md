@@ -6,7 +6,7 @@ sidebar_label: Server Requirements
 
 The reference PayID server is comprised of a simple Node.js HTTP server and a Postgres database.
 
-In production environments, you should set up a reverse proxy like nginx in front of the Node.js HTTP server
+In production environments, you should set up a reverse proxy like nginx in front of the Node.js HTTP server, as described at [NGINX Reverse Proxy + SSL setup](remote-deployment#nginx-reverse-proxy--ssl-setup).
 
 ## Production Requirements
 

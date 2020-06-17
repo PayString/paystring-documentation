@@ -49,7 +49,7 @@ If you want to verify whether CORS is correctly set up for your PayID server, yo
 
 ### Use TLS (Transport Layer Security)
 
-Your implementation of PayID must use TLS.
+Your implementation of PayID must use TLS. For an example of this implementation, see [NGINX Reverse Proxy + SSL setup](remote-deployment#nginx-reverse-proxy--ssl-setup).
 
 ## Best practices for PayID implementation
 

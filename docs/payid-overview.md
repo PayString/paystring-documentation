@@ -18,15 +18,15 @@ For using Xpring SDK with PayID, see [Xpring SDK repo](https://github.com/xpring
 
 ## PayID standards
 
-PayID has open standards, and invites commentary. You can open a Github issue to provide feedback.
-
-### PayID RFCs
-
-[Current PayID RFCs](https://github.com/payid-org/rfcs) describe the 'payid' URL Scheme, PayID Discovery, and the PayID protocol.
+PayID is an open standard. Commentary is welcome. You can open a Github issue to provide feedback.
 
 ### PayID protocol whitepaper
 
 Refer to the [PayID protocol whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf) for an extensive discussion of the underlying principles.
+
+### PayID RFCs
+
+[Current PayID RFCs](https://github.com/payid-org/rfcs) describe the 'payid' URL Scheme, PayID Discovery, and the PayID protocol.
 
 ## Implementations
 
