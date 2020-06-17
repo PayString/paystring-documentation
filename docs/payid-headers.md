@@ -16,7 +16,7 @@ The values accepted for XRP are:
 | ----------------------------- | -----------------------: |
 | application/xrpl-mainnet+json | Returns mainnet xAddress |
 | application/xrpl-testnet+json | Returns testnet xAddress |
-| application/xrpl-devnet+json  | Returns devnet xAddress |
+| application/xrpl-devnet+json  |  Returns devnet xAddress |
 
 PayID is a fundamentally neutral protocol. When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayID is therefore capable of returning a user's address information for any network in which that user participates.
 
@@ -49,11 +49,11 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Headers for XRP
 
-|         Accept header         |       Description        |
-| :---------------------------: | :----------------------: |
+|         Accept header         |                  Description                  |
+| :---------------------------: | :-------------------------------------------: |
 | application/xrpl-mainnet+json | Returns mainnet address (and tag if provided) |
-| application/xrpl-testnet+json | Returns testnet xAddress |
-| application/xrpl-devnet+json  | Returns devnet xAddress  |
+| application/xrpl-testnet+json |           Returns testnet xAddress            |
+| application/xrpl-devnet+json  |            Returns devnet xAddress            |
 
 ### Headers for ACH
 
