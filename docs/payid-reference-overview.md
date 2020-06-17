@@ -24,7 +24,7 @@ To clean up the associated Docker containers, run `npm run devDown`.
 
 ## PayID user setup
 
-You can use the PayID Private API to set up your users. You might already have an existing user database, and you will then provide each user with a corresponding PayID, as described in [Integrate Existing User Databases](Integrate Existing User Databases).
+You can use the PayID Private API to set up your users. You might already have an existing user database, and you will then provide each user with a corresponding PayID, as described in [Integrate Existing User Databases](integrate-payid-users).
 
 ## PayID transaction management
 
