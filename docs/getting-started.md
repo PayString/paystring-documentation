@@ -73,7 +73,9 @@ You should get back the following payload:
 }
 ```
 
-That's it! We've gone through the basics of running a PayID server locally, creating new PayIDs on our server, and requesting PayIDs using the PayID Protocol.
+That's it! You've set up a PayID server locally, created a new PayID on our server, and requested that PayIDs by using the PayID Protocol.
+
+Now that you've set up the basics, [learn more](#learn-more) about PayID and what you can do with it. 
 
 ## Learn More
 
