@@ -80,6 +80,11 @@ module.exports = {
           position: 'right',
         },
         {
+          href: `${getPayIDURL()}/contact`,
+          label: 'Contact Us',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/payid-org/payid',
           position: 'right',
           className: 'header-github-link',
