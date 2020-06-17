@@ -1,7 +1,7 @@
 ---
 id: api-reference
-title: PayID documentation on Postman
-sidebar_label: Postman API Reference
+title: API Reference
+sidebar_label: API Reference
 ---
 
 See the Postman [PayID API Reference](https://api.payid.org).

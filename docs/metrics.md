@@ -1,6 +1,6 @@
 ---
 id: metrics
-title: PayID Metrics
+title: Metrics
 sidebar_label: Metrics
 ---
 

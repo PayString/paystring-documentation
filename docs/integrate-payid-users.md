@@ -1,7 +1,7 @@
 ---
 id: integrate-payid-users
-title: Integrate Existing User Databases
-sidebar_label: Integrate Existing User Databases
+title: Integrate With Existing User Databases
+sidebar_label: Integrate With Existing User Databases
 ---
 
 If you have an existing user database, you can take the following steps to integrate PayID functionality into your product.
