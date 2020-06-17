@@ -135,3 +135,9 @@ Here are some other things you may also want to learn about:
 - How to contribute to PayID
 - [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes to the PayID Protocol
 - The [PayID Whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf), which gives much more background context around the problems that PayID solves
+
+## Working With PayID
+
+Xpring provides the ability to work with PayID from [Xpring SDK](https://github.com/xpring-eng/xpring-sdk) which provides libraries in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
+
+These libraries help you connect your application to PayID without having to worry about the specifics of PayID.
