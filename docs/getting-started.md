@@ -26,7 +26,7 @@ Ensure that you follow the [recommended best practices](payid-best-practices) fo
 To set up a PayID server to develop some other server against, such as the Xpring Wallet, run these commands.
 
 ```bash
-git clone git@github.com:xpring-eng/payid.git
+git clone git@github.com:payid-org/payid.git
 npm run devEnvUp
 ```
 

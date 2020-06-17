@@ -26,6 +26,8 @@ If you want to contribute to PayID, see [Contributing to PayID](https://github.c
 
 The PayID protocol has basic standards, principles, and requirements.
 
+Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+
 ## Web standards
 
 PayID uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayID server, as described in [Set up a PayID server](#set-up-a-payid-server).
@@ -64,7 +66,7 @@ PayID is an extensible and flexible open standard, and therefore can be used as 
 
 Verifiable PayID is a suite of security enhancements to the base PayID request and response that adds in a variety of digital signature fields for linking external digital identities, proving control of the payment rail address, and providing non-repudiable messaging. It can be used to enable trust-minimized and trust-free security regimes and has applications in both custodial and non-custodial settings.
 
-To learn more, see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/src/spec/verifiable-payid-protocol.md).
+To learn more, please see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/payid/dist/spec/verifiable-payid-protocol.txt).
 
 ### Compliance and Travel Rule
 
