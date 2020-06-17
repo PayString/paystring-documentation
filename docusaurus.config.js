@@ -110,7 +110,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/xpring-eng/payid-documentation/tree/master',
+            'https://github.com/payid-org/payid-documentation/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

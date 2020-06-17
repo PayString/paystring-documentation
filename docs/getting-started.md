@@ -4,46 +4,134 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-PayID provides both the PayID Private API and PayID Public API. You can deploy your own PayID server and then create PayIDs for your users using the PayID Private API. You can also query and modify this list of users. This API should be exposed internally only, so that only your company's systems can update PayID mappings.
+PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you though:
 
-Once you have set up a PayID server, anyone can use the PayID Public API to query address information. This API is publicly accessible so that anyone can send payments to, or receive payments at, your users' PayID addresses.
+- [Run a PayID Server Locally](#run-a-payid-server-locally)
+- [Create a PayID](#create-a-payid)
+- [Request a PayID](#request-a-payid)
+- [Learn More](#learn-more)
 
-For guidance on setting up a complete PayID workflow, see [PayID workflow](payid-workflow).
+## Run a PayID Server Locally
 
-## Set up a PayID server for development purposes
+To get started, the first thing you need to do is set up a PayID server. If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine. Then:
 
-To ease the deployment of a development environment, the PayID application includes scripts to quickly deploy a Postgres database and a PayID server.
+Download the reference implementation server by cloning the repository:
 
-The Postgres Docker image used in these scripts is version
-12-alpine. See [Postgres--Docker Official Images](https://hub.docker.com/_/postgres). Before you proceed, ensure you have Docker installed.
-
-If you want to run a PayID server without Docker, see [Local deployment of a PayID server without Docker](local-deployment). You can also set up your PayID server using [AWS and NGINX][remote-deployment].
-
-Ensure that you follow the [recommended best practices](payid-best-practices) for security.
-
-### Set up a PayID server to develop some other server against
-
-To set up a PayID server to develop some other server against, such as the Xpring Wallet, run these commands.
-
-```bash
+```
 git clone git@github.com:payid-org/payid.git
+```
+
+Boot up the PayID HTTP server and a Postgres database to develop against:
+
+```sh
 npm run devEnvUp
 ```
 
-### Set up a Postgres container without a PayID server
+## Create a PayID
 
-To work on the PayID server source code itself, you can create a Postgres container without a PayID server. Run:
+Now that you have a [PayID server running locally](#run-a-payid-server-locally), you can create a PayID and receive funds. If your server was publically accessible, other people could query your account information from your PayID server.
 
-```sh
-npm run devDbUp
+To create a PayID, with an [XRP Ledger Testnet account](https://xrpl.org/xrp-testnet-faucet.html), send this request to your server:
+
+```bash
+curl --location --request POST 'http://127.0.0.1:8081/users' \
+  --header 'PayID-API-Version: 2020-06-18' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+       "payId": "alice$127.0.0.1",
+       "addresses": [
+           {
+               "paymentNetwork": "XRPL",
+               "environment": "TESTNET",
+               "details": {
+                   "address": "rDk7FQvkQxQQNGTtfM2Fr66s7Nm3k87vdS",
+                   "tag": "123"
+               }
+           }
+       ]
+   }'
 ```
 
-The Postgres container listens on port 5432. You will need to start PayID separately, using `npm run start`.
+PayID supports various payment networks. To create a second user with a Bitcoin testnet account, send this request to your server:
 
-### Remove a development environment
-
-To remove the full development environment (Postgres and PayID), or only Postgres, run this command, which will remove the Postgres container, and cause you to lose all of your data in it.
-
-```sh
-npm run devAllDown
+```bash
+curl --location --request POST 'http://127.0.0.1:8081/users' \
+  --header 'PayID-API-Version: 2020-06-18' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+       "payId": "bob$127.0.0.1",
+       "addresses": [
+           {
+               "paymentNetwork": "BTC",
+               "environment": "TESTNET",
+               "details": {
+                   "address": "mxNEbRXokcdJtT6sbukr1CTGVx8Tkxk3DB"
+               }
+           }
+       ]
+   }'
 ```
+
+## Request a PayID
+
+After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is requesting the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
+
+To request the PayID you created for Alice:
+
+```bash
+curl --location --request GET 'http://127.0.0.1:8080/alice' \
+   --header 'PayID-Version: 1.0' \
+   --header 'Accept: application/xrpl-testnet+json'
+```
+
+The response should have the following payload:
+
+```json
+{
+  "payId": "alice$127.0.0.1",
+  "addresses": [
+    {
+      "paymentNetwork": "XRPL",
+      "environment": "TESTNET",
+      "addressDetailsType": "CryptoAddressDetails",
+      "addressDetails": {
+        "address": "rDk7FQvkQxQQNGTtfM2Fr66s7Nm3k87vdS",
+        "tag:": "123"
+      }
+    }
+  ]
+}
+```
+
+To request the PayID you created for Bob:
+
+```bash
+curl --location --request GET 'http://127.0.0.1:8080/bob' \
+   --header 'PayID-Version: 1.0' \
+   --header 'Accept: application/btc-testnet+json'
+```
+
+That's it! You've set up a PayID server locally, created new PayIDs on your server, and requested those PayIDs by using the PayID Protocol.
+
+If you want to clean up the Docker containers, you can run `npm run devDown`.
+
+Now that you've set up the basics, [learn more](#learn-more) about PayID and what you can do with it.
+
+## Learn More
+
+<!-- TODO:(hbergren) Make this section better once the docs skeleton has been refactored. -->
+<!-- Would be great to add links to other sections here. -->
+
+After setting up the basics, you have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take:
+
+- How to convert a `payid$domain` format to a URL
+- How to use relevant HTTP headers
+- How to handle different types of responses you could receive from a PayID server
+
+Here are some other things you may also want to learn about:
+
+- The PayID reference implementation server
+- Other features and extensions that PayID has to offer
+- How to contribute to PayID
+- [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes to the PayID Protocol
+- The [PayID Whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf), which gives much more background context around the problems that PayID solves
