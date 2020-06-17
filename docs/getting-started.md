@@ -46,7 +46,9 @@ curl --location --request POST 'http://127.0.0.1:8081/users' \
 
 ## Request a PayID
 
-Now that we have a PayID on our server, we can request it using the PayID Protocol, the same way that other wallets would ask for our address. This is how you would get account information for sending money using a PayID.
+After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is requesting the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
+
+To request the PayID you created for Alice:
 
 ```bash
 curl --location --request GET 'http://127.0.0.1:8080/alice' \
