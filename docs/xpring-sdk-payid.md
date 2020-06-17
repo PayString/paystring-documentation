@@ -4,13 +4,13 @@ title: Use Xpring SDK With PayID
 sidebar_label: Use Xpring SDK With PayID
 ---
 
-[Xpring SDK](https://www.xpring.io/docs) can be used to simplify the process of developing with PayID. Currently only the Node.js version is available, and Java and Swift will soon be available.
+[Xpring SDK](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayID. Currently Node.js, Java, and Swift versions are available.
 
 ## Demo
 
 This demo uses PayID to resolve an address on the specified payment network, which is XRP Ledger in this case.
 
-To execute this demo:
+To execute the Node.js version of this demo:
 
 1. Clone the [Xpring SDK repo](https://github.com/xpring-eng/Xpring-SDK-Demo/).
 2. Change to the `Xpring-SDK-Demo/node` directory.
@@ -29,6 +29,7 @@ You can send ETH to a PayID address, as shown in this demo using Xpring SDK. See
 
 You can send XRP to a PayID address, as shown in this demo using Xpring SDK. See [index-xpring.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-xpring.js)
 
+<!--
 ## Payment code example
 
 This example demonstrates a payment to `alice$institution.com`.
@@ -51,7 +52,7 @@ async function pay(payId, amount) {
 pay('alice$institution.com', 0.63)
 ```
 
-## Generate a seed-based wallet code example 
+## Generate a seed-based wallet code example
 
 In this example, you generate a seed-based wallet using the Xpring SDK. See [Xpring SDK docs](https://xpring.io/docs).
 
@@ -62,3 +63,5 @@ const { Wallet } = require('xpring-js')
 const wallet = Wallet.generateWalletFromSeed('snRiAJGe3zRwiYDBm1M')
 const tx = await wallet.send(0.63, 'alice$institution.com')
 ```
+
+-->

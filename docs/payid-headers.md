@@ -28,7 +28,7 @@ GET /{user} HTTP/1.1
 Accept: application/xrpl-testnet+json
 ```
 
-The different header options are shown here, with example values.
+Some different header options are shown here, with example values.
 
 | Currency | Header                        | Address payload                                               |
 | :------- | :---------------------------- | :------------------------------------------------------------ |
@@ -71,17 +71,9 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Headers for ETH
 
-<table>
-<tr>
-<th>Accept header</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>application/eth-mainnet+json</td>
-<td>Returns mainnet address</td>
-</tr>
-<tr>
-<td>application/eth-testnet-name+json</td>
-<td>Returns testnet-name address. Ethernet has a number of different testnets. Refer to <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP 155</a>.</td>
-</tr>
-</table>
+|        Accept header         |       Description       |
+| :--------------------------: | :---------------------: |
+| application/eth-mainnet+json | Returns mainnet address |
+| application/eth-testnet-name+json | Returns testnet address |
+
+Ethernet has a number of different testnets. Refer to <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP 155</a>.

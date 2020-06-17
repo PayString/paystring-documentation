@@ -43,15 +43,3 @@ A single user can have multiple destinations, because the same user can have add
 | `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.                                                                                 |
 | `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                   |
 | `address.details`          | Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `AchAddressDetails`. See [Interfaces](#interfaces). |
-
-### Example error schema
-
-This example shows the format of an error payload.
-
-```json
-{
-  "statusCode": 422,
-  "error": "Unprocessable Entity",
-  "message": "Your data is bad"
-}
-```
