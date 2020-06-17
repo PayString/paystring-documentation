@@ -16,6 +16,18 @@ The PayID protocol is designed to be simple, general, open, and universal. This 
 
 For using Xpring SDK with PayID, see [Xpring SDK repo](https://github.com/xpring-eng/xpring-sdk).
 
+## PayID standards
+
+PayID has open standards, and invites commentary. You can open a Github issue to provide feedback.
+
+### PayID RFCs
+
+[Current PayID RFCs](https://github.com/payid-org/rfcs) describe the 'payid' URL Scheme, PayID Discovery, and the PayID protocol.
+
+### PayID protocol whitepaper
+
+Refer to the [PayID protocol whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf) for an extensive discussion of the underlying principles.
+
 ## Implementations
 
 You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
@@ -28,7 +40,7 @@ The PayID protocol has basic standards, principles, and requirements.
 
 Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
-## Web standards
+### Web standards
 
 PayID uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayID server, as described in [Set up a PayID server](#set-up-a-payid-server).
 
@@ -45,18 +57,6 @@ PayID fully abstracts away underlying payment rail details from end users. A use
 ### Security requirements
 
 A PayID implementation requires the use of TLS (Transport Level Security). As described in [PayID Security and Best Practices](best-practices), the use of TLS 1.3 is highly recommended.
-
-## PayID standards
-
-PayID has open standards, and invites commentary.
-
-### PayID RFCs
-
-[Current PayID RFCs](https://github.com/payid-org/rfcs) describe the 'payid' URL Scheme, PayID Discovery, and the PayID protocol.
-
-### PayID protocol whitepaper
-
-Refer to the [PayID protocol whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf) for an extensive discussion of the underlying principles.
 
 ## Future features and integrations
 
