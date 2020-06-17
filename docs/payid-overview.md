@@ -76,8 +76,6 @@ The compliance extension to PayID provides an abstraction layer so that users ca
 
 By default, data exchange in the Travel Rule extension is accomplished via the [TRISA protocol](https://trisa.io/). TRISA is a complementary protocol built on common principles shared by PayID, including simplicity, security, a commitment to free and open source tech, use of proven technology, and an emphasis on interoperability and scalability.
 
-![Travel Rule](/img/docs/travel_rule.png)
-
 ### Other upcoming features and integrations
 
 Some features and integrations on the roadmap include:
