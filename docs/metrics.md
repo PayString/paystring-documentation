@@ -113,7 +113,7 @@ Install the following software on your machine, if not already present.
 Run these commands to build a Docker container for a PayID server.
 
 ```bash
-git clone git@github.com:xpring-eng/payid.git
+git clone git@github.com:payid-org/payid.git
 cd payid
 docker build -t payid-server .
 ```

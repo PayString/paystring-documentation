@@ -22,7 +22,7 @@ Ensure your system meets these requirements before you set up a PayID server.
 Before you begin, make sure that you have installed Postgres locally, or in an otherwise accessible location.
 
 1. Clone the PayID repo.
-   `git clone https://github.com/xpring-eng/payid.git && cd payid`
+   `git clone https://github.com/payid-org/payid.git && cd payid`
 2. Install dependencies.
 
    `npm i`
