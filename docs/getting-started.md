@@ -82,7 +82,11 @@ Now that you've set up the basics, [learn more](#learn-more) about PayID and wha
 <!-- TODO:(hbergren) Make this section better once the docs skeleton has been refactored. -->
 <!-- Would be great to add links to other sections here. -->
 
-Now that you know the basics, you have a good foundation for learning more about the PayID Protocol: How to convert a `payid$domain` format to a URL, the relevant HTTP headers, and the types of responses you could get back from a PayID server.
+After setting up the basics, you have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take: 
+
+- How to convert a `payid$domain` format to a URL
+- How to use relevant HTTP headers
+- How to handle different types of responses you could receive from a PayID server 
 
 You may also want to learn more about the PayID reference implementation server, the other capabilities it can offer you, and how to contribute to it.
 
