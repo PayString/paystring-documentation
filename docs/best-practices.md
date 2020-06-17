@@ -21,7 +21,7 @@ Access-Control-Allow-Headers: 'PayID-Version'
 Access-Control-Expose-Headers: 'PayID-Version, PayID-Server-Version'
 ```
 
-The PayID reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you will want to make sure these headers are set or passed through.
+The PayID reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure these headers are set or passed through.
 
 ## Use TLS (Transport Layer Security) 1.3
 
