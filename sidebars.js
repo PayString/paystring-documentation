@@ -13,11 +13,13 @@ module.exports = {
       'payid-reference-overview',
       'api-reference',
       'payid-best-practices',
+      'integrate-payid-users',
+      'metrics',
+    ],
+    "Deployment": [
       'payid-server-requirements',
       'remote-deployment',
       'local-deployment',
-      'integrate-payid-users',
-      'metrics',
     ],
     "PayID Tooling": [
       'xpring-sdk-payid',
