@@ -4,64 +4,12 @@ title: Use Xpring SDK With PayID
 sidebar_label: Use Xpring SDK With PayID
 ---
 
-[Xpring SDK](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayID. Currently Node.js, Java, and Swift versions are available.
+[Xpring SDK](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayID. Currently [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit)
 
-## Demo
+## Documentation
 
-This demo uses PayID to resolve an address on the specified payment network, which is XRP Ledger in this case.
+Xpring SDK provides classes and utilites to work with PayID. Head over to the PayID documentation for the [JavaScript](https://github.com/xpring-eng/Xpring-JS#usage-payid), [Java](https://github.com/xpring-eng/Xpring4j#usage-payid), or [Swift](https://github.com/xpring-eng/XpringKit#usage-payid) libraries to get started.
 
-To execute the Node.js version of this demo:
+## Demos
 
-1. Clone the [Xpring SDK repo](https://github.com/xpring-eng/Xpring-SDK-Demo/).
-2. Change to the `Xpring-SDK-Demo/node` directory.
-3. Run `npm i` to install the dependencies.
-4. Run `node src/index-payid.js` to execute the demo.
-
-View [index-payid.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-payid.js).
-
-See other demos at [Xpring-SDK-Demo](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/node/src).
-
-## Send ETH to a PayID address
-
-You can send ETH to a PayID address, as shown in this demo using Xpring SDK. See [index-send-eth-to-payid.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-send-eth-to-payid.js)
-
-## Send XRP to a PayID address
-
-You can send XRP to a PayID address, as shown in this demo using Xpring SDK. See [index-xpring.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-xpring.js)
-
-<!--
-## Payment code example
-
-This example demonstrates a payment to `alice$institution.com`.
-
-```javascript
-const axios = require('axios')
-const btc = require('bitcoinjs-lib')
-
-async function pay(payId, amount) {
-  const user = payId.split('$')[0]
-  const url = payId.split('$')[1]
-
-  const response = await axios.get({
-    method: 'GET',
-    baseURL: 'https://' + url + '/' + user
-    headers: { accept: 'application/btc+json' }
-  }
-  const tx = await new btc.Transaction(address, amount)
-}
-pay('alice$institution.com', 0.63)
-```
-
-## Generate a seed-based wallet code example
-
-In this example, you generate a seed-based wallet using the Xpring SDK. See [Xpring SDK docs](https://xpring.io/docs).
-
-```javascript
-// Xpring SDK
-const { Wallet } = require('xpring-js')
-
-const wallet = Wallet.generateWalletFromSeed('snRiAJGe3zRwiYDBm1M')
-const tx = await wallet.send(0.63, 'alice$institution.com')
-```
-
--->
+Xpring SDK provides a number of demos in their demo repo. You can browse PayID demos in [JavaScript](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/node), [Java](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/java), or [Swift](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/swift).

@@ -47,3 +47,9 @@ To remove the full development environment (Postgres and PayID), or only Postgre
 ```sh
 npm run devAllDown
 ```
+
+## Working With PayID
+
+Xpring provides the ability to work with PayID from [Xpring SDK](https://github.com/xpring-eng/xpring-sdk) which provides libraries in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
+
+These libraries help you connect your application to PayID without having to worry about the specifics of PayID.
