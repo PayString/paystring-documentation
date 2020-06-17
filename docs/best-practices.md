@@ -12,7 +12,9 @@ The [Private PayID API](https://api.payid.org/?version=latest#7a19329b-80eb-451f
 
 ## CORS (Cross-Origin Resource Sharing) Headers
 
-PayID servers should be easily accessible. To allow browser scripts to hit a PayID server, you should set the following CORS headers:
+PayID servers should be easily accessible. To allow browser scripts to hit a PayID server, you should set the following CORS headers.
+
+The PayID reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure these headers are set or passed through.
 
 ```http
 Access-Control-Allow-Origin: '*'
@@ -21,7 +23,25 @@ Access-Control-Allow-Headers: 'PayID-Version'
 Access-Control-Expose-Headers: 'PayID-Version, PayID-Server-Version'
 ```
 
-The PayID reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure these headers are set or passed through.
+If you want to verify whether CORS is correctly set up for your PayID server, you can modify the following HTML file to point to your PayID server, open it up in a web browser, and inspect the console.
+
+```html
+<html>
+  <script>
+    const headers = new Headers()
+    headers.append('Accept', 'application/xrpl-mainnet+json')
+    headers.append('PayID-Version', '1.0')
+
+    fetch(new Request('https://xpring.money/alice'), {
+      method: 'GET',
+      headers,
+      mode: 'cors',
+    })
+      .then((response) => response.json())
+      .then(console.log)
+  </script>
+</html>
+```
 
 ## Use TLS (Transport Layer Security) 1.3
 
