@@ -4,10 +4,7 @@ title: Deploy a PayID Server on AWS
 sidebar_label: Deploy a PayID Server on AWS
 ---
 
-You can set up a PayID server on AWS (Amazon Web Services). For other ways to deploy a PayID server, see:
-
-- [Run a demo script for a local deployment with Docker](getting-started)
-- [Deploy a PayID server without Docker](local-deployment)
+You can set up a PayID server on AWS (Amazon Web Services).
 
 1. Initialize a `t2.micro` instance on AWS running Ubuntu 18.04m with a minimum of 8 GB SSD. For the purposes of this demo, you can use AWS Free Tier.
    See [Getting Started with Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) for more information about setting up your instance.
@@ -36,7 +33,7 @@ You can set up a PayID server on AWS (Amazon Web Services). For other ways to de
    sudo apt install docker.io
    ```
 9. Clone the payid Github repository.
-   `git clone git@github.com:xpring-eng/payid.git`
+   `git clone git@github.com:payid-org/payid.git`
 10. Set the docker port to 80 by modifying the demo script.
     - Open the script editor: `nano payid/demo/run_payid_demo.sh`
     - Change the line:
