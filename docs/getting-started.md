@@ -140,6 +140,6 @@ Here are some other things you may also want to learn about:
 
 PayID is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
 
-Xpring SDK provides the ability to work with PayID from which provides libraries in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
+Xpring SDK provides the ability to work with PayID, using libraries provided in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
 
 These libraries help you connect your application to PayID without having to worry about the specifics of PayID.
