@@ -50,8 +50,9 @@ const getSentryDSN = () => {
 }
 
 module.exports = {
-  title: 'PayID',
-  tagline: 'Deploy and use PayID',
+  title: 'Developer Documentation and Reference Guides | PayID',
+  tagline:
+    "Learn how to implement and deploy PayID on your payment network with our documentation library. You'll find API reference, standards and technical white papers.",
   url: getDocsURL(),
   baseUrl: '/',
   favicon: 'img/favicon.ico',
