@@ -10,6 +10,7 @@ PayID is a simple, web-based protocol designed to make it as easy to send someon
 - [Create a PayID](#create-a-payid)
 - [Request a PayID](#request-a-payid)
 - [Learn More](#learn-more)
+- [Xpring SDK Integration](#xpring-sdk-integration)
 
 ## Run a PayID Server Locally
 
@@ -136,7 +137,7 @@ Here are some other things you may also want to learn about:
 - [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes to the PayID Protocol
 - The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which gives much more background context around the problems that PayID solves
 
-### Xpring SDK Integration
+## Xpring SDK Integration
 
 PayID is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
 
