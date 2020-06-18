@@ -137,6 +137,5 @@ module.exports = {
         environment: process.env.RELEASE_ENV,
       },
     ],
-    [require.resolve(path.resolve(__dirname, './src/plugins/fonts.js'))],
   ],
 }
