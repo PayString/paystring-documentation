@@ -35,8 +35,8 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Header for all addresses
 
-|      Accept header       |                          Description                           |
-| :----------------------: | :------------------------------------------------------------: |
+|      Accept header       |            Description            |
+| :----------------------: | :-------------------------------: |
 | `application/payid+json` | Returns all addresses for a PayID |
 
 ### Headers for XRP
