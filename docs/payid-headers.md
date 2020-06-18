@@ -41,30 +41,30 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Headers for XRP
 
-|         Accept header         |                              Description                               |
-| :---------------------------: | :--------------------------------------------------------------------: |
-| application/xrpl-mainnet+json | Returns XRPL mainnet xAddress or classic address (and tag if provided) |
-| application/xrpl-testnet+json |            Returns XRPL testnet xAddress or classic address            |
-| application/xrpl-devnet+json  |            Returns XRPL devnet xAddress or classic address             |
+|          Accept header          |                              Description                               |
+| :-----------------------------: | :--------------------------------------------------------------------: |
+| `application/xrpl-mainnet+json` | Returns XRPL mainnet xAddress or classic address (and tag if provided) |
+| `application/xrpl-testnet+json` |            Returns XRPL testnet xAddress or classic address            |
+| `application/xrpl-devnet+json`  |            Returns XRPL devnet xAddress or classic address             |
 
 ### Headers for ACH
 
-|    Accept header     |            Description             |
-| :------------------: | :--------------------------------: |
-| application/ach+json | Returns account and routing number |
+|     Accept header      |            Description             |
+| :--------------------: | :--------------------------------: |
+| `application/ach+json` | Returns account and routing number |
 
 ### Headers for BTC
 
-|        Accept header         |       Description       |
-| :--------------------------: | :---------------------: |
-| application/btc-mainnet+json | Returns mainnet address |
-| application/btc-testnet+json | Returns testnet address |
+|         Accept header          |       Description       |
+| :----------------------------: | :---------------------: |
+| `application/btc-mainnet+json` | Returns mainnet address |
+| `application/btc-testnet+json` | Returns testnet address |
 
 ### Headers for ETH
 
-|           Accept header           |       Description       |
-| :-------------------------------: | :---------------------: |
-|   application/eth-mainnet+json    | Returns mainnet address |
-| application/eth-testnet-name+json | Returns testnet address |
+|            Accept header            |       Description       |
+| :---------------------------------: | :---------------------: |
+|   `application/eth-mainnet+json`    | Returns mainnet address |
+| `application/eth-testnet-name+json` | Returns testnet address |
 
 Ethernet has a number of different testnets. Refer to <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP 155</a>.
