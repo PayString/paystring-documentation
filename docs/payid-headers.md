@@ -22,8 +22,8 @@ Accept: application/xrpl-testnet+json
 
 Some different header options are shown here, with example values.
 
-| Currency | Header                        | Address payload                                                   |
-| :------- | :---------------------------- | :---------------------------------------------------------------- |
+| Currency | Header                          | Address payload                                                   |
+| :------- | :------------------------------ | :---------------------------------------------------------------- |
 | BTC      | `application/btc+mainnet+json`  | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                      |
 | XRP      | `application/xrpl-mainnet+json` | { address: "rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg", tag: "67298042"} |
 | ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
@@ -35,8 +35,8 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Header for all addresses
 
-|     Accept header      |                          Description                           |
-| :--------------------: | :------------------------------------------------------------: |
+|      Accept header       |                          Description                           |
+| :----------------------: | :------------------------------------------------------------: |
 | `application/payid+json` | May return addresses for all payment-networks and environments |
 
 ### Headers for XRP
