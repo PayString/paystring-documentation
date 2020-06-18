@@ -59,6 +59,7 @@ module.exports = {
   organizationName: 'payid-org', // Usually your GitHub org/user name.
   projectName: 'payid', // Usually your repo name.
   themeConfig: {
+    image: 'img/payid.png',
     navbar: {
       hideOnScroll: true,
       logo: {
