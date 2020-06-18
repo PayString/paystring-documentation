@@ -113,8 +113,8 @@ module.exports = {
           routeBasePath: '/',
           homePageId: 'getting-started',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/payid-org/payid-documentation/tree/master',
+          // editUrl:
+          //   'https://github.com/payid-org/payid-documentation/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
