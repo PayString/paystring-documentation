@@ -35,9 +35,8 @@ module.exports = {
       ],
     },
     {
-      type: 'category',
-      label: 'PayID Tooling',
-      items: ['xpring-sdk-payid'],
+      type: 'doc',
+      id: 'xpring-sdk-payid',
     },
   ],
 }

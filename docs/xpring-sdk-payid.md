@@ -1,10 +1,12 @@
 ---
 id: xpring-sdk-payid
 title: Use Xpring SDK With PayID
-sidebar_label: Use Xpring SDK With PayID
+sidebar_label: Xpring SDK Integration
 ---
 
-[Xpring SDK](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayID. Currently [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit)
+[Xpring SDK](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayID.
+
+Xpring SDK provides libraries in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
 
 ## Documentation
 
