@@ -1,30 +1,17 @@
 ---
 id: xpring-sdk-payid
 title: Use Xpring SDK With PayID
-sidebar_label: Use Xpring SDK With PayID
+sidebar_label: Xpring SDK Integration
 ---
 
-[Xpring SDK](https://www.xpring.io/docs) can be used to simplify the process of developing with PayID. Currently only the Node.js version is available, and Java and Swift will soon be available.
+[Xpring SDK](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayID.
 
-### Demo
+Xpring SDK provides libraries in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
 
-This demo uses PayID to resolve an address on the specified payment network, which is XRP Ledger in this case.
+## Documentation
 
-To execute this demo:
+Xpring SDK provides classes and utilites to work with PayID. Head over to the PayID documentation for the [JavaScript](https://github.com/xpring-eng/Xpring-JS#usage-payid), [Java](https://github.com/xpring-eng/Xpring4j#usage-payid), or [Swift](https://github.com/xpring-eng/XpringKit#usage-payid) libraries to get started.
 
-1. Clone the [Xpring SDK repo](https://github.com/xpring-eng/Xpring-SDK-Demo/).
-2. Change to the `Xpring-SDK-Demo/node` directory.
-3. Run `npm i` to install the dependencies.
-4. Run `node src/index-payid.js` to execute the demo.
+## Demos
 
-View [index-payid.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-payid.js).
-
-See other demos at [Xpring-SDK-Demo](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/node/src).
-
-## Send ETH to a PayID address
-
-You can send ETH to a PayID address, as shown in this demo using Xpring SDK. See [index-send-eth-to-payid.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-send-eth-to-payid.js)
-
-## Send XRP to a PayID address
-
-You can send XRP to a PayID address, as shown in this demo using Xpring SDK. See [index-xpring.js](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/src/index-xpring.js)
+Xpring SDK provides a number of demos in their demo repo. You can browse PayID demos in [JavaScript](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/node), [Java](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/java), or [Swift](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/swift).

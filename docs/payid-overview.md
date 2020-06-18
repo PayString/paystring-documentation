@@ -1,7 +1,7 @@
 ---
 id: payid-overview
-title: What is PayID?
-sidebar_label: PayID Protocol Overview
+title: Overview
+sidebar_label: Overview
 ---
 
 With PayID, you can use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$wallet.com` maps to the corresponding URL `https://wallet.com/alice`.
@@ -14,17 +14,45 @@ PayID is fully peer-to-peer with no central counterparty. Anyone can set up thei
 
 The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayID address that works across all platforms.
 
+For using Xpring SDK with PayID, see [Xpring SDK repo](https://github.com/xpring-eng/xpring-sdk).
+
+## PayID standards
+
+PayID is an open standard. Commentary is welcome. You can open a Github issue to provide feedback.
+
+### PayID protocol whitepaper
+
+Refer to the [PayID protocol whitepaper](https://payid.org/whitepaper.pdf) for an extensive discussion of the underlying principles.
+
+### PayID RFCs
+
+[Current PayID RFCs](https://github.com/payid-org/rfcs) describe the 'payid' URL Scheme, PayID Discovery, and the PayID protocol.
+
+## Implementations
+
+You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+
+If you want to contribute to PayID, see [Contributing to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md).
+
+## Xpring SDK Integration
+
+PayID is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
+
+Xpring SDK provides the ability to work with PayID, using libraries provided in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
+
+These libraries help you connect your application to PayID without having to worry about the specifics of PayID.
+
+## Building blocks
+
+The PayID protocol has basic standards, principles, and requirements.
+
 Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
-## Web standards
+### Web standards
 
 PayID uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayID server, as described in [Set up a PayID server](#set-up-a-payid-server).
 
 PayID does not rely on any consensus protocols, which simplifies infrastructure demands.
-
-## RFCs
-
-View RFCs related to PayID at [Draft RFCs](https://github.com/payid-org/rfcs).
 
 ### Decentralized and trust-minimized
 
@@ -34,9 +62,13 @@ PayID is built on the most successful decentralized network in history: the web.
 
 PayID fully abstracts away underlying payment rail details from end users. A user only needs to keep track of a single PayID rather than a complex address for each network. Service operators can manage the underlying addresses behind the scenes according to their own security and privacy best practices without requiring the end user to take any action.
 
-## Extensions, future features and integrations
+### Security requirements
 
-PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions.
+A PayID implementation requires the use of TLS (Transport Level Security). As described in [PayID Security and Best Practices](best-practices), the use of TLS 1.3 is highly recommended.
+
+## Future features and integrations
+
+PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions. In upcoming releases, Xpring intends to extend PayID capabilities as described here.
 
 ### Verifiable PayID
 
@@ -54,11 +86,9 @@ The compliance extension to PayID provides an abstraction layer so that users ca
 
 By default, data exchange in the Travel Rule extension is accomplished via the [TRISA protocol](https://trisa.io/). TRISA is a complementary protocol built on common principles shared by PayID, including simplicity, security, a commitment to free and open source tech, use of proven technology, and an emphasis on interoperability and scalability.
 
-![Travel Rule](/img/docs/travel_rule.png)
+### Other upcoming features and integrations
 
-### Upcoming features and integrations
-
-Features and integrations on the roadmap include:
+Some features and integrations on the roadmap include:
 
 - Additional payment rail standards
 - Payment request ([W3C Standard](https://www.w3.org/TR/payment-request/)) integration

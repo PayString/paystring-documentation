@@ -1,7 +1,7 @@
 ---
 id: integrate-payid-users
-title: Integrate Existing User Databases
-sidebar_label: Integrate Existing User Databases
+title: Integrate With Existing User Databases
+sidebar_label: Integrate With Existing User Databases
 ---
 
 If you have an existing user database, you can take the following steps to integrate PayID functionality into your product.
@@ -14,7 +14,7 @@ The account table contains two fields: `id` and `pay_id`. The address table uses
 
 With an existing user database, you will need to add the `pay_id` column. Your user database might already have the equivalent of an `id` field, but if not, add this column so that each address can reference a specific user.
 
-The PayID account schema has three constraints that could be useful to apply to your existing user database. Two constraints guarantee that all entered PayIDs are lowercase and are not empty strings. The final and most important constraint is that the regex constraint `valid_pay_id` guarantees that all entered PayIDs are in compliance with the format outlined in the [PayID whitepaper](https://github.com/payid-org/payid/blob/master/docs/whitepaper_v2.0.0.pdf).
+The PayID account schema has three constraints that could be useful to apply to your existing user database. Two constraints guarantee that all entered PayIDs are lowercase and are not empty strings. The final and most important constraint is that the regex constraint `valid_pay_id` guarantees that all entered PayIDs are in compliance with the format outlined in the [PayID whitepaper](https://payid.org/whitepaper.pdf).
 
 The PayID [address schema](https://github.com/payid-org/payid/blob/master/src/db/schema/02_address.sql) is used to define a table of addresses associated with users.
 

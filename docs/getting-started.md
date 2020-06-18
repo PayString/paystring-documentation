@@ -1,7 +1,7 @@
 ---
 id: getting-started
-title: Getting Started With PayID
-sidebar_label: Getting Started With PayID
+title: Getting Started
+sidebar_label: Getting Started
 ---
 
 PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you though:
@@ -10,6 +10,7 @@ PayID is a simple, web-based protocol designed to make it as easy to send someon
 - [Create a PayID](#create-a-payid)
 - [Request a PayID](#request-a-payid)
 - [Learn More](#learn-more)
+- [Xpring SDK Integration](#xpring-sdk-integration)
 
 ## Run a PayID Server Locally
 
@@ -134,4 +135,12 @@ Here are some other things you may also want to learn about:
 - Other features and extensions that PayID has to offer
 - How to contribute to PayID
 - [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes to the PayID Protocol
-- The [PayID Whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf), which gives much more background context around the problems that PayID solves
+- The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which gives much more background context around the problems that PayID solves
+
+## Xpring SDK Integration
+
+PayID is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
+
+Xpring SDK provides the ability to work with PayID, using libraries provided in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
+
+These libraries help you connect your application to PayID without having to worry about the specifics of PayID.
