@@ -61,7 +61,8 @@ module.exports = {
     navbar: {
       hideOnScroll: true,
       logo: {
-        alt: 'PayID icon',
+        alt:
+          'PayID: Unifying payments through a universal payment identifier to simplify sending and receiving payments',
         src: 'img/icon.svg',
         srcDark: 'img/icon-dark.svg',
         href: getPayIDURL(),
@@ -69,7 +70,7 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/payid-overview',
+          to: 'docs/getting-started',
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'right',
@@ -108,6 +109,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          homePageId: 'getting-started',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/payid-org/payid-documentation/tree/master',

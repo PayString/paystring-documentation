@@ -1,28 +1,24 @@
 module.exports = {
-  someSidebar: {
-    "Getting Started": [
-      'getting-started',
-    ],
-    "PayID Protocol": [
+  sidebar: {
+    'Getting Started': ['getting-started'],
+    'PayID Protocol': [
       'payid-overview',
       'payid-headers',
       'payid-interfaces',
       'payid-schemas',
     ],
-    "PayID Reference Implementation": [
+    'PayID Reference Implementation': [
       'payid-reference-overview',
       'api-reference',
       'payid-best-practices',
       'integrate-payid-users',
       'metrics',
     ],
-    "Deployment": [
+    Deployment: [
       'payid-server-requirements',
       'remote-deployment',
       'local-deployment',
     ],
-    "PayID Tooling": [
-      'xpring-sdk-payid',
-    ],
+    'PayID Tooling': ['xpring-sdk-payid'],
   },
 }

@@ -4,7 +4,7 @@ import { Redirect } from '@docusaurus/router'
 import React from 'react'
 
 const Home: React.FC = () => {
-  return <Redirect to="/docs/payid-overview" />
+  return <Redirect to="/docs" />
 }
 
 export default Home
