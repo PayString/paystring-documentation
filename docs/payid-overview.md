@@ -22,7 +22,7 @@ PayID is an open standard. Commentary is welcome. You can open a Github issue to
 
 ### PayID protocol whitepaper
 
-Refer to the [PayID protocol whitepaper](https://github.com/payid-org/payid/blob/master/docs/payid_whitepaper.pdf) for an extensive discussion of the underlying principles.
+Refer to the [PayID protocol whitepaper](https://payid.org/whitepaper.pdf) for an extensive discussion of the underlying principles.
 
 ### PayID RFCs
 
