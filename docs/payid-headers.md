@@ -43,17 +43,17 @@ This launch of PayID includes those headers specific to the Xpring ecosystem. Ea
 
 ### Header for all addresses
 
-|     Accept header      |            Description            |
-| :--------------------: | :-------------------------------: |
-| application/payid+json | Returns all addresses for a PayID |
+|     Accept header      |                          Description                           |
+| :--------------------: | :------------------------------------------------------------: |
+| application/payid+json | May return addresses for all payment-networks and environments |
 
 ### Headers for XRP
 
-|         Accept header         |                  Description                  |
-| :---------------------------: | :-------------------------------------------: |
-| application/xrpl-mainnet+json | Returns mainnet address (and tag if provided) |
-| application/xrpl-testnet+json |           Returns testnet xAddress            |
-| application/xrpl-devnet+json  |            Returns devnet xAddress            |
+|         Accept header         |                              Description                               |
+| :---------------------------: | :--------------------------------------------------------------------: |
+| application/xrpl-mainnet+json | Returns XRPL mainnet xAddress or classic address (and tag if provided) |
+| application/xrpl-testnet+json |            Returns XRPL testnet xAddress or classic address            |
+| application/xrpl-devnet+json  |            Returns XRPL devnet xAddress or classic address             |
 
 ### Headers for ACH
 
