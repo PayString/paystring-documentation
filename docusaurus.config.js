@@ -72,8 +72,8 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/getting-started',
-          activeBasePath: 'docs',
+          to: '/getting-started',
+          activeBasePath: '/',
           label: 'Documentation',
           position: 'right',
         },
