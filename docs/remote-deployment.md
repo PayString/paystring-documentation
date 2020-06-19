@@ -32,19 +32,14 @@ You can set up a PayID server on AWS (Amazon Web Services).
    sudo apt-get update
    sudo apt install docker.io
    ```
-9. Clone the payid Github repository.
-   `git clone git@github.com:payid-org/payid.git`
-10. Set the docker port to 80 by modifying the demo script.
-    - Open the script editor: `nano payid/demo/run_payid_demo.sh`
-    - Change the line:
-      `docker run --name payid -d -p 8080:8080 -p 8081:8081 payid_demo:latest`
-      to
-      `docker run --name payid -d -p 80:8080 -p 8081:8081 payid_demo:latest`
-11. Run the demo script:
-    `sudo payid/demo/run_payid_demo.sh`
-    You should see a success message like this one (note the port will be different due to changing it in step 10).
-    "PayID is now available on 127.0.0.1:8080 and 127.0.0.1:8081".
-    Stop the demo at any time by running 'docker stop -t 1 payid'.
+9. Clone the payid Github repository: `git clone git@github.com:payid-org/payid.git`
+10. Set the docker port to 80 by modifying the `docker-compose.yml`:
+    - Open the script editor: `nano payid/docker-compose.yml`
+    - Go to the `ports` property, and change: `8080:8080` to `80:8080`
+11. Run this script to start PayID with a Postgres database: `npm run devEnvUp`
+
+    - To bring this down, run `npm run devDown`
+
 12. Check your IP address and the website in your browser to confirm the server is running. You should see an error message like:
     `{"statusCode":400,"error":"Bad Request","message":"Invalid Accept header. Must be of the form \"application/xrpl-{environment}+json\""}`
 13. Load up your desired PayID to the database using the [private PayID API](readme.md). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
