@@ -4,7 +4,7 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you though:
+PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through:
 
 - [Run a PayID Server Locally](#run-a-payid-server-locally)
 - [Create a PayID](#create-a-payid)
