@@ -12,11 +12,18 @@ The PayID protocol includes the following interface definitions.
 
 ```ts
 interface PaymentInformation {
-  addressDetailsType: AddressDetailsType
-  addressDetails: CryptoAddressDetails | AchAddressDetails
+  addresses: Address[]
   proofOfControlSignature?: string
   payId?: string
   memo?: string
+}
+```
+
+### AddressDetailsType
+```ts
+enum AddressDetailsType {
+  CryptoAddress = 'CryptoAddressDetails'
+  AchAddress = 'AchAddressDetails
 }
 ```
 
@@ -35,5 +42,15 @@ interface CryptoAddressDetails {
 interface AchAddressDetails {
   accountNumber: string
   routingNumber: string
+}
+```
+
+### Address
+```ts
+interface Address {
+  paymentNetwork: string
+  environment?: string
+  addressDetailsType: AddressDetailsType
+  addressDetails: CryptoAddressDetails | AchAddressDetails
 }
 ```
