@@ -1,7 +1,7 @@
 const path = require('path')
 require('dotenv/config')
 
-const getPayIDURL = () => {
+function getPayIDURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
       return 'https://dev.payid.org'
@@ -14,7 +14,7 @@ const getPayIDURL = () => {
   }
 }
 
-const getDocsURL = () => {
+function getDocsURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
       return 'https://dev.docs.payid.org'
@@ -27,7 +27,7 @@ const getDocsURL = () => {
   }
 }
 
-const getHeapAppID = () => {
+function getHeapAppID() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
       return '3411953951'
@@ -38,7 +38,7 @@ const getHeapAppID = () => {
   }
 }
 
-const getSentryDSN = () => {
+function getSentryDSN() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
       return 'https://c15f0f6a453c444597c6a637a15273ab@o262339.ingest.sentry.io/5277565'
@@ -72,7 +72,7 @@ module.exports = {
       },
       links: [
         {
-          to: '/getting-started',
+          to: '/',
           activeBasePath: '/',
           label: 'Documentation',
           position: 'right',
