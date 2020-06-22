@@ -20,6 +20,7 @@ interface PaymentInformation {
 ```
 
 ### AddressDetailsType
+
 ```ts
 enum AddressDetailsType {
   CryptoAddress = 'CryptoAddressDetails'
@@ -46,6 +47,7 @@ interface AchAddressDetails {
 ```
 
 ### Address
+
 ```ts
 interface Address {
   paymentNetwork: string
