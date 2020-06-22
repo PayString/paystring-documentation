@@ -1,7 +1,7 @@
 const path = require('path')
 require('dotenv/config')
 
-const getPayIDURL = () => {
+function getPayIDURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
       return 'https://dev.payid.org'
@@ -14,7 +14,7 @@ const getPayIDURL = () => {
   }
 }
 
-const getDocsURL = () => {
+function getDocsURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
       return 'https://dev.docs.payid.org'
@@ -27,7 +27,7 @@ const getDocsURL = () => {
   }
 }
 
-const getHeapAppID = () => {
+function getHeapAppID() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
       return '3411953951'
@@ -38,7 +38,7 @@ const getHeapAppID = () => {
   }
 }
 
-const getSentryDSN = () => {
+function getSentryDSN() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
       return 'https://c15f0f6a453c444597c6a637a15273ab@o262339.ingest.sentry.io/5277565'
@@ -50,18 +50,21 @@ const getSentryDSN = () => {
 }
 
 module.exports = {
-  title: 'PayID',
-  tagline: 'Deploy and use PayID',
+  title: 'PayID Developer Documentation and Reference Guides',
+  tagline:
+    "Learn how to implement and deploy PayID on your payment network with our documentation library. You'll find API reference, standards and technical white papers.",
   url: getDocsURL(),
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'payid-org', // Usually your GitHub org/user name.
   projectName: 'payid', // Usually your repo name.
   themeConfig: {
+    image: 'img/payid.png',
     navbar: {
       hideOnScroll: true,
       logo: {
-        alt: 'PayID icon',
+        alt:
+          'PayID: Unifying payments through a universal payment identifier to simplify sending and receiving payments',
         src: 'img/icon.svg',
         srcDark: 'img/icon-dark.svg',
         href: getPayIDURL(),
@@ -69,8 +72,8 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/payid-overview',
-          activeBasePath: 'docs',
+          to: '/',
+          activeBasePath: '/',
           label: 'Documentation',
           position: 'right',
         },
@@ -108,9 +111,11 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
+          homePageId: 'getting-started',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/payid-org/payid-documentation/tree/master',
+          // editUrl:
+          //   'https://github.com/payid-org/payid-documentation/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -132,6 +137,5 @@ module.exports = {
         environment: process.env.RELEASE_ENV,
       },
     ],
-    [require.resolve(path.resolve(__dirname, './src/plugins/fonts.js'))],
   ],
 }
