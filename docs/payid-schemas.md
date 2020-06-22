@@ -6,7 +6,7 @@ sidebar_label: Schemas
 
 See also: [PayID API Reference](https://api.payid.org).
 
-The PayID protocol includes the following interface definitions.
+The PayID protocol includes the following schema definitions.
 
 These schemas are used for request or response payloads for various requests.
 
