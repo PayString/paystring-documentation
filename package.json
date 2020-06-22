@@ -24,8 +24,8 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.56",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.56",
+    "@docusaurus/core": "^2.0.0-alpha.58",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.58",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "react": "^16.8.4",
