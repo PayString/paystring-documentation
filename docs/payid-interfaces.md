@@ -23,7 +23,7 @@ interface PaymentInformation {
 ```ts
 enum AddressDetailsType {
   CryptoAddress = 'CryptoAddressDetails'
-  AchAddress = 'AchAddressDetails
+  AchAddress = 'AchAddressDetails'
 }
 ```
 
