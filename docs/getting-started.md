@@ -6,23 +6,25 @@ sidebar_label: Getting Started
 
 PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through:
 
-- [Run a PayID Server Locally](#run-a-payid-server-locally)
+- [Run a PayID Server](#run-a-payid-server)
 - [Create a PayID](#create-a-payid)
 - [Request a PayID](#request-a-payid)
 - [Learn More](#learn-more)
 - [Xpring SDK Integration](#xpring-sdk-integration)
 
-## Run a PayID Server Locally
+## Run a PayID Server
 
-To get started, the first thing you need to do is set up a PayID server. If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine. Then:
+To get started, the first thing to do is set up a PayID server.
 
-Download the reference implementation server by cloning the repository:
+1. If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine.
+
+2. Download the reference implementation server by cloning the repository:
 
 ```
 git clone git@github.com:payid-org/payid.git
 ```
 
-Boot up the PayID HTTP server and a Postgres database to develop against:
+3. Boot up the PayID HTTP server and a Postgres database to develop against:
 
 ```sh
 npm run devEnvUp
