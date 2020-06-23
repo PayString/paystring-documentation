@@ -16,7 +16,7 @@ PUSH_GATEWAY_URL=https://push00.mon.payid.tech
 PAYID_ORG=<your organization name>
 ```
 
-You can also analyze your own PayID metrics by running your own [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) servers. The following sections describe what metrics are collected and how to collect metrics on your own servers.
+Alternatively, you can directly configure them within `src/config.ts`. You can also analyze your own PayID metrics by running your own [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) servers. The following sections describe what metrics are collected and how to collect metrics on your own servers.
 
 ## Available metrics
 
