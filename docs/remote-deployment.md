@@ -30,7 +30,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 8. Install docker on your instance.
    ```bash
    sudo apt-get update
-   sudo apt install docker.io
+   sudo apt install docker.io docker-compose
    ```
 9. Clone the payid Github repository: `git clone git@github.com:payid-org/payid.git`
 10. Set the docker port to 80 by modifying the `docker-compose.yml`:
@@ -40,8 +40,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 
     - To bring this down, run `npm run devDown`
 
-12. Check your IP address and the website in your browser to confirm the server is running. You should see an error message like:
-    `{"statusCode":400,"error":"Bad Request","message":"Invalid Accept header. Must be of the form \"application/xrpl-{environment}+json\""}`
+12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this].(https://xpring.money/).
 13. Load up your desired PayID to the database using the [private PayID API](readme.md). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayIDs for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayID.
     ```bash
@@ -49,20 +48,20 @@ You can set up a PayID server on AWS (Amazon Web Services).
     --header 'PayID-API-Version: 2020-06-16' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-     "pay_id": "$<your-pay-id-address>",
+     "payId": "<user$domain.com>",
      "addresses": [{
-       "payment_network": "XRPL",
+       "paymentNetwork": "XRPL",
        "environment": "MAINNET",
        "details": {
-         "address": "<your-address"
+         "address": "<your-address>"
        }
      }]
     }'
     ```
 14. From your local computer, run a cURL command to fetch your PayID. For example:
 
-```bash
-curl --location --request GET 'http://pay.michael.zochow.ski/.well-known/pay' --header 'Accept: application/xrpl-mainnet+json'
+```
+curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayID-version: 1.0'
 ```
 
 For other PayID API methods, see the [readme](readme.md).
@@ -74,7 +73,7 @@ To convert a PayID address to a URL endpoint, follow these patterns:
 
 **Note:** Public APIs hit port 80 and private APIs hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
 
-For additional network formats, see the [readme](readme.md).
+For additional network formats, see the [API Reference]( https://api.payid.org/?version=latest).
 
 Next, set up NGINX Reverse Proxy + SSL.
 
@@ -113,7 +112,15 @@ Next, set up NGINX Reverse Proxy + SSL.
    ```nginx
    location / {
       proxy_set_header Host $http_host;
+      # needed for CORS
+      add_header Access-Control-Allow-Origin *;
+      add_header Access-Control-Allow-Headers *;
 
+      # proxy passing needed for all supported networks
+      # modify port to the one used by your PayID server
+      if ($http_accept ~ "application/payid*") {
+            proxy_pass http://127.0.0.1:8080;
+      }
       if ($http_accept ~ "application/xrpl-*") {
             proxy_pass http://127.0.0.1:8080;
       }
