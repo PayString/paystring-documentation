@@ -31,7 +31,7 @@ Some different header options are shown here, with example values.
 
 ## Headers for GET requests for PayID Public API
 
-This launch of PayID includes those headers specific to the Xpring ecosystem. Each payment network is free to establish its own standard headers. These headers should be submitted with every GET request, but not POST.
+This launch of PayID includes those headers specific to the XRPL community. Each payment network is free to establish its own standard headers. These headers should be submitted with every GET request, but not POST.
 
 ### Header for all addresses
 
