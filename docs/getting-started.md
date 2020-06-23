@@ -127,17 +127,15 @@ Now that you've set up the basics, [learn more](#learn-more) about PayID and wha
 
 After setting up the basics, you have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take:
 
-- How to convert a `payid$domain` format to a URL
-- How to use relevant HTTP headers
-- How to handle different types of responses you could receive from a PayID server
+- [How to convert](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/README.md#payid) a `payid$domain` format to a URL
+- How to use relevant [HTTP headers](payid-headers)
+- How to handle different types of [responses](api-reference) you could receive from a PayID server
 
-Here are some other things you may also want to learn about:
+Learn about:
 
-- The PayID reference implementation server
-- Other features and extensions that PayID has to offer
-- How to contribute to PayID
+- [How to contribute to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md)
 - [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes to the PayID Protocol
-- The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which gives much more background context around the problems that PayID solves
+- The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which provides background context around the problems that PayID solves
 
 ## Xpring SDK Integration
 
