@@ -32,7 +32,7 @@ npm run devEnvUp
 
 ## Create a PayID
 
-Now that you have a [PayID server running locally](#run-a-payid-server-locally), you can create a PayID and receive funds. If your server was publically accessible, other people could query your account information from your PayID server.
+Now that you have a [PayID server running](#run-a-payid-server), you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
 
 To create a PayID, with an [XRP Ledger Testnet account](https://xrpl.org/xrp-testnet-faucet.html), send this request to your server:
 
@@ -77,7 +77,7 @@ curl --location --request POST 'http://127.0.0.1:8081/users' \
 
 ## Request a PayID
 
-After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is requesting the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
+After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is to request the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
 
 To request the PayID you created for Alice:
 
