@@ -40,7 +40,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 
     - To bring this down, run `npm run devDown`
 
-12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this].(https://xpring.money/).
+12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://xpring.money/).
 13. Load up your desired PayID to the database using the [private PayID API](readme.md). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayIDs for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayID.
     ```bash
