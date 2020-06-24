@@ -62,7 +62,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 14. From your local computer, run a cURL command to fetch your PayID. For example:
 
 ```bash
-curl --location --request GET 'http://pay.michael.zochow.ski/.well-known/pay' --header 'Accept: application/xrpl-mainnet+json'
+curl --location --request GET 'http://example.com/.well-known/pay' --header 'Accept: application/xrpl-mainnet+json'
 ```
 
 For other PayID API methods, see the [readme](readme.md).
@@ -101,7 +101,7 @@ Next, set up NGINX Reverse Proxy + SSL.
    ```
    **Note:** The second line is required to preserve the original URL, which is used to find the user.
    **Note:** You can expand your certificate to cover any subdomain used in a PayID using:
-   `sudo certbot -d zochow.ski,pay.michael.zochow.ski,www.zochow.ski --expand`
+   `sudo certbot -d example.com,www.example.com --expand`
 6. Restart NGINX.
    `sudo systemctl restart nginx`
 7. [Optional] Update the NGINX configuration that catches PayID headers and forwards them to the PayID server; otherwise, send these headers to the web server.
