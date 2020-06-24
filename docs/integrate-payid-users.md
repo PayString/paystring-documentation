@@ -22,13 +22,13 @@ Whenever a PayID is queried, the payment network and environment are sent via an
 
 ## Match column names in data access functions
 
-All functions that query the database are located in [https://github.com/payid-org/payid/tree/master/src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access). If you use column names that do not match the [schema](https://github.com/payid-org/payid/tree/master/src/db/schema), then you must reflect those changes in the data access functions. The following table lists the files contained within [https://github.com/payid-org/payid/tree/master/src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access) and the corresponding column names they use:
+All functions that query the database are located in [src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access). If you use column names that do not match the [schema](https://github.com/payid-org/payid/tree/master/src/db/schema), then you must reflect those changes in the data access functions. The following table lists the files contained within [src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access) and the corresponding column names they use:
 
 | File name                  | Columns used                                                                                                  |
 | -------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| src/data-access/payIds.ts  | address.payment_network, address.environment, address.details                                                 |
-| src/data-access/reports.ts | address.payment_network, address.environment                                                                  |
-| src/data-access/users.ts   | account.pay_id, account.id, address.account_id, address.payment_network, address.environment, address.details |
+| [payIds.ts](https://github.com/payid-org/payid/blob/master/src/data-access/payIds.ts)  | address.payment_network, address.environment, address.details                                                 |
+| [reports.ts](https://github.com/payid-org/payid/blob/master/src/data-access/reports.ts) | address.payment_network, address.environment                                                                  |
+| [users.ts](https://github.com/payid-org/payid/blob/master/src/data-access/users.ts)   | account.pay_id, account.id, address.account_id, address.payment_network, address.environment, address.details |
 
 ## Change the type of database
 
@@ -44,4 +44,4 @@ If you use your own database, there are migration files written specifically for
 
 ## Update SQL files
 
-The `.sql` files within [src/db](https://github.com/payid-org/payid/tree/master/src/db) are each executed by the function `syncDatabaseSchema` located in [src/db/syncDatabaseSchema.ts](https://github.com/payid-org/payid/blob/master/src/db/syncDatabaseSchema.ts). To integrate into an existing system, be sure to look through the directories in [src/db](https://github.com/payid-org/payid/blob/master/src/db/) to identify any `.sql` files that you need to modify to fit your existing system, or to remove because they do not apply.
+The `.sql` files within [src/db](https://github.com/payid-org/payid/tree/master/src/db) are each executed by the function `syncDatabaseSchema` located in [db/syncDatabaseSchema.ts](https://github.com/payid-org/payid/blob/master/src/db/syncDatabaseSchema.ts). To integrate into an existing system, be sure to look through the directories in [src/db](https://github.com/payid-org/payid/blob/master/src/db/) to identify any `.sql` files that you need to modify to fit your existing system, or to remove because they do not apply.
