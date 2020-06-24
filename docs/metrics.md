@@ -52,8 +52,8 @@ Here is a sample `prometheus.yml` configuration file set up to pull metrics from
 ```yml
 # my global config
 global:
-  scrape_interval: 5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval: 5s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
   # scrape_timeout is set to the global default (10s).
 
 # A scrape configuration containing exactly one endpoint to scrape:
