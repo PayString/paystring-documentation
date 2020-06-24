@@ -29,7 +29,7 @@ Some different header options are shown here, with example values.
 | ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
 | All      | `application/payid+json`        | Variable depending on the contents of each address                |
 
-## Headers for GET requests for PayID Public API
+## Headers for GET requests
 
 This launch of PayID includes those headers specific to the XRPL community. Each payment network is free to establish its own standard headers. These headers should be submitted with every GET request, but not POST.
 
