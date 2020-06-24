@@ -18,7 +18,7 @@ To get started, the first thing to do is set up a PayID server.
 
 1. If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine.
 
-2. Download the reference implementation server by cloning the repository:
+2. The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository:
 
 ```
 git clone git@github.com:payid-org/payid.git
