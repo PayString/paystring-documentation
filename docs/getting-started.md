@@ -18,7 +18,9 @@ To get started, the first thing to do is set up a PayID server.
 
 1. If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine.
 
-2. The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository:
+2. If you have not set up GitHub, see [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for instructions on how to do so.
+
+2. The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
 
 ```
 git clone git@github.com:payid-org/payid.git
