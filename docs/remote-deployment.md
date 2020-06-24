@@ -73,7 +73,7 @@ To convert a PayID address to a URL endpoint, follow these patterns:
 
 **Note:** Public APIs hit port 80 and private APIs hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
 
-For additional network formats, see the [API Reference]( https://api.payid.org/?version=latest).
+For additional network formats, see the [API Reference](https://api.payid.org/?version=latest).
 
 Next, set up NGINX Reverse Proxy + SSL.
 
