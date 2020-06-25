@@ -9,14 +9,12 @@ not sent to any reporting server. This document describes how you can push these
 
 ## Reporting metrics to Xpring
 
-Xpring runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with the Xpring allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place. You can configure your PayID server(s) to report metrics to Xpring by setting the following 2 environment variables on each PayID server:
+Xpring runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with Xpring allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place. To report metrics to Xpring for each PayID server you run, set the following two environment variables on your server or directly configure them in `src/config.ts`:
 
 ```
 PUSH_GATEWAY_URL=https://push00.mon.payid.tech
 PAYID_ORG=<your organization name>
 ```
-
-You can also analyze your own PayID metrics by running your own [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) servers. The following sections describe what metrics are collected and how to collect metrics on your own servers.
 
 ## Available metrics
 

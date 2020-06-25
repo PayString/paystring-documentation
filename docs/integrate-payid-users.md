@@ -10,7 +10,7 @@ If you have an existing user database, you can take the following steps to integ
 
 The PayID [account schema](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql) is used to define a table for users.
 
-The account table contains two fields: `id` and `pay_id`. The address table uses a foreign key column called `account_id` which depends on id as a foreign key to associate addresses with individual accounts. The second column is `pay_id` which is where we store the string identifier (such as `alice$wallet.com`).
+The account table contains two fields: `id` and `pay_id`. The address table uses a foreign key column called `account_id` which depends on `id` as a foreign key to associate addresses with individual accounts. The second column is `pay_id` which is where we store the string identifier (such as `alice$wallet.com`).
 
 With an existing user database, you will need to add the `pay_id` column. Your user database might already have the equivalent of an `id` field, but if not, add this column so that each address can reference a specific user.
 
