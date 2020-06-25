@@ -14,4 +14,4 @@ Xpring SDK provides classes and utilites to work with PayID. Head over to the Pa
 
 ## Demos
 
-Xpring SDK provides a number of demos in their demo repo. You can browse PayID demos in [JavaScript](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/node), [Java](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/java), or [Swift](https://github.com/xpring-eng/Xpring-SDK-Demo/tree/master/swift).
+Xpring SDK provides a number of demos in their demo repo. You can browse PayID demos in [JavaScript](https://github.com/xpring-eng/xpring-js#usage-payid), [Java](https://github.com/xpring-eng/xpring4j#usage-payid), or [Swift](https://github.com/xpring-eng/xpringkit#usage-payid).
