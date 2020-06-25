@@ -41,11 +41,11 @@ This launch of PayID includes those headers specific to the XRPL community. Each
 
 ### Headers for XRP
 
-|          Accept header          |                              Description                               |
-| :-----------------------------: | :--------------------------------------------------------------------: |
-| `application/xrpl-mainnet+json` | Returns XRPL mainnet xAddress or classic address (and tag if provided) |
-| `application/xrpl-testnet+json` |            Returns XRPL testnet xAddress or classic address            |
-| `application/xrpl-devnet+json`  |            Returns XRPL devnet xAddress or classic address             |
+|          Accept header          |                            Description                             |
+| :-----------------------------: | :----------------------------------------------------------------: |
+| `application/xrpl-mainnet+json` |     Returns XRPL mainnet classic address (and tag if provided)     |
+| `application/xrpl-testnet+json` |     Returns XRPL testnet classic address (and tag if provided)     |
+| `application/xrpl-devnet+json`  | Returns XRPL devnet xAddress classic address (and tag if provided) |
 
 ### Headers for ACH
 
@@ -68,3 +68,10 @@ This launch of PayID includes those headers specific to the XRPL community. Each
 | `application/eth-testnet-name+json` | Returns testnet address |
 
 Ethernet has a number of different testnets. Refer to <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP 155</a>.
+
+### Headers for ILP
+
+|             Accept header              |       Description       |
+| :------------------------------------: | :---------------------: |
+| `application/interledger-mainnet+json` | Returns mainnet address |
+| `application/interledger-testnet+json` | Returns testnet address |
