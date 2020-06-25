@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'PayID Reference Implementation',
+      label: 'Reference Implementation',
       items: [
         'payid-reference-overview',
         'api-reference',
