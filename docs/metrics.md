@@ -102,7 +102,7 @@ In this tutorial, you will deploy a PayID server and run Prometheus locally usin
 
 Install the following software on your machine, if not already present.
 
-- [npm](https://docs.npmjs.com/cli/install)
+- [npm](https://www.npmjs.com/get-npm)
 - [docker](https://docs.docker.com/get-docker/)
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
