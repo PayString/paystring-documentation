@@ -24,11 +24,11 @@ Whenever a PayID is queried, the payment network and environment are sent via an
 
 All functions that query the database are located in [src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access). If you use column names that do not match the [schema](https://github.com/payid-org/payid/tree/master/src/db/schema), then you must reflect those changes in the data access functions. The following table lists the files contained within [src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access) and the corresponding column names they use:
 
-| File name                  | Columns used                                                                                                  |
-| -------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| [payIds.ts](https://github.com/payid-org/payid/blob/master/src/data-access/payIds.ts)  | address.payment_network, address.environment, address.details                                                 |
+| File name                                                                               | Columns used                                                                                                  |
+| --------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| [payIds.ts](https://github.com/payid-org/payid/blob/master/src/data-access/payIds.ts)   | address.payment_network, address.environment, address.details                                                 |
 | [reports.ts](https://github.com/payid-org/payid/blob/master/src/data-access/reports.ts) | address.payment_network, address.environment                                                                  |
-| [users.ts](https://github.com/payid-org/payid/blob/master/src/data-access/users.ts)   | account.pay_id, account.id, address.account_id, address.payment_network, address.environment, address.details |
+| [users.ts](https://github.com/payid-org/payid/blob/master/src/data-access/users.ts)     | account.pay_id, account.id, address.account_id, address.payment_network, address.environment, address.details |
 
 ## Change the type of database
 
