@@ -10,7 +10,7 @@ The PayID protocol has specific header requirements for requests and responses.
 
 ### Request headers
 
-PayID is a fundamentally neutral protocol. When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayID is therefore capable of returning a user's address information for any network in which that user participates.
+When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayID is therefore capable of returning a user's address information for any network in which that user participates.
 
 An example request has this form.
 
