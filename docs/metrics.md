@@ -23,7 +23,7 @@ The PayID server captures these metrics:
 - `payid_count` - Number of PayID address mappings in the system. This is calculated periodically by query the PayID database and published as metrics periodically (every 60s by default). In Prometheus terms, this metric is a gauge. This metric has the following attributes:
   - `paymentNetwork` - The payment network for the PayID address mapping, such as XRPL, BTC, ACH, and so on)
   - `environment` - The payment network’s environment for the PayID address mapping (e.g. testnet, mainnet, rinkby, and so on)
-- `payid_lookup_request` - Number of PayID lookup requests. This metric is updated every time a PayID server is called to look up the address mappings for a PayID. In Prometheus terms, this metric is a counter. This metric has the following attributes:
+- `payid_lookup_request` - Number of PayID lookup requests. This metric is updated every time a PayID server is called to look up the address mappings for a PayID. This metric has the following attributes:
   - paymentNetwork - same meaning as above for payid_count
   - environment - same meaning as above for payid_count
   - result - the result of the lookup. Possible values include:
