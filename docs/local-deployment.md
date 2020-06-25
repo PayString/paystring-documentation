@@ -4,13 +4,6 @@ title: Deploy Locally Without Docker
 sidebar_label: Deploy Locally Without Docker
 ---
 
-If you want to set up and run a PayID server, you have several options. This document describes how to run a PayID server without using Docker.
-
-For other ways to deploy a PayID server, see:
-
-- [Run the demo script](getting-started)
-- [Set up a PayID server on AWS](remote-deployment)
-
 ## Basic requirements
 
 Ensure your system meets these requirements before you set up a PayID server.
