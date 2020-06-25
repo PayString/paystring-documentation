@@ -162,7 +162,9 @@ You should get a `Created` response.
 
 Query the PayID server to make sure it resolves, using this cURL command.
 
-`curl http://127.0.0.1:8080/alice -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
+```bash
+curl http://127.0.0.1:8080/alice -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
+```
 
 ### Start Prometheus
 
@@ -184,7 +186,9 @@ scrape_configs:
 
 Start the docker container:
 
-`docker run -d --network payid-network -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`
+```bash
+docker run -d --network payid-network -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`
+```
 
 You can verify Prometheus is running by opening `http://localhost:9090/graph` in a browser.
 
