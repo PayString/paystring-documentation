@@ -10,11 +10,11 @@ If you have an existing user database, you can take the following steps to integ
 
 The PayID [account schema](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql) is used to define a table for users.
 
-The account table contains two fields: `id` and `pay_id`. The address table uses a foreign key column called `account_id` which depends on id as a foreign key to associate addresses with individual accounts. The second column is `pay_id` which is where we store the string identifier (such as `alice$wallet.com`).
+The account table contains two fields: `id` and `pay_id`. The address table uses a foreign key column called `account_id` which depends on `id` as a foreign key to associate addresses with individual accounts. The second column is `pay_id` which is where we store the string identifier (such as `alice$wallet.com`).
 
 With an existing user database, you will need to add the `pay_id` column. Your user database might already have the equivalent of an `id` field, but if not, add this column so that each address can reference a specific user.
 
-The PayID account schema has three constraints that could be useful to apply to your existing user database. Two constraints guarantee that all entered PayIDs are lowercase and are not empty strings. The final and most important constraint is that the regex constraint `valid_pay_id` guarantees that all entered PayIDs are in compliance with the format outlined in the [PayID whitepaper](https://payid.org/whitepaper.pdf).
+The PayID account schema has three constraints that could be useful to apply to your existing user database. Two constraints guarantee that all entered PayIDs are lowercase and are not empty strings. The final and most important constraint is that the regex constraint [valid_pay_id](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql#L17) guarantees that all entered PayIDs are in compliance with the format outlined in the [PayID whitepaper](https://payid.org/whitepaper.pdf).
 
 The PayID [address schema](https://github.com/payid-org/payid/blob/master/src/db/schema/02_address.sql) is used to define a table of addresses associated with users.
 
@@ -22,13 +22,13 @@ Whenever a PayID is queried, the payment network and environment are sent via an
 
 ## Match column names in data access functions
 
-All functions that query the database are located in [https://github.com/payid-org/payid/tree/master/src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access). If you use column names that do not match the [schema](https://github.com/payid-org/payid/tree/master/src/db/schema), then you must reflect those changes in the data access functions. The following table lists the files contained within [https://github.com/payid-org/payid/tree/master/src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access) and the corresponding column names they use:
+All functions that query the database are located in [src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access). If you use column names that do not match the [schema](https://github.com/payid-org/payid/tree/master/src/db/schema), then you must reflect those changes in the data access functions. The following table lists the files contained within [src/data-access](https://github.com/payid-org/payid/tree/master/src/data-access) and the corresponding column names they use:
 
-| File name                  | Columns used                                                                                                  |
-| -------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| src/data-access/payIds.ts  | address.payment_network, address.environment, address.details                                                 |
-| src/data-access/reports.ts | address.payment_network, address.environment                                                                  |
-| src/data-access/users.ts   | account.pay_id, account.id, address.account_id, address.payment_network, address.environment, address.details |
+| File name                                                                               | Columns used                                                                                                  |
+| --------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| [payIds.ts](https://github.com/payid-org/payid/blob/master/src/data-access/payIds.ts)   | address.payment_network, address.environment, address.details                                                 |
+| [reports.ts](https://github.com/payid-org/payid/blob/master/src/data-access/reports.ts) | address.payment_network, address.environment                                                                  |
+| [users.ts](https://github.com/payid-org/payid/blob/master/src/data-access/users.ts)     | account.pay_id, account.id, address.account_id, address.payment_network, address.environment, address.details |
 
 ## Change the type of database
 
@@ -44,4 +44,4 @@ If you use your own database, there are migration files written specifically for
 
 ## Update SQL files
 
-The `.sql` files within [src/db](https://github.com/payid-org/payid/tree/master/src/db) are each executed by the function `syncDatabaseSchema` located in [src/db/syncDatabaseSchema.ts](https://github.com/payid-org/payid/blob/master/src/db/syncDatabaseSchema.ts). To integrate into an existing system, be sure to look through the directories in [src/db](https://github.com/payid-org/payid/blob/master/src/db/) to identify any `.sql` files that you need to modify to fit your existing system, or to remove because they do not apply.
+The `.sql` files within [src/db](https://github.com/payid-org/payid/tree/master/src/db) are each executed by the function `syncDatabaseSchema` located in [db/syncDatabaseSchema.ts](https://github.com/payid-org/payid/blob/master/src/db/syncDatabaseSchema.ts). To integrate into an existing system, be sure to look through the directories in [src/db](https://github.com/payid-org/payid/blob/master/src/db/) to identify any `.sql` files that you need to modify to fit your existing system, or to remove because they do not apply.
