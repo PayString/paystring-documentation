@@ -32,7 +32,7 @@ All functions that query the database are located in [src/data-access](https://g
 
 ## Change the type of database
 
-The reference implementation described in [Getting Started](getting-started) uses a Postgres database. To use a different type of database, either update the settings in the [knexfile](https://github.com/payid-org/payid/blob/master/src/db/knex.ts), or replace the use of `knex` throughout the repository with your preferred database connection tool.
+The reference implementation described in [Getting Started](/) uses a Postgres database. To use a different type of database, either update the settings in the [knexfile](https://github.com/payid-org/payid/blob/master/src/db/knex.ts), or replace the use of `knex` throughout the repository with your preferred database connection tool.
 
 ## Set environment variables
 
