@@ -26,7 +26,13 @@ To get started, the first thing to do is set up a PayID server.
 git clone git@github.com:payid-org/payid.git
 ```
 
-4. Boot up the PayID HTTP server and a Postgres database to develop against:
+4. Enter the `payid` directory that you just created:
+
+```
+cd payid
+```
+
+5. Boot up the PayID HTTP server and a Postgres database to develop against:
 
 ```sh
 npm run devEnvUp
