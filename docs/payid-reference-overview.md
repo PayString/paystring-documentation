@@ -22,10 +22,6 @@ To work on the PayID server source code itself, you can spin up a Postgres datab
 
 To clean up the associated Docker containers, run `npm run devDown`.
 
-## PayID transaction management
-
-You will act either as an originator of payments, or a beneficiary of payments. In order to complete a payment, both parties must cooperate to fulfill the PayID protocol requirements.
-
 ## PayID integration
 
 PayID is a flexible protocol that can be integrated into your existing systems. It does not substitute for your existing infrastructure and workflows.
