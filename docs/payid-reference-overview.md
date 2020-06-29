@@ -26,10 +26,6 @@ To clean up the associated Docker containers, run `npm run devDown`.
 
 You can use the PayID Private API to set up your users. You might already have an existing user database, and you will then provide each user with a corresponding PayID, as described in [Integrate Existing User Databases](integrate-payid-users).
 
-## PayID transaction management
-
-You will act either as an originator of payments, or a beneficiary of payments. In order to complete a payment, both parties must cooperate to fulfill the PayID protocol requirements.
-
 ## PayID integration
 
 PayID is a flexible protocol that can be integrated into your existing systems. It does not substitute for your existing infrastructure and workflows.
