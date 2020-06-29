@@ -22,10 +22,6 @@ To work on the PayID server source code itself, you can spin up a Postgres datab
 
 To clean up the associated Docker containers, run `npm run devDown`.
 
-## PayID user setup
-
-You can use the PayID Private API to set up your users. You might already have an existing user database, and you will then provide each user with a corresponding PayID, as described in [Integrate Existing User Databases](integrate-payid-users).
-
 ## PayID integration
 
 PayID is a flexible protocol that can be integrated into your existing systems. It does not substitute for your existing infrastructure and workflows.
