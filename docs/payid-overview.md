@@ -30,7 +30,7 @@ Refer to the [PayID protocol whitepaper](https://payid.org/whitepaper.pdf) for a
 
 ## Implementations
 
-You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 If you want to contribute to PayID, see [Contributing to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md).
 
@@ -46,7 +46,7 @@ These libraries help you connect your application to PayID without having to wor
 
 The PayID protocol has basic standards, principles, and requirements.
 
-Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 ### Web standards
 
