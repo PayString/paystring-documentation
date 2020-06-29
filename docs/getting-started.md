@@ -22,21 +22,15 @@ To get started, the first thing to do is set up a PayID server.
 
 3. The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
 
-```
-git clone git@github.com:payid-org/payid.git
-```
+   `git clone https://github.com/payid-org/payid.git`
 
-4. Enter the `payid` directory that you just created:
+4. Go to the `/payid` directory that you just created:
 
-```
-cd payid
-```
+   `cd payid`
 
 5. Boot up the PayID HTTP server and a Postgres database to develop against:
 
-```sh
-npm run devEnvUp
-```
+   `npm run devEnvUp`
 
 ## Create a PayID
 
