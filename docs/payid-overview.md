@@ -66,7 +66,7 @@ PayID is an extensible and flexible open standard, and therefore can be used as 
 
 Verifiable PayID is a suite of security enhancements to the base PayID request and response that adds in a variety of digital signature fields for linking external digital identities, proving control of the payment rail address, and providing non-repudiable messaging. It can be used to enable trust-minimized and trust-free security regimes and has applications in both custodial and non-custodial settings.
 
-To learn more, please see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/payid/dist/spec/verifiable-payid-protocol.txt).
+To learn more, please see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/dist/spec/verifiable-payid-protocol.txt).
 
 ### Compliance and Travel Rule
 
