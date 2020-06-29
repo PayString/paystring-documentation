@@ -131,7 +131,7 @@ After setting up the basics, you have a good foundation for learning more about 
 
 - [How to convert](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/README.md#payid) a `payid$domain` format to a URL
 - How to use relevant [HTTP headers](payid-headers)
-- How to handle different types of [responses](api-reference) you could receive from a PayID server
+- How to handle different types of [responses](api-documentation) you could receive from a PayID server
 
 Learn about:
 

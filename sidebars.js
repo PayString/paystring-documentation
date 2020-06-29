@@ -19,7 +19,7 @@ module.exports = {
       label: 'Reference Implementation',
       items: [
         'payid-reference-overview',
-        'api-reference',
+        'api-documentation',
         'payid-best-practices',
         'integrate-payid-users',
         'metrics',
