@@ -47,6 +47,16 @@ If you want to verify whether CORS is correctly set up for your PayID server, yo
 </html>
 ```
 
+### Cache-Control
+
+Because the PayID server deals with payment addresses, you want to ensure that payment addresses don't get cached. That way, the payment address is always up to date, and money won't be set to the incorrect address.
+
+The PayID reference implementation server already sets this header, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure this header is set or passed through.
+
+```http
+Cache-Control: no-store
+```
+
 ### Use TLS 1.3
 
 As stated in the requirements, your implementation of PayID must use TLS. To ensure security, both the PayID client and the PayID server should use the latest TLS 1.3, as described in [RFC 8446](https://tools.ietf.org/html/rfc8446). TLS 1.3 is faster and safer than its predecessors, and offers these advantages:
@@ -61,16 +71,6 @@ As stated in the requirements, your implementation of PayID must use TLS. To ens
 ## Best practices for PayID implementation
 
 The following best practices are strongly recommended.
-
-### Cache-Control
-
-Because the PayID server deals with payment addresses, you want to ensure that payment addresses don't get cached. That way, the payment address is always up to date, and money won't be set to the incorrect address.
-
-The PayID reference implementation server already sets this header, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure this header is set or passed through.
-
-```http
-Cache-Control: no-store
-```
 
 ### Harden Docker
 
