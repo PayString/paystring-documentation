@@ -4,33 +4,37 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you though:
+PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through:
 
-- [Run a PayID Server Locally](#run-a-payid-server-locally)
+- [Run a PayID Server](#run-a-payid-server)
 - [Create a PayID](#create-a-payid)
 - [Request a PayID](#request-a-payid)
 - [Learn More](#learn-more)
 - [Xpring SDK Integration](#xpring-sdk-integration)
 
-## Run a PayID Server Locally
+## Run a PayID Server
 
-To get started, the first thing you need to do is set up a PayID server. If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine. Then:
+To get started, the first thing to do is set up a PayID server.
 
-Download the reference implementation server by cloning the repository:
+1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine.
 
-```
-git clone git@github.com:payid-org/payid.git
-```
+2.  If you have not set up GitHub, see [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for instructions on how to do so.
 
-Boot up the PayID HTTP server and a Postgres database to develop against:
+3.  The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
 
-```sh
-npm run devEnvUp
-```
+        git clone https://github.com/payid-org/payid.git
+
+4.  Go to the `/payid` directory that you just created:
+
+        cd payid
+
+5.  Boot up the PayID HTTP server and a Postgres database to develop against:
+
+    npm run devEnvUp
 
 ## Create a PayID
 
-Now that you have a [PayID server running locally](#run-a-payid-server-locally), you can create a PayID and receive funds. If your server was publically accessible, other people could query your account information from your PayID server.
+Now that you have a [PayID server running](#run-a-payid-server), you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
 
 To create a PayID, with an [XRP Ledger Testnet account](https://xrpl.org/xrp-testnet-faucet.html), send this request to your server:
 
@@ -75,7 +79,7 @@ curl --location --request POST 'http://127.0.0.1:8081/users' \
 
 ## Request a PayID
 
-After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is requesting the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
+After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is to request the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
 
 To request the PayID you created for Alice:
 
@@ -125,17 +129,15 @@ Now that you've set up the basics, [learn more](#learn-more) about PayID and wha
 
 After setting up the basics, you have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take:
 
-- How to convert a `payid$domain` format to a URL
-- How to use relevant HTTP headers
-- How to handle different types of responses you could receive from a PayID server
+- [How to convert](https://github.com/xpring-eng/Xpring-SDK-Demo/blob/master/node/README.md#payid) a `payid$domain` format to a URL
+- How to use relevant [HTTP headers](payid-headers)
+- How to handle different types of [responses](api-reference) you could receive from a PayID server
 
-Here are some other things you may also want to learn about:
+Learn about:
 
-- The PayID reference implementation server
-- Other features and extensions that PayID has to offer
-- How to contribute to PayID
+- [How to contribute to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md)
 - [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes to the PayID Protocol
-- The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which gives much more background context around the problems that PayID solves
+- The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which provides background context around the problems that PayID solves
 
 ## Xpring SDK Integration
 

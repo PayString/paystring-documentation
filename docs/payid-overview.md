@@ -30,23 +30,15 @@ Refer to the [PayID protocol whitepaper](https://payid.org/whitepaper.pdf) for a
 
 ## Implementations
 
-You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 If you want to contribute to PayID, see [Contributing to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md).
-
-## Xpring SDK Integration
-
-PayID is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
-
-Xpring SDK provides the ability to work with PayID, using libraries provided in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).
-
-These libraries help you connect your application to PayID without having to worry about the specifics of PayID.
 
 ## Building blocks
 
 The PayID protocol has basic standards, principles, and requirements.
 
-Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](getting-started) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 ### Web standards
 
@@ -74,7 +66,7 @@ PayID is an extensible and flexible open standard, and therefore can be used as 
 
 Verifiable PayID is a suite of security enhancements to the base PayID request and response that adds in a variety of digital signature fields for linking external digital identities, proving control of the payment rail address, and providing non-repudiable messaging. It can be used to enable trust-minimized and trust-free security regimes and has applications in both custodial and non-custodial settings.
 
-To learn more, please see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/payid/dist/spec/verifiable-payid-protocol.txt).
+To learn more, please see the [Verifiable PayID RFC](https://github.com/payid-org/rfcs/blob/master/dist/spec/verifiable-payid-protocol.txt).
 
 ### Compliance and Travel Rule
 
