@@ -10,9 +10,9 @@ The PayID protocol is flexible and supports a wide range of implementations. To 
 
 When implementing PayID, you must meet the following requirements.
 
-### Limit Private API exposure
+### Limit Admin API exposure
 
-The [Private PayID API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
+The [Admin PayID API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
 
 ### Set CORS (Cross-Origin Resource Sharing) Headers
 
