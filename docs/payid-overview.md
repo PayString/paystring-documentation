@@ -36,10 +36,6 @@ If you want to contribute to PayID, see [Contributing to PayID](https://github.c
 
 ## Building blocks
 
-The PayID protocol has basic standards, principles, and requirements.
-
-Check out the [PayID repository on Github](https://github.com/payid-org/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
-
 ### Web standards
 
 PayID uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayID server, as described in [Set up a PayID server](#set-up-a-payid-server).
