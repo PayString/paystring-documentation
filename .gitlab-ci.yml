@@ -2,6 +2,7 @@
 #
 
 stages:
+  - test
   - publish
   - deploy
 
@@ -16,8 +17,20 @@ variables:
   INSTALL_XPRING_PROXY: "true"
 
 include:
-  - project: 'xpring/xpring-ci-templates'
-    file: '/templates/build_for_gcr.yml'
+  - project: "xpring/xpring-ci-templates"
+    file: "/templates/build_for_gcr.yml"
+
+# Ensure that all links are still valid and do not 404
+link checker:
+  stage: test
+  image:
+    name: golang:1.14-alpine
+  before_script:
+    - apk add git
+    - export GO111MODULE=on
+    - go get -u github.com/raviqqe/liche
+  script:
+    - liche -r ${CI_PROJECT_DIR}
 
 # Build a docker image and push it to the GCR associated with $GCLOUD_PROJECT_ID
 .publish_payiddocumentation:
@@ -69,14 +82,14 @@ publish prod image:
     - helm dep update ./charts
     - kubectl create namespace ${RELEASE_NAME}-${RELEASE_ENV} || true
     - helm upgrade --install --namespace ${RELEASE_NAME}-${RELEASE_ENV}
-        --set releaseEnv=$RELEASE_ENV
-        --set releaseImage="gcr.io/$GCR_PROJECT_ID/$CI_PROJECT_NAME:$IMAGE_UID"
-        --set replicas=$REPLICAS
-        --set proxyng.domainName="${FULL_DNS_NAME}"
-        --set proxyng.proxiedService="http://${RELEASE_NAME}-${RELEASE_ENV}:80"
-        --set proxyng.replicaCount=$PROXY_REPLICAS
-        --set proxyng.install=$INSTALL_XPRING_PROXY
-        ${RELEASE_NAME}-${RELEASE_ENV} ./charts
+      --set releaseEnv=$RELEASE_ENV
+      --set releaseImage="gcr.io/$GCR_PROJECT_ID/$CI_PROJECT_NAME:$IMAGE_UID"
+      --set replicas=$REPLICAS
+      --set proxyng.domainName="${FULL_DNS_NAME}"
+      --set proxyng.proxiedService="http://${RELEASE_NAME}-${RELEASE_ENV}:80"
+      --set proxyng.replicaCount=$PROXY_REPLICAS
+      --set proxyng.install=$INSTALL_XPRING_PROXY
+      ${RELEASE_NAME}-${RELEASE_ENV} ./charts
 
 deploy to dev:
   extends: .deploy_payiddocumentation
