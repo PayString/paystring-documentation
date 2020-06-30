@@ -62,6 +62,16 @@ As stated in the requirements, your implementation of PayID must use TLS. To ens
 
 The following best practices are strongly recommended.
 
+### Cache-Control
+
+Because the PayID server deals with payment addresses, you want to ensure that payment addresses don't get cached. That way, the payment address is always up to date, and money won't be set to the incorrect address.
+
+The PayID reference implementation server already sets this header, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure this header is set or passed through.
+
+```http
+Cache-Control: no-store
+```
+
 ### Harden Docker
 
 Consider adding further Docker hardening steps, such as using the `no-new-privileges` security option to help prevent privilege escalation attacks through the misuse of `setuid` and `setgid` programs.
