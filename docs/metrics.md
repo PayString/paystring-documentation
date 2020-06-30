@@ -46,7 +46,7 @@ The PayID server captures the following metrics:
   - `not_found` - as address was not found for the PayID lookup (HTTP status code 404).
   - `error` - there was an error in the PayID lookup request. For example, if the client provided an Accept request header that was invalid or missing.
 
-This data can be used to generate real-time charts. For example, this chart shows how many PayID address mappings exist in the system over time:
+You can use this data to generate real-time charts. For example, this chart shows how many PayID address mappings exist in the system over time:
 ![PayID address mappings in system over time](/img/docs/payid_address_count.png)
 
 This chart shows the rate per minute of PayID lookup requests:
