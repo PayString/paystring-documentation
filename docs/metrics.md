@@ -5,45 +5,62 @@ sidebar_label: Metrics
 ---
 
 The reference implementation of PayID server automatically collects metrics using Prometheus. By default, metrics are
-not sent to any reporting server. This document describes how you can push these metrics to Xpring, or collect and analyze these metrics using your own metrics server.
+pushed to the Xpring Prometheus pushgateway. This document describes how you can configure metrics pushed to Xpring, or collect and analyze these metrics using your own metrics server.
 
 ## Reporting metrics to Xpring
 
-Xpring runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with Xpring allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place. To report metrics to Xpring for each PayID server you run, set the following two environment variables on your server or directly configure them in `src/config.ts`:
+Xpring runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with Xpring allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place.
 
-```
+Metrics are reported to Xpring by default, but you can choose to push metrics to your own Prometheus pushgateway. This is how you would configure your PayID server to push to a different Prometheus pushgateway:
+
+```sh
+# Xpring's Prometheus pushgateway
 PUSH_GATEWAY_URL=https://push00.mon.payid.tech
-PAYID_ORG=<your organization name>
+```
+
+To opt out of pushing metrics entirely, set the following environment variable on your server:
+
+```sh
+PUSH_PAYID_METRICS=false
 ```
 
 ## Available metrics
 
-The PayID server captures these metrics:
+The PayID server captures the following metrics:
 
-- `payid_count` - Number of PayID address mappings in the system. This is calculated periodically by query the PayID database and published as metrics periodically (every 60s by default). In Prometheus terms, this metric is a gauge. This metric has the following attributes:
-  - `paymentNetwork` - The payment network for the PayID address mapping, such as XRPL, BTC, ACH, and so on)
-  - `environment` - The payment network’s environment for the PayID address mapping (e.g. testnet, mainnet, rinkby, and so on)
-- `payid_lookup_request` - Number of PayID lookup requests. This metric is updated every time a PayID server is called to look up the address mappings for a PayID. This metric has the following attributes:
-  - paymentNetwork - same meaning as above for payid_count
-  - environment - same meaning as above for payid_count
-  - result - the result of the lookup. Possible values include:
-    - `found` - an address was found for the PayID lookup
-    - `not_found` - as address was not found for the PayID lookup
-    - `error` - there was an error in the PayID lookup request. For example, if the client provided an Accept that was invalid or missing.
+### PayID Count
 
-This data can be used to generate real-time charts. For example, this chart shows how many PayID address mappings exist in the system over time.
+`payid_count` : The number of PayID address mappings in the system. This is calculated periodically by querying the PayID database and published as metrics periodically (every 60 seconds by default). In Prometheus terms, this metric is a gauge. This metric has the following attributes:
+
+- `paymentNetwork` - The payment network for the PayID address mapping. (XRPL, BTC, ETH, ACH, ...)
+- `environment` - The payment network’s environment for the PayID address mapping (MAINNET, TESTNET, RINKEBY, ...)
+
+### PayID Lookup Requests
+
+`payid_lookup_request`: The number of PayID lookup requests. This metric is updated every time a PayID server is hit with a HTTP request to look up an address or addresses for a PayID. This metric has the following attributes:
+
+- `paymentNetwork` - same meaning as above for `payid_count`.
+- `environment` - same meaning as above for `payid_count`.
+- `result` - the result of the lookup. Possible values include:
+  - `found` - an address was found for the PayID lookup.
+  - `not_found` - as address was not found for the PayID lookup (HTTP status code 404).
+  - `error` - there was an error in the PayID lookup request. For example, if the client provided an Accept request header that was invalid or missing.
+
+This data can be used to generate real-time charts. For example, this chart shows how many PayID address mappings exist in the system over time:
 ![PayID address mappings in system over time](/img/docs/payid_address_count.png)
 
-This chart shows the rate per minute of PayID lookup requests.
+This chart shows the rate per minute of PayID lookup requests:
 ![PayID lookups per minute](/img/docs/payid_lookups.png)
 
-## Import metrics from PayID server to Prometheus
+## Import metrics from the PayID server to Prometheus
 
 You can use a push or pull method to obtain metrics from Prometheus.
 
+Note that both push and pull methods can be used together simultaneously. For example, to pull metrics into an internal Prometheus server and push metrics to a third-party Prometheus server like Xpring.
+
 ### How to pull metrics to Prometheus
 
-Prometheus pulls metrics by scraping a known endpoint for metrics data. The PayID server exposes metrics in Prometheus format on the admin port (default 8081). For simplicity, you can configure Prometheus to scrape metrics directly from the PayID server. Prometheus must be running inside the same network as PayID server because Prometheus needs access to the admin port. If multiple instances of PayID server are being run behind a load balancer, then Prometheus must pull metrics directly from each instance, not through the load balancer. This direct method is recommended for collecting metrics using your own Prometheus server.
+Prometheus pulls metrics by scraping a known endpoint for metrics data. The PayID server exposes metrics in Prometheus format on the admin port (default `8081`). For simplicity, you can configure Prometheus to scrape metrics directly from the PayID server. Prometheus must be running inside the same network as PayID server because Prometheus needs access to the admin port. If multiple instances of the PayID server are being run behind a load balancer, then Prometheus must pull metrics directly from each instance, not through the load balancer. This direct method is recommended for collecting metrics using your own Prometheus server.
 
 Here is a sample `prometheus.yml` configuration file set up to pull metrics from a PayID server running locally.
 
@@ -71,20 +88,16 @@ scrape_configs:
 
 Alternatively, you can push metrics from the PayID server to Prometheus using a [pushgateway](https://github.com/prometheus/pushgateway). This setup requires running a pushgateway in addition to a Prometheus server, and configuring the PayID server to push metrics to the pushgateway. Prometheus then pulls metrics from the pushgateway. In this setup, Prometheus and pushgateway do not need to run inside the same network as the PayID server(s), but the PayID server must be able to reach the pushgateway over http. This is the recommended method for pushing metrics to a third party such as Xpring.
 
-By default, PayID server does not push metrics to a pushgateway. To push metrics, follow this procedure:
+By default, the PayID server pushes metrics to the Xpring pushgateway. To push metrics to your own pushgateway, follow this procedure:
 
-1. Set the environment variables `PUSH_GATEWAY_URL` with the url to your pushgateway and `PAYID_ORG` to the name of your organization.
+1. Set the environment variables `PUSH_GATEWAY_URL` with the url to your pushgateway.
 2. Restart your PayID server.
 
-For example, if the fictitious company Vandelay Industries wants to push metrics to a pushgateway running at `https://some-pushgateway.com`, then set these environment variables: `PUSH_GATEWAY_URL= https://some-pushgateway.com` and `PAYID_ORG='Vandelay Industries'`.
+For example, if the fictitious company Vandelay Industries wants to push metrics to a pushgateway running at `https://some-pushgateway.com`, then set these environment variables: `PUSH_GATEWAY_URL= https://some-pushgateway.com`.
 
 By default, a PayID server will push metrics every 15 seconds to the configured pushgateway. To change this frequency, set the `PUSH_METRICS_INTERVAL` value. For example, to push every 5 minutes (300 seconds), set `PUSH_METRICS_INTERVAL=300`. This value must be a positive number.
 
-As mentioned above, you can also set `PUSH_GATEWAY_URL=https://push00.mon.payid.tech` to push the metrics from your PayID server to Xpring.
-
-### Use push and pull methods together
-
-Both push and pull methods can be used together, for example, to pull metrics into an internal Prometheus server and push metrics to a third-party Prometheus server.
+As mentioned above, you can also explicitly set `PUSH_GATEWAY_URL=https://push00.mon.payid.tech` to push the metrics from your PayID server to Xpring.
 
 ## Visualize metrics with Prometheus and Grafana
 
@@ -94,7 +107,7 @@ Prometheus has an admin web console with limited visualization capabilities on p
 
 To build dashboards with multiple charts, you can [use Grafana and configure Prometheus as a datasource](https://prometheus.io/docs/visualization/grafana/).
 
-## Tutorial--Deploy a PayID server with Docker, and pull PayID metrics into Prometheus
+## Tutorial - Deploy a PayID server with Docker, and pull PayID metrics into Prometheus
 
 In this tutorial, you will deploy a PayID server and run Prometheus locally using Docker, and you will create a configuration file for the PayID server so that PayID metrics are pulled into Prometheus.
 
@@ -144,14 +157,14 @@ docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-net
 Test whether the PayID server is running by creating a PayID with this cURL command.
 
 ```bash
- curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayID-API-Version: 2020-06-16' --header 'Content-Type: application/json' --header 'Content-Type: text/plain' --data-raw '{
-     "pay_id": "alice$127.0.0.1",
+ curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayID-API-Version: 2020-06-16' --header 'Content-Type: application/json' --data-raw '{
+     "payId": "charlie$127.0.0.1",
      "addresses": [
          {
-             "payment_network": "XRPL",
+             "paymentNetwork": "XRPL",
              "environment": "TESTNET",
              "details": {
-                 "address": "TVacixsWrqyWCr98eTYP7FSzE9NwupESR4TrnijN7fccNiS"
+                 "address": "rDk7FQvkQxQQNGTtfM2Fr66s7Nm3k87vdS"
              }
          }
      ]
@@ -163,7 +176,7 @@ You should get a `Created` response.
 Query the PayID server to make sure it resolves, using this cURL command.
 
 ```bash
-curl http://127.0.0.1:8080/alice -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
+curl http://127.0.0.1:8080/charlie -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
 ```
 
 ### Start Prometheus
