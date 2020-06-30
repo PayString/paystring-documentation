@@ -3,6 +3,7 @@ stages:
 
 link checker:
   stage: test
+  allow_failure: true
   image:
     name: golang:1.14-alpine
   before_script:
