@@ -62,12 +62,14 @@ This launch of PayID includes those headers specific to the XRPL community. Each
 
 ### Headers for ETH
 
-|            Accept header            |       Description       |
-| :---------------------------------: | :---------------------: |
-|   `application/eth-mainnet+json`    | Returns mainnet address |
-| `application/eth-testnet-name+json` | Returns testnet address |
+|         Accept header          |       Description       |
+| :----------------------------: | :---------------------: |
+| `application/eth-mainnet+json` | Returns mainnet address |
+| `application/eth-ropsten+json` | Returns testnet address |
+|  `application/eth-kovan+json`  | Returns testnet address |
+| `application/eth-rinkeby+json` | Returns testnet address |
 
-Ethernet has a number of different testnets. Refer to <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md">EIP 155</a>.
+Ethernet has a number of different testnets. Refer to [EIP 155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md).
 
 ### Headers for ILP
 
