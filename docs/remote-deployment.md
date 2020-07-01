@@ -18,7 +18,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 
 4. Set your instance's firewall/security group.
    - Port 80 (TCP) open for all address
-   - Port 8081 (Private API access) open for your local IP address only, or closed generally, or only available inside your virtual private cloud. If port 8081 is exposed publicly it allows anybody to update your payment information, potentially leading to a loss of funds.
+   - Port 8081 (Admin API access) open for your local IP address only, or closed generally, or only available inside your virtual private cloud. If port 8081 is exposed publicly it allows anybody to update your payment information, potentially leading to a loss of funds.
    - Port 22 (SSH) open
 5. SSH into your instance.
    - Right-click on the instance.
@@ -41,7 +41,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
     - To bring this down, run `npm run devDown`
 
 12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://xpring.money/).
-13. Load up your desired PayID to the database using the [private PayID API](readme.md). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
+13. Load up your desired PayID to the database using the [Admin API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayIDs for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayID.
     ```bash
     curl --location --request POST 'http://127.0.0.1:8081/users' \
@@ -71,7 +71,7 @@ To convert a PayID address to a URL endpoint, follow these patterns:
 - `user$wallet.com` converts to `https://wallet.com/user`
 - `user$subdomain.wallet.com/payid` converts to `https://subdomain.wallet.com/payid/user`
 
-**Note:** Public APIs hit port 80 and private APIs hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
+**Note:** Public API requests hit port 80 and Admin API requests hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
 
 For additional network formats, see the [API Reference](https://api.payid.org/?version=latest).
 
