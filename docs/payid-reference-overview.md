@@ -4,11 +4,9 @@ title: Reference Implementation Overview
 sidebar_label: Reference Implementation Overview
 ---
 
-Xpring provides a reference implementation of the PayID server. You can implement it as described here, you can make your preferred modifications, and you can create your own implementation from scratch.
-
 ## PayID reference specifications
 
-This implementation uses TypeScript, a Node.js HTTP server, and a Postgres database.
+The [reference implementation](https://github.com/payid-org/payid) uses TypeScript, a Node.js HTTP server, and a Postgres database.
 
 By default, the server hosts the PayID Protocol implementation, or Public API, on port 8080. It also hosts a second RESTful API on port 8081 for CRUD operations of PayIDs and associated addresses.
 
