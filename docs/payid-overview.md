@@ -8,13 +8,9 @@ With PayID, you can use human-readable addresses to transmit value in the curren
 
 When you make an HTTP GET request that follows the PayID protocol, it resolves to an address on the underlying payment network. PayID is a payment-network-agnostic protocol, capable of sending payments in BTC, ETH, XRP, or fiat networks like ACH.
 
-Each request must have a valid `Accept` request HTTP header. For example: `Accept: application/xrpl-mainnet+json` indicates the XRP Ledger Mainnet payment network and the JSON format of the response payload.
-
 PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own PayID server or integrate with a trustless blockchain solution so they have no counterparty risk.
 
 The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayID address that works across all platforms.
-
-For using Xpring SDK with PayID, see [Xpring SDK repo](https://github.com/xpring-eng/xpring-sdk).
 
 ## PayID standards
 
@@ -42,7 +38,7 @@ PayID uses existing web standards and infrastructure, including HTTP and DNS. Ea
 
 PayID does not rely on any consensus protocols, which simplifies infrastructure demands.
 
-### Decentralized and trust-minimized
+### Decentralized
 
 PayID is built on the most successful decentralized network in history: the web. PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own personal PayID server so they have no counterparty risk.
 
