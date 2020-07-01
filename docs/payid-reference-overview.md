@@ -15,6 +15,7 @@ By default, the server hosts the PayID Protocol implementation, or Public API, o
 ## PayID server setup
 
 There are multiple ways to set up a PayID server. We recommend any of the following:
+
 - You can use the provided Docker-based deployment as described in [Getting Started](/).
 - You can set up a [local PayID server without Docker](local-deployment).
 - You can use [AWS and nginx](remote-deployment) to set up your PayID server, or adapt those instructions to other cloud providers. See the [PayID server requirements](payid-server-requirements) to learn about what types of resources you should deploy.
