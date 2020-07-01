@@ -10,11 +10,11 @@ The PayID protocol is flexible and supports a wide range of implementations. To 
 
 When implementing PayID, you must meet the following requirements.
 
-## Limit Private API exposure
+### Limit Private API exposure
 
 The [Private PayID API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
 
-## Set CORS (Cross-Origin Resource Sharing) Headers
+### Set CORS (Cross-Origin Resource Sharing) Headers
 
 PayID servers should be easily accessible. To allow browser scripts to hit a PayID server, you should set the following CORS headers.
 
@@ -62,6 +62,10 @@ As stated in the requirements, your implementation of PayID must use TLS. To ens
 
 The following best practices are strongly recommended.
 
+### Harden Docker
+
+Consider adding further Docker hardening steps, such as using the `no-new-privileges` security option to help prevent privilege escalation attacks through the misuse of `setuid` and `setgid` programs.
+
 ### Recommendations for open-source implementation libraries
 
 Many open-source implementation libraries support TLS 1.3. See the comprehensive list [on Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_TLS_implementations).
@@ -107,7 +111,3 @@ Use one of the following cipher suites:
 
 Do not use the 0-RTT (Zero Round Trip Time Resumption (0-RTT) mode of operation. 0-RTT encryption keys do not provide
 full-forward secrecy, and the server cannot guarantee uniqueness of the handshake (non-replayability) without keeping potentially undue amounts of state. See [RFC 8446, Appendix E.1.3](https://tools.ietf.org/html/rfc8446#appendix-E.1.3).
-
-### Harden Docker
-
-Consider adding further Docker hardening steps, such as using the `no-new-privileges` security option to help prevent privilege escalation attacks through the misuse of `setuid` and `setgid` programs.
