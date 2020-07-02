@@ -1,7 +1,7 @@
 ---
 id: payid-best-practices
-title: Security Requirements and Best Practices
-sidebar_label: Security Requirements and Best Practices
+title: Security
+sidebar_label: Security
 ---
 
 The PayID protocol is flexible and supports a wide range of implementations. To ensure security, follow these best practices.
