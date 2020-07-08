@@ -56,8 +56,8 @@ module.exports = {
   url: getDocsURL(),
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'payid-org', // Usually your GitHub org/user name.
-  projectName: 'payid', // Usually your repo name.
+  organizationName: 'payid-org',
+  projectName: 'payid',
   themeConfig: {
     image: 'img/payid.png',
     navbar: {
@@ -121,8 +121,7 @@ module.exports = {
           routeBasePath: '/',
           homePageId: 'getting-started',
           sidebarPath: require.resolve('./sidebars.js'),
-          // editUrl:
-          //   'https://github.com/payid-org/payid-documentation/tree/master',
+          editUrl: 'https://github.com/payid-org/payid-documentation/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -26,11 +26,8 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
+    "src/**/*.js",
     "sidebars.js",
     "docusaurus.config.js",
-    ".eslintrc.js",
-    "src/plugins/heap.js",
-    "src/plugins/fonts.js",
-    "src/plugins/sentry.js",
   ]
 }

@@ -12,3 +12,12 @@ link checker:
     - go get -u github.com/raviqqe/liche
   script:
     - liche -r ${CI_PROJECT_DIR}
+
+build:
+  image:
+    name: node:12-alpine
+  stage: test
+  before_script:
+    - npm i --cache .npm --prefer-offline --no-audit --progress=false
+  script:
+    - npm run build
