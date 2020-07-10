@@ -1,5 +1,5 @@
 ---
-id: community-tools
+id: community-resources
 title: Community Resources
 sidebar_label: Community Resources
 ---
