@@ -4,7 +4,7 @@ title: Community Resources
 sidebar_label: Community Resources
 ---
 
-The PayID community has created useful resources for using and learning about PayID.
+Members of the PayID community have created useful resources for using and learning about PayID.
 
 * [PayID Youtube Tutorial by Ken Carabello](https://www.youtube.com/watch?v=gpLJp1lylns)
 
@@ -15,9 +15,9 @@ The PayID community has created useful resources for using and learning about Pa
     - [CORS accessibility](https://docs.payid.org/payid-best-practices#set-cors-cross-origin-resource-sharing-headers)
     - Response time
 
-    See also: Open source [Python-based PayID validator](https://github.com/RockHoward/python-payid-validator).
+    See also: [Python-based PayID validator](https://github.com/RockHoward/python-payid-validator).
 
-* PayID Server(s)
+* [PayID Server](https://github.com/RockHoward/django-payid-server) - A Django-based PayId reference server.
 
 * [Assorted PayID Client Libraries in Node.js](https://www.npmjs.com/search?q=payid)
 
