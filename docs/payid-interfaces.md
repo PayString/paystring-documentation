@@ -13,7 +13,6 @@ The PayID protocol includes the following interface definitions.
 ```ts
 interface PaymentInformation {
   addresses: Address[]
-  proofOfControlSignature?: string
   payId?: string
   memo?: string
 }
