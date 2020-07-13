@@ -17,7 +17,7 @@ Members of the PayID community have created useful resources for using and learn
 
   See also: [Python-based PayID validator](https://github.com/RockHoward/python-payid-validator).
 
-- [PayID Server](https://github.com/RockHoward/django-payid-server) - A Django-based PayId reference server.
+- [Django PayID Server](https://github.com/RockHoward/django-payid-server) - A Django-based PayID server.
 
 - [Assorted PayID Client Libraries in Node.js](https://www.npmjs.com/search?q=payid)
 
