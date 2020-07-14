@@ -37,7 +37,7 @@ module.exports = {
     {
       type: 'category',
       label: 'PayID Tooling',
-      items: ['xpring-sdk-payid', 'community-tools'],
+      items: ['xpring-sdk-payid', 'community-resources'],
     },
   ],
 }
