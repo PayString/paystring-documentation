@@ -21,7 +21,7 @@ Members of the PayID community have created useful resources for using and learn
 
 - [Python-based PayID validator](https://github.com/RockHoward/python-payid-validator) - Validates URI strings to determine if they are valid PayIDs.
 
-**Reference server implementations**
+**PayID server implementations**
 
 - [Django PayID Server](https://github.com/RockHoward/django-payid-server) - A Django-based PayID server.
 - [PayID Static](https://github.com/WietseWind/PayID-Static) - A Node.js PayID server with static configuration (easy to use on Heroku).
