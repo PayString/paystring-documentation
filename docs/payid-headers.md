@@ -27,7 +27,9 @@ Some different header options are shown here, with example values.
 | BTC      | `application/btc-mainnet+json`  | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                      |
 | XRP      | `application/xrpl-mainnet+json` | { address: "rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg", tag: "67298042"} |
 | ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
-| All      | `application/payid+json`        | Variable depending on the contents of each address                |
+| All      | `application/payid+json`        | Variable, depending on the contents of each address                |
+
+If you create your own Accept header for another currency, follow the pattern for BTC Accept headers, as shown.
 
 ## Headers for GET requests
 
@@ -66,7 +68,7 @@ This launch of PayID includes those headers specific to the XRPL community. Each
 | :----------------------------: | :---------------------: |
 | `application/eth-mainnet+json` | Returns mainnet address |
 | `application/eth-ropsten+json` | Returns testnet address |
-|  `application/eth-kovan+json`  | Returns testnet address |
+| `application/eth-kovan+json`  | Returns testnet address |
 | `application/eth-rinkeby+json` | Returns testnet address |
 
 Ethernet has a number of different testnets. Refer to [EIP 155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md).
