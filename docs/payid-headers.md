@@ -27,7 +27,9 @@ Some different header options are shown here, with example values.
 | BTC      | `application/btc-mainnet+json`  | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                      |
 | XRP      | `application/xrpl-mainnet+json` | { address: "rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg", tag: "67298042"} |
 | ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
-| All      | `application/payid+json`        | Variable depending on the contents of each address                |
+| All      | `application/payid+json`        | Variable, depending on the contents of each address               |
+
+If you create your own Accept header for another currency, follow the pattern for BTC Accept headers, and use three characters for the currency, as shown. In addition, consider creating a PR to update this list.
 
 ## Headers for GET requests
 
