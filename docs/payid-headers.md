@@ -29,7 +29,7 @@ Some different header options are shown here, with example values.
 | ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
 | All      | `application/payid+json`        | Variable, depending on the contents of each address               |
 
-If you create your own Accept header for another currency, follow the pattern for BTC Accept headers, and use three characters for the currency, as shown.
+If you create your own Accept header for another currency, follow the pattern for BTC Accept headers, and use three characters for the currency, as shown. In addition, consider creating a PR to update this list.
 
 ## Headers for GET requests
 
