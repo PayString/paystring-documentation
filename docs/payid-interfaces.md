@@ -13,7 +13,7 @@ The PayID protocol includes the following interface definitions.
 ```ts
 interface PaymentInformation {
   addressDetailsType: AddressDetailsType
-  addressDetails: CryptoAddressDetails | AchAddressDetails
+  addressDetails: CryptoAddressDetails | FiatAddressDetails
   proofOfControlSignature?: string
   payId?: string
   memo?: string
@@ -29,11 +29,11 @@ interface CryptoAddressDetails {
 }
 ```
 
-### AchAddressDetails
+### FiatAddressDetails
 
 ```ts
-interface AchAddressDetails {
+interface FiatAddressDetails {
   accountNumber: string
-  routingNumber: string
+  routingNumber?: string
 }
 ```
