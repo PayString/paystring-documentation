@@ -36,10 +36,10 @@ A single user can have multiple destinations, because the same user can have add
 }
 ```
 
-| Field                      | Description                                                                                                                                    |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `payId`                    | PayID user address                                                                                                                             |
-| `addresses`                | Object that includes payment address information for one or more payment networks.                                                             |
-| `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.                                                                                 |
-| `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                   |
-| `address.details`          | Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `AchAddressDetails`. See [Interfaces](#interfaces). |
+| Field                      | Description                                                                                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `payId`                    | PayID user address                                                                                                                              |
+| `addresses`                | Object that includes payment address information for one or more payment networks.                                                              |
+| `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.                                                                                  |
+| `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                    |
+| `address.details`          | Actual payment information for this address. Must be in the form `CryptoAddressDetails` or `FiatAddressDetails`. See [Interfaces](#interfaces). |
