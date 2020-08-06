@@ -12,3 +12,4 @@ WORKDIR /payiddocumentation
 
 FROM nginx:1.17-alpine
 COPY --from=0 /payiddocumentation/build /usr/share/nginx/html
+COPY files/default.conf /etc/nginx/conf.d/default.conf
