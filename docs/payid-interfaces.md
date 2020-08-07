@@ -23,7 +23,7 @@ interface PaymentInformation {
 ```ts
 enum AddressDetailsType {
   CryptoAddress = 'CryptoAddressDetails'
-  AchAddress = 'AchAddressDetails'
+  FiatAddress = 'FiatAddressDetails'
 }
 ```
 
@@ -36,12 +36,12 @@ interface CryptoAddressDetails {
 }
 ```
 
-### AchAddressDetails
+### FiatAddressDetails
 
 ```ts
-interface AchAddressDetails {
+interface FiatAddressDetails {
   accountNumber: string
-  routingNumber: string
+  routingNumber?: string
 }
 ```
 
@@ -52,6 +52,6 @@ interface Address {
   paymentNetwork: string
   environment?: string
   addressDetailsType: AddressDetailsType
-  addressDetails: CryptoAddressDetails | AchAddressDetails
+  addressDetails: CryptoAddressDetails | FiatAddressDetails
 }
 ```
