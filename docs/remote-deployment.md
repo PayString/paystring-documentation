@@ -14,7 +14,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 | Type | Name                 | Value             | TTL         |
 | ---- | -------------------- | ----------------- | ----------- |
 | A    | @                    | _your-ip-address_ | 600 seconds |
-| A    | _your-payID-address_ | _your-ip-address_ | 1/2 Hour    |
+| A    | _your-payID-domain_  | _your-ip-address_ | 1/2 Hour    |
 
 4. Set your instance's firewall/security group.
    - Port 80 (TCP) open for all address
