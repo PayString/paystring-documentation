@@ -70,7 +70,7 @@ module.exports = {
         href: getPayIDURL(),
         target: '_self',
       },
-      links: [
+      items: [
         {
           to: '/',
           activeBasePath: '/',
