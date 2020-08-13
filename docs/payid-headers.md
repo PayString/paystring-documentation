@@ -29,9 +29,9 @@ Some different header options are shown here, with example values.
 | ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
 | All      | `application/payid+json`        | Variable, depending on the contents of each address               |
 
-If you create your own Accept header for another currency: 
+If you create your own Accept header for another currency:
 
-1. Follow the pattern for BTC Accept headers and use three characters for the currency, as shown. 
+1. Follow the pattern for BTC Accept headers and use three characters for the currency, as shown.
 2. Consider creating a [PR on the PayID docs site](https://github.com/payid-org/payid-documentation) to update this list.
 3. Consider updating [IANA registration section in the PayID protocol RFC for supported Media-types](https://github.com/payid-org/rfcs/blob/master/dist/spec/payid-protocol.txt#L1162) by sending an email to <rfcs@payid.org>.
 
