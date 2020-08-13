@@ -70,7 +70,7 @@ module.exports = {
         href: getPayIDURL(),
         target: '_self',
       },
-      links: [
+      items: [
         {
           to: '/',
           activeBasePath: '/',
@@ -105,13 +105,13 @@ module.exports = {
       apiKey: 'a88df26bddf797de70ffeb1e55475513',
       indexName: 'payid',
     },
-    announcementBar: {
-      id: 'hackathon_annoucement',
-      content:
-        'Participate in the <a target="_blank" rel="noopener noreferrer" href="https://payid.devpost.com/?utm_source=docs.payid.org&utm_medium=banner">PayID Hackathon</a> and win up to $15K! Submissions are due by 5:00pm PDT Aug 2, 2020',
-      backgroundColor: '#292d3e',
-      textColor: '#bfc7d5',
-    },
+    // announcementBar: {
+    //   id: 'hackathon_annoucement',
+    //   content:
+    //     'Participate in the <a target="_blank" rel="noopener noreferrer" href="https://payid.devpost.com/?utm_source=docs.payid.org&utm_medium=banner">PayID Hackathon</a> and win up to $15K! Submissions are due by 5:00pm PDT Aug 2, 2020',
+    //   backgroundColor: '#292d3e',
+    //   textColor: '#bfc7d5',
+    // },
   },
   presets: [
     [
