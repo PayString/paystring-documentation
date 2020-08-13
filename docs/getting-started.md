@@ -18,21 +18,19 @@ Your contributions are welcome. Check out the [PayID repository on GitHub](https
 
 To get started, the first thing to do is set up a PayID server.
 
-1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) on your machine.
+1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) and [Node](https://nodejs.org/en/) on your machine.
 
-2.  If you have not set up GitHub, see [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for instructions on how to do so.
-
-3.  The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
+2.  The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
 
         git clone https://github.com/payid-org/payid.git
 
-4.  Go to the `/payid` directory that you just created:
+3.  Go to the `/payid` directory that you just created:
 
         cd payid
 
-5.  Boot up the PayID HTTP server and a Postgres database to develop against:
+4.  Boot up the PayID HTTP server and a Postgres database to develop against:
 
-    npm run devEnvUp
+        npm run devEnvUp
 
 ## Create a PayID
 
