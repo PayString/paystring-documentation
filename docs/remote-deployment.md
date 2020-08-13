@@ -11,10 +11,10 @@ You can set up a PayID server on AWS (Amazon Web Services).
 2. Get an elastic IP address and associate it with your AWS `t2.micro` instance, as described in [Step 1, part 10](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance).
 3. Update the DNS for your PayID domain as shown in the following table. Add any other subdomain you would like to use as a PayID as well.
 
-| Type | Name                 | Value             | TTL         |
-| ---- | -------------------- | ----------------- | ----------- |
-| A    | @                    | _your-ip-address_ | 600 seconds |
-| A    | _your-payID-address_ | _your-ip-address_ | 1/2 Hour    |
+| Type | Name                | Value             | TTL         |
+| ---- | ------------------- | ----------------- | ----------- |
+| A    | @                   | _your-ip-address_ | 600 seconds |
+| A    | _your-payID-domain_ | _your-ip-address_ | 1/2 Hour    |
 
 4. Set your instance's firewall/security group.
    - Port 80 (TCP) open for all address
