@@ -64,7 +64,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayID-version: 1.0'
 ```
 
-For other PayID API methods, see the [readme](readme.md).
+For other PayID API methods, see the [readme](https://github.com/payid-org/payid/blob/master/readme.md).
 
 To convert a PayID address to a URL endpoint, follow these patterns:
 

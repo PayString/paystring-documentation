@@ -48,7 +48,7 @@ PayID fully abstracts away underlying payment rail details from end users. A use
 
 ### Security requirements
 
-A PayID implementation requires the use of TLS (Transport Level Security). As described in [PayID Security and Best Practices](best-practices), the use of TLS 1.3 is highly recommended.
+A PayID implementation requires the use of TLS (Transport Level Security). As described in [PayID Security and Best Practices](payid-best-practices), the use of TLS 1.3 is highly recommended.
 
 ## Future features and integrations
 

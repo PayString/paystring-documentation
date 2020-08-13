@@ -40,7 +40,7 @@ PayID depends on environment variables. All of these environment variables are r
 
 ## Update database migrations
 
-If you use your own database, there are migration files written specifically for the tables outlined in [src/db/schema](./src/db/schema). Either remove these migration files, or update them to match your database.
+If you use your own database, there are migration files written specifically for the tables outlined in [src/db/schema](https://github.com/payid-org/payid/tree/master/src/db/schema). Either remove these migration files, or update them to match your database.
 
 ## Update SQL files
 
