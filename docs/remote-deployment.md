@@ -105,6 +105,8 @@ Next, set up NGINX Reverse Proxy + SSL.
    `sudo systemctl restart nginx`
 7. [Optional] Update the NGINX configuration that catches PayID headers and forwards them to the PayID server; otherwise, send these headers to the web server.
 
+**Note:** You will need to add additional proxy passing statements for each additional network supported, or otherwise use a generic regex to identify all PayID headers.
+
    ```bash
    sudo nano /etc/nginx/sites-available/<your-site>
    ```
@@ -119,10 +121,10 @@ Next, set up NGINX Reverse Proxy + SSL.
       # proxy passing needed for all supported networks
       # modify port to the one used by your PayID server
       if ($http_accept ~ "application/payid*") {
-            proxy_pass http://127.0.0.1:8080;
+            proxy_pass http://localhost:8080;
       }
       if ($http_accept ~ "application/xrpl-*") {
-            proxy_pass http://127.0.0.1:8080;
+            proxy_pass http://localhost:8080;
       }
 
       try_files $uri $uri/ =404;
