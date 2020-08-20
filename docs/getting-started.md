@@ -6,6 +6,7 @@ sidebar_label: Getting Started
 
 PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through:
 
+- [Experiment With the PayID Sandbox](#experiment-with-the-payid-sandbox)
 - [Run a PayID Server](#run-a-payid-server)
 - [Create a PayID](#create-a-payid)
 - [Request a PayID](#request-a-payid)
@@ -13,6 +14,10 @@ PayID is a simple, web-based protocol designed to make it as easy to send someon
 - [Xpring SDK Integration](#xpring-sdk-integration)
 
 Your contributions are welcome. Check out the [PayID repository on GitHub](https://github.com/payid-org/payid), and note the [Contributing](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md) guidelines.
+
+## Experiment with the PayID Sandbox
+
+The [PayID Sandbox](https://payid.org/sandbox) lets you experiment with PayID. Log in with your Github account and follow the prompts. You can quickly set up a virtual server, and then create users with simple PayID addresses that map to addresses on various networks such as XRPL, Interledger, BTC, and ETH. Using the provided cURL or Javascript code, you can create, update, and delete users, and get payment information about a PayID address. While the session is running, you can also run operations from your command line. Your work is not saved between sessions, and the sandbox may be reset at any time.  
 
 ## Run a PayID Server
 
