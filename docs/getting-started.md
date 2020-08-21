@@ -17,7 +17,9 @@ Your contributions are welcome. Check out the [PayID repository on GitHub](https
 
 ## Experiment with the PayID Sandbox
 
-The [PayID Sandbox](https://payid.org/sandbox) lets you experiment with PayID. Log in with your Github account and follow the prompts. You can quickly set up a virtual server, and then create users with simple PayID addresses that map to addresses on various networks such as XRPL, Interledger, BTC, and ETH. Using the provided cURL or Javascript code, you can create, update, and delete users, and get payment information about a PayID address. While the session is running, you can also run operations from your command line. Your work is not saved between sessions, and the sandbox may be reset at any time.  
+The [PayID Sandbox](https://payid.org/sandbox) lets you experiment with PayID in a test environment. Your work is not saved between sessions, and the sandbox may be reset at any time.
+
+To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github account and follow the prompts. You can quickly set up a virtual test server, and then create users with simple PayID addresses that map to addresses on various networks such as XRPL, Interledger, BTC, and ETH. Using the provided cURL or Javascript code, you can create, update, and delete users, and get payment information about a PayID address. While the session is running, you can also run operations from your command line.
 
 ## Run a PayID Server
 
