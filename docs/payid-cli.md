@@ -4,7 +4,9 @@ title: PayID CLI
 sidebar_label: PayID CLI
 ---
 
-You can run PayID commands from the command line, and access all PayID features.
+With the PayID CLI, you can run PayID commands from the command line, and access all PayID features.
+
+View the [PayID CLI project on Github](https://github.com/payid-org/payid-cli).
 
 ## PayID CLI setup
 
