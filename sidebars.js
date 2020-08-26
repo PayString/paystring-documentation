@@ -39,5 +39,10 @@ module.exports = {
       label: 'PayID Tooling',
       items: ['xpring-sdk-payid', 'community-resources'],
     },
+    {
+      type: 'category',
+      label: 'Release Notes',
+      items: ['release-notes'],
+    }
   ],
 }
