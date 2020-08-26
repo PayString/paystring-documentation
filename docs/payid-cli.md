@@ -14,7 +14,7 @@ PayID CLI uses TypeScript. Therefore, make sure you have installed [node](https:
 
 To install PayID CLI, run:
 
-   `npm install -g @payid-org/payid-cli`
+`npm install -g @payid-org/payid-cli`
 
 This command installs PayID CLI as a global npm module and links it as a payid executable, typically under
 `/usr/local/bin/payid`.
@@ -22,7 +22,6 @@ This command installs PayID CLI as a global npm module and links it as a payid e
 To install and run PayID CLI from Docker, run:
 
     `docker run xpring/payid-cli`
-
 
 ## Run PayID CLI in interactive or single-command mode
 
@@ -50,28 +49,27 @@ When you pass a PayID as an argument in non-interactive mode, make sure to escap
 
 Use these commands with the PayID CLI.
 
-| Command | Description |
-|---------|-------------|
-| `help [command...]` | Provides help for a given command. |
-| `exit` | Exits application. |
-| `clear` | Clears the terminal. |
-| `crypto-address add <paymentNetwork> <environment> <address> [tag]` | Starts building a new PayID. |
-| `crypto-address remove <address>` | Removes an address from the current PayID. |
-| `keys clear` | Clears all loaded keys. |
-| `keys generate` | Generates and saves a new identity key. |
-| `keys list` | Lists keys that have been loaded. |
-| `keys load <filePath>` | Loads identity-key from file. |
-| `keys print` | Prints keys that have been loaded in pem format. |
-| `init <payid>` | Initializes a new PayID. |
-| `inspect [payId]` | Inspects signatures on the loaded PayID or from an optionally specified PayID. |
-| `load <payId>` | Loads a PayID from PayID server. |
-| `show` | Shows the currently loaded PayID. |
-| `sign` | Signs the loaded PayID with the loaded signing keys. |
-| `verify [payId]` | Verifies the loaded PayID or an optionally specified PayID. |
-| `save` | Saves the currently loaded PayID. |
-| `from-url <url>` | Converts a URL to a PayID. |
-| `to-url <payId>` | Converts a PayID to a URL. |
-
+| Command                                                             | Description                                                                    |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `help [command...]`                                                 | Provides help for a given command.                                             |
+| `exit`                                                              | Exits application.                                                             |
+| `clear`                                                             | Clears the terminal.                                                           |
+| `crypto-address add <paymentNetwork> <environment> <address> [tag]` | Starts building a new PayID.                                                   |
+| `crypto-address remove <address>`                                   | Removes an address from the current PayID.                                     |
+| `keys clear`                                                        | Clears all loaded keys.                                                        |
+| `keys generate`                                                     | Generates and saves a new identity key.                                        |
+| `keys list`                                                         | Lists keys that have been loaded.                                              |
+| `keys load <filePath>`                                              | Loads identity-key from file.                                                  |
+| `keys print`                                                        | Prints keys that have been loaded in pem format.                               |
+| `init <payid>`                                                      | Initializes a new PayID.                                                       |
+| `inspect [payId]`                                                   | Inspects signatures on the loaded PayID or from an optionally specified PayID. |
+| `load <payId>`                                                      | Loads a PayID from PayID server.                                               |
+| `show`                                                              | Shows the currently loaded PayID.                                              |
+| `sign`                                                              | Signs the loaded PayID with the loaded signing keys.                           |
+| `verify [payId]`                                                    | Verifies the loaded PayID or an optionally specified PayID.                    |
+| `save`                                                              | Saves the currently loaded PayID.                                              |
+| `from-url <url>`                                                    | Converts a URL to a PayID.                                                     |
+| `to-url <payId>`                                                    | Converts a PayID to a URL.                                                     |
 
 ## Example commands
 
@@ -109,7 +107,7 @@ The output fetches all the PayID address mappings for the given PayID from the r
   ],
   "verifiedAddresses": []
 }
-```    
+```
 
 ### Remove a crypto-address
 
@@ -117,25 +115,25 @@ If you have previously loaded a PayID, you can use this command to remove a cryp
 
 `crypto-address remove "rwcBVJwXdXusY5SgNMjHbMWbR2Nnt2U3R6"`
 
- The output returns the updated information about the PayID. In this example, the command removed the address on XRP testnet.
+The output returns the updated information about the PayID. In this example, the command removed the address on XRP testnet.
 
- ```json
- {
-   "payId": "loisrp$xpring.money",
-   "version": "1.0",
-   "addresses": [
-     {
-       "paymentNetwork": "INTERLEDGER",
-       "environment": "TESTNET",
-       "addressDetailsType": "CryptoAddressDetails",
-       "addressDetails": {
-         "address": "$xpring.money/LoisRP"
-       }
-     }
-   ],
-   "verifiedAddresses": []
- }
- ```
+```json
+{
+  "payId": "loisrp$xpring.money",
+  "version": "1.0",
+  "addresses": [
+    {
+      "paymentNetwork": "INTERLEDGER",
+      "environment": "TESTNET",
+      "addressDetailsType": "CryptoAddressDetails",
+      "addressDetails": {
+        "address": "$xpring.money/LoisRP"
+      }
+    }
+  ],
+  "verifiedAddresses": []
+}
+```
 
 ### Add a crypto-address
 
@@ -143,7 +141,7 @@ You can add a crypto-address to a PayID. This command does not confirm the valid
 
 `crypto-address add xrpl mainnet rP3t3JStqWPYd8H88WfBYh3v84qqYzbHQ6 12345`
 
-The output returns the updated information for the PayID, including the added crypto-address.  
+The output returns the updated information for the PayID, including the added crypto-address.
 
 ```json
 {
@@ -202,11 +200,13 @@ This generates a new key and saves it to a file named identity-key.pem. To load 
 `keys load </path/to/pem/file>`.
 
 #### Sign a PayID
+
 Before you sign an PayID, you must either load the PayID using the `load` command, or create a PayID using the `init` command, and you must execute commands to add one or more crypto-addresses to the PayID.
 
 Once a PayID has been initialized or loaded, you can sign it using an identity key. You must either generate a new key, or load an existing one. Once your PayID has been loaded or initialized, and your identity key has been generated or loaded, you can sign the PayID using the `sign` command. The `sign` command signs each of your PayID address mappings using the loaded identity keys, and outputs the resulting PayID with a `verifiedAddress` field. Run the `save` command to save your PayID, with signed addresses, to file.
 
 #### Inspect a Verified PayID
+
 Two commands are available to verify a PayID's verified addresses.
 
 `verify` - Checks if all the verified addresses have valid signatures.
