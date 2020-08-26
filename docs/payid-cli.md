@@ -10,25 +10,48 @@ View the [PayID CLI project on Github](https://github.com/payid-org/payid-cli).
 
 ## PayID CLI setup
 
-1. PayID CLI uses TypeScript. Therefore, make sure you have installed [node](https://nodejs.org/en/download/) and the [npm](https://docs.npmjs.com/downloading-and-installing-packages-locally) package manager locally.
-2. Install PayID CLI with this command: `npm install -g @payid-org/payid-cli`
-   This command installs PayID CLI as a global npm module and links it as a payid executable (typically under /usr/local/bin/payid).
-3. If you prefer to install and run PayID CLI from Docker, use this command: `docker run xpring/payid-cli`
+PayID CLI uses TypeScript. Therefore, make sure you have installed [node](https://nodejs.org/en/download/) and the [npm](https://docs.npmjs.com/downloading-and-installing-packages-locally) package manager locally.
+
+To install PayID CLI, run:
+
+   `npm install -g @payid-org/payid-cli`
+
+This command installs PayID CLI as a global npm module and links it as a payid executable, typically under
+`/usr/local/bin/payid`.
+
+To install and run PayID CLI from Docker, run:
+
+    `docker run xpring/payid-cli`
+
 
 ## Run PayID CLI in interactive or single-command mode
 
-To run PayID CLI in interactive mode, run `payid`. You can then run PayID CLI commands as desired with the form
-`<command> <arguments>`, such as `load 'nhartner$xpring.money'`. To exit interactive mode, run `exit`.
+To run PayID CLI in interactive mode, run `payid` to open an interactive session.
 
-To run PayID CLI in single-command mode, prefix each command with `payid` so it takes the form `payid <command> <arguments>`, such as `payid load 'nhartner$xpring.money'`. Use single-command mode for scripts, or to chain the results of multiple commands together, such as `payid init 'my$pay.id' && payid crypto-address add btc mainnet notARealAddress && payid save`.
+In interactive mode, you can then run PayID CLI commands as desired with the form
+`<command> <arguments>`, such as:
 
-When you pass a PayID as an argument in non-interactive mode, the PayID must be escaped or quoted
-to avoid the `'$'` being interpolated as a variable by the shell.
+    `load 'nhartner$xpring.money'`
+
+To exit interactive mode, run `exit`.
+
+To run PayID CLI in single-command mode, prefix each command with `payid`. Each command takes the form
+`payid <command> <arguments>`, such as:
+
+    `payid load 'nhartner$xpring.money'`
+
+Use single-command mode for scripts, or to chain the results of multiple commands together, such as:
+
+    `payid init 'my$pay.id' && payid crypto-address add btc mainnet notARealAddress && payid save`
+
+When you pass a PayID as an argument in non-interactive mode, make sure to escape or quote the PayID to avoid the `'$'` being interpolated as a variable by the shell.
 
 ## Command list
 
 Use these commands with the PayID CLI.
 
+| Command | Description |
+|---------|-------------|
 | `help [command...]` | Provides help for a given command. |
 | `exit` | Exits application. |
 | `clear` | Clears the terminal. |
@@ -187,6 +210,7 @@ Once a PayID has been initialized or loaded, you can sign it using an identity k
 Two commands are available to verify a PayID's verified addresses.
 
 `verify` - Checks if all the verified addresses have valid signatures.
+
 `inspect` - Displays details information about each verified address and signatures.
 
 #### Create, sign, and verify a PayID

@@ -2,7 +2,11 @@ module.exports = {
   docs: [
     {
       type: 'doc',
-      id: 'getting-started','payid-cli',
+      id: 'getting-started'
+    },
+    {
+      type: 'doc',
+      id: 'payid-cli'
     },
     {
       type: 'category',
