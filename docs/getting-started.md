@@ -137,6 +137,10 @@ After setting up the basics, you have a good foundation for learning more about 
 - Learn how to use relevant [HTTP headers](payid-headers)
 - Learn how to handle different types of [responses](https://api.payid.org/?version=latest) you could receive from a PayID server
 
+You can use extended PayID features:
+* [Get Started With Verifiable PayID](verifiable-payid). Verifiable PayID enhances security for PayID.
+* [Use PayID CLI](payid-cli). PayID CLI is a convenient tool to work with PayID addresses. 
+
 Learn about:
 
 - [How to contribute to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md)

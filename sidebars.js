@@ -20,6 +20,13 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Verifiable PayID',
+      items: [
+        'verifiable-payid',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Reference Implementation',
       items: [
         'payid-reference-overview',
