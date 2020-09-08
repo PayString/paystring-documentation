@@ -1,7 +1,7 @@
 ---
 id: verifiable-payid
 title: Getting Started With Verifiable PayID
-sidebar_label: Getting Started With Verifiable PayID
+sidebar_label: Verifiable PayID
 ---
 
 Verifiable PayID provides enhanced security to the base PayID request and response. Verifiable PayID adds several digital signature fields so you can:
@@ -14,11 +14,11 @@ With Verifiable PayID, you can enable trust-minimized and trust-free security re
 
 ## Use Verifiable PayID
 
-In this guide, you will deploy a local PayID server, create a PayID, sign and verify the PayID, and test it using calls to the PayID Admin API. If you want to use base PayID without verification, see [Getting Started](getting-started).
+In this guide, you will deploy a local PayID server, create a PayID, sign and verify the PayID, and test it using calls to the PayID Admin API. If you want to use base PayID without verification, see [Getting Started](/).
 
 Before you begin:
 
-- Deploy a PayID server locally. See [Getting Started: Deploy a PayID Server](getting-started#run-a-payid-server).
+- Deploy a PayID server locally. See [Getting Started: Deploy a PayID Server](/#run-a-payid-server).
 - [Install PayID CLI](payid-cli). You will use the command line to perform the tasks in this tutorial.
 
 1. Open the command line. Enter `payid`. You can now enter commands in interactive mode.

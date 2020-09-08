@@ -2,11 +2,11 @@ module.exports = {
   docs: [
     {
       type: 'doc',
-      id: 'getting-started'
+      id: 'getting-started',
     },
     {
       type: 'doc',
-      id: 'payid-cli'
+      id: 'payid-cli',
     },
     {
       type: 'category',
@@ -19,11 +19,8 @@ module.exports = {
       ],
     },
     {
-      type: 'category',
-      label: 'Verifiable PayID',
-      items: [
-        'verifiable-payid',
-      ],
+      type: 'doc',
+      id: 'verifiable-payid',
     },
     {
       type: 'category',
@@ -54,6 +51,6 @@ module.exports = {
       type: 'category',
       label: 'Release Notes',
       items: ['release-notes'],
-    }
+    },
   ],
 }
