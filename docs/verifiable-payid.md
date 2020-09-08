@@ -6,9 +6,9 @@ sidebar_label: Getting Started With Verifiable PayID
 
 Verifiable PayID provides enhanced security to the base PayID request and response. Verifiable PayID adds several digital signature fields so you can:
 
-* Link a PayID to one or more external digital identities
-* Prove control of the payment rail address
-* Provide non-repudiable messaging
+- Link a PayID to one or more external digital identities
+- Prove control of the payment rail address
+- Provide non-repudiable messaging
 
 With Verifiable PayID, you can enable trust-minimized and trust-free security regimes, which are applicable to both custodial and non-custodial settings.
 
@@ -18,8 +18,8 @@ In this guide, you will deploy a local PayID server, create a PayID, sign and ve
 
 Before you begin:
 
-* Deploy a PayID server locally. See [Getting Started: Deploy a PayID Server](getting-started#run-a-payid-server).
-* [Install PayID CLI](payid-cli). You will use the command line to perform the tasks in this tutorial.
+- Deploy a PayID server locally. See [Getting Started: Deploy a PayID Server](getting-started#run-a-payid-server).
+- [Install PayID CLI](payid-cli). You will use the command line to perform the tasks in this tutorial.
 
 1. Open the command line. Enter `payid`. You can now enter commands in interactive mode.
 2. See the available commands: enter `help`. Note the commands related to signing and verifying PayIDs.
@@ -28,6 +28,7 @@ Before you begin:
 5. Generate a user identity key:`keys generate`. This key is stored locally at the specified location. Make sure you keep the key in a safe place.
 6. Sign the PayID with the user identity key to create a verified PayID and address payload: `sign`.
 7. Remove the unverified crypto address: `crypto-address remove rDk7FQvkQxQQNGTtfM2Fr66s7Nm3k87vdS`. The output payload should have this format:
+
 ```js
 {
   "payId": "verifiabledemo$127.0.0.1",
@@ -45,12 +46,14 @@ Before you begin:
   ]
 }
 ```
+
 8. Upload the verified PayID. If you are using the PayID Admin API version from 2020-08-25 or later, POST the payload from Step 7 to the Admin API endpoint. See [PayID API Reference](https://api.payid.org). As mentioned, you must have a PayID server deployed to use this API.
-    If you use  the PayID Admin API version from before 2020-08-25, then you must modify this payload.
-    * `identityKey` should have the contents of the `protected` field in Step 7.
-    * `verifiedAddresses` should be the un-stringified JSON contents of the `payload` field in Step 7.
-    * `identityKeySignature` should be the `signature` field in Step 7.
-   The payload for older versions of the PayID Admin API appears as follows:
+   If you use the PayID Admin API version from before 2020-08-25, then you must modify this payload.
+   - `identityKey` should have the contents of the `protected` field in Step 7.
+   - `verifiedAddresses` should be the un-stringified JSON contents of the `payload` field in Step 7.
+   - `identityKeySignature` should be the `signature` field in Step 7.
+     The payload for older versions of the PayID Admin API appears as follows:
+
 ```js
 {
    "payId": "verifiabledemo$127.0.0.1",
@@ -68,9 +71,10 @@ Before you begin:
    ]
 }
 ```
+
 9. Retrieve and verify the verified PayID using PayID CLI. These commands do not use interactive mode.
-    `payid load verifiabledemo$127.0.0.11`
-    `payid inspect`
-    `payid verify`
+   `payid load verifiabledemo$127.0.0.11`
+   `payid inspect`
+   `payid verify`
 10. Verify the PayID from the PayID Public API endpoint with GET. See [API Reference](https://api.payid.org/). You can also use a JWS library like `jose` to verify the `verifiedAddress` object(s).
 11. If operating through a trust on first use (TOFU) model, safely store the identity key after successful verification, and use this key to verify subsequent addresses retrieved from the same PayID.
