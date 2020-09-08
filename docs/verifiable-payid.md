@@ -82,7 +82,3 @@ Before you begin:
 
 10. Verify the PayID from the PayID Public API endpoint with GET. See [API Reference](https://api.payid.org/). You can also use a JWS library like `jose` to verify the `verifiedAddress` object(s).
 11. If operating through a trust on first use (TOFU) model, safely store the identity key after successful verification, and use this key to verify subsequent addresses retrieved from the same PayID.
-
-```
-
-```
