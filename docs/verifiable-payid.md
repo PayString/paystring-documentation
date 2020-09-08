@@ -68,8 +68,7 @@ Before you begin:
    ]
 }
 ```
-9. Retrieve and verify the verified PayID with the PayID CLI payid-utils tool. These commands do not use interactive mode.
-    `payid-utils`
+9. Retrieve and verify the verified PayID using PayID CLI. These commands do not use interactive mode.
     `payid load verifiabledemo$127.0.0.11`
     `payid inspect`
     `payid verify`
