@@ -21,6 +21,7 @@ module.exports = {
     {
       type: 'doc',
       id: 'verifiable-payid',
+      id: 'payid-discovery',      
     },
     {
       type: 'category',
