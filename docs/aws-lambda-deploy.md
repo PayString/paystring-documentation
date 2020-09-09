@@ -1,7 +1,7 @@
 ---
 id: aws-lambda-deploy
 title: Deploy a PayID Server on AWS Lambda
-sidebar_label: Deploy a PayID Server on AWS Lambda  
+sidebar_label: Deploy a PayID Server on AWS Lambda
 ---
 
 You can deploy a PayID server on AWS Lambda, a setup that allows you to run code without having to deploy or manage a server.
@@ -92,7 +92,7 @@ Once you're on this page, click on the domain you used in the stack template (in
 
 ### Step 2: Find the nameservers
 
-Clicking on the hosted zone will display the nameservers you need to use with your registrar:
+Click on the hosted zone to display the nameservers you need to use with your registrar:
 
 ![hosted zone nameservers](./help-images/nameservers/hosted-zone-nameservers.png)
 
@@ -102,23 +102,22 @@ Paste the values you saw in the previous step into wherever your registrar allow
 
 ![registrar nameservers](./help-images/nameservers/registrar-nameservers.png)
 
-## Launching using scripts
+## Launch with AWS Lambda using scripts
 
-Several scripts are provided to make it simple to request a AWS certificate for your payid domain and launch the payid
-lambda stack on your domain.
+Several scripts are provided to make it simple to request a AWS certificate for your PayID domain and launch the payid lambda stack on your domain.
 
 - [request-certificate.sh](request-certificate.sh) - to request a certificate via AWS certificate manager for a given domain.
 - [create-stack.sh](create-stack.sh) - to create the PayID lambda stack on your account for a given domain.
 
 ### Prequisites
 
-- AWS cli must be installed (see https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
-- `aws configure` must have been configured with an Access Key created via https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials
+- You must install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+- Make sure `aws configure` has been configured with an Access Key created via [IAM--Your Security Credentials](https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials).
 - You must have a domain and the ability to configure DNS for your domain.
 
 ### Usage
 
-#### Requesting a certificate
+#### Request a certificate
 
 Commamd: `./request-certificate.sh <domain-name>`
 
@@ -132,11 +131,11 @@ Certificate requested. Please create the following CNAME record for your domain:
 _09dee7696e4d458fb16fead080465035.hodl.payid.ml.	CNAME	_b1fddaad4657f8e03167be7b61dc3685.jfrzftwwjs.acm-validations.aws.
 ```
 
-Once the certificate request is completed, create the CNAME for your domain as specified in the output.
+When the certificate request is completed, create the CNAME for your domain as specified in the output.
 
 Wait for AWS Certificate Manager to issue your certificate before proceeding to the next command.
 
-#### Launching the PayID Lambda stack
+#### Launch the PayID Lambda stack
 
 Commamd: `./create-stack.sh <domain-name>`
 
@@ -161,13 +160,13 @@ nameserver4	ns-8.awsdns-01.com
 
 Once completed, update the nameservers for your domain to the ones specified in the output.
 
-## How do I add PayIDs?
+## Add PayIDs to your Amazon S3 bucket
 
-When the stack is created, an S3 bucket titled `{name of stack}-s3bucket-{unique hash}` is created.
+When the stack is created, an Amazon S3 bucket titled `{name of stack}-s3bucket-{unique hash}` is also created.
 
-PayIDs can be added to this bucket by uploading `json` files to the bucket, each of which contains a single user that conforms to [the PayID schema](https://docs.payid.org/payid-schemas#example-single-user-schema). You can upload new files to the bucket via https://s3.console.aws.amazon.com/s3/buckets/.
+You can add PayIDs by uploading `json` files to this bucket, each of which contains a single user that conforms to [the PayID schema](https://docs.payid.org/payid-schemas#example-single-user-schema). You can upload new files to the bucket via the [Amazon S3 console](https://s3.console.aws.amazon.com/s3/buckets/).
 
-A test account is provided on creation at `testaccount.json`:
+When the stack is created, a test account is provided at `testaccount.json`:
 
 ```
 {
@@ -184,18 +183,18 @@ A test account is provided on creation at `testaccount.json`:
 }
 ```
 
-The name of the file is used to resolve the PayID - `testaccount.json` will be resolved by `mydomain.tld/testaccount`.
+The name of the file used to resolve the PayID--`testaccount.json`--is resolved by `mydomain.tld/testaccount`.
 
-## How do I upgrade?
+## Upgrade the AWS Lambda function
 
-Releases can be found in the [releases tab](https://github.com/xpring-eng/payid-lambda/releases), with the file `payid-stack.yaml` attached.
+To see if there is a release with an upgraded AWS Lambda function, look for [releases](https://github.com/xpring-eng/payid-lambda/releases) with the file `payid-stack.yaml` attached.
 
-The version you have installed will be visible in the description of the stack in CloudFormation (for example, something like `[v1.0] PayID Lambda Server and API Gateway front end`) and also in the `Outputs` of the stack under the name `PayIdLambdaStackVersion`.
+The version you have installed is visible in the description of the stack in CloudFormation (for example, something like `[v1.0] PayID Lambda Server and API Gateway front end`) and also in the `Outputs` of the stack under the name `PayIdLambdaStackVersion`.
 
-To perform an update, click the `Update` button when viewing the stack and upload the version of `payid-stack.yaml` you want to upgrade to.
+To perform an update, click the `Update` button when viewing the stack and upload the version of `payid-stack.yaml` to which you want to upgrade.
 
 ![update button](./help-images/upgrade/update-button.png)
 
 ![update button](./help-images/upgrade/update-form.png)
 
-Note: While this will update the Lambda function it could also update other resources as well in the stack, including API Gateway, S3, etc. We'll outline changes in the release notes if other resources are altered, but be sure to look at the changelog for indications that other resources may be impacted.
+**Note**: This upgrade updates the Lambda function, but it could also update other resources as well in the stack, including API Gateway, Amazon S3, and others. The release notes will outline changes if other resources are altered, but be sure to also look at the changelog to see if other resources may be impacted.
