@@ -21,7 +21,6 @@ module.exports = {
     {
       type: 'doc',
       id: 'verifiable-payid',
-      id: 'payid-discovery',      
     },
     {
       type: 'category',
@@ -31,6 +30,7 @@ module.exports = {
         'api-reference',
         'payid-best-practices',
         'integrate-payid-users',
+        'payid-discovery',        
         'metrics',
       ],
     },
