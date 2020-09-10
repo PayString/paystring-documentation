@@ -1,8 +1,10 @@
 ---
-id: payid-overview
-title: Overview
-sidebar_label: Overview
+id: welcome-to-payid
+title: Welcome to PayID
+sidebar_label: Welcome to PayID
 ---
+
+**NOTES** - Welcome to PayID will be somewhat similar to PayID Overview. I've kept the content for now. **END NOTES**
 
 With PayID, you can use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$wallet.com` maps to the corresponding URL `https://wallet.com/alice`.
 

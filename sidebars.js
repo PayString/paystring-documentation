@@ -2,32 +2,16 @@ module.exports = {
   docs: [
     {
       type: 'doc',
-      id: 'getting-started',
-    },
-    {
-      type: 'doc',
-      id: 'payid-cli',
-    },
-    {
-      type: 'category',
-      label: 'PayID Protocol',
-      items: [
-        'payid-overview',
-        'payid-headers',
-        'payid-interfaces',
-        'payid-schemas',
-      ],
-    },
-    {
-      type: 'doc',
-      id: 'verifiable-payid',
+      id: 'welcome-to-payid',
     },
     {
       type: 'category',
       label: 'Reference Implementation',
       items: [
         'payid-reference-overview',
-        'api-reference',
+        'payid-server-requirements',
+        'payid-cli',
+        'verifiable-payid',
         'payid-best-practices',
         'integrate-payid-users',
         'metrics',
@@ -35,17 +19,44 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Deployment',
+      label: 'Deployment Options',
       items: [
-        'payid-server-requirements',
+        'deployment-overview',
+        'aws-lambda-deploy',
         'remote-deployment',
         'local-deployment',
       ],
     },
     {
       type: 'category',
+      label: 'Get Started',
+      items: [
+        'getting-started',
+        'payid-cli-tutorial',
+        'verifiable-payid-tutorial',
+        'xpring-sdk-payid-tutorial',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'PayID References',
+      items: [
+        'api-reference',
+        'payid-cli-reference',
+        'payid-headers',
+        'payid-interfaces',
+        'payid-schemas',
+      ],
+    },
+    {
+      type: 'category',
       label: 'PayID Tooling',
-      items: ['xpring-sdk-payid', 'community-resources'],
+      items: ['xpring-sdk-payid'],
+    },
+    {
+      type: 'category',
+      label: 'Resources',
+      items: ['community-resources'],
     },
     {
       type: 'category',
