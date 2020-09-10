@@ -3,6 +3,7 @@ id: payid-reference-overview
 title: Reference Implementation Overview
 sidebar_label: Reference Implementation Overview
 ---
+
 **NOTES** - MAKE VERY CLEAR WHAT A Reference Implementation is. **END NOTES**
 
 ## PayID reference specifications
