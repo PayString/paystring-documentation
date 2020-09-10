@@ -4,6 +4,8 @@ title: Getting Started With Verifiable PayID
 sidebar_label: Verifiable PayID
 ---
 
+**NOTES** - This doc will be cut up to have both a tutorial and a concepts section.
+
 Verifiable PayID provides enhanced security to the base PayID request and response. Verifiable PayID adds several digital signature fields so you can:
 
 - Link a PayID to one or more external digital identities
