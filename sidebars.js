@@ -40,6 +40,7 @@ module.exports = {
         'payid-server-requirements',
         'remote-deployment',
         'local-deployment',
+        'aws-lambda-deploy',
       ],
     },
     {
