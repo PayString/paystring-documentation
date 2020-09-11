@@ -38,6 +38,7 @@ module.exports = {
       label: 'Deployment',
       items: [
         'payid-server-requirements',
+        'aws-lambda-deploy',
         'remote-deployment',
         'local-deployment',
         'aws-lambda-deploy',
