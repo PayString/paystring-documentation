@@ -16,6 +16,7 @@ To deploy PayID server on AWS Lambda, you need the following:
 - If you have existing PayIDs to import, a `json` file containing the PayIDs that you want to upload to the S3 (Amazon Simple Storage Service) bucket created by the stack.
 
 For more information about AWS Lambda and AWS CloudFormation, see:
+
 - [AWS Lambda](https://aws.amazon.com/lambda/)
 - [AWS CloudFormation](https://aws.amazon.com/cloudformation/)
 
@@ -76,7 +77,7 @@ If the validation is unsuccessful after 72 hours, the process times out. Repeat 
 
 ### Step 8: Copy the certificate ARN (Amazon Resource Name) for use with this CloudFormation stack
 
-This ARN appears on the page where your certificate is issued, as shown here.  
+This ARN appears on the page where your certificate is issued, as shown here.
 
 ![certificate arn](/img/docs/request-cert-step-8.png)
 
