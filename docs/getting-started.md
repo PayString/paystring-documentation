@@ -21,27 +21,13 @@ The [PayID Sandbox](https://payid.org/sandbox) lets you experiment with PayID in
 
 To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github account and follow the prompts. You can quickly set up a virtual test server, and then create users with simple PayID addresses that map to addresses on various networks such as XRPL, Interledger, BTC, and ETH. Using the provided cURL or Javascript code, you can create, update, and delete users, and get payment information about a PayID address. While the session is running, you can also run operations from your command line.
 
-## Run a PayID Server
+## Set up your own PayID server
 
-To get started, the first thing to do is set up a PayID server.
-
-1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) and [Node](https://nodejs.org/en/) on your machine.
-
-2.  The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
-
-        git clone https://github.com/payid-org/payid.git
-
-3.  Go to the `/payid` directory that you just created:
-
-        cd payid
-
-4.  Boot up the PayID HTTP server and a Postgres database to develop against:
-
-        npm run devEnvUp
+You have several options to set up your own PayID server. See [Deployment Options](intro-deploy). For preliminary development and testing, try deploying locally, with or without Docker.
 
 ## Create a PayID
 
-Now that you have a [PayID server running](#run-a-payid-server), you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
+Now that you have a PayID server running, you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
 
 To create a PayID, with an [XRP Ledger Testnet account](https://xrpl.org/xrp-testnet-faucet.html), send this request to your server:
 
