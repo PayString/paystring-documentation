@@ -37,9 +37,12 @@ module.exports = {
       type: 'category',
       label: 'Deployment',
       items: [
+        'intro-deploy',
         'payid-server-requirements',
-        'remote-deployment',
         'local-deployment',
+        'deploy-with-docker',
+        'remote-deployment',
+        'aws-lambda-deploy',
       ],
     },
     {
