@@ -135,8 +135,8 @@ Use [PayID Validator](https://payidvalidator.com/) to test your PayIDs.
 
 If you prefer not to use the AWS CLI, you can use these scripts to request a AWS certificate for your PayID domain and launch the payid lambda stack on your domain.
 
-- [request-certificate.sh](request-certificate.sh) - Request a certificate via AWS certificate manager for a given domain.
-- [create-stack.sh](create-stack.sh) - Create the payid lambda stack on your account for a given domain.
+- [request-certificate.sh](https://github.com/xpring-eng/payid-lambda/blob/master/request-certificate.sh) - Request a certificate via AWS certificate manager for a given domain.
+- [create-stack.sh](https://github.com/xpring-eng/payid-lambda/blob/master/create-stack.sh) - Create the payid lambda stack on your account for a given domain.
 
 ### Prequisites
 
@@ -148,7 +148,7 @@ If you prefer not to use the AWS CLI, you can use these scripts to request a AWS
 
 #### Request a certificate
 
-Commamd: `./request-certificate.sh <domain-name>`
+Command: `./request-certificate.sh <domain-name>`
 
 Example:
 
