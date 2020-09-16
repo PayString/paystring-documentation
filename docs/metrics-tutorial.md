@@ -4,7 +4,6 @@ title: Metrics Tutorial
 sidebar_label: Metrics Tutorial
 ---
 
-
 ## Deploy a PayID server with Docker, and pull PayID metrics into Prometheus
 
 In this tutorial, you will deploy a PayID server and run Prometheus locally using Docker, and you will create a configuration file for the PayID server so that PayID metrics are pulled into Prometheus.
