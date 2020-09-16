@@ -21,10 +21,11 @@ module.exports = {
       type: 'category',
       label: 'Deployment Options',
       items: [
-        'deployment-overview',
+        'intro-deploy',
+        'local-deployment',
+        'deploy-with-docker',
         'aws-lambda-deploy',
         'remote-deployment',
-        'local-deployment',
       ],
     },
     {
@@ -32,9 +33,11 @@ module.exports = {
       label: 'Get Started',
       items: [
         'getting-started',
+        'payid-setup-tutorial',
         'payid-cli-tutorial',
         'verifiable-payid-tutorial',
         'xpring-sdk-payid-tutorial',
+        'metrics-tutorial',
       ],
     },
     {
@@ -55,7 +58,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Resources',
+      label: 'Community Resources',
       items: ['community-resources'],
     },
     {
