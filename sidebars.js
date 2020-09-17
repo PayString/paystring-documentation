@@ -6,6 +6,18 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Get Started',
+      items: [
+        'getting-started',
+        'payid-setup-tutorial',
+        'payid-cli-tutorial',
+        'verifiable-payid-tutorial',
+        'xpring-sdk-payid-tutorial',
+        'metrics-tutorial',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Reference Implementation',
       items: [
         'payid-reference-overview',
@@ -30,18 +42,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Get Started',
-      items: [
-        'getting-started',
-        'payid-setup-tutorial',
-        'payid-cli-tutorial',
-        'verifiable-payid-tutorial',
-        'xpring-sdk-payid-tutorial',
-        'metrics-tutorial',
-      ],
-    },
-    {
-      type: 'category',
       label: 'PayID References',
       items: [
         'api-reference',
@@ -52,19 +52,16 @@ module.exports = {
       ],
     },
     {
-      type: 'category',
-      label: 'PayID Tooling',
-      items: ['xpring-sdk-payid'],
+      type: 'doc',
+      id: 'xpring-sdk-payid',
     },
     {
-      type: 'category',
-      label: 'Community Resources',
-      items: ['community-resources'],
+      type: 'doc',
+      id: 'community-resources',
     },
     {
-      type: 'category',
-      label: 'Release Notes',
-      items: ['release-notes'],
+      type: 'doc',
+      id: 'release-notes',
     },
   ],
 }
