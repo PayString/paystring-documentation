@@ -4,8 +4,6 @@ title: Get Started with Verifiable PayID
 sidebar_label: Get Started with Verifiable PayID
 ---
 
-## Use Verifiable PayID
-
 In this guide, you will deploy a local PayID server, create a PayID, sign and verify the PayID, and test it using calls to the PayID Admin API. If you want to use base PayID without verification, see [Getting Started](/).
 
 For more information about Verifiable PayID, see [Enhance Security With Verifiable PayID](verifiable-payid).
