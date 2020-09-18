@@ -10,7 +10,6 @@ module.exports = {
       items: [
         'getting-started',
         'payid-setup-tutorial',
-        'payid-cli-tutorial',
         'verifiable-payid-tutorial',
         'xpring-sdk-payid-tutorial',
         'metrics-tutorial',
@@ -33,7 +32,7 @@ module.exports = {
       label: 'Deployment Options',
       items: [
         'intro-deploy',
-        'payid-server-requirements',        
+        'payid-server-requirements',
         'local-deployment',
         'deploy-with-docker',
         'aws-lambda-deploy',
