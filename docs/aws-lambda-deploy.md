@@ -4,7 +4,7 @@ title: Deploy on AWS Lambda
 sidebar_label: Deploy on AWS Lambda
 ---
 
-You can deploy a PayID server on AWS Lambda, a setup that allows you to run code without having to manage a virtual server on AWS.
+You can deploy a PayID server on AWS Lambda, a setup that allows you to run code without having to deploy or manage a server.
 
 ## Requirements
 

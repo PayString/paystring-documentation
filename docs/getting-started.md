@@ -23,25 +23,24 @@ To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github accou
 
 ## Run a PayID Server
 
-To get started, the first thing to do is set up a PayID server.
+To get started, the first thing to do is set up a local PayID server. Here is a simple method. For more options, see [Deployment Overview](intro-deploy).
 
 1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) and [Node](https://nodejs.org/en/) on your machine.
 
 2.  The reference implementation server is available at [https://github.com/payid-org/payid](https://github.com/payid-org/payid). You can download the reference implementation server by cloning the repository at the command line:
-
-        git clone https://github.com/payid-org/payid.git
+`git clone https://github.com/payid-org/payid.git`
 
 3.  Go to the `/payid` directory that you just created:
-
-        cd payid
+`cd payid`
 
 4.  Boot up the PayID HTTP server and a Postgres database to develop against:
+`npm run devEnvUp`
 
-        npm run devEnvUp
 
 ## Create a PayID
 
-Now that you have a [PayID server running](#run-a-payid-server), you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
+Now that you have a PayID server running, you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
+Now that you have a PayID server running, you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
 
 To create a PayID, with an [XRP Ledger Testnet account](https://xrpl.org/xrp-testnet-faucet.html), send this request to your server:
 

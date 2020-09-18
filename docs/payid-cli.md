@@ -21,7 +21,7 @@ This command installs PayID CLI as a global npm module and links it as a payid e
 
 To install and run PayID CLI from Docker, run:
 
-    `docker run xpring/payid-cli`
+`docker run xpring/payid-cli`
 
 ## Run PayID CLI in interactive or single-command mode
 
@@ -30,18 +30,19 @@ To run PayID CLI in interactive mode, run `payid` to open an interactive session
 In interactive mode, you can then run PayID CLI commands as desired with the form
 `<command> <arguments>`, such as:
 
-    `load 'nhartner$xpring.money'`
+`load 'nhartner$xpring.money'`
 
 To exit interactive mode, run `exit`.
 
 To run PayID CLI in single-command mode, prefix each command with `payid`. Each command takes the form
+
 `payid <command> <arguments>`, such as:
 
-    `payid load 'nhartner$xpring.money'`
+`payid load 'nhartner$xpring.money'`
 
 Use single-command mode for scripts, or to chain the results of multiple commands together, such as:
 
-    `payid init 'my$pay.id' && payid crypto-address add btc mainnet notARealAddress && payid save`
+`payid init 'my$pay.id' && payid crypto-address add btc mainnet notARealAddress && payid save`
 
 When you pass a PayID as an argument in non-interactive mode, make sure to escape or quote the PayID to avoid the `'$'` being interpolated as a variable by the shell.
 
