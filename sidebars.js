@@ -9,7 +9,6 @@ module.exports = {
       label: 'Get Started',
       items: [
         'getting-started',
-        'payid-setup-tutorial',
         'verifiable-payid-tutorial',
         'xpring-sdk-payid-tutorial',
         'metrics-tutorial',
