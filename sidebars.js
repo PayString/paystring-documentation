@@ -38,6 +38,7 @@ module.exports = {
         'deploy-with-docker',
         'aws-lambda-deploy',
         'remote-deployment',
+        'nginx-ssl-deploy',
       ],
     },
     {
