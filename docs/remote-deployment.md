@@ -10,10 +10,10 @@ When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy 
 
 ## Requirements
 
-* An AWS account
-* Your own domain, for which you can update the DNS
+- An AWS account
+- Your own domain, for which you can update the DNS
 
-## Deployment steps 
+## Deployment steps
 
 1. Initialize a `t2.micro` instance on AWS running Ubuntu 18.04m with a minimum of 8 GB SSD. For the purposes of this demo, you can use AWS Free Tier.
    See [Getting Started with Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) for more information about setting up your instance.
