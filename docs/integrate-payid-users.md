@@ -4,7 +4,7 @@ title: Integrate Existing User Databases
 sidebar_label: Integrate Existing User Databases
 ---
 
-If you have an existing user database, you can take the following steps to integrate PayID functionality into your product. 
+If you have an existing user database, you can take the following steps to integrate PayID functionality into your product.
 
 ## Extend existing database tables with new columns
 

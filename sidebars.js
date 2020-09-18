@@ -21,7 +21,6 @@ module.exports = {
       label: 'Reference Implementation',
       items: [
         'payid-reference-overview',
-        'payid-server-requirements',
         'payid-cli',
         'verifiable-payid',
         'payid-best-practices',
@@ -34,6 +33,7 @@ module.exports = {
       label: 'Deployment Options',
       items: [
         'intro-deploy',
+        'payid-server-requirements',        
         'local-deployment',
         'deploy-with-docker',
         'aws-lambda-deploy',
