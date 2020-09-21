@@ -38,6 +38,17 @@ function getHeapAppID() {
   }
 }
 
+function getHubspotID() {
+  switch (process.env.RELEASE_ENV) {
+    case 'stage':
+      return '8186536'
+    case 'prod':
+      return '8186536'
+    default:
+      return null
+  }
+}
+
 function getSentryDSN() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
@@ -135,6 +146,12 @@ module.exports = {
       require.resolve(path.resolve(__dirname, './src/plugins/heap.js')),
       {
         appId: getHeapAppID(),
+      },
+    ],
+    [
+      require.resolve(path.resolve(__dirname, './src/plugins/hubspot.js')),
+      {
+        appId: getHubspotID(),
       },
     ],
     [
