@@ -20,8 +20,8 @@ module.exports = function (context, opts) {
             attributes: {
               type: 'text/javascript',
               id: 'hs-script-loader',
-              async,
-              defer,
+              async: true,
+              defer: true,
               src: `//js.hs-scripts.com/${options.appId}.js`,
             },
           },
