@@ -10,7 +10,7 @@ module.exports = {
       items: [
         'getting-started',
         'verifiable-payid-tutorial',
-        'xpring-sdk-payid-tutorial',
+        'xpring-sdk-payid-get-started',
         'metrics-tutorial',
       ],
     },
