@@ -4,7 +4,7 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through:
+PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through the following.
 
 - [Experiment With the PayID Sandbox](#experiment-with-the-payid-sandbox)
 - [Run a PayID Server](#run-a-payid-server)
@@ -23,7 +23,7 @@ To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github accou
 
 ## Run a PayID Server
 
-To get started, the first thing to do is set up a local PayID server. Here is a simple method. For more options, see [Deployment Overview](intro-deploy).
+To familiarize yourself and experiment with PayID, you can set up a local PayID server. Here is a simple method. For more options, including PayID deployment for production environments, see [Deployment Overview](intro-deploy).
 
 1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) and [Node](https://nodejs.org/en/) on your machine.
 
@@ -38,8 +38,7 @@ To get started, the first thing to do is set up a local PayID server. Here is a 
 
 ## Create a PayID
 
-Now that you have a PayID server running, you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
-Now that you have a PayID server running, you can create a PayID. If your server was publicly accessible, other people could query your account information from your PayID server.
+Now that you have a PayID server running, you can create a PayID. If your server is publicly accessible, other people could query your account information from your PayID server.
 
 To create a PayID, with an [XRP Ledger Testnet account](https://xrpl.org/xrp-testnet-faucet.html), send this request to your server:
 
@@ -127,9 +126,21 @@ If you want to clean up the Docker containers, you can run `npm run devDown`.
 
 Now that you've set up the basics, [learn more](#learn-more) about PayID and what you can do with it.
 
+## Xpring SDK Integration
+
+PayID support is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
+
+Xpring SDK provides the ability to work with PayID. It provides three language libraries:
+
+- [JavaScript](https://github.com/xpring-eng/xpring-js)
+- [Java](https://github.com/xpring-eng/xpring4j)
+- [Swift](https://github.com/xpring-eng/xpringkit)
+
+These libraries help you connect your application to PayID without having to worry about the specifics of PayID. Try [Get Started With Xpring SDK and PayID](xpring-sdk-payid-get-started).
+
 ## Learn More
 
-After setting up the basics, you have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take:
+You now have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take:
 
 - [How to convert](https://github.com/xpring-eng/xpring-js#usage-payid) the `user$domain.com` format to a URL
 - Learn how to use relevant [HTTP headers](payid-headers)
@@ -145,11 +156,3 @@ Learn about:
 - [How to contribute to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md)
 - [PayID RFCs](https://github.com/payid-org/rfcs), which discuss potential changes and additions to the PayID Protocol
 - The [PayID Whitepaper](https://payid.org/whitepaper.pdf), which provides background context around the problems that PayID solves
-
-## Xpring SDK Integration
-
-PayID support is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
-
-Xpring SDK provides the ability to work with PayID, using libraries provided in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit). See [Get Started With Xpring SDK and PayID](xpring-sdk-payid-get-started).
-
-These libraries help you connect your application to PayID without having to worry about the specifics of PayID.

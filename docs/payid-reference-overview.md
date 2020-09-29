@@ -4,7 +4,7 @@ title: Reference Implementation Overview
 sidebar_label: Reference Implementation Overview
 ---
 
-**NOTES** - MAKE VERY CLEAR WHAT A Reference Implementation is. **END NOTES**
+[PayID.org](https://payid.org) provides a reference implementation of the PayID Protocol. If you want to use PayID, you can use this reference implementation, or you can make changes to it, or you can create your own solution entirely, as long as you follow the PayID Protocol.
 
 ## PayID reference specifications
 
