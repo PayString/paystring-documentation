@@ -4,7 +4,16 @@ title: Deploy on AWS
 sidebar_label: Deploy on AWS
 ---
 
-You can set up a PayID server on AWS (Amazon Web Services).
+You can set up a PayID server on AWS (Amazon Web Services) setting up your own virtual Linux server. Alternatively, you can set up a PayID server using [AWS Lambda][aws-lambda-deploy].
+
+When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy and SSL](nginx-ssl-deploy) for load bearing and security.
+
+## Requirements
+
+- An AWS account
+- Your own domain, for which you can update the DNS
+
+## Deployment steps
 
 1. Initialize a `t2.micro` instance on AWS running Ubuntu 18.04m with a minimum of 8 GB SSD. For the purposes of this demo, you can use AWS Free Tier.
    See [Getting Started with Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) for more information about setting up your instance.
@@ -64,7 +73,7 @@ You can set up a PayID server on AWS (Amazon Web Services).
 curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayID-version: 1.0'
 ```
 
-For other PayID API methods, see the [readme](https://github.com/payid-org/payid/blob/master/readme.md).
+For other PayID API methods, see [PayID API Reference](https://api.payid.org).
 
 To convert a PayID address to a URL endpoint, follow these patterns:
 
@@ -74,59 +83,3 @@ To convert a PayID address to a URL endpoint, follow these patterns:
 **Note:** Public API requests hit port 80 and Admin API requests hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
 
 For additional network formats, see the [API Reference](https://api.payid.org/?version=latest).
-
-Next, set up NGINX Reverse Proxy + SSL.
-
-## NGINX Reverse Proxy + SSL setup
-
-1. Change the PayID server to run on port 8080 (default).
-2. Set up a Server Block on NGINX for your domain, following [these instructions](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04).
-3. Install Certbot, as follows.
-   ```bash
-   apt-get update
-   apt-get install software-properties-common
-   add-apt-repository ppa:certbot/certbot
-   apt-get update
-   apt-get install python-certbot-nginx
-   ```
-4. Generate a certificate (choose to redirect)
-   `certbot --nginx`
-5. Change the location parameter in the NGINX conf file to reverse proxy to the PayID server (running on port 8080):
-   `try_files $uri $uri/ =404;`
-   to:
-   ```nginx
-   proxy_pass http://127.0.0.1:8080;
-   proxy_set_header Host $http_host;
-   ```
-   **Note:** The second line is required to preserve the original URL, which is used to find the user.
-   **Note:** You can expand your certificate to cover any subdomain used in a PayID using:
-   `sudo certbot -d zochow.ski,pay.michael.zochow.ski,www.zochow.ski --expand`
-6. Restart NGINX.
-   `sudo systemctl restart nginx`
-7. [Optional] Update the NGINX configuration that catches PayID headers and forwards them to the PayID server; otherwise, send these headers to the web server.
-
-**Note:** You will need to add additional proxy passing statements for each additional network supported, or otherwise use a generic regex to identify all PayID headers.
-
-```bash
-sudo nano /etc/nginx/sites-available/<your-site>
-```
-
-```nginx
-location / {
-   proxy_set_header Host $http_host;
-   # needed for CORS
-   add_header Access-Control-Allow-Origin *;
-   add_header Access-Control-Allow-Headers *;
-
-   # proxy passing needed for all supported networks
-   # modify port to the one used by your PayID server
-   if ($http_accept ~ "application/payid*") {
-         proxy_pass http://localhost:8080;
-   }
-   if ($http_accept ~ "application/xrpl-*") {
-         proxy_pass http://localhost:8080;
-   }
-
-   try_files $uri $uri/ =404;
-}
-```

@@ -1,16 +1,18 @@
 ---
-id: payid-overview
-title: Overview
-sidebar_label: Overview
+id: welcome-to-payid
+title: Welcome to PayID
+sidebar_label: Welcome to PayID
 ---
 
-With PayID, you can use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$wallet.com` maps to the corresponding URL `https://wallet.com/alice`.
+With PayID, you use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$example.com` maps to the corresponding URL `https://example.com/alice`.
 
 When you make an HTTP GET request that follows the PayID protocol, it resolves to an address on the underlying payment network. PayID is a payment-network-agnostic protocol, capable of sending payments in BTC, ETH, XRP, or fiat networks like ACH.
 
 PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own PayID server or integrate with a trustless blockchain solution so they have no counterparty risk.
 
 The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayID address that works across all platforms.
+
+Payid.org has created a [reference implementation](payid-reference-overview) of the PayID protocol, which you can [view on GitHub]((https://github.com/payid-org/payid). You are welcome to create your own implementation as well.
 
 ## PayID standards
 
@@ -38,7 +40,7 @@ PayID uses existing web standards and infrastructure, including HTTP and DNS. Ea
 
 PayID does not rely on any consensus protocols, which simplifies infrastructure demands.
 
-### Decentralized
+### Decentralization
 
 PayID is built on the most successful decentralized network in history: the web. PayID is fully peer-to-peer with no central counterparty. Anyone can set up their own personal PayID server so they have no counterparty risk.
 
