@@ -21,7 +21,7 @@ This command installs PayID CLI as a global npm module and links it as a payid e
 
 To install and run PayID CLI from Docker, run:
 
-    `docker run xpring/payid-cli`
+`docker run xpring/payid-cli`
 
 ## Run PayID CLI in interactive or single-command mode
 
@@ -30,46 +30,21 @@ To run PayID CLI in interactive mode, run `payid` to open an interactive session
 In interactive mode, you can then run PayID CLI commands as desired with the form
 `<command> <arguments>`, such as:
 
-    `load 'nhartner$xpring.money'`
+`load 'nhartner$xpring.money'`
 
 To exit interactive mode, run `exit`.
 
 To run PayID CLI in single-command mode, prefix each command with `payid`. Each command takes the form
+
 `payid <command> <arguments>`, such as:
 
-    `payid load 'nhartner$xpring.money'`
+`payid load 'nhartner$xpring.money'`
 
 Use single-command mode for scripts, or to chain the results of multiple commands together, such as:
 
-    `payid init 'my$pay.id' && payid crypto-address add btc mainnet notARealAddress && payid save`
+`payid init 'my$pay.id' && payid crypto-address add btc mainnet notARealAddress && payid save`
 
 When you pass a PayID as an argument in non-interactive mode, make sure to escape or quote the PayID to avoid the `'$'` being interpolated as a variable by the shell.
-
-## Command list
-
-Use these commands with the PayID CLI.
-
-| Command                                                             | Description                                                                    |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| `help [command...]`                                                 | Provides help for a given command.                                             |
-| `exit`                                                              | Exits application.                                                             |
-| `clear`                                                             | Clears the terminal.                                                           |
-| `crypto-address add <paymentNetwork> <environment> <address> [tag]` | Starts building a new PayID.                                                   |
-| `crypto-address remove <address>`                                   | Removes an address from the current PayID.                                     |
-| `keys clear`                                                        | Clears all loaded keys.                                                        |
-| `keys generate`                                                     | Generates and saves a new identity key.                                        |
-| `keys list`                                                         | Lists keys that have been loaded.                                              |
-| `keys load <filePath>`                                              | Loads identity-key from file.                                                  |
-| `keys print`                                                        | Prints keys that have been loaded in pem format.                               |
-| `init <payid>`                                                      | Initializes a new PayID.                                                       |
-| `inspect [payId]`                                                   | Inspects signatures on the loaded PayID or from an optionally specified PayID. |
-| `load <payId>`                                                      | Loads a PayID from PayID server.                                               |
-| `show`                                                              | Shows the currently loaded PayID.                                              |
-| `sign`                                                              | Signs the loaded PayID with the loaded signing keys.                           |
-| `verify [payId]`                                                    | Verifies the loaded PayID or an optionally specified PayID.                    |
-| `save`                                                              | Saves the currently loaded PayID.                                              |
-| `from-url <url>`                                                    | Converts a URL to a PayID.                                                     |
-| `to-url <payId>`                                                    | Converts a PayID to a URL.                                                     |
 
 ## Example commands
 

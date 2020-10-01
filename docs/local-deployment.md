@@ -6,7 +6,7 @@ sidebar_label: Deploy Locally Without Docker
 
 ## Basic requirements
 
-Ensure your system meets these requirements before you set up a PayID server.
+Make sure your system meets these requirements before you set up a PayID server.
 
 - RAM: Minimum of 100 MB
 - Postgres: 11.7 or later, with [pgpool-II](https://www.pgpool.net) in front
