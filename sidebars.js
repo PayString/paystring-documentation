@@ -45,6 +45,7 @@ module.exports = {
       items: [
         'api-reference',
         'payid-cli-reference',
+        'payid-discovery',        
         'payid-headers',
         'payid-interfaces',
         'payid-schemas',
