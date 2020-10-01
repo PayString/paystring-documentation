@@ -28,7 +28,7 @@ Refer to the [PayID protocol whitepaper](https://payid.org/whitepaper.pdf) for a
 
 ## Implementations
 
-You can decide how you want to implement the PayID protocol. To facilitate ease of use, Xpring has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
+You can decide how you want to implement the PayID protocol. To facilitate ease of use, RippleX has created a [reference implementation for a PayID server](payid-reference-overview). Check out the [PayID repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayID server, manage users, and execute transactions.
 
 If you want to contribute to PayID, see [Contributing to PayID](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md).
 
@@ -54,7 +54,7 @@ A PayID implementation requires the use of TLS (Transport Level Security). As de
 
 ## Future features and integrations
 
-PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions. In upcoming releases, Xpring intends to extend PayID capabilities as described here.
+PayID is an extensible and flexible open standard, and therefore can be used as a basis for additional solutions. In upcoming releases, RippleX intends to extend PayID capabilities as described here.
 
 ### Verifiable PayID
 

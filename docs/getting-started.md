@@ -11,7 +11,7 @@ PayID is a simple, web-based protocol designed to make it as easy to send someon
 - [Create a PayID](#create-a-payid)
 - [Request a PayID](#request-a-payid)
 - [Learn More](#learn-more)
-- [Xpring SDK Integration](#xpring-sdk-integration)
+- [RippleX Dev Kit Integration](#ripplex-dev-kit-integration)
 
 Your contributions are welcome. Check out the [PayID repository on GitHub](https://github.com/payid-org/payid), and note the [Contributing](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md) guidelines.
 
@@ -126,17 +126,17 @@ If you want to clean up the Docker containers, you can run `npm run devDown`.
 
 Now that you've set up the basics, [learn more](#learn-more) about PayID and what you can do with it.
 
-## Xpring SDK Integration
+## RippleX Dev Kit Integration
 
-PayID support is integrated into [Xpring SDK](https://github.com/xpring-eng/xpring-sdk).
+PayID support is integrated into [RippleX Dev Kit](https://github.com/xpring-eng/ripplex-dev-kit).
 
-Xpring SDK provides the ability to work with PayID. It provides three language libraries:
+RippleX Dev Kit provides the ability to work with PayID. It provides three language libraries:
 
 - [JavaScript](https://github.com/xpring-eng/xpring-js)
 - [Java](https://github.com/xpring-eng/xpring4j)
 - [Swift](https://github.com/xpring-eng/xpringkit)
 
-These libraries help you connect your application to PayID without having to worry about the specifics of PayID. Try [Get Started With Xpring SDK and PayID](xpring-sdk-payid-get-started).
+These libraries help you connect your application to PayID without having to worry about the specifics of PayID. Try [Get Started With RippleX Dev Kit and PayID](ripplex-dev-kit-payid-get-started).
 
 ## Learn More
 

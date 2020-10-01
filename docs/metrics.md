@@ -4,16 +4,16 @@ title: Metrics
 sidebar_label: Metrics
 ---
 
-The reference implementation of PayID server automatically collects metrics using Prometheus. By default, metrics are pushed to the Xpring Prometheus pushgateway. This document describes how you can explicitly configure the PayID server to push to Xpring, or how to collect and analyze these metrics using your own metrics server.
+The reference implementation of PayID server automatically collects metrics using Prometheus. By default, metrics are pushed to the RippleX Prometheus pushgateway. This document describes how you can explicitly configure the PayID server to push to RippleX, or how to collect and analyze these metrics using your own metrics server.
 
-## Reporting metrics to Xpring
+## Reporting metrics to RippleX
 
-Xpring runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with Xpring allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place.
+RippleX runs a metrics collection server for general use by anyone running a PayID server. Sharing your metrics with RippleX allows the PayID community to aggregate and monitor PayID adoption and growth metrics in one place.
 
-Metrics are reported to Xpring by default but you can push metrics to your own Prometheus pushgateway. Here's how to configure your PayID server to do that:
+Metrics are reported to RippleX by default but you can push metrics to your own Prometheus pushgateway. Here's how to configure your PayID server to do that:
 
 ```sh
-# Xpring's Prometheus pushgateway
+# RippleX's Prometheus pushgateway
 PUSH_GATEWAY_URL=https://push00.mon.payid.tech
 ```
 
@@ -47,7 +47,7 @@ This chart shows the rate per minute of PayID lookup requests:
 
 You can use a push or pull method to obtain metrics from Prometheus.
 
-**Tip:** Note that both push and pull methods can be used together simultaneously. For example, to pull metrics into an internal Prometheus server and push metrics to a third-party Prometheus server like Xpring.
+**Tip:** Note that both push and pull methods can be used together simultaneously. For example, to pull metrics into an internal Prometheus server and push metrics to a third-party Prometheus server like RippleX.
 
 ### How to pull metrics to Prometheus
 
@@ -77,9 +77,9 @@ scrape_configs:
 
 ### How to push metrics from the PayID server to Prometheus
 
-Alternatively, you can push metrics from the PayID server to Prometheus using a [pushgateway](https://github.com/prometheus/pushgateway). This setup requires running a pushgateway in addition to a Prometheus server, and configuring the PayID server to push metrics to the pushgateway. Prometheus then pulls metrics from the pushgateway. In this setup, Prometheus and pushgateway do not need to run inside the same network as the PayID server(s), but the PayID server must be able to reach the pushgateway over http. This is the recommended method for pushing metrics to a third party such as Xpring.
+Alternatively, you can push metrics from the PayID server to Prometheus using a [pushgateway](https://github.com/prometheus/pushgateway). This setup requires running a pushgateway in addition to a Prometheus server, and configuring the PayID server to push metrics to the pushgateway. Prometheus then pulls metrics from the pushgateway. In this setup, Prometheus and pushgateway do not need to run inside the same network as the PayID server(s), but the PayID server must be able to reach the pushgateway over http. This is the recommended method for pushing metrics to a third party such as RippleX.
 
-By default, the reference PayID server pushes metrics to the Xpring pushgateway. To push metrics to your own pushgateway, follow these steps:
+By default, the reference PayID server pushes metrics to the RippleX pushgateway. To push metrics to your own pushgateway, follow these steps:
 
 1. Set the environment variables `PUSH_GATEWAY_URL` with the url to your pushgateway.
 2. Restart your PayID server.
@@ -88,7 +88,7 @@ For example, if the fictitious company Vandelay Industries wants to push metrics
 
 By default, a PayID server will push metrics every 15 seconds to the configured pushgateway. To change this frequency, set the `PUSH_METRICS_INTERVAL` value. For example, to push every 5 minutes (300 seconds), set `PUSH_METRICS_INTERVAL=300`. This value must be a positive number.
 
-As mentioned above, you can also explicitly set `PUSH_GATEWAY_URL=https://push00.mon.payid.tech` to push the metrics from your PayID server to Xpring.
+As mentioned above, you can also explicitly set `PUSH_GATEWAY_URL=https://push00.mon.payid.tech` to push the metrics from your PayID server to RippleX.
 
 ## Visualize metrics with Prometheus and Grafana
 

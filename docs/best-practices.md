@@ -36,7 +36,7 @@ If you want to verify whether CORS is correctly set up for your PayID server, yo
     headers.append('Accept', 'application/xrpl-mainnet+json')
     headers.append('PayID-Version', '1.0')
 
-    fetch(new Request('https://xpring.money/alice'), {
+    fetch(new Request('https://ripplex.money/alice'), {
       method: 'GET',
       headers,
       mode: 'cors',
