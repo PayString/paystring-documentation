@@ -35,8 +35,7 @@ If the server for Bob's exchange, where Bob receives currency, supports the PayI
  }
 ```
 
-Alice's wallet can then use the URL template found in the "template"
-property to assemble the specified PayId URL. Typically, this template might add a folder structure to the URL, such as `https://receiver.example.com/users/bob`. The server can be set up to use other URL formats, so long as the resulting URL is valid and represents Bob's PayID.
+Alice's wallet can then use the URL template found in the "template" property to assemble the specified PayId URL. Typically, this template might add a folder structure to the URL, such as `https://receiver.example.com/users/bob`. The server can be set up to use other URL formats, so long as the resulting URL is valid and represents Bob's PayID.
 
 ## PayID discovery with a default template
 
