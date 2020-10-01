@@ -16,7 +16,7 @@ HTTP/1.1
 Host: receiver.example.com
 ```
 
-If the server where Bob receives currency supports the PayID Discovery endpoint, it responds like this:
+If the server for Bob's exchange, where Bob receives currency, supports the PayID Discovery endpoint, it responds like this:
 
 ```
  HTTP/1.1 200 OK
