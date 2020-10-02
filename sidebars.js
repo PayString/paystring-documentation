@@ -21,6 +21,7 @@ module.exports = {
         'payid-reference-overview',
         'payid-cli',
         'verifiable-payid',
+        'payid-discovery',
         'payid-best-practices',
         'integrate-payid-users',
         'metrics',
