@@ -115,7 +115,7 @@ Use one of the following cipher suites:
 
 - TLS_AES_128_GCM_SHA256 (This cipher suite must be implemented for any TLS-compliant application.)
 
-- TLS_AES_256_GCM_SHA384 and TLS_CHACHA20_POLY1305_SHA256 (these are SHOULD be implemented cipher suites )
+- TLS_AES_256_GCM_SHA384 and TLS_CHACHA20_POLY1305_SHA256 (These SHOULD be implemented cipher suites. )
 
 #### Additional Recommendations
 
