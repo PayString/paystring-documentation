@@ -100,9 +100,9 @@ Start the docker container:
 docker run -d --network payid-network -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`
 ```
 
-You can verify Prometheus is running by opening `http://localhost:9090/graph` in a browser.
+Verify Prometheus is running by opening `http://localhost:9090/graph` in a browser.
 
-You can verify metrics collection metrics are being collected by entering the following expression into the form:
+Verify metrics collection metrics are being collected by entering the following expression into the form:
 
 `sum(payid_count)`
 
