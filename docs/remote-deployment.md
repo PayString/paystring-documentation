@@ -49,7 +49,7 @@ When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy 
 
     - To bring this down, run `npm run devDown`
 
-12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://xpring.money/).
+12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://ripplex.money/).
 13. Load up your desired PayID to the database using the [Admin API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayIDs for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayID.
     ```bash

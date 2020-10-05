@@ -10,7 +10,7 @@ module.exports = {
       items: [
         'getting-started',
         'verifiable-payid-tutorial',
-        'xpring-sdk-payid-get-started',
+        'ripplex-dev-kit-payid-get-started',
         'metrics-tutorial',
       ],
     },
@@ -53,7 +53,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'xpring-sdk-payid',
+      id: 'ripplex-dev-kit-payid',
     },
     {
       type: 'doc',

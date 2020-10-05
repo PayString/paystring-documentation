@@ -30,7 +30,7 @@ To run PayID CLI in interactive mode, run `payid` to open an interactive session
 In interactive mode, you can then run PayID CLI commands as desired with the form
 `<command> <arguments>`, such as:
 
-`load 'nhartner$xpring.money'`
+`load 'nhartner$ripplex.money'`
 
 To exit interactive mode, run `exit`.
 
@@ -38,7 +38,7 @@ To run PayID CLI in single-command mode, prefix each command with `payid`. Each 
 
 `payid <command> <arguments>`, such as:
 
-`payid load 'nhartner$xpring.money'`
+`payid load 'nhartner$ripplex.money'`
 
 Use single-command mode for scripts, or to chain the results of multiple commands together, such as:
 
@@ -48,19 +48,19 @@ When you pass a PayID as an argument in non-interactive mode, make sure to escap
 
 ## Example commands
 
-**Tip**: If you obtain an XRP testnet wallet, you get a PayID based on your Xpring account that is already linked to an XRP address. This is useful for testing. Visit the [xpring.io portal](https://xpring.io/portal) and sign in with Github. The Xpring portal launchpad page opens. Click **XRP Testnet Wallet** and follow the steps to create your wallet. Your PayID has the form `<github-username>$xpring.money` and you can use this PayID value in these example commands.
+**Tip**: If you obtain an XRP testnet wallet, you get a PayID based on your RippleX account that is already linked to an XRP address. This is useful for testing. Visit the [RippleX.io portal](https://RippleX.io/portal) and sign in with Github. The RippleX portal launchpad page opens. Click **XRP Testnet Wallet** and follow the steps to create your wallet. Your PayID has the form `<github-username>$ripplex.money` and you can use this PayID value in these example commands.
 
 ### Load a PayID
 
 This command loads the specified PayID from a remote server.
 
-`load loisrp$xpring.money`
+`load loisrp$ripplex.money`
 
 The output fetches all the PayID address mappings for the given PayID from the remote server and displays the resulting JSON. In this example, the PayID has two crypto-addresses attached to it.
 
 ```json
 {
-  "payId": "loisrp$xpring.money",
+  "payId": "loisrp$ripplex.money",
   "version": "1.0",
   "addresses": [
     {
@@ -76,7 +76,7 @@ The output fetches all the PayID address mappings for the given PayID from the r
       "environment": "TESTNET",
       "addressDetailsType": "CryptoAddressDetails",
       "addressDetails": {
-        "address": "$xpring.money/LoisRP"
+        "address": "$ripplex.money/LoisRP"
       }
     }
   ],
@@ -94,7 +94,7 @@ The output returns the updated information about the PayID. In this example, the
 
 ```json
 {
-  "payId": "loisrp$xpring.money",
+  "payId": "loisrp$ripplex.money",
   "version": "1.0",
   "addresses": [
     {
@@ -102,7 +102,7 @@ The output returns the updated information about the PayID. In this example, the
       "environment": "TESTNET",
       "addressDetailsType": "CryptoAddressDetails",
       "addressDetails": {
-        "address": "$xpring.money/LoisRP"
+        "address": "$ripplex.money/LoisRP"
       }
     }
   ],
@@ -120,14 +120,14 @@ The output returns the updated information for the PayID, including the added cr
 
 ```json
 {
-  "payId": "loisrp$xpring.money",
+  "payId": "loisrp$ripplex.money",
   "addresses": [
     {
       "paymentNetwork": "INTERLEDGER",
       "environment": "TESTNET",
       "addressDetailsType": "CryptoAddressDetails",
       "addressDetails": {
-        "address": "$xpring.money/LoisRP"
+        "address": "$ripplex.money/LoisRP"
       }
     },
     {

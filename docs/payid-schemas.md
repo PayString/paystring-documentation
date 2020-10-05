@@ -16,7 +16,7 @@ A single user can have multiple destinations, because the same user can have add
 
 ```json
 {
-  "payId": "johndoe$xpring.money",
+  "payId": "johndoe$ripplex.money",
   "addresses": [
     {
       "paymentNetwork": "XRPL",
