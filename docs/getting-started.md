@@ -128,13 +128,13 @@ Now that you've set up the basics, [learn more](#learn-more) about PayID and wha
 
 ## RippleX Dev Kit Integration
 
-PayID support is integrated into [RippleX Dev Kit](https://github.com/xpring-eng/ripplex-dev-kit).
+PayID support is integrated into [RippleX Dev Kit](https://github.com/ripplex-eng/ripplex-dev-kit).
 
 RippleX Dev Kit provides the ability to work with PayID. It provides three language libraries:
 
-- [JavaScript](https://github.com/xpring-eng/xpring-js)
-- [Java](https://github.com/xpring-eng/xpring4j)
-- [Swift](https://github.com/xpring-eng/xpringkit)
+- [JavaScript](https://github.com/ripplex-eng/ripplex-js)
+- [Java](https://github.com/ripplex-eng/ripplex4j)
+- [Swift](https://github.com/ripplex-eng/ripplexkit)
 
 These libraries help you connect your application to PayID without having to worry about the specifics of PayID. Try [Get Started With RippleX Dev Kit and PayID](ripplex-dev-kit-payid-get-started).
 
@@ -142,7 +142,7 @@ These libraries help you connect your application to PayID without having to wor
 
 You now have a good foundation for learning more about the PayID Protocol. Here are some next steps you can take:
 
-- [How to convert](https://github.com/xpring-eng/xpring-js#usage-payid) the `user$domain.com` format to a URL
+- [How to convert](https://github.com/ripplex-eng/ripplex-js#usage-payid) the `user$domain.com` format to a URL
 - Learn how to use relevant [HTTP headers](payid-headers)
 - Learn how to handle different types of [responses](https://api.payid.org/?version=latest) you could receive from a PayID server
 

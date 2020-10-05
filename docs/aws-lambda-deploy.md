@@ -135,8 +135,8 @@ Use [PayID Validator](https://payidvalidator.com/) to test your PayIDs.
 
 If you prefer not to use the AWS CLI, you can use these scripts to request a AWS certificate for your PayID domain and launch the payid lambda stack on your domain.
 
-- [request-certificate.sh](https://github.com/xpring-eng/payid-lambda/blob/master/request-certificate.sh) - Request a certificate via AWS certificate manager for a given domain.
-- [create-stack.sh](https://github.com/xpring-eng/payid-lambda/blob/master/create-stack.sh) - Create the payid lambda stack on your account for a given domain.
+- [request-certificate.sh](https://github.com/ripplex-eng/payid-lambda/blob/master/request-certificate.sh) - Request a certificate via AWS certificate manager for a given domain.
+- [create-stack.sh](https://github.com/ripplex-eng/payid-lambda/blob/master/create-stack.sh) - Create the payid lambda stack on your account for a given domain.
 
 ### Prequisites
 
@@ -214,7 +214,7 @@ When the stack is created, a test account is provided at `testaccount.json`. The
 
 ## Upgrade the AWS Lambda function
 
-To see if there is a release with an upgraded AWS Lambda function, look for [releases](https://github.com/xpring-eng/payid-lambda/releases) with the file `payid-stack.yaml` attached.
+To see if there is a release with an upgraded AWS Lambda function, look for [releases](https://github.com/ripplex-eng/payid-lambda/releases) with the file `payid-stack.yaml` attached.
 
 The version you have installed is visible in the description of the stack in CloudFormation (for example, `[v1.0] PayID Lambda Server and API Gateway front end`) and also in the `Outputs` of the stack under the name `PayIdLambdaStackVersion`.
 

@@ -21,7 +21,7 @@ This command installs PayID CLI as a global npm module and links it as a payid e
 
 To install and run PayID CLI from Docker, run:
 
-`docker run xpring/payid-cli`
+`docker run ripplex/payid-cli`
 
 ## Run PayID CLI in interactive or single-command mode
 
