@@ -15,9 +15,9 @@ When you make a request, the HTTP `Accept` header of the request specifies the p
 An example request has this form.
 
 ```HTTP
-GET /{user} HTTP/1.1
+GET /lestat HTTP/1.1
 
-Accept: application/xrpl-testnet+json
+Accept: application/xrpl-mainnet+json
 ```
 
 Some different header options are shown here, with example values.
