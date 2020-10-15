@@ -2,7 +2,7 @@ const path = require('path')
 
 const DEFAULT_OPTIONS = {
   appId: null,
-  enableOnDevMode: false, // if 'false', segment will be fired on NODE_ENV=production only
+  enableOnDevMode: true, // if 'false', segment will be fired on NODE_ENV=production only
 }
 
 module.exports = function (context, opts) {

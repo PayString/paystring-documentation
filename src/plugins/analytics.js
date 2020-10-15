@@ -46,7 +46,8 @@ export default (function () {
   setTimeout(recordDocumentationPage, 100)
 
   return {
-    onRouteUpdate(data) {
+    onRouteUpdate() {
+      analytics.page()
       // Wait until next tick to record documentation viewed
       setTimeout(recordDocumentationPage, 100)
     },
