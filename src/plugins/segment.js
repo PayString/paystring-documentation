@@ -1,6 +1,8 @@
+const path = require('path')
+
 const DEFAULT_OPTIONS = {
   appId: null,
-  enableOnDevMode: false, // if 'false', segment will be fired on NODE_ENV=production only
+  enableOnDevMode: true, // if 'false', segment will be fired on NODE_ENV=production only
 }
 
 module.exports = function (context, opts) {
@@ -11,6 +13,11 @@ module.exports = function (context, opts) {
 
   return {
     name: 'docusaurus2-segment',
+
+    getClientModules() {
+      return isEnabled ? [path.resolve(__dirname, './analytics')] : []
+    },
+
     injectHtmlTags() {
       if (!isEnabled) return {}
       return {
