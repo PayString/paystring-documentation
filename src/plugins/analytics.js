@@ -32,6 +32,10 @@ export default (function () {
         category: categoryElement.textContent,
         title: titleElement.textContent,
       })
+    } else if (titleElement) {
+      analytics.track('Documentation Viewed', {
+        title: titleElement.textContent,
+      })
     }
   }
 
