@@ -47,9 +47,11 @@ export default (function () {
 
   return {
     onRouteUpdate() {
-      analytics.page()
-      // Wait until next tick to record documentation viewed
-      setTimeout(recordDocumentationPage, 100)
+      // Wait until next tick to record documentation viewed and page view
+      setTimeout(() => {
+        analytics.page()
+        recordDocumentationPage()
+      }, 100)
     },
   }
 })()
