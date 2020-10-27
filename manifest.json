@@ -25,9 +25,9 @@
     "apps": [
       {
         "name": "review-apps",
-        "headCommitId": "9abc47c36a030f39dc5682656aadf3633d88e756",
-        "updatedAt": "2020-10-27T22:26:33.536Z",
-        "href": "review-apps/landing-page/9abc47",
+        "headCommitId": "e32f2ac6056a01027055d60690dcfaa328f3ab13",
+        "updatedAt": "2020-10-27T23:44:27.391Z",
+        "href": "review-apps/landing-page/e32f2a",
         "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/123"
       }
     ]
