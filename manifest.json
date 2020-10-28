@@ -42,5 +42,16 @@
         "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/124"
       }
     ]
+  },
+  "loisrp-sandbox-tutorial": {
+    "apps": [
+      {
+        "name": "review-apps",
+        "headCommitId": "4def42854d7daa03977365bebd68691eda80ddda",
+        "updatedAt": "2020-10-28T13:03:06.031Z",
+        "href": "review-apps/loisrp-sandbox-tutorial/4def42",
+        "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/125"
+      }
+    ]
   }
 }
