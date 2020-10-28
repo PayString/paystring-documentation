@@ -2,7 +2,7 @@ module.exports = {
   docs: [
     {
       type: 'doc',
-      id: 'welcome-to-payid',
+      id: 'home',
     },
     {
       type: 'category',
