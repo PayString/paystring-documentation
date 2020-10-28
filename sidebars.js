@@ -5,12 +5,16 @@ module.exports = {
       id: 'home',
     },
     {
+      type: 'doc',
+      id: 'what-is-payid',
+    },
+    {
       type: 'category',
       label: 'Get Started',
       items: [
         'getting-started',
         'getting-started-sandbox',
-        'payid-cli',        
+        'payid-cli',
         'verifiable-payid-tutorial',
         'ripplex-dev-kit-payid-get-started',
         'metrics-tutorial',

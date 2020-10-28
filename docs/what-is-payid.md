@@ -1,7 +1,7 @@
 ---
-id: welcome-to-payid
-title: Welcome to PayID
-sidebar_label: Welcome to PayID
+id: what-is-payid
+title: What is PayID?
+sidebar_label: What is PayID?
 ---
 
 With PayID, you use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$example.com` maps to the corresponding URL `https://example.com/alice`.
