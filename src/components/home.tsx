@@ -88,7 +88,7 @@ const Home = () => {
           </div>
         </div>
         <div className="col col--6 image-container">
-          <img src={useBaseUrl('/img/docs/sandbox-image.svg')} />
+          <img src={useBaseUrl('/img/docs/sandbox-image.png')} />
         </div>
       </div>
       <div className="row home-middle">
