@@ -31,5 +31,16 @@
         "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/123"
       }
     ]
+  },
+  "fix-sandbox-image": {
+    "apps": [
+      {
+        "name": "review-apps",
+        "headCommitId": "b1c131ea5f1ca39a414885740511c6c2f31470db",
+        "updatedAt": "2020-10-28T02:40:57.522Z",
+        "href": "review-apps/fix-sandbox-image/b1c131",
+        "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/124"
+      }
+    ]
   }
 }
