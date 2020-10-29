@@ -39,6 +39,7 @@ function getSegmentId() {
 }
 
 module.exports = {
+  baseUrl: '',
   title: 'PayID Developer Documentation and Reference Guides',
   tagline:
     "Learn how to implement and deploy PayID on your payment network with our documentation library. You'll find API reference, standards and technical white papers.",
@@ -79,8 +80,9 @@ module.exports = {
         {
           href: 'https://github.com/payid-org/payid',
           position: 'right',
-          className: 'header-github-link',
+          className: 'github-button header-github-link',
           'aria-label': 'GitHub repository',
+          label: 'GitHub repository',
         },
       ],
     },
@@ -108,7 +110,7 @@ module.exports = {
       {
         docs: {
           routeBasePath: '/',
-          homePageId: 'getting-started',
+          homePageId: 'home',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/payid-org/payid-documentation/tree/master',
@@ -127,4 +129,9 @@ module.exports = {
       },
     ],
   ],
+  customFields: {
+    developerUrl: `${getPayIDURL()}/use-cases`,
+    sandboxUrl: `${getPayIDURL()}/sandbox`,
+    discordUrl: 'https://chat.payid.org/',
+  },
 }
