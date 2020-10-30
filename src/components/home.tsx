@@ -15,7 +15,7 @@ const homeCards = [
   {
     title: 'Getting Started',
     description:
-      'Getting Started guide that covers basics that go beyond the sanbox.',
+      'Getting Started guide that covers basics that go beyond the sandbox.',
     icon: '/img/docs/home/getting-started.svg',
     whiteIcon: '/img/docs/home/getting-started-white.svg',
     url: '/getting-started',
@@ -23,7 +23,7 @@ const homeCards = [
   {
     title: 'Deploy PayID',
     description:
-      'Check the deployment options page to integrate payID in your project.',
+      'Check the deployment options page to integrate PayID in your project.',
     icon: '/img/docs/home/deploy.svg',
     whiteIcon: '/img/docs/home/deploy-white.svg',
     url: '/intro-deploy',
@@ -210,9 +210,9 @@ const Home = () => {
             <div className="banner-left">
               <img src={useBaseUrl(currentBanner.logoWhite)} />
               <p className="banner-text">{currentBanner.text}</p>
-              <Link to="/getting-started">
+              <a href={currentBanner.url} target="_blank">
                 <button className="button">Get a PayID</button>
-              </Link>
+              </a>
             </div>
             <div
               className="banner-right"
