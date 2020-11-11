@@ -1,7 +1,7 @@
 ---
 id: payid-cli
-title: PayID CLI
-sidebar_label: PayID CLI
+title: Get Started With PayID CLI
+sidebar_label: Get Started With PayID CLI
 ---
 
 With the PayID CLI, you can run PayID commands from the command line, and access all PayID features.

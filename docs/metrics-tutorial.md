@@ -1,7 +1,7 @@
 ---
 id: metrics-tutorial
-title: Metrics Tutorial
-sidebar_label: Metrics Tutorial
+title: Get Started With Metrics
+sidebar_label: Get Started With Metrics
 ---
 
 ## Deploy a PayID server with Docker, and pull PayID metrics into Prometheus
