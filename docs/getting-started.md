@@ -1,15 +1,14 @@
 ---
 id: getting-started
-title: Getting Started
-sidebar_label: Getting Started
+title: Get Started Overview
+sidebar_label: Get Started Overview
 ---
 
 PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through the following.
 
 - [Experiment With the PayID Sandbox](#experiment-with-the-payid-sandbox)
 - [Run a PayID Server](#run-a-payid-server)
-- [Create a PayID](#create-a-payid)
-- [Request a PayID](#request-a-payid)
+- [Run PayID CLI](#run-payid-cli)
 - [Learn More](#learn-more)
 - [RippleX Dev Kit Integration](#ripplex-dev-kit-integration)
 
@@ -19,7 +18,7 @@ Your contributions are welcome. Check out the [PayID repository on GitHub](https
 
 The [PayID Sandbox](https://payid.org/sandbox) lets you experiment with PayID in a test environment. Your work is not saved between sessions, and the sandbox may be reset at any time.
 
-To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github account and follow the prompts. You can quickly set up a virtual test server, and then create users with simple PayID addresses that map to addresses on various networks such as XRPL, Interledger, BTC, and ETH. Using the provided cURL or Javascript code, you can create, update, and delete users, and get payment information about a PayID address. While the session is running, you can also run operations from your command line.
+To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github account and follow the prompts. You can quickly set up a virtual test server, and then create users with simple PayID addresses that map to addresses on various networks such as XRPL, Interledger, BTC, and ETH. Using the provided cURL or Javascript code, you can create, update, and delete users, and get payment information about a PayID address. While the session is running, you can also run operations from your command line. See [Get Started With PayID Sandbox](getting-started-sandbox).
 
 ## Run a PayID Server
 
@@ -36,7 +35,7 @@ To familiarize yourself and experiment with PayID, you can set up a local PayID 
 4.  Boot up the PayID HTTP server and a Postgres database to develop against:
     `npm run devEnvUp`
 
-## Create a PayID
+### Create a PayID
 
 Now that you have a PayID server running, you can create a PayID. If your server is publicly accessible, other people could query your account information from your PayID server.
 
@@ -81,7 +80,7 @@ curl --location --request POST 'http://127.0.0.1:8081/users' \
    }'
 ```
 
-## Request a PayID
+### Request a PayID
 
 After setting up a server and [creating a PayID](#create-a-payid) on the server, the next step is to request the PayID from the server. The PayID Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayID and related account information stored on the server.
 
@@ -125,6 +124,10 @@ That's it! You've set up a PayID server locally, created new PayIDs on your serv
 If you want to clean up the Docker containers, you can run `npm run devDown`.
 
 Now that you've set up the basics, [learn more](#learn-more) about PayID and what you can do with it.
+
+## Run PayID CLI
+
+PayID CLI allows you to manage PayIDs and get user information from the command line. See [Get Started With PayID CLI](payid-cli).
 
 ## RippleX Dev Kit Integration
 

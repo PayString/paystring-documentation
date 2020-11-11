@@ -1,10 +1,10 @@
 ---
-id: welcome-to-payid
-title: Welcome to PayID
-sidebar_label: Welcome to PayID
+id: what-is-payid
+title: What is PayID?
+sidebar_label: What is PayID?
 ---
 
-With PayID, you use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through a standardized address. For example, `alice$example.com` maps to the corresponding URL `https://example.com/alice`.
+PayID is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. With the PayID protocol, you use human-readable addresses to transmit value in the currency of your choice. The PayID network allows participants to reach one another through standardized addresses. An address such as `alice$example.com` maps to the corresponding URL `https://example.com/alice`.
 
 When you make an HTTP GET request that follows the PayID protocol, it resolves to an address on the underlying payment network. PayID is a payment-network-agnostic protocol, capable of sending payments in BTC, ETH, XRP, or fiat networks like ACH.
 
