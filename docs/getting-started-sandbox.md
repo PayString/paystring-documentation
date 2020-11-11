@@ -1,7 +1,7 @@
 ---
 id: getting-started-sandbox
-title: Getting Started With PayID Sandbox
-sidebar_label: Getting Started With PayID Sandbox
+title: Get Started With PayID Sandbox
+sidebar_label: Get Started With PayID Sandbox
 ---
 
 With the [PayID Sandbox](https://payid.org/sandbox), you can experiment with PayID without deploying your own server. The PayID Sandbox does not directly support Verifiable PayID.
