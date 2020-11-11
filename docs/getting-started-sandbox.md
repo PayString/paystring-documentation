@@ -4,7 +4,9 @@ title: Getting Started With PayID Sandbox
 sidebar_label: Getting Started With PayID Sandbox
 ---
 
-With the [PayID Sandbox](https://payid.org/sandbox), you can experiment with PayID without deploying your own server. Although the PayID Sandbox can be used to create PayIDs, do not use these PayIDs that rely on this virtual server to send or receive real cryptocurrency. The PayID Sandbox does not directly support Verifiable PayID.
+With the [PayID Sandbox](https://payid.org/sandbox), you can experiment with PayID without deploying your own server. The PayID Sandbox does not directly support Verifiable PayID.
+
+**Caution:** Although the PayID Sandbox can be used to create PayIDs, do not use PayIDs that rely on this virtual server to send or receive real cryptocurrency.
 
 You can also experiment with PayID by using [PayID CLI](payid-cli), which does support Verifiable PayID.
 
@@ -20,7 +22,7 @@ Requirements:
 ## Open PayID Sandbox and Create a User
 
 1. Open [PayID Sandbox](https://payid.org/sandbox) and log in with your GitHub account.
-   The sandbox sets up a virtual server for you at _github_user_name_.sandbox.payid.org.
+   The sandbox sets up a virtual server for you at `<YOUR_GITHUB_USERNAME>.sandbox.payid.org`.
    You also get an Admin API token that can be used to create and manage users. Save this token for later use. By default, the sandbox incorporates this token into the **Authorization: Bearer** heading.
    ![Sandbox start](/img/docs/sandbox-start.png)
 2. Click **Try API Constructor**.
@@ -34,7 +36,7 @@ Requirements:
    - Select **Testnet** or **Mainnet**, depending whether you want to have the address be valid for test currency or real currency.
    - If you want to associate another address to this PayID, click **+** and repeat the process for another address. Your PayID can have multiple addresses on multiple networks on the same PayID.
 5. By default, **cURL** is selected on the top right. The sandbox constructs the cURL snippet you need to create a user. You can also select **JavaScript** to run a script to create a user.
-6. Click **Run**. Whether you used cURL or JavaScript, the JSON for the newly created user looks the same.
+6. Click **Run**. Whether you used cURL or JavaScript, the JSON response for the newly created user looks the same.
    ```json
    {
      "payId": "starlight$loisrp.sandbox.payid.org",
@@ -67,17 +69,50 @@ Requirements:
 3. Select either **cURL** or **JavaScript**.
 4. Click **Run**. The JSON response provides information about the PayID.
 
-If you enter a nonexistent PayID, you get the response "Failed to find the PayID <_value_>".
+   ```json
+   {
+     "payId": "starlight$loisrp.sandbox.payid.org",
+     "addresses": [
+       {
+         "paymentNetwork": "XRPL",
+         "environment": "TESTNET",
+         "details": {
+           "address": "rUAuauaXNTskaHdsz1TWnHWvB8goNXQaVy"
+         }
+       }
+     ],
+     "verifiedAddresses": []
+   }
+   ```
+
+````
+
+If you enter a nonexistent PayID, you get the response `"Failed to find the PayID <NONEXISTENT_PAYID_VALUE>"`.
 
 ## Replace User
 
 With **Replace User**, you can rename a PayID, and enter new address information. The address information from the "old" PayID does not transfer to the new PayID, so you have to enter the address information again.
 
 1. Click **Replace User** on the left.
-2. Enter the PayID you want to rename, and the new PayID.
+2. Enter the PayID you want to rename, and the new PayID. In this example, `starlight` is replaced with `moonlight`.
 3. Enter the address information as if you were creating a user.
 4. Select either **cURL** or **JavaScript**.
 5. Click **Run**.
+   ```json
+   {
+  "payId": "moonlight$loisrp.sandbox.payid.org",
+  "addresses": [
+    {
+      "paymentNetwork": "XRPL",
+      "environment": "TESTNET",
+      "details": {
+        "address": "rUAuauaXNTskaHdsz1TWnHWvB8goNXQaVy"
+      }
+    }
+  ],
+  "verifiedAddresses": []
+}
+````
 
 The new PayID information is returned in JSON format.
 
@@ -86,6 +121,7 @@ The new PayID information is returned in JSON format.
 1. Click **Delete User** on the left.
 2. Enter the PayID you want to delete.
 3. Select either **cURL** or **JavaScript**.
-4. Click **Run**.
+4. Click **Run**. The PayID is returned.
+   `"moonlight$loisrp.sandbox.payid.org"`
 
 The PayID you have deleted is returned in the response. Even if the PayID did not exist, you will get the same response.
