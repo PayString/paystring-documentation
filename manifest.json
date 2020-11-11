@@ -75,5 +75,16 @@
         "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/127"
       }
     ]
+  },
+  "loisrp-networks": {
+    "apps": [
+      {
+        "name": "review-apps",
+        "headCommitId": "b5f2418b788c7419c2b067cbf60d1dc0ad9e3cf7",
+        "updatedAt": "2020-11-11T13:28:16.963Z",
+        "href": "review-apps/loisrp-networks/b5f241",
+        "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/128"
+      }
+    ]
   }
 }
