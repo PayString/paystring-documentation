@@ -27,36 +27,25 @@ function getDocsURL() {
   }
 }
 
-function getHeapAppID() {
+function getSegmentId() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
-      return '3411953951'
+      return 'fY65tW4oAAvTElIHzrXQ2plf99qDjjAe'
     case 'prod':
-      return '3069043076'
+      return 'eGcENJL6ghTAXTAdzOrmd4oqxDlRorz1'
     default:
-      return null
+      return '5KojrihxpEBJvAn3u0JXi9hlhzMh5b1M'
   }
 }
 
-function getHubspotID() {
+function getSegmentHost() {
   switch (process.env.RELEASE_ENV) {
     case 'stage':
-      return '8186536'
+      return 'https://segment.ripplex.io/ana_stg.js'
     case 'prod':
-      return '8186536'
+      return 'https://segment.ripplex.io/ana_prod.js'
     default:
-      return null
-  }
-}
-
-function getSentryDSN() {
-  switch (process.env.RELEASE_ENV) {
-    case 'stage':
-      return 'https://c15f0f6a453c444597c6a637a15273ab@o262339.ingest.sentry.io/5277565'
-    case 'prod':
-      return 'https://531c7661d68844239952e7c6d5cc5961@o262339.ingest.sentry.io/5277626'
-    default:
-      return null
+      return 'https://segment.ripplex.io/ana_dev.js'
   }
 }
 
@@ -145,22 +134,10 @@ module.exports = {
   ],
   plugins: [
     [
-      require.resolve(path.resolve(__dirname, './src/plugins/heap.js')),
+      require.resolve(path.resolve(__dirname, './src/plugins/segment.js')),
       {
-        appId: getHeapAppID(),
-      },
-    ],
-    [
-      require.resolve(path.resolve(__dirname, './src/plugins/hubspot.js')),
-      {
-        appId: getHubspotID(),
-      },
-    ],
-    [
-      require.resolve(path.resolve(__dirname, './src/plugins/sentry.js')),
-      {
-        dsn: getSentryDSN(),
-        environment: process.env.RELEASE_ENV,
+        appId: getSegmentId(),
+        host: getSegmentHost(),
       },
     ],
   ],
