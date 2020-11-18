@@ -38,6 +38,17 @@ function getSegmentId() {
   }
 }
 
+function getSegmentHost() {
+  switch (process.env.RELEASE_ENV) {
+    case 'stage':
+      return 'https://segment.ripplex.io/ana_stg.js'
+    case 'prod':
+      return 'https://segment.ripplex.io/ana_prod.js'
+    default:
+      return 'https://segment.ripplex.io/ana_dev.js'
+  }
+}
+
 module.exports = {
   baseUrl: '',
   title: 'PayID Developer Documentation and Reference Guides',
@@ -126,6 +137,7 @@ module.exports = {
       require.resolve(path.resolve(__dirname, './src/plugins/segment.js')),
       {
         appId: getSegmentId(),
+        host: getSegmentHost(),
       },
     ],
   ],
