@@ -4,19 +4,18 @@ title: Get Started With PayID and Payburner
 sidebar_label: Get Started With PayID and Payburner
 ---
 
-
 If you install Payburner, it creates an XRP wallet for you, and it automatically creates a PayID.
 
 Currently, you can install PayBurner as a Chrome or Brave extension, and mobile apps are expected shortly. This quickstart uses the Chrome extension.
 
-This quickstart does not require that you deploy your own server. It is a quick introduction to using PayID as a customer would use it. 
+This quickstart does not require that you deploy your own server. It is a quick introduction to using PayID as a customer would use it.
 
 ## Set up your Payburner PayID
 
 1. Go to [PayBurner](https://payburner.com). Select the option to install PayBurner as a Chrome extension.
 2. Open the extension.
 3. Create a new account, either with a Payburner extension code, or by buying a code on the payburner.com site. If you have previously created an account, you can import it from the JSON file you saved when you created your wallet. Your wallet opens.
-   ![Payburner wallet](/img/docs/payburner-wallet.png)  
+   ![Payburner wallet](/img/docs/payburner-wallet.png)
 4. To see your PayID, click your avatar on the right and select **My PayID**. You can see both your PayID, and the JSON that defines it.
    ![Payburner PayID](/img/docs/payburner-payid.png)
 

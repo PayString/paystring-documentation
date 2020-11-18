@@ -15,6 +15,7 @@ module.exports = {
         'getting-started',
         'getting-started-sandbox',
         'getting-started-local',
+        'getting-started-payburner',
         'payid-cli',
         'verifiable-payid-tutorial',
         'ripplex-dev-kit-payid-get-started',
