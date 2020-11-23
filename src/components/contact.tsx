@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
+import { formSubmitted } from '../utils/typewritter'
 
 // Copied from payid code: common/community.tsx
 const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -73,6 +74,12 @@ const contact = () => {
           mode: 'no-cors',
         },
       ).catch(() => {})
+
+      formSubmitted({
+        email,
+        form_name: 'documentation_newsletter',
+      })
+      window.analytics.identify({ email })
     } else {
       setErrorMsg('Invalid email.')
     }
@@ -91,8 +98,9 @@ const contact = () => {
           {!success && (
             <>
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
+                name="email"
                 className="text-input email-input"
                 value={email}
                 onChange={handleInputChange}
