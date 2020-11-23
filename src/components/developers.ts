@@ -4,7 +4,7 @@ export default [
     whiteLogo: '/img/docs/home/logo/briskid-white.svg',
     title: 'Brisk ID',
     description:
-      'allows anyone with a mobile phone to create and manage a PayID.',
+      'allows anyone with a mobile phone to create and manage a PayString.',
     userLogo: '/img/docs/home/developers/briskid.svg',
     userName: 'Leighton Scarlett,',
     userdetail: 'Founder',
@@ -13,8 +13,8 @@ export default [
   {
     logo: '/img/docs/home/logo/kyc-crypto.svg',
     whiteLogo: '/img/docs/home/logo/kyc-crypto-white.svg',
-    title: 'Verified PayID',
-    description: 'decentralized saved identities assigned to PayID.',
+    title: 'Verified PayString',
+    description: 'decentralized saved identities assigned to PayString.',
     userLogo: '/img/docs/home/developers/kyc-crypto.svg',
     userName: 'Tobias Graf,',
     userdetail: 'CEO KYC.Crypto',
@@ -36,7 +36,7 @@ export default [
     whiteLogo: '/img/docs/home/logo/xnd-white.svg',
     title: 'XND',
     description:
-      'a wallet that can perform cross-chain transfers directly to a PayID.',
+      'a wallet that can perform cross-chain transfers directly to a PayString.',
     userLogo: '/img/docs/home/developers/xnd.svg',
     userName: 'Anirudha Bose,',
     userdetail: 'Backend Developer',
@@ -66,9 +66,9 @@ export default [
   {
     logo: '/img/docs/home/logo/payid-validator.svg',
     whiteLogo: '/img/docs/home/logo/payid-validator-white.svg',
-    title: 'PayID Validator',
+    title: 'PayString Validator',
     description:
-      'a tool for performing checks to validate PayID response headers.',
+      'a tool for performing checks to validate PayString response headers.',
     userLogo: '/img/docs/home/developers/payid-validator.svg',
     userName: 'Robert Swarthout,',
     userdetail: 'Founder',
@@ -88,7 +88,7 @@ export default [
     logo: '/img/docs/home/logo/unisend.svg',
     whiteLogo: '/img/docs/home/logo/unisend-white.svg',
     title: 'Unisend',
-    description: 'app to send money internationally for free using PayID.',
+    description: 'app to send money internationally for free using PayString.',
     userLogo: '/img/docs/home/developers/unisend.svg',
     userName: 'Drew Patel,',
     userdetail: 'Backend Developer',

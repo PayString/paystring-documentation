@@ -4,37 +4,37 @@ title: Security Best Practices
 sidebar_label: Security Best Practices
 ---
 
-The PayID protocol is flexible and supports a wide range of implementations. To ensure security, follow these best practices.
+The PayString protocol is flexible and supports a wide range of implementations. To ensure security, follow these best practices.
 
 ## Requirements
 
-When implementing PayID, you must meet the following requirements.
+When implementing PayString, you must meet the following requirements.
 
 ### Limit Admin API exposure
 
-The [Admin PayID API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
+The [Admin PayString API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
 
 ### Set CORS (Cross-Origin Resource Sharing) Headers
 
-PayID servers should be easily accessible. To allow browser scripts to hit a PayID server, you should set the following CORS headers.
+PayString servers should be easily accessible. To allow browser scripts to hit a PayString server, you should set the following CORS headers.
 
-The PayID reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure these headers are set or passed through.
+The PayString reference implementation server already sets these headers, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure these headers are set or passed through.
 
 ```http
 Access-Control-Allow-Origin: '*'
 Access-Control-Allow-Methods: 'POST, GET, OPTIONS'
-Access-Control-Allow-Headers: 'PayID-Version'
-Access-Control-Expose-Headers: 'PayID-Version, PayID-Server-Version'
+Access-Control-Allow-Headers: 'PayString-Version'
+Access-Control-Expose-Headers: 'PayString-Version, PayString-Server-Version'
 ```
 
-If you want to verify whether CORS is correctly set up for your PayID server, you can modify the following HTML file to point to your PayID server, open it up in a web browser, and inspect the console.
+If you want to verify whether CORS is correctly set up for your PayString server, you can modify the following HTML file to point to your PayString server, open it up in a web browser, and inspect the console.
 
 ```html
 <html>
   <script>
     const headers = new Headers()
     headers.append('Accept', 'application/xrpl-mainnet+json')
-    headers.append('PayID-Version', '1.0')
+    headers.append('PayString-Version', '1.0')
 
     fetch(new Request('https://ripplex.money/alice'), {
       method: 'GET',
@@ -49,9 +49,9 @@ If you want to verify whether CORS is correctly set up for your PayID server, yo
 
 ### Cache-Control
 
-Because the PayID server deals with payment addresses, you want to ensure that payment addresses don't get cached. That way, the payment address is always up to date, and money won't be set to the incorrect address.
+Because the PayString server deals with payment addresses, you want to ensure that payment addresses don't get cached. That way, the payment address is always up to date, and money won't be set to the incorrect address.
 
-The PayID reference implementation server already sets this header, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure this header is set or passed through.
+The PayString reference implementation server already sets this header, but if you are rolling your own implementation or using a reverse proxy like nginx, you should ensure this header is set or passed through.
 
 ```http
 Cache-Control: no-store
@@ -59,7 +59,7 @@ Cache-Control: no-store
 
 ### Use TLS 1.3
 
-As stated in the requirements, your implementation of PayID must use TLS. To ensure security, both the PayID client and the PayID server should use the latest TLS 1.3, as described in [RFC 8446](https://tools.ietf.org/html/rfc8446). TLS 1.3 is faster and safer than its predecessors, and offers these advantages:
+As stated in the requirements, your implementation of PayString must use TLS. To ensure security, both the PayString client and the PayString server should use the latest TLS 1.3, as described in [RFC 8446](https://tools.ietf.org/html/rfc8446). TLS 1.3 is faster and safer than its predecessors, and offers these advantages:
 
 - Reduces handshake latency
 - Encrypts more of the handshake
@@ -68,7 +68,7 @@ As stated in the requirements, your implementation of PayID must use TLS. To ens
 
 **Note:** TLS 1.3 (RFC 8446) and its implementations provide considerable flexibility in the selection of cipher suites. Cryptographic algorithms weaken over time as cryptanalysis improves: algorithms that are considered strong today may become weak tomorrow. Therefore, you must prepare to phase out such algorithms over time, and replace with more secure cipher suites as those become available.
 
-## Best practices for PayID implementation
+## Best practices for PayString implementation
 
 The following best practices are strongly recommended.
 

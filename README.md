@@ -1,6 +1,6 @@
-# PayID Documentation
+# PayString Documentation
 
-Welcome to the PayID Documentation Repo
+Welcome to the PayString Documentation Repo
 
 ### Installation
 

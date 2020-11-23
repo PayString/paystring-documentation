@@ -4,9 +4,9 @@ title: Schemas
 sidebar_label: Schemas
 ---
 
-See also: [PayID API Reference](https://api.payid.org).
+See also: [PayString API Reference](https://api.payid.org).
 
-The PayID protocol includes the following schema definitions.
+The PayString protocol includes the following schema definitions.
 
 These schemas are used for request or response payloads for various requests.
 
@@ -38,7 +38,7 @@ A single user can have multiple destinations, because the same user can have add
 
 | Field                      | Description                                                                                                                                     |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `payId`                    | PayID user address                                                                                                                              |
+| `payId`                    | PayString user address                                                                                                                          |
 | `addresses`                | Object that includes payment address information for one or more payment networks.                                                              |
 | `addresses.paymentNetwork` | A payment network, like the bitcoin network, the XRPL, or ACH.                                                                                  |
 | `addresses.environment`    | "Environment" of the payment network for this payment address. For example, the XPR Ledger has MAINNET, TESTNET, and DEVNET.                    |

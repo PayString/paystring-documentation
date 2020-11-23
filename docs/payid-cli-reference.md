@@ -1,29 +1,29 @@
 ---
 id: payid-cli-reference
-title: PayID CLI Reference
-sidebar_label: PayID CLI Reference
+title: PayString CLI Reference
+sidebar_label: PayString CLI Reference
 ---
 
-Use these commands with PayID CLI. See [PayID CLI](payid-cli) for setup information.
+Use these commands with PayString CLI. See [PayString CLI](payid-cli) for setup information.
 
-| Command                                                             | Description                                                                    |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| `help [command...]`                                                 | Provides help for a given command.                                             |
-| `exit`                                                              | Exits application.                                                             |
-| `clear`                                                             | Clears the terminal.                                                           |
-| `crypto-address add <paymentNetwork> <environment> <address> [tag]` | Starts building a new PayID.                                                   |
-| `crypto-address remove <address>`                                   | Removes an address from the current PayID.                                     |
-| `keys clear`                                                        | Clears all loaded keys.                                                        |
-| `keys generate`                                                     | Generates and saves a new identity key.                                        |
-| `keys list`                                                         | Lists keys that have been loaded.                                              |
-| `keys load <filePath>`                                              | Loads identity-key from file.                                                  |
-| `keys print`                                                        | Prints keys that have been loaded in pem format.                               |
-| `init <payid>`                                                      | Initializes a new PayID.                                                       |
-| `inspect [payId]`                                                   | Inspects signatures on the loaded PayID or from an optionally specified PayID. |
-| `load <payId>`                                                      | Loads a PayID from PayID server.                                               |
-| `show`                                                              | Shows the currently loaded PayID.                                              |
-| `sign`                                                              | Signs the loaded PayID with the loaded signing keys.                           |
-| `verify [payId]`                                                    | Verifies the loaded PayID or an optionally specified PayID.                    |
-| `save`                                                              | Saves the currently loaded PayID.                                              |
-| `from-url <url>`                                                    | Converts a URL to a PayID.                                                     |
-| `to-url <payId>`                                                    | Converts a PayID to a URL.                                                     |
+| Command                                                             | Description                                                                            |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `help [command...]`                                                 | Provides help for a given command.                                                     |
+| `exit`                                                              | Exits application.                                                                     |
+| `clear`                                                             | Clears the terminal.                                                                   |
+| `crypto-address add <paymentNetwork> <environment> <address> [tag]` | Starts building a new PayString.                                                       |
+| `crypto-address remove <address>`                                   | Removes an address from the current PayString.                                         |
+| `keys clear`                                                        | Clears all loaded keys.                                                                |
+| `keys generate`                                                     | Generates and saves a new identity key.                                                |
+| `keys list`                                                         | Lists keys that have been loaded.                                                      |
+| `keys load <filePath>`                                              | Loads identity-key from file.                                                          |
+| `keys print`                                                        | Prints keys that have been loaded in pem format.                                       |
+| `init <payid>`                                                      | Initializes a new PayString.                                                           |
+| `inspect [payId]`                                                   | Inspects signatures on the loaded PayString or from an optionally specified PayString. |
+| `load <payId>`                                                      | Loads a PayString from PayString server.                                               |
+| `show`                                                              | Shows the currently loaded PayString.                                                  |
+| `sign`                                                              | Signs the loaded PayString with the loaded signing keys.                               |
+| `verify [payId]`                                                    | Verifies the loaded PayString or an optionally specified PayString.                    |
+| `save`                                                              | Saves the currently loaded PayString.                                                  |
+| `from-url <url>`                                                    | Converts a URL to a PayString.                                                         |
+| `to-url <payId>`                                                    | Converts a PayString to a URL.                                                         |

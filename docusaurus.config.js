@@ -1,7 +1,7 @@
 const path = require('path')
 require('dotenv/config')
 
-function getPayIDURL() {
+function getPayStringURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
       return 'https://dev.payid.org'
@@ -51,9 +51,9 @@ function getSegmentHost() {
 
 module.exports = {
   baseUrl: '',
-  title: 'PayID Developer Documentation and Reference Guides',
+  title: 'PayString Developer Documentation and Reference Guides',
   tagline:
-    "Learn how to implement and deploy PayID on your payment network with our documentation library. You'll find API reference, standards and technical white papers.",
+    "Learn how to implement and deploy PayString on your payment network with our documentation library. You'll find API reference, standards and technical white papers.",
   url: getDocsURL(),
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -65,10 +65,10 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt:
-          'PayID: Unifying payments through a universal payment identifier to simplify sending and receiving payments',
+          'PayString: Unifying payments through a universal payment identifier to simplify sending and receiving payments',
         src: 'img/icon.svg',
         srcDark: 'img/icon-dark.svg',
-        href: getPayIDURL(),
+        href: getPayStringURL(),
         target: '_self',
       },
       items: [
@@ -84,7 +84,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: `${getPayIDURL()}/contact`,
+          href: `${getPayStringURL()}/contact`,
           label: 'Contact Us',
           position: 'right',
         },
@@ -100,7 +100,7 @@ module.exports = {
     gtag: {
       trackingID: 'UA-148411216-7',
       linker: {
-        domains: [getDocsURL(), getPayIDURL()],
+        domains: [getDocsURL(), getPayStringURL()],
       },
     },
     algolia: {
@@ -110,7 +110,7 @@ module.exports = {
     // announcementBar: {
     //   id: 'hackathon_annoucement',
     //   content:
-    //     'Participate in the <a target="_blank" rel="noopener noreferrer" href="https://payid.devpost.com/?utm_source=docs.payid.org&utm_medium=banner">PayID Hackathon</a> and win up to $15K! Submissions are due by 5:00pm PDT Aug 2, 2020',
+    //     'Participate in the <a target="_blank" rel="noopener noreferrer" href="https://payid.devpost.com/?utm_source=docs.payid.org&utm_medium=banner">PayString Hackathon</a> and win up to $15K! Submissions are due by 5:00pm PDT Aug 2, 2020',
     //   backgroundColor: '#292d3e',
     //   textColor: '#bfc7d5',
     // },
@@ -142,8 +142,8 @@ module.exports = {
     ],
   ],
   customFields: {
-    developerUrl: `${getPayIDURL()}/use-cases`,
-    sandboxUrl: `${getPayIDURL()}/sandbox`,
+    developerUrl: `${getPayStringURL()}/use-cases`,
+    sandboxUrl: `${getPayStringURL()}/sandbox`,
     discordUrl: 'https://chat.payid.org/',
   },
 }

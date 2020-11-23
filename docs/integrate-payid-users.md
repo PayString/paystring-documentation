@@ -4,21 +4,21 @@ title: Integrate Existing User Databases
 sidebar_label: Integrate Existing User Databases
 ---
 
-If you have an existing user database, you can take the following steps to integrate PayID functionality into your product.
+If you have an existing user database, you can take the following steps to integrate PayString functionality into your product.
 
 ## Extend existing database tables with new columns
 
-The PayID [account schema](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql) is used to define a table for users.
+The PayString [account schema](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql) is used to define a table for users.
 
 The account table contains two fields: `id` and `pay_id`. The address table uses a foreign key column called `account_id` which depends on `id` as a foreign key to associate addresses with individual accounts. The second column is `pay_id` which is where we store the string identifier (such as `alice$wallet.com`).
 
 With an existing user database, you will need to add the `pay_id` column. Your user database might already have the equivalent of an `id` field, but if not, add this column so that each address can reference a specific user.
 
-The PayID account schema has three constraints that could be useful to apply to your existing user database. Two constraints guarantee that all entered PayIDs are lowercase and are not empty strings. The final and most important constraint is that the regex constraint [valid_pay_id](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql#L17) guarantees that all entered PayIDs are in compliance with the format outlined in the [PayID whitepaper](https://payid.org/whitepaper.pdf).
+The PayString account schema has three constraints that could be useful to apply to your existing user database. Two constraints guarantee that all entered PayStrings are lowercase and are not empty strings. The final and most important constraint is that the regex constraint [valid_pay_id](https://github.com/payid-org/payid/blob/master/src/db/schema/01_account.sql#L17) guarantees that all entered PayStrings are in compliance with the format outlined in the [PayString whitepaper](https://payid.org/whitepaper.pdf).
 
-The PayID [address schema](https://github.com/payid-org/payid/blob/master/src/db/schema/02_address.sql) is used to define a table of addresses associated with users.
+The PayString [address schema](https://github.com/payid-org/payid/blob/master/src/db/schema/02_address.sql) is used to define a table of addresses associated with users.
 
-Whenever a PayID is queried, the payment network and environment are sent via an Accept header. Therefore, it is important that each address stored has an associated payment network and environment. For example, upon receipt of the accept header `application/xrpl-testnet+json` you should query your address table for the address associated with the `xrpl` payment network and `testnet` environment.
+Whenever a PayString is queried, the payment network and environment are sent via an Accept header. Therefore, it is important that each address stored has an associated payment network and environment. For example, upon receipt of the accept header `application/xrpl-testnet+json` you should query your address table for the address associated with the `xrpl` payment network and `testnet` environment.
 
 ## Match column names in data access functions
 
@@ -36,7 +36,7 @@ The reference implementation described in [Getting Started](/) uses a Postgres d
 
 ## Set environment variables
 
-PayID depends on environment variables. All of these environment variables are read in [src/config.ts](https://github.com/payid-org/payid/blob/master/src/config.ts) and assigned to variables. During integration, look through all of the environment variables used in [src/config.ts](https://github.com/payid-org/payid/blob/master/src/config.ts) to ensure all are set properly for your environment.
+PayString depends on environment variables. All of these environment variables are read in [src/config.ts](https://github.com/payid-org/payid/blob/master/src/config.ts) and assigned to variables. During integration, look through all of the environment variables used in [src/config.ts](https://github.com/payid-org/payid/blob/master/src/config.ts) to ensure all are set properly for your environment.
 
 ## Update database migrations
 

@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'PayID References',
+      label: 'PayString References',
       items: [
         'api-reference',
         'payid-cli-reference',

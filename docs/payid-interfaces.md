@@ -4,9 +4,9 @@ title: Interfaces
 sidebar_label: Interfaces
 ---
 
-See also: [PayID API Reference](https://api.payid.org).
+See also: [PayString API Reference](https://api.payid.org).
 
-The PayID protocol includes the following interface definitions.
+The PayString protocol includes the following interface definitions.
 
 ### PaymentInformation type
 

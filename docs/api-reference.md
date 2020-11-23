@@ -4,4 +4,4 @@ title: API Reference
 sidebar_label: API Reference
 ---
 
-See the Postman [PayID API Reference](https://api.payid.org).
+See the Postman [PayString API Reference](https://api.payid.org).
