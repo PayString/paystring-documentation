@@ -129,7 +129,7 @@ Paste the values you saw in the previous step into wherever your registrar allow
 
 ## Test your PayID server
 
-Use [PayID Validator](https://payidvalidator.com/) to test your PayIDs.
+Use [PayString Validator](https://paystringvalidator.com/) to test your PayStrings.
 
 ## Launch with AWS Lambda using scripts
 

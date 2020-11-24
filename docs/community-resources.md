@@ -12,7 +12,7 @@ Members of the PayID community have created useful resources for using and learn
 
 **Validators**
 
-- [PayID Validator](https://payidvalidator.com/) - An [open-source project](https://github.com/rswarthout/payid-validator) that validates responses using [JSON schemas](https://docs.payid.org/payid-interfaces) and verifies whether your PayID server follows various [best practices](payid-best-practices), like:
+- [PayString Validator](https://paystringvalidator.com/) - An [open-source project](https://github.com/rswarthout/paystring-validator) that validates responses using [JSON schemas](https://docs.payid.org/payid-interfaces) and verifies whether your PayID server follows various [best practices](payid-best-practices), like:
 
   - [HTTP response headers](payid-headers)
   - [Cache-Control](payid-best-practices#cache-control)
