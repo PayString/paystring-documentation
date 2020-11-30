@@ -12,7 +12,7 @@ PayID is fully peer-to-peer with no central counterparty. Anyone can set up thei
 
 The PayID protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayID address that works across all platforms.
 
-Payid.org has created a [reference implementation](payid-reference-overview) of the PayID protocol, which you can [view on GitHub]((https://github.com/payid-org/payid). You are welcome to create your own implementation as well.
+Payid.org has created a [reference implementation](payid-reference-overview) of the PayID protocol, which you can [view on GitHub](https://github.com/payid-org/payid). You are welcome to create your own implementation as well.
 
 ## PayID standards
 

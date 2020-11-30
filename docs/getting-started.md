@@ -22,7 +22,7 @@ To use [PayID Sandbox](https://payid.org/sandbox), log in with your Github accou
 
 ## Run a PayID Server
 
-See [Get Started With ]
+See [Get Started With a Local PayID Server](getting-started-local).
 
 ## Run PayID CLI
 
