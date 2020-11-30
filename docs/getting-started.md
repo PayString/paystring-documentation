@@ -28,10 +28,6 @@ See [Get Started With a Local PayID Server](getting-started-local).
 
 PayID CLI allows you to manage PayIDs and get user information from the command line. See [Get Started With PayID CLI](payid-cli).
 
-## Run PayID CLI
-
-PayID CLI allows you to manage PayIDs and get user information from the command line. See [Get Started With PayID CLI](payid-cli).
-
 ## RippleX Dev Kit Integration
 
 PayID support is integrated into [RippleX Dev Kit](https://github.com/xpring-eng/ripplex-dev-kit).
