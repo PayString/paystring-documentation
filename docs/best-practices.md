@@ -1,5 +1,5 @@
 ---
-id: payid-best-practices
+id: best-practices
 title: Security Best Practices
 sidebar_label: Security Best Practices
 ---
