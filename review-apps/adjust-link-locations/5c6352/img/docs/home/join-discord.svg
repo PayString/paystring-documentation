@@ -1,0 +1,41 @@
+<svg id="svg8" version="1.1" viewBox="0 0 232.03958 74.083336" height="74.083336mm" width="232.03958mm" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs2">
+    <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="388" width="985" y="0" x="0" id="filter0_d">
+      <feFlood id="feFlood240" result="BackgroundImageFix" flood-opacity="0"></feFlood>
+      <feColorMatrix id="feColorMatrix242" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" type="matrix" in="SourceAlpha"></feColorMatrix>
+      <feOffset id="feOffset244" dy="27"></feOffset>
+      <feGaussianBlur id="feGaussianBlur246" stdDeviation="27"></feGaussianBlur>
+      <feColorMatrix id="feColorMatrix248" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" type="matrix"></feColorMatrix>
+      <feBlend id="feBlend250" result="effect1_dropShadow" in2="BackgroundImageFix" mode="normal"></feBlend>
+      <feBlend id="feBlend252" result="shape" in2="effect1_dropShadow" in="SourceGraphic" mode="normal"></feBlend>
+    </filter>
+  </defs>
+  
+  <metadata id="metadata5">
+    
+      
+        image/svg+xml
+        
+        
+      
+    
+  </metadata>
+  <g transform="translate(82.446419,21.858675)" id="layer1">
+    <g transform="matrix(0.26458333,0,0,0.26458333,-96.73392,-29.002425)" id="g282" style="fill:none">
+      <g id="g217" filter="url(#filter0_d)">
+        <rect id="rect215" fill="none" rx="15" height="280" width="877" y="27" x="54"></rect>
+      </g>
+      <g id="g238" mask="url(#mask0)">
+        <rect id="rect222" stroke-width="3" stroke="#0087ff" height="167" width="208" y="206.5" x="776.5"></rect>
+        <circle id="circle224" stroke-width="3" stroke="#a803fc" r="99.5" cy="25" cx="814"></circle>
+        <circle id="circle226" fill="#cccccd" r="7.5" cy="167.5" cx="191.5"></circle>
+        <circle id="circle228" stroke-width="3" stroke="#cccccd" r="7.5" cy="88.5" cx="685.5"></circle>
+        <rect id="rect230" stroke-width="3" stroke="#a803fc" transform="rotate(45,246.087,83.1213)" height="18.335899" width="18.335899" y="83.1213" x="246.08701"></rect>
+        <path id="path232" fill="#ff5d00" d="m 890,143 10.392,18 h -20.784 z"></path>
+        <path id="path234" stroke-width="3" stroke="#55df20" d="M -5.70766,420 119,204 243.708,420 Z"></path>
+        <path id="path236" stroke-width="3" stroke="#ff5d00" d="M 89,157 199,-35"></path>
+      </g>
+    </g>
+    <rect ry="8.342577" rx="0.83051389" y="-21.858675" x="-82.446419" height="74.083336" width="232.03958" id="rect284" style="fill:none;stroke-width:0.264583"></rect>
+  </g>
+</svg>
