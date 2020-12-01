@@ -1,0 +1,39 @@
+<svg id="svg8" version="1.1" viewBox="0 0 86.518745 85.724998" height="85.724998mm" width="86.518745mm" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs2">
+    <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="432" width="435" y="0" x="-30" id="filter0_d">
+      <feFlood id="feFlood325" result="BackgroundImageFix" flood-opacity="0"></feFlood>
+      <feColorMatrix id="feColorMatrix327" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" type="matrix" in="SourceAlpha"></feColorMatrix>
+      <feOffset id="feOffset329" dy="27"></feOffset>
+      <feGaussianBlur id="feGaussianBlur331" stdDeviation="27"></feGaussianBlur>
+      <feColorMatrix id="feColorMatrix333" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" type="matrix"></feColorMatrix>
+      <feBlend id="feBlend335" result="effect1_dropShadow" in2="BackgroundImageFix" mode="normal"></feBlend>
+      <feBlend id="feBlend337" result="shape" in2="effect1_dropShadow" in="SourceGraphic" mode="normal"></feBlend>
+    </filter>
+  </defs>
+  
+  <metadata id="metadata5">
+    
+      
+        image/svg+xml
+        
+        
+      
+    
+  </metadata>
+  <g transform="translate(-81.305374,7.4608784)" id="layer1">
+    <g transform="matrix(0.26458333,0,0,0.26458333,74.955374,-14.604628)" id="g365" style="fill:none">
+      <g id="g306" filter="url(#filter0_d)">
+        <rect id="rect304" fill="none" rx="15" height="324" width="327" y="27" x="24"></rect>
+      </g>
+      <g id="g323" mask="url(#mask0)">
+        <rect id="rect311" stroke-width="3" stroke="#0087ff" height="167" width="208" y="206.5" x="321.5"></rect>
+        <circle id="circle313" stroke-width="3" stroke="#a803fc" r="99.5" cy="25" cx="359"></circle>
+        <circle id="circle315" fill="#cccccd" r="7.5" cy="136.5" cx="64.5"></circle>
+        <rect id="rect317" stroke-width="3" stroke="#a803fc" transform="rotate(45,111.087,60.1213)" height="18.335899" width="18.335899" y="60.1213" x="111.087"></rect>
+        <path id="path319" stroke-width="3" stroke="#55df20" d="M -100.708,420 24,204 148.708,420 Z"></path>
+        <path id="path321" stroke-width="3" stroke="#ff5d00" d="M 46,94 156,-98"></path>
+      </g>
+    </g>
+    <rect ry="8.342577" rx="0.83051389" y="-7.4608784" x="81.305374" height="85.724998" width="86.518745" id="rect367" style="fill:none;stroke-width:0.264583"></rect>
+  </g>
+</svg>

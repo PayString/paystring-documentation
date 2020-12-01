@@ -97,5 +97,16 @@
         "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/136"
       }
     ]
+  },
+  "loisrp-payburn2": {
+    "apps": [
+      {
+        "name": "review-apps",
+        "headCommitId": "e69174e50517f0e712afb89f4733c1eb24dc1a72",
+        "updatedAt": "2020-12-01T00:22:12.502Z",
+        "href": "review-apps/loisrp-payburn2/e69174",
+        "pullRequestUrl": "https://github.com/payid-org/payid-documentation/pull/133"
+      }
+    ]
   }
 }
