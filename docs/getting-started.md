@@ -28,10 +28,6 @@ See [Get Started With a Local PayString Server](getting-started-local).
 
 PayString CLI allows you to manage PayStrings and get user information from the command line. See [Get Started With PayString CLI](payid-cli).
 
-## Run PayString CLI
-
-PayString CLI allows you to manage PayStrings and get user information from the command line. See [Get Started With PayString CLI](payid-cli).
-
 ## RippleX Dev Kit Integration
 
 PayString support is integrated into [RippleX Dev Kit](https://github.com/xpring-eng/ripplex-dev-kit).

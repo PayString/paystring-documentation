@@ -15,8 +15,8 @@ Members of the PayString community have created useful resources for using and l
 - [PayString Validator](https://payidvalidator.com/) - An [open-source project](https://github.com/rswarthout/payid-validator) that validates responses using [JSON schemas](https://docs.payid.org/payid-interfaces) and verifies whether your PayString server follows various [best practices](payid-best-practices), like:
 
   - [HTTP response headers](payid-headers)
-  - [Cache-Control](payid-best-practices#cache-control)
-  - [CORS accessibility](payid-best-practices#set-cors-cross-origin-resource-sharing-headers)
+  - [Cache-Control](best-practices#cache-control)
+  - [CORS accessibility](best-practices#set-cors-cross-origin-resource-sharing-headers)
   - Response time
 
 - [Python-based PayString validator](https://github.com/RockHoward/python-payid-validator) - Validates URI strings to determine if they are valid PayStrings.
