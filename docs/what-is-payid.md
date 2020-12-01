@@ -34,6 +34,10 @@ If you want to contribute to PayString, see [Contributing to PayString](https://
 
 ## Building blocks
 
+### Developer best practices
+
+RippleX has developed a [set of best practices] for incorporating PayString into your app.
+
 ### Web standards
 
 PayString uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayString server, as described in [Set up a PayString server](#set-up-a-payid-server).

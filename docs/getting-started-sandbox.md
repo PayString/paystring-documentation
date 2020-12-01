@@ -85,8 +85,6 @@ Requirements:
    }
    ```
 
-````
-
 If you enter a nonexistent PayString, you get the response `"Failed to find the PayString <NONEXISTENT_PAYID_VALUE>"`.
 
 ## Replace User
