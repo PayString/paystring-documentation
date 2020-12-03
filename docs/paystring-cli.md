@@ -16,7 +16,7 @@ PayString CLI uses TypeScript. Therefore, make sure you have installed [node](ht
 
 To install PayString CLI, run:
 
-`npm install -g @payid-org/payid-cli`
+`npm install -g @paystring/paystring`
 
 This command installs PayString CLI as a global npm module and links it as a payid executable, typically under
 `/usr/local/bin/payid`.
@@ -32,7 +32,7 @@ To run PayString CLI in interactive mode, run `payid` to open an interactive ses
 In interactive mode, you can then run PayString CLI commands as desired with the form
 `<command> <arguments>`, such as:
 
-`load 'nhartner$ripplex.money'`
+`load 'nhartner$xpring.money'`
 
 To exit interactive mode, run `exit`.
 
@@ -40,7 +40,7 @@ To run PayString CLI in single-command mode, prefix each command with `payid`. E
 
 `payid <command> <arguments>`, such as:
 
-`payid load 'nhartner$ripplex.money'`
+`payid load 'nhartner$xpring.money'`
 
 Use single-command mode for scripts, or to chain the results of multiple commands together, such as:
 
@@ -50,19 +50,19 @@ When you pass a PayString as an argument in non-interactive mode, make sure to e
 
 ## Example commands
 
-**Tip**: If you obtain an XRP testnet wallet, you get a PayString based on your RippleX account that is already linked to an XRP address. This is useful for testing. Visit the [RippleX.io portal](https://RippleX.io/portal) and sign in with Github. The RippleX portal launchpad page opens. Click **XRP Testnet Wallet** and follow the steps to create your wallet. Your PayString has the form `<github-username>$ripplex.money` and you can use this PayString value in these example commands.
+**Tip**: If you obtain an XRP testnet wallet, you get a PayString based on your RippleX account that is already linked to an XRP address. This is useful for testing. Visit the [RippleX.io portal](https://RippleX.io/portal) and sign in with Github. The RippleX portal launchpad page opens. Click **XRP Testnet Wallet** and follow the steps to create your wallet. Your PayString has the form `<github-username>$xpring.money` and you can use this PayString value in these example commands.
 
 ### Load a PayString
 
 This command loads the specified PayString from a remote server.
 
-`load loisrp$ripplex.money`
+`load loisrp$xpring.money`
 
 The output fetches all the PayString address mappings for the given PayString from the remote server and displays the resulting JSON. In this example, the PayString has two crypto-addresses attached to it.
 
 ```json
 {
-  "payId": "loisrp$ripplex.money",
+  "payId": "loisrp$xpring.money",
   "version": "1.0",
   "addresses": [
     {
@@ -78,7 +78,7 @@ The output fetches all the PayString address mappings for the given PayString fr
       "environment": "TESTNET",
       "addressDetailsType": "CryptoAddressDetails",
       "addressDetails": {
-        "address": "$ripplex.money/LoisRP"
+        "address": "$xpring.money/LoisRP"
       }
     }
   ],
@@ -96,7 +96,7 @@ The output returns the updated information about the PayString. In this example,
 
 ```json
 {
-  "payId": "loisrp$ripplex.money",
+  "payId": "loisrp$xpring.money",
   "version": "1.0",
   "addresses": [
     {
@@ -104,7 +104,7 @@ The output returns the updated information about the PayString. In this example,
       "environment": "TESTNET",
       "addressDetailsType": "CryptoAddressDetails",
       "addressDetails": {
-        "address": "$ripplex.money/LoisRP"
+        "address": "$xpring.money/LoisRP"
       }
     }
   ],
@@ -122,14 +122,14 @@ The output returns the updated information for the PayString, including the adde
 
 ```json
 {
-  "payId": "loisrp$ripplex.money",
+  "payId": "loisrp$xpring.money",
   "addresses": [
     {
       "paymentNetwork": "INTERLEDGER",
       "environment": "TESTNET",
       "addressDetailsType": "CryptoAddressDetails",
       "addressDetails": {
-        "address": "$ripplex.money/LoisRP"
+        "address": "$xpring.money/LoisRP"
       }
     },
     {

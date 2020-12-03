@@ -4,6 +4,8 @@ title: Get Started With a Local PayString Server
 sidebar_label: Get Started With a Local PayString Server
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 To familiarize yourself and experiment with PayString, you can set up a local PayString server. Here is a simple method. For more options, including PayString deployment for production environments, see [Deployment Overview](intro-deploy).
 
 1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) and [Node](https://nodejs.org/en/) on your machine.
@@ -25,7 +27,7 @@ To create a PayString, with an [XRP Ledger Testnet account](https://xrpl.org/xrp
 
 ```bash
 curl --location --request POST 'http://127.0.0.1:8081/users' \
-  --header 'PayString-API-Version: 2020-06-18' \
+  --header 'PayID-API-Version: 2020-06-18' \
   --header 'Content-Type: application/json' \
   --data-raw '{
        "payId": "alice$127.0.0.1",
@@ -46,7 +48,7 @@ PayString supports various payment networks. To create a second user with a Bitc
 
 ```bash
 curl --location --request POST 'http://127.0.0.1:8081/users' \
-  --header 'PayString-API-Version: 2020-06-18' \
+  --header 'PayID-API-Version: 2020-06-18' \
   --header 'Content-Type: application/json' \
   --data-raw '{
        "payId": "bob$127.0.0.1",
@@ -70,7 +72,7 @@ To request the PayString you created for Alice:
 
 ```bash
 curl --location --request GET 'http://127.0.0.1:8080/alice' \
-   --header 'PayString-Version: 1.0' \
+   --header 'PayID-Version: 1.0' \
    --header 'Accept: application/xrpl-testnet+json'
 ```
 
@@ -97,7 +99,7 @@ To request the PayString you created for Bob:
 
 ```bash
 curl --location --request GET 'http://127.0.0.1:8080/bob' \
-   --header 'PayString-Version: 1.0' \
+   --header 'PayID-Version: 1.0' \
    --header 'Accept: application/btc-testnet+json'
 ```
 

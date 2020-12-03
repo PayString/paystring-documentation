@@ -148,7 +148,7 @@ docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-net
 Test whether the PayString server is running by creating a PayString with this cURL command.
 
 ```bash
- curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayString-API-Version: 2020-06-16' --header 'Content-Type: application/json' --data-raw '{
+ curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayID-API-Version: 2020-06-16' --header 'Content-Type: application/json' --data-raw '{
      "payId": "charlie$127.0.0.1",
      "addresses": [
          {
@@ -167,7 +167,7 @@ You should get a `Created` response.
 Query the PayString server to make sure it resolves, using this cURL command.
 
 ```bash
-curl http://127.0.0.1:8080/charlie -H "PayString-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
+curl http://127.0.0.1:8080/charlie -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
 ```
 
 ### Start Prometheus

@@ -4,6 +4,8 @@ title: Security Best Practices
 sidebar_label: Security Best Practices
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 The PayString protocol is flexible and supports a wide range of implementations. To ensure security, follow these best practices.
 
 ## Requirements
@@ -23,8 +25,8 @@ The PayString reference implementation server already sets these headers, but if
 ```http
 Access-Control-Allow-Origin: '*'
 Access-Control-Allow-Methods: 'POST, GET, OPTIONS'
-Access-Control-Allow-Headers: 'PayString-Version'
-Access-Control-Expose-Headers: 'PayString-Version, PayString-Server-Version'
+Access-Control-Allow-Headers: 'PayID-Version'
+Access-Control-Expose-Headers: 'PayID-Version, PayID-Server-Version'
 ```
 
 If you want to verify whether CORS is correctly set up for your PayString server, you can modify the following HTML file to point to your PayString server, open it up in a web browser, and inspect the console.
@@ -34,9 +36,9 @@ If you want to verify whether CORS is correctly set up for your PayString server
   <script>
     const headers = new Headers()
     headers.append('Accept', 'application/xrpl-mainnet+json')
-    headers.append('PayString-Version', '1.0')
+    headers.append('PayID-Version', '1.0')
 
-    fetch(new Request('https://ripplex.money/alice'), {
+    fetch(new Request('https://xpring.money/alice'), {
       method: 'GET',
       headers,
       mode: 'cors',

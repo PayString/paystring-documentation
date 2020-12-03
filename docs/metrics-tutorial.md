@@ -4,6 +4,8 @@ title: Get Started With Metrics
 sidebar_label: Get Started With Metrics
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 ## Deploy a PayString server with Docker, and pull PayString metrics into Prometheus
 
 In this tutorial, you will deploy a PayString server and run Prometheus locally using Docker, and you will create a configuration file for the PayString server so that PayString metrics are pulled into Prometheus.
@@ -54,7 +56,7 @@ docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-net
 Test whether the PayString server is running by creating a PayString with this cURL command.
 
 ```bash
- curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayString-API-Version: 2020-06-16' --header 'Content-Type: application/json' --data-raw '{
+ curl --location --request POST 'http://127.0.0.1:8081/users' --header 'PayID-API-Version: 2020-06-16' --header 'Content-Type: application/json' --data-raw '{
      "payId": "charlie$127.0.0.1",
      "addresses": [
          {
@@ -73,7 +75,7 @@ You should get a `Created` response.
 Query the PayString server to make sure it resolves, using this cURL command.
 
 ```bash
-curl http://127.0.0.1:8080/charlie -H "PayString-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
+curl http://127.0.0.1:8080/charlie -H "PayID-Version: 1.0" -H "Accept: application/xrpl-testnet+json"`
 ```
 
 ### Start Prometheus

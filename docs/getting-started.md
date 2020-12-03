@@ -5,6 +5,8 @@ sidebar_label: Get Started Overview
 
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 PayString is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through the following.
 
 - [Experiment With the PayString Sandbox](#experiment-with-the-payid-sandbox)

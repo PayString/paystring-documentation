@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'what-is-payid',
+      id: 'what-is-paystring',
     },
     {
       type: 'category',

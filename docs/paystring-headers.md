@@ -4,6 +4,8 @@ title: Headers
 sidebar_label: Headers
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 See also: [PayString API Reference](https://api.paystring.org).
 
 The PayString protocol has specific header requirements for requests and responses.

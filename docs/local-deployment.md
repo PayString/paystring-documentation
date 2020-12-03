@@ -4,6 +4,8 @@ title: Deploy Locally Without Docker
 sidebar_label: Deploy Locally Without Docker
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 ## Basic requirements
 
 Make sure your system meets these requirements before you set up a PayString server.

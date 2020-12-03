@@ -49,12 +49,12 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
 
     - To bring this down, run `npm run devDown`
 
-12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://ripplex.money/).
+12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://xpring.money/).
 13. Load up your desired PayString to the database using the [Admin API](https://api.paystring.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayStrings for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayString.
     ```bash
     curl --location --request POST 'http://127.0.0.1:8081/users' \
-    --header 'PayString-API-Version: 2020-06-16' \
+    --header 'PayID-API-Version: 2020-06-16' \
     --header 'Content-Type: application/json' \
     --data-raw '{
      "payId": "<user$domain.com>",
@@ -70,7 +70,7 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
 14. From your local computer, run a cURL command to fetch your PayString. For example:
 
 ```
-curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayString-version: 1.0'
+curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayID-version: 1.0'
 ```
 
 For other PayString API methods, see [PayString API Reference](https://api.paystring.org).

@@ -4,6 +4,8 @@ title: Use RippleX Dev Kit With PayString
 sidebar_label: RippleX Dev Kit Integration
 ---
 
+**Note:** PayString was previously known as PayID. RippleX was formerly known as Xpring. Some references remain.
+
 [RippleX Dev Kit](https://github.com/xpring-eng/xpring-sdk) can be used to simplify the process of developing with PayString.
 
 RippleX Dev Kit provides libraries in [JavaScript](https://github.com/xpring-eng/xpring-js), [Java](https://github.com/xpring-eng/xpring4j), and [Swift](https://github.com/xpring-eng/xpringkit).

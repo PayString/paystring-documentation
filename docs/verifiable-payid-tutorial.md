@@ -4,6 +4,8 @@ title: Get Started with Verifiable PayString
 sidebar_label: Get Started with Verifiable PayString
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 In this guide, you will deploy a local PayString server, create a PayString, sign and verify the PayString, and test it using calls to the PayString Admin API. If you want to use base PayString without verification, see [Getting Started](/).
 
 For more information about Verifiable PayString, see [Enhance Security With Verifiable PayString](verifiable-payid).

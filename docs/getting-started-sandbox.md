@@ -4,6 +4,8 @@ title: Get Started With PayString Sandbox
 sidebar_label: Get Started With PayString Sandbox
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 With the [PayString Sandbox](https://paystring.org/sandbox), you can experiment with PayString without deploying your own server. The PayString Sandbox does not directly support Verifiable PayString.
 
 **Caution:** Although the PayString Sandbox can be used to create PayStrings, do not use PayStrings that rely on this virtual server to send or receive real cryptocurrency.

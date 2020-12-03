@@ -1,5 +1,5 @@
 ---
-id: what-is-payid
+id: what-is-paystring
 title: What is PayString?
 sidebar_label: What is PayString?
 ---

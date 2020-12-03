@@ -4,6 +4,8 @@ title: Discover a PayString
 sidebar_label: Discover a PayString
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 The PayString Discovery endpoint facilitates finding the PayString URI for a given PayString.
 
 ## PayString discovery by a wallet application

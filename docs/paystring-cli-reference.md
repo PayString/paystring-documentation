@@ -4,6 +4,8 @@ title: PayString CLI Reference
 sidebar_label: PayString CLI Reference
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 Use these commands with PayString CLI. See [PayString CLI](paystring-cli) for setup information.
 
 | Command                                                             | Description                                                                            |
