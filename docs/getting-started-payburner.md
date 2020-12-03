@@ -1,8 +1,10 @@
 ---
 id: getting-started-payburner
-title: Get Started With PayID and Payburner
-sidebar_label: Get Started With PayID and Payburner
+title: Get Started With PayString and Payburner
+sidebar_label: Get Started With PayString and Payburner
 ---
+
+**Note:** PayString was previously known as PayID, and some references remain.
 
 If you install Payburner, it creates an XRP wallet for you, and it automatically creates a PayID.
 
