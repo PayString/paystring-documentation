@@ -12,9 +12,9 @@ Members of the PayString community have created useful resources for using and l
 
 **Validators**
 
-- [PayString Validator](https://payidvalidator.com/) - An [open-source project](https://github.com/rswarthout/payid-validator) that validates responses using [JSON schemas](https://docs.payid.org/payid-interfaces) and verifies whether your PayString server follows various [best practices](payid-best-practices), like:
+- [PayString Validator](https://PayStringValidator.com) - An [open-source project](https://github.com/rswarthout/payid-validator) that validates responses using [JSON schemas](https://docs.paystring.org/paystring-interfaces) and verifies whether your PayString server follows various [best practices](payid-best-practices), like:
 
-  - [HTTP response headers](payid-headers)
+  - [HTTP response headers](paystring-headers)
   - [Cache-Control](best-practices#cache-control)
   - [CORS accessibility](best-practices#set-cors-cross-origin-resource-sharing-headers)
   - Response time
@@ -29,4 +29,4 @@ Members of the PayString community have created useful resources for using and l
 **Community resources**
 
 - [PayString subreddit](https://www.reddit.com/r/PayIdDevs/)
-- [PayString Discord channel](https://chat.payid.org)
+- [PayString Discord channel](https://chat.paystring.org)

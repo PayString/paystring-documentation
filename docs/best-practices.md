@@ -12,7 +12,7 @@ When implementing PayString, you must meet the following requirements.
 
 ### Limit Admin API exposure
 
-The [Admin PayString API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
+The [Admin PayString API](https://api.paystring.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788) does not currently include authentication. Therefore, this API **MUST** only be exposed to trusted IP ranges, and **MUST NOT** be exposed publicly.
 
 ### Set CORS (Cross-Origin Resource Sharing) Headers
 

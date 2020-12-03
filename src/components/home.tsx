@@ -33,7 +33,7 @@ const homeCards = [
     description: 'Here you can find API Reference, Security and Metrics.',
     icon: '/img/docs/home/reference.svg',
     whiteIcon: '/img/docs/home/reference-white.svg',
-    url: '/payid-reference-overview',
+    url: '/paystring-reference-overview',
   },
 ]
 

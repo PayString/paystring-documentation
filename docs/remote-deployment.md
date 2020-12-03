@@ -41,7 +41,7 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
    sudo apt-get update
    sudo apt install docker.io docker-compose
    ```
-9. Clone the payid Github repository: `git clone git@github.com:payid-org/payid.git`
+9. Clone the Github repository: `git clone git@github.com:paystring/paystring.git`
 10. Set the docker port to 80 by modifying the `docker-compose.yml`:
     - Open the script editor: `nano payid/docker-compose.yml`
     - Go to the `ports` property, and change: `8080:8080` to `80:8080`
@@ -50,7 +50,7 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
     - To bring this down, run `npm run devDown`
 
 12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://ripplex.money/).
-13. Load up your desired PayString to the database using the [Admin API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
+13. Load up your desired PayString to the database using the [Admin API](https://api.paystring.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
     **Note:** You can add PayStrings for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayString.
     ```bash
     curl --location --request POST 'http://127.0.0.1:8081/users' \
@@ -73,7 +73,7 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
 curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayString-version: 1.0'
 ```
 
-For other PayString API methods, see [PayString API Reference](https://api.payid.org).
+For other PayString API methods, see [PayString API Reference](https://api.paystring.org).
 
 To convert a PayString address to a URL endpoint, follow these patterns:
 
@@ -82,4 +82,4 @@ To convert a PayString address to a URL endpoint, follow these patterns:
 
 **Note:** Public API requests hit port 80 and Admin API requests hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
 
-For additional network formats, see the [API Reference](https://api.payid.org/?version=latest).
+For additional network formats, see the [API Reference](https://api.paystring.org/?version=latest).

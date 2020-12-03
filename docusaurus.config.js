@@ -4,11 +4,11 @@ require('dotenv/config')
 function getPayStringURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
-      return 'https://dev.payid.org'
+      return 'https://dev.paystring.org'
     case 'stage':
-      return 'https://stage.payid.org'
+      return 'https://stage.paystring.org'
     case 'prod':
-      return 'https://payid.org'
+      return 'https://paystring.org'
     default:
       return 'http://localhost:8000'
   }
@@ -17,11 +17,11 @@ function getPayStringURL() {
 function getDocsURL() {
   switch (process.env.RELEASE_ENV) {
     case 'dev':
-      return 'https://dev.docs.payid.org'
+      return 'https://dev.docs.paystring.org'
     case 'stage':
-      return 'https://stage.docs.payid.org'
+      return 'https://stage.docs.paystring.org'
     case 'prod':
-      return 'https://docs.payid.org'
+      return 'https://docs.paystring.org'
     default:
       return 'http://localhost:3000'
   }
@@ -79,7 +79,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://api.payid.org',
+          href: 'https://api.paystring.org',
           label: 'API Reference',
           position: 'right',
         },
@@ -89,7 +89,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/payid-org/payid',
+          href: 'https://github.com/paystring/paystring',
           position: 'right',
           className: 'github-button header-github-link',
           'aria-label': 'GitHub repository',
@@ -110,7 +110,7 @@ module.exports = {
     // announcementBar: {
     //   id: 'hackathon_annoucement',
     //   content:
-    //     'Participate in the <a target="_blank" rel="noopener noreferrer" href="https://payid.devpost.com/?utm_source=docs.payid.org&utm_medium=banner">PayString Hackathon</a> and win up to $15K! Submissions are due by 5:00pm PDT Aug 2, 2020',
+    //     'Participate in the <a target="_blank" rel="noopener noreferrer" href="https://payid.devpost.com/?utm_source=docs.paystring.org&utm_medium=banner">PayString Hackathon</a> and win up to $15K! Submissions are due by 5:00pm PDT Aug 2, 2020',
     //   backgroundColor: '#292d3e',
     //   textColor: '#bfc7d5',
     // },
@@ -124,7 +124,7 @@ module.exports = {
           homePageId: 'home',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/payid-org/payid-documentation/tree/master',
+            'https://github.com/paystring/paystring-documentation/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -144,6 +144,6 @@ module.exports = {
   customFields: {
     developerUrl: `${getPayStringURL()}/use-cases`,
     sandboxUrl: `${getPayStringURL()}/sandbox`,
-    discordUrl: 'https://chat.payid.org/',
+    discordUrl: 'https://chat.paystring.org/',
   },
 }

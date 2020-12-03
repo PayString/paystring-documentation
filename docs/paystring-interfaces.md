@@ -1,10 +1,10 @@
 ---
-id: payid-interfaces
+id: paystring-interfaces
 title: Interfaces
 sidebar_label: Interfaces
 ---
 
-See also: [PayString API Reference](https://api.payid.org).
+See also: [PayString API Reference](https://api.paystring.org).
 
 The PayString protocol includes the following interface definitions.
 

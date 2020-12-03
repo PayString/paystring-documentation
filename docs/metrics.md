@@ -115,7 +115,7 @@ Install the following software on your machine, if not already present.
 Run these commands to build a Docker container for a PayString server.
 
 ```bash
-git clone https://github.com/payid-org/payid.git
+git clone https://github.com/paystring/paystring.git
 cd payid
 docker build -t payid-server .
 ```

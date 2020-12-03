@@ -1,10 +1,10 @@
 ---
-id: payid-cli-reference
+id: paystring-cli-reference
 title: PayString CLI Reference
 sidebar_label: PayString CLI Reference
 ---
 
-Use these commands with PayString CLI. See [PayString CLI](payid-cli) for setup information.
+Use these commands with PayString CLI. See [PayString CLI](paystring-cli) for setup information.
 
 | Command                                                             | Description                                                                            |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |

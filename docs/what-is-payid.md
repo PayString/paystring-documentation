@@ -12,7 +12,7 @@ PayString is fully peer-to-peer with no central counterparty. Anyone can set up 
 
 The PayString protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayString address that works across all platforms.
 
-Payid.org has created a [reference implementation](payid-reference-overview) of the PayString protocol, which you can [view on GitHub](https://github.com/payid-org/payid). You are welcome to create your own implementation as well.
+Payid.org has created a [reference implementation](paystring-reference-overview) of the PayString protocol, which you can [view on GitHub](https://github.com/paystring/paystring). You are welcome to create your own implementation as well.
 
 ## PayString standards
 
@@ -20,7 +20,7 @@ PayString is an open standard. Commentary is welcome. You can open a Github issu
 
 ### PayString protocol whitepaper
 
-Refer to the [PayString protocol whitepaper](https://payid.org/whitepaper.pdf) for an extensive discussion of the underlying principles.
+Refer to the [PayString protocol whitepaper](https://paystring.org/whitepaper.pdf) for an extensive discussion of the underlying principles.
 
 ### PayString RFCs
 
@@ -28,9 +28,9 @@ Refer to the [PayString protocol whitepaper](https://payid.org/whitepaper.pdf) f
 
 ## Implementations
 
-You can decide how you want to implement the PayString protocol. To facilitate ease of use, RippleX has created a [reference implementation for a PayString server](payid-reference-overview). Check out the [PayString repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayString server, manage users, and execute transactions.
+You can decide how you want to implement the PayString protocol. To facilitate ease of use, RippleX has created a [reference implementation for a PayString server](paystring-reference-overview). Check out the [PayString repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayString server, manage users, and execute transactions.
 
-If you want to contribute to PayString, see [Contributing to PayString](https://github.com/payid-org/payid/blob/master/CONTRIBUTING.md).
+If you want to contribute to PayString, see [Contributing to PayString](https://github.com/paystring/paystring/blob/master/CONTRIBUTING.md).
 
 ## Building blocks
 

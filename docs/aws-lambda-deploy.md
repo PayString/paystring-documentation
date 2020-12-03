@@ -129,16 +129,16 @@ Paste the values you saw in the previous step into wherever your registrar allow
 
 ## Test your PayString server
 
-Use [PayString Validator](https://payidvalidator.com/) to test your PayStrings.
+Use [PayString Validator](https://paystringvalidator.com/) to test your PayStrings.
 
 ## Launch with AWS Lambda using scripts
 
-If you prefer not to use the AWS CLI, you can use these scripts to request a AWS certificate for your PayString domain and launch the payid lambda stack on your domain.
+If you prefer not to use the AWS CLI, you can use these scripts to request a AWS certificate for your PayString domain and launch the lambda stack on your domain.
 
 - [request-certificate.sh](https://github.com/xpring-eng/payid-lambda/blob/master/request-certificate.sh) - Request a certificate via AWS certificate manager for a given domain.
 - [create-stack.sh](https://github.com/xpring-eng/payid-lambda/blob/master/create-stack.sh) - Create the payid lambda stack on your account for a given domain.
 
-### Prequisites
+### Prerequisites
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
 - Make sure `aws configure` has been configured with an Access Key created via [IAM--Your Security Credentials](https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials).
@@ -193,7 +193,7 @@ Once completed, update the nameservers for your domain to the ones specified in 
 
 When the stack is created, an Amazon S3 bucket titled `{name of stack}-s3bucket-{unique hash}` is also created.
 
-You can add PayStrings by uploading `json` files to this bucket, each of which contains a single user that conforms to [the PayString schema](payid-schemas#example-single-user-schema). You can upload new files to the bucket via the [Amazon S3 console](https://s3.console.aws.amazon.com/s3/buckets/).
+You can add PayStrings by uploading `json` files to this bucket, each of which contains a single user that conforms to [the PayString schema](paystring-schemas#example-single-user-schema). You can upload new files to the bucket via the [Amazon S3 console](https://s3.console.aws.amazon.com/s3/buckets/).
 
 When the stack is created, a test account is provided at `testaccount.json`. The name of the file used to resolve the PayString--`testaccount.json`--is resolved by `mydomain.tld/testaccount`.
 

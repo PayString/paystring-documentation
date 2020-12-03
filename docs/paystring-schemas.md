@@ -1,10 +1,10 @@
 ---
-id: payid-schemas
+id: paystring-schemas
 title: Schemas
 sidebar_label: Schemas
 ---
 
-See also: [PayString API Reference](https://api.payid.org).
+See also: [PayString API Reference](https://api.paystring.org).
 
 The PayString protocol includes the following schema definitions.
 

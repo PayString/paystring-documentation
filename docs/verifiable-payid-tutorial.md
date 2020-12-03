@@ -11,7 +11,7 @@ For more information about Verifiable PayString, see [Enhance Security With Veri
 Before you begin:
 
 - Deploy a PayString server locally. See [Getting Started: Deploy a PayString Server](/#run-a-payid-server).
-- [Install PayString CLI](payid-cli). You will use the command line to perform the tasks in this tutorial.
+- [Install PayString CLI](paystring-cli). You will use the command line to perform the tasks in this tutorial.
 
 1. Open the command line. Enter `payid`. You can now enter commands in interactive mode.
 2. See the available commands: enter `help`. Note the commands related to signing and verifying PayStrings.
@@ -39,7 +39,7 @@ Before you begin:
 }
 ```
 
-8. Upload the verified PayString. If you are using the PayString Admin API version from 2020-08-25 or later, POST the payload from Step 7 to the Admin API endpoint. See [PayString API Reference](https://api.payid.org). As mentioned, you must have a PayString server deployed to use this API.
+8. Upload the verified PayString. If you are using the PayString Admin API version from 2020-08-25 or later, POST the payload from Step 7 to the Admin API endpoint. See [PayString API Reference](https://api.paystring.org). As mentioned, you must have a PayString server deployed to use this API.
    If you use the PayString Admin API version from before 2020-08-25, then you must modify this payload.
    - `identityKey` should have the contents of the `protected` field in Step 7.
    - `verifiedAddresses` should be the un-stringified JSON contents of the `payload` field in Step 7.
@@ -72,5 +72,5 @@ Before you begin:
       payid verify
    ```
 
-10. Verify the PayString from the PayString Public API endpoint with GET. See [API Reference](https://api.payid.org/). You can also use a JWS library like `jose` to verify the `verifiedAddress` object(s).
+10. Verify the PayString from the PayString Public API endpoint with GET. See [API Reference](https://api.paystring.org/). You can also use a JWS library like `jose` to verify the `verifiedAddress` object(s).
 11. If operating through a trust on first use (TOFU) model, safely store the identity key after successful verification, and use this key to verify subsequent addresses retrieved from the same PayString.

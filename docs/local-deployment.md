@@ -15,7 +15,7 @@ Make sure your system meets these requirements before you set up a PayString ser
 Before you begin, make sure that you have installed Postgres locally, or in an otherwise accessible location.
 
 1. Clone the PayString repo.
-   `git clone https://github.com/payid-org/payid.git && cd payid`
+   `git clone https://github.com/paystring/paystring.git && cd payid`
 2. Install dependencies.
 
    `npm i`

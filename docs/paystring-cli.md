@@ -1,12 +1,14 @@
 ---
-id: payid-cli
+id: paystring-cli
 title: Get Started With PayString CLI
 sidebar_label: Get Started With PayString CLI
 ---
 
+**Note:** PayString was previously known as PayID, and some references remain.
+
 With the PayString CLI, you can run PayString commands from the command line, and access all PayString features.
 
-View the [PayString CLI project on Github](https://github.com/payid-org/payid-cli).
+View the [PayString CLI project on Github](https://github.com/paystring/paystring-cli).
 
 ## PayString CLI setup
 

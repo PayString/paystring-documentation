@@ -1,5 +1,5 @@
 ---
-id: payid-discovery
+id: paystring-discovery
 title: Discover a PayString
 sidebar_label: Discover a PayString
 ---
@@ -28,7 +28,7 @@ If the server for Bob's exchange, where Bob receives currency, supports the PayS
    "links" :
    [
      {
-       "rel": "https://payid.org/ns/payid-uri-template/1.0",
+       "rel": "https://paystring.org/ns/payid-uri-template/1.0",
        "template": "https://receiver.example.com/users/{acctpart}"
      }
    ]
