@@ -35,7 +35,7 @@ If you create your own Accept header for another currency:
 
 1. Follow the pattern for BTC Accept headers and use the currency code for the currency, as shown.
 2. Consider creating a [PR on the PayString docs site](https://github.com/paystring/paystring-documentation) to update this list.
-3. Consider updating [IANA registration section in the PayString protocol RFC for supported Media-types](https://github.com/payid-org/rfcs/blob/master/dist/spec/payid-protocol.txt#L1162) by sending an email to <rfcs@paystring.org>.
+3. Consider updating [IANA registration section in the PayString protocol RFC for supported Media-types](https://github.com/paystring/rfcs/blob/master/dist/spec/payid-protocol.txt#L1162) by sending an email to <rfcs@paystring.org>.
 
 ## Headers for GET requests
 
