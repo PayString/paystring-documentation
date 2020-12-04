@@ -16,7 +16,7 @@ Members of the PayString community have created useful resources for using and l
 
 **Validators**
 
-- [PayString Validator](https://paystringvalidator.com) - An [open-source project](https://github.com/rswarthout/paystring-validator) that validates responses using [JSON schemas](https://docs.paystring.org/paystring-interfaces) and verifies whether your PayString server follows various [best practices](paystring-best-practices), like:
+- [PayString Validator](https://paystringvalidator.com) - An [open-source project](https://github.com/rswarthout/paystring-validator) that validates responses using [JSON schemas](https://docs.paystring.org/paystring-interfaces) and verifies whether your PayString server follows various [best practices](best-practices), like:
 
   - [HTTP response headers](paystring-headers)
   - [Cache-Control](best-practices#cache-control)

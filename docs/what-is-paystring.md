@@ -58,7 +58,7 @@ PayString fully abstracts away underlying payment rail details from end users. A
 
 ### Security requirements
 
-A PayString implementation requires the use of TLS (Transport Level Security). As described in [PayString Security and Best Practices](paystring-best-practices), the use of TLS 1.3 is highly recommended.
+A PayString implementation requires the use of TLS (Transport Level Security). As described in [PayString Security and Best Practices](best-practices), the use of TLS 1.3 is highly recommended.
 
 ## Future features and integrations
 

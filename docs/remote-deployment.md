@@ -20,9 +20,9 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
 2. Get an elastic IP address and associate it with your AWS `t2.micro` instance, as described in [Step 1, part 10](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance).
 3. Update the DNS for your PayString domain as shown in the following table. Add any other subdomain you would like to use as a PayString as well.
 
-| Type | Name                | Value             | TTL         |
-| ---- | ------------------- | ----------------- | ----------- |
-| A    | @                   | _your-ip-address_ | 600 seconds |
+| Type | Name                    | Value             | TTL         |
+| ---- | ----------------------- | ----------------- | ----------- |
+| A    | @                       | _your-ip-address_ | 600 seconds |
 | A    | _your-payString-domain_ | _your-ip-address_ | 1/2 Hour    |
 
 4. Set your instance's firewall/security group.
