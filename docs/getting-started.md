@@ -1,16 +1,17 @@
-paystring/paystring---
+---
 id: getting-started
-title: Get Started Overview
-sidebar_label: Get Started Overview
-
+title: Overview
+sidebar_label: Overview
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 PayString is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through the following.
 
-- [Experiment With the PayString Sandbox](#experiment-with-the-payid-sandbox)
-- [Run a PayString Server](#run-a-payid-server)
+- [Experiment With the PayString Sandbox](#experiment-with-the-paystring-sandbox)
+- [Run a PayString Server](#run-a-paystring-server)
 - [Run PayString CLI](#run-paystring-cli)
 - [Learn More](#learn-more)
 - [RippleX Dev Kit Integration](#ripplex-dev-kit-integration)
@@ -41,19 +42,19 @@ RippleX Dev Kit provides the ability to work with PayString. It provides three l
 - [Java](https://github.com/xpring-eng/xpring4j)
 - [Swift](https://github.com/xpring-eng/xpringkit)
 
-These libraries help you connect your application to PayString without having to worry about the specifics of PayString. Try [Get Started With RippleX Dev Kit and PayString](ripplex-dev-kit-payid-get-started).
+These libraries help you connect your application to PayString without having to worry about the specifics of PayString. Try [Get Started With RippleX Dev Kit and PayString](ripplex-dev-kit-paystring-get-started).
 
 ## Learn More
 
 You now have a good foundation for learning more about the PayString Protocol. Here are some next steps you can take:
 
-- [How to convert](https://github.com/xpring-eng/xpring-js#usage-payid) the `user$domain.com` format to a URL
+- [How to convert](https://github.com/xpring-eng/xpring-js#usage-paystring) the `user$domain.com` format to a URL
 - Learn how to use relevant [HTTP headers](paystring-headers)
 - Learn how to handle different types of [responses](https://api.paystring.org/?version=latest) you could receive from a PayString server
 
 You can use extended PayString features:
 
-- [Get Started With Verifiable PayString](verifiable-payid). Verifiable PayString enhances security for PayString.
+- [Get Started With Verifiable PayString](verifiable-paystring). Verifiable PayString enhances security for PayString.
 - [Use PayString CLI](paystring-cli). PayString CLI is a convenient tool to work with PayString addresses.
 
 Learn about:

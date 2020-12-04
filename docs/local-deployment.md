@@ -4,7 +4,9 @@ title: Deploy Locally Without Docker
 sidebar_label: Deploy Locally Without Docker
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 ## Basic requirements
 

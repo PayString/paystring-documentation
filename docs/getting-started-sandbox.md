@@ -1,10 +1,12 @@
 ---
 id: getting-started-sandbox
-title: Get Started With PayString Sandbox
-sidebar_label: Get Started With PayString Sandbox
+title: PayString Sandbox
+sidebar_label: PayString Sandbox
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 With the [PayString Sandbox](https://paystring.org/sandbox), you can experiment with PayString without deploying your own server. The PayString Sandbox does not directly support Verifiable PayString.
 

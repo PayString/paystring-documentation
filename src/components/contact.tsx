@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { formSubmitted } from '../utils/typewritter'
 
-// Copied from payid code: common/community.tsx
+// Copied from PayString code: common/community.tsx
 const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 const isValidEmail = (val: string | undefined): boolean => {
   return !!(val && emailRegex.test(val))

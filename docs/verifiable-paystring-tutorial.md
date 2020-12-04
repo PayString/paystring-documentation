@@ -1,18 +1,20 @@
 ---
-id: verifiable-payid-tutorial
-title: Get Started with Verifiable PayString
-sidebar_label: Get Started with Verifiable PayString
+id: verifiable-paystring-tutorial
+title: Verifiable PayString
+sidebar_label: Verifiable PayString
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 In this guide, you will deploy a local PayString server, create a PayString, sign and verify the PayString, and test it using calls to the PayString Admin API. If you want to use base PayString without verification, see [Getting Started](/).
 
-For more information about Verifiable PayString, see [Enhance Security With Verifiable PayString](verifiable-payid).
+For more information about Verifiable PayString, see [Enhance Security With Verifiable PayString](verifiable-paystring).
 
 Before you begin:
 
-- Deploy a PayString server locally. See [Getting Started: Deploy a PayString Server](/#run-a-payid-server).
+- Deploy a PayString server locally. See [Getting Started: Deploy a PayString Server](/#run-a-paystring-server).
 - [Install PayString CLI](paystring-cli). You will use the command line to perform the tasks in this tutorial.
 
 1. Open the command line. Enter `payid`. You can now enter commands in interactive mode.

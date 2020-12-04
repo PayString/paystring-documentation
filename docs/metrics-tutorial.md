@@ -1,10 +1,12 @@
 ---
 id: metrics-tutorial
-title: Get Started With Metrics
-sidebar_label: Get Started With Metrics
+title: Metrics
+sidebar_label: Metrics
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 ## Deploy a PayString server with Docker, and pull PayString metrics into Prometheus
 
@@ -25,32 +27,32 @@ Run these commands to build a Docker container for a PayString server.
 ```bash
 git clone https://github.com/paystring/paystring.git
 cd paystring
-docker build -t payid-server .
+docker build -t paystring-server .
 ```
 
 ### Create Docker network for PayString
 
-You will run several containers in Docker that must talk to each other. To set up these containers, create a docker network called `payid-network`.
+You will run several containers in Docker that must talk to each other. To set up these containers, create a docker network called `paystring-network`.
 
 ```bash
-docker network create payid-network
+docker network create paystring-network
 ```
 
 ### Start a Postgres Database
 
-To have a PayString server, you require a Postgres database to store PayString accounts and address mappings. To do this, run the postgres database in docker with a default password of `password`, and tell the database to use the `payid-network` that you previously created. Name this docker container `payid-postgres`, so that you can reference the container by name when you connect your PayString server. Note that both the default database and the user are named `postgres`, as described at [Postgres Docker Official Images](https://hub.docker.com/_/postgres).
+To have a PayString server, you require a Postgres database to store PayString accounts and address mappings. To do this, run the postgres database in docker with a default password of `password`, and tell the database to use the `paystring-network` that you previously created. Name this docker container `paystring-postgres`, so that you can reference the container by name when you connect your PayString server. Note that both the default database and the user are named `postgres`, as described at [Postgres Docker Official Images](https://hub.docker.com/_/postgres).
 
 ```bash
-docker run -d --rm --name payid-postgres --network payid-network -e POSTGRES_PASSWORD=password postgres
+docker run -d --rm --name paystring-postgres --network paystring-network -e POSTGRES_PASSWORD=password postgres
 ```
 
 ### Start and test the PayString server
 
-To start the PayString server, run the PayString server in docker using the image you created. You must also use the docker network `payid-network` so that it can connect to the `payid-postgres` container.
+To start the PayString server, run the PayString server in docker using the image you created. You must also use the docker network `paystring-network` so that it can connect to the `paystring-postgres` container.
 
 ```bash
-docker run -it -p 8080:8080 -p 8081:8081 --name payid-server --network payid-network -e DB_PASSWORD=password -e
-    DB_NAME=postgres -e DB_HOSTNAME=payid-postgres payid-server
+docker run -it -p 8080:8080 -p 8081:8081 --name paystring-server --network paystring-network -e DB_PASSWORD=password -e
+    DB_NAME=postgres -e DB_HOSTNAME=paystring-postgres paystring-server
 ```
 
 Test whether the PayString server is running by creating a PayString with this cURL command.
@@ -90,16 +92,16 @@ global:
   evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
 
 scrape_configs:
-  - job_name: 'payid-metric'
+  - job_name: 'paystring-metric'
     honor_labels: true
     static_configs:
-      - targets: ['payid-server:8081']
+      - targets: ['paystring-server:8081']
 ```
 
 Start the docker container:
 
 ```bash
-docker run -d --network payid-network -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`
+docker run -d --network paystrings-network -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`
 ```
 
 You can verify Prometheus is running by opening `http://localhost:9090/graph` in a browser.
@@ -116,6 +118,6 @@ Click the **Graph** tab to display the results in graph format.
 
 Here are some other example expressions:
 
-- `sum(payid_count) by (paymentNetwork)` - Sum of `payid` count by payment network, such as XRPL, BTC, and so forth.
-- `sum(payid_lookup_request)` - Total number of `payid` lookup requests.
-- `rate(payid_lookup_request[5m])` - Rate of `payid` lookup requests per second.
+- `sum(payid_count) by (paymentNetwork)` - Sum of `PayString` count by payment network, such as XRPL, BTC, and so forth.
+- `sum(payid_lookup_request)` - Total number of `PayString` lookup requests.
+- `rate(payid_lookup_request[5m])` - Rate of `PayString` lookup requests per second.

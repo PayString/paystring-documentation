@@ -4,7 +4,9 @@ title: PayString CLI Reference
 sidebar_label: PayString CLI Reference
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 Use these commands with PayString CLI. See [PayString CLI](paystring-cli) for setup information.
 
@@ -20,12 +22,12 @@ Use these commands with PayString CLI. See [PayString CLI](paystring-cli) for se
 | `keys list`                                                         | Lists keys that have been loaded.                                                      |
 | `keys load <filePath>`                                              | Loads identity-key from file.                                                          |
 | `keys print`                                                        | Prints keys that have been loaded in pem format.                                       |
-| `init <payid>`                                                      | Initializes a new PayString.                                                           |
-| `inspect [payId]`                                                   | Inspects signatures on the loaded PayString or from an optionally specified PayString. |
-| `load <payId>`                                                      | Loads a PayString from PayString server.                                               |
+| `init <payString>`                                                      | Initializes a new PayString.                                                           |
+| `inspect [payString]`                                                   | Inspects signatures on the loaded PayString or from an optionally specified PayString. |
+| `load <payString>`                                                      | Loads a PayString from PayString server.                                               |
 | `show`                                                              | Shows the currently loaded PayString.                                                  |
 | `sign`                                                              | Signs the loaded PayString with the loaded signing keys.                               |
-| `verify [payId]`                                                    | Verifies the loaded PayString or an optionally specified PayString.                    |
+| `verify [payString]`                                                    | Verifies the loaded PayString or an optionally specified PayString.                    |
 | `save`                                                              | Saves the currently loaded PayString.                                                  |
 | `from-url <url>`                                                    | Converts a URL to a PayString.                                                         |
-| `to-url <payId>`                                                    | Converts a PayString to a URL.                                                         |
+| `to-url <payString>`                                                    | Converts a PayString to a URL.                                                         |

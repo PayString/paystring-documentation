@@ -1,5 +1,5 @@
 ---
-id: verifiable-payid
+id: verifiable-paystring
 title: Enhance Security With Verifiable PayString
 sidebar_label: Enhance Security With Verifiable PayString
 ---
@@ -12,4 +12,4 @@ Verifiable PayString provides enhanced security to the base PayString request an
 
 With Verifiable PayString, you can enable trust-minimized and trust-free security regimes, which are applicable to both custodial and non-custodial settings.
 
-Try [Get Started With Verifiable PayString](verifiable-payid-tutorial).
+Try [Get Started With Verifiable PayString](verifiable-paystring-tutorial).

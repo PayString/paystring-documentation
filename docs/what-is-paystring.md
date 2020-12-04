@@ -4,7 +4,9 @@ title: What is PayString?
 sidebar_label: What is PayString?
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 PayString is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. With the PayString protocol, you use human-readable addresses to transmit value in the currency of your choice. The PayString network allows participants to reach one another through standardized addresses. An address such as `alice$example.com` maps to the corresponding URL `https://example.com/alice`.
 
@@ -14,7 +16,7 @@ PayString is fully peer-to-peer with no central counterparty. Anyone can set up 
 
 The PayString protocol is designed to be simple, general, open, and universal. This makes it composable with any other existing namespace, including blockchain namespace projects like ENS and Unstoppable Domains or app-specific usernames. Anyone with an existing username or address can get a PayString address that works across all platforms.
 
-Payid.org has created a [reference implementation](paystring-reference-overview) of the PayString protocol, which you can [view on GitHub](https://github.com/paystring/paystring). You are welcome to create your own implementation as well.
+PayString.org has created a [reference implementation](paystring-reference-overview) of the PayString protocol, which you can [view on GitHub](https://github.com/paystring/paystring). You are welcome to create your own implementation as well.
 
 ## PayString standards
 
@@ -26,11 +28,11 @@ Refer to the [PayString protocol whitepaper](https://paystring.org/whitepaper.pd
 
 ### PayString RFCs
 
-[Current PayString RFCs](https://github.com/payid-org/rfcs) describe the 'payid' URL Scheme, PayString Discovery, and the PayString protocol.
+[Current PayString RFCs](https://github.com/paystring/rfcs) describe the 'paystring' URL Scheme, PayString Discovery, and the PayString protocol.
 
 ## Implementations
 
-You can decide how you want to implement the PayString protocol. To facilitate ease of use, RippleX has created a [reference implementation for a PayString server](paystring-reference-overview). Check out the [PayString repository on Github](https://github.com/xpring-eng/payid/). Refer to [Getting started](/) for a quick guide to deploy your own PayString server, manage users, and execute transactions.
+You can decide how you want to implement the PayString protocol. To facilitate ease of use, RippleX has created a [reference implementation for a PayString server](paystring-reference-overview). Check out the [PayString repository on Github](https://github.com/paystring/paystring/). Refer to [Getting started](/) for a quick guide to deploy your own PayString server, manage users, and execute transactions.
 
 If you want to contribute to PayString, see [Contributing to PayString](https://github.com/paystring/paystring/blob/master/CONTRIBUTING.md).
 
@@ -42,7 +44,7 @@ RippleX has developed a [set of best practices] for incorporating PayString into
 
 ### Web standards
 
-PayString uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayString server, as described in [Set up a PayString server](#set-up-a-payid-server).
+PayString uses existing web standards and infrastructure, including HTTP and DNS. Each institution supports its users through its domain, creating a decentralized network where institutions maintain sovereignty over their own users. Each institution is empowered to participate in the network by deploying its own server with its own users. Additionally, a user who prefers to self-custody their cryptocurrency can deploy a personal PayString server, as described in [Set up a PayString server](#set-up-a-paystring-server).
 
 PayString does not rely on any consensus protocols, which simplifies infrastructure demands.
 
@@ -56,7 +58,7 @@ PayString fully abstracts away underlying payment rail details from end users. A
 
 ### Security requirements
 
-A PayString implementation requires the use of TLS (Transport Level Security). As described in [PayString Security and Best Practices](payid-best-practices), the use of TLS 1.3 is highly recommended.
+A PayString implementation requires the use of TLS (Transport Level Security). As described in [PayString Security and Best Practices](paystring-best-practices), the use of TLS 1.3 is highly recommended.
 
 ## Future features and integrations
 
@@ -66,7 +68,7 @@ PayString is an extensible and flexible open standard, and therefore can be used
 
 Verifiable PayString is a suite of security enhancements to the base PayString request and response that adds in a variety of digital signature fields for linking external digital identities, proving control of the payment rail address, and providing non-repudiable messaging. It can be used to enable trust-minimized and trust-free security regimes and has applications in both custodial and non-custodial settings.
 
-To learn more, see [Verifiable PayString RFC](https://github.com/payid-org/rfcs/blob/master/dist/spec/verifiable-payid-protocol.txt).
+To learn more, see [Verifiable PayString RFC](https://github.com/paystring/rfcs/blob/master/dist/spec/verifiable-payid-protocol.txt).
 
 ### Compliance and Travel Rule
 

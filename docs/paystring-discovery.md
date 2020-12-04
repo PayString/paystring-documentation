@@ -4,7 +4,9 @@ title: Discover a PayString
 sidebar_label: Discover a PayString
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 The PayString Discovery endpoint facilitates finding the PayString URI for a given PayString.
 
@@ -37,7 +39,7 @@ If the server for Bob's exchange, where Bob receives currency, supports the PayS
  }
 ```
 
-Alice's wallet can then use the URL template found in the "template" property to assemble the specified PayId URL. Typically, this template might add a folder structure to the URL, such as `https://receiver.example.com/users/bob`. The server can be set up to use other URL formats, so long as the resulting URL is valid and represents Bob's PayString.
+Alice's wallet can then use the URL template found in the "template" property to assemble the specified PayString URL. Typically, this template might add a folder structure to the URL, such as `https://receiver.example.com/users/bob`. The server can be set up to use other URL formats, so long as the resulting URL is valid and represents Bob's PayString.
 
 ## PayString discovery with a default template
 

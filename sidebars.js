@@ -17,8 +17,8 @@ module.exports = {
         'getting-started-local',
         'getting-started-payburner',
         'paystring-cli',
-        'verifiable-payid-tutorial',
-        'ripplex-dev-kit-payid-get-started',
+        'verifiable-paystring-tutorial',
+        'ripplex-dev-kit-paystring-get-started',
         'metrics-tutorial',
       ],
     },
@@ -27,10 +27,10 @@ module.exports = {
       label: 'Reference Implementation',
       items: [
         'paystring-reference-overview',
-        'verifiable-payid',
+        'verifiable-paystring',
         'paystring-discovery',
         'best-practices',
-        'integrate-payid-users',
+        'integrate-paystring-users',
         'metrics',
       ],
     },
@@ -39,7 +39,7 @@ module.exports = {
       label: 'Deployment Options',
       items: [
         'intro-deploy',
-        'payid-server-requirements',
+        'paystring-server-requirements',
         'local-deployment',
         'deploy-with-docker',
         'aws-lambda-deploy',
@@ -60,7 +60,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'ripplex-dev-kit-payid',
+      id: 'ripplex-dev-kit-paystring',
     },
     {
       type: 'doc',

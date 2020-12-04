@@ -1,5 +1,5 @@
 ---
-id: payid-server-requirements
+id: paystring-server-requirements
 title: Server Requirements
 sidebar_label: Server Requirements
 ---

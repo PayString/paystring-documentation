@@ -64,12 +64,12 @@ export default [
     link: 'https://devpost.com/software/u-pay',
   },
   {
-    logo: '/img/docs/home/logo/payid-validator.svg',
-    whiteLogo: '/img/docs/home/logo/payid-validator-white.svg',
+    logo: '/img/docs/home/logo/paystring-validator.svg',
+    whiteLogo: '/img/docs/home/logo/paystring-validator-white.svg',
     title: 'PayString Validator',
     description:
       'a tool for performing checks to validate PayString response headers.',
-    userLogo: '/img/docs/home/developers/payid-validator.svg',
+    userLogo: '/img/docs/home/developers/paystring-validator.svg',
     userName: 'Robert Swarthout,',
     userdetail: 'Founder',
     link: 'https://devpost.com/software/payid-validator',

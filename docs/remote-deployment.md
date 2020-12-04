@@ -23,7 +23,7 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
 | Type | Name                | Value             | TTL         |
 | ---- | ------------------- | ----------------- | ----------- |
 | A    | @                   | _your-ip-address_ | 600 seconds |
-| A    | _your-payID-domain_ | _your-ip-address_ | 1/2 Hour    |
+| A    | _your-payString-domain_ | _your-ip-address_ | 1/2 Hour    |
 
 4. Set your instance's firewall/security group.
    - Port 80 (TCP) open for all address
@@ -43,7 +43,7 @@ When you have deployed a PayString server, you can then set up [NGINX Reverse Pr
    ```
 9. Clone the Github repository: `git clone git@github.com:paystring/paystring.git`
 10. Set the docker port to 80 by modifying the `docker-compose.yml`:
-    - Open the script editor: `nano payid/docker-compose.yml`
+    - Open the script editor: `nano paystring/docker-compose.yml`
     - Go to the `ports` property, and change: `8080:8080` to `80:8080`
 11. Run this script to start PayString with a Postgres database: `npm run devEnvUp`
 

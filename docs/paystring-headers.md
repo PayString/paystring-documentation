@@ -4,7 +4,9 @@ title: Headers
 sidebar_label: Headers
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 See also: [PayString API Reference](https://api.paystring.org).
 

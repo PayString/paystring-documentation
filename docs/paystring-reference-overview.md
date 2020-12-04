@@ -18,7 +18,7 @@ There are multiple ways to set up a PayString server. We recommend any of the fo
 
 - You can use the provided Docker-based deployment as described in [Getting Started](/).
 - You can set up a [local PayString server without Docker](local-deployment).
-- You can use [AWS and nginx](remote-deployment) to set up your PayString server, or adapt those instructions to other cloud providers. See the [PayString server requirements](payid-server-requirements) to learn about what types of resources you should deploy.
+- You can use [AWS and nginx](remote-deployment) to set up your PayString server, or adapt those instructions to other cloud providers. See the [PayString server requirements](paystring-server-requirements) to learn about what types of resources you should deploy.
 
 To experiment with PayString, you can quickly set up a local server. First, clone the [PayString reference implementation](https://github.com/paystring/paystring). From inside the repository, run `npm run devEnvUp`, which uses the local `docker-compose.yml` file to set up Docker containers running a Postgres database and PayString server.
 

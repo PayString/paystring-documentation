@@ -1,5 +1,5 @@
 ---
-id: integrate-payid-users
+id: integrate-paystring-users
 title: Integrate Existing User Databases
 sidebar_label: Integrate Existing User Databases
 ---

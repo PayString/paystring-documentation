@@ -1,10 +1,12 @@
 ---
 id: paystring-cli
-title: Get Started With PayString CLI
-sidebar_label: Get Started With PayString CLI
+title: PayString CLI
+sidebar_label: PayString CLI
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 With the PayString CLI, you can run PayString commands from the command line, and access all PayString features.
 
@@ -16,9 +18,9 @@ PayString CLI uses TypeScript. Therefore, make sure you have installed [node](ht
 
 To install PayString CLI, run:
 
-`npm install -g @paystring/paystring`
+`npm install -g @payid-org/payid-cli`
 
-This command installs PayString CLI as a global npm module and links it as a payid executable, typically under
+This command installs PayString CLI as a global npm module and links it as an executable, typically under
 `/usr/local/bin/payid`.
 
 To install and run PayString CLI from Docker, run:

@@ -4,7 +4,9 @@ title: Security Best Practices
 sidebar_label: Security Best Practices
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 The PayString protocol is flexible and supports a wide range of implementations. To ensure security, follow these best practices.
 

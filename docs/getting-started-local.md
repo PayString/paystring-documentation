@@ -1,10 +1,12 @@
 ---
 id: getting-started-local
-title: Get Started With a Local PayString Server
-sidebar_label: Get Started With a Local PayString Server
+title: Local PayString Server
+sidebar_label: Local PayString Server
 ---
 
-**Note:** PayString was previously known as PayID, and some references remain.
+:::note
+PayString was previously known as PayID, and some references remain.
+:::
 
 To familiarize yourself and experiment with PayString, you can set up a local PayString server. Here is a simple method. For more options, including PayString deployment for production environments, see [Deployment Overview](intro-deploy).
 
@@ -66,7 +68,7 @@ curl --location --request POST 'http://127.0.0.1:8081/users' \
 
 ### Request a PayString
 
-After setting up a server and [creating a PayString](#create-a-payid) on the server, the next step is to request the PayString from the server. The PayString Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayString and related account information stored on the server.
+After setting up a server and [creating a PayString](#create-a-paystring) on the server, the next step is to request the PayString from the server. The PayString Protocol is what allows you to make these requests. And, when the server is publicly available, other wallets and entities can make similar requests to query any PayString and related account information stored on the server.
 
 To request the PayString you created for Alice:
 

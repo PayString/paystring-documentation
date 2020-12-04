@@ -14,6 +14,6 @@ When you want to experiment with or deploy a PayString server, you have several 
 
 - [Deploy on AWS Lambda](aws-lambda-deploy)
 
-You can use the same principles to deploy a PayString server on other cloud providers, or on your own machines. See the suggested [requirements](payid-server-requirements).
+You can use the same principles to deploy a PayString server on other cloud providers, or on your own machines. See the suggested [requirements](paystring-server-requirements).
 
 When you have set up your PayString server, you can also configure an [NGINX reverse proxy and SSL](nginx-ssl-deploy) to improve load bearing and security.

@@ -23,7 +23,7 @@ const homeCards = [
   {
     title: 'Deploy PayString',
     description:
-      'Check the deployment options page to integrate PayID in your project.',
+      'Check the deployment options page to integrate PayString in your project.',
     icon: '/img/docs/home/deploy.svg',
     whiteIcon: '/img/docs/home/deploy-white.svg',
     url: '/intro-deploy',
@@ -79,7 +79,7 @@ const Home = () => {
     <>
       <div className="row">
         <div className="col col--6">
-          <div className="markdown greetings">
+          <div className="markdown greetings center">
             <h1 className="markdown-title">Start building with PayString</h1>
             <p>Explore how easily you can build with PayString</p>
             <a href={customFields.sandboxUrl} target="_blank">
@@ -118,7 +118,7 @@ const Home = () => {
           )
         })}
       </div>
-      <div className="markdown">
+      <div className="markdown center">
         <h2>Built by Developers</h2>
         <p>Explore what our developers are building.</p>
       </div>
@@ -166,7 +166,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="markdown">
+      <div className="markdown center">
         <h2>Get PayString Today</h2>
       </div>
       <div className="banner-container">
