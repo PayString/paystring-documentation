@@ -5,7 +5,7 @@ sidebar_label: PayString and Payburner
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 If you install Payburner, it creates an XRP wallet for you, and it automatically creates a PayString.

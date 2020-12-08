@@ -4,6 +4,10 @@ title: Integrate Existing User Databases
 sidebar_label: Integrate Existing User Databases
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 If you have an existing user database, you can take the following steps to integrate PayString functionality into your product.
 
 ## Extend existing database tables with new columns

@@ -4,6 +4,10 @@ title: Metrics
 sidebar_label: Metrics
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 The reference implementation of PayString server automatically collects metrics using Prometheus. By default, metrics are pushed to the RippleX Prometheus pushgateway. This document describes how you can explicitly configure the PayString server to push to RippleX, or how to collect and analyze these metrics using your own metrics server.
 
 ## Reporting metrics to RippleX

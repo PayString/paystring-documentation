@@ -4,6 +4,10 @@ title: Release Notes
 sidebar_label: Release Notes
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 See release notes for the last releases:
 
 - [PayString 1.4 - August 25, 2020](https://github.com/paystring/paystring/releases) - Improvement of PayString CLI. Updates to payloads for the PayString Admin API for greater consistency.

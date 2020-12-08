@@ -4,6 +4,10 @@ title: Enhance Security With Verifiable PayString
 sidebar_label: Enhance Security With Verifiable PayString
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 Verifiable PayString provides enhanced security to the base PayString request and response. Verifiable PayString adds several digital signature fields so you can:
 
 - Link a PayString to one or more external digital identities

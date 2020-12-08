@@ -4,6 +4,10 @@ title: Deployment Options
 sidebar_label: Deployment Options
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 When you want to experiment with or deploy a PayString server, you have several options.
 
 - To experiment without deploying a server, use the [PayString Sandbox](https://paystring.org/sandbox).
