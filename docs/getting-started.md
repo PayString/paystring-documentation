@@ -46,7 +46,7 @@ These libraries help you connect your application to PayString without having to
 
 ## Best Practices for App Development
 
-[Follow these guidelines](./static/paystring-best-practices.pdf) for incorporating PayString into your app.
+[Follow these guidelines](paystring-best-practices.pdf) for incorporating PayString into your app.
 
 ## Learn More
 
