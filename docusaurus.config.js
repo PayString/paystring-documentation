@@ -114,7 +114,6 @@ module.exports = {
       {
         docs: {
           routeBasePath: '/',
-          homePageId: 'home',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/paystring/paystring-documentation/tree/master',
