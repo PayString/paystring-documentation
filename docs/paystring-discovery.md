@@ -5,7 +5,7 @@ sidebar_label: Discover a PayString
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 The PayString Discovery endpoint facilitates finding the PayString URI for a given PayString.

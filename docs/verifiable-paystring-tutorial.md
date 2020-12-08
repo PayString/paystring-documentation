@@ -5,7 +5,7 @@ sidebar_label: Verifiable PayString
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 In this guide, you will deploy a local PayString server, create a PayString, sign and verify the PayString, and test it using calls to the PayString Admin API. If you want to use base PayString without verification, see [Getting Started](/).

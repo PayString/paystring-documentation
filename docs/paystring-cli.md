@@ -5,7 +5,7 @@ sidebar_label: PayString CLI
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 With the PayString CLI, you can run PayString commands from the command line, and access all PayString features.

@@ -4,6 +4,10 @@ title: Deploy a PayString Server with Docker
 sidebar_label: Deploy a PayString Server with Docker
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 To get started, the first thing to do is set up a PayString server.
 
 1.  If you haven't already, install [Docker](https://docks.docker.com/get-docker/) and [Node](https://nodejs.org/en/) on your machine.

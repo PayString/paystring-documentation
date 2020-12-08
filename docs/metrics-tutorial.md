@@ -5,7 +5,7 @@ sidebar_label: Metrics
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 ## Deploy a PayString server with Docker, and pull PayString metrics into Prometheus

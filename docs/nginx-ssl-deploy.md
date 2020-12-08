@@ -4,6 +4,10 @@ title: Set Up NGINX Reverse Proxy and SSL
 sidebar_label: Set Up NGINX Reverse Proxy and SSL
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 After you set up a PayString server using your preferred [deployment option](intro-deploy.md), you can set up NGINX Reverse Proxy + SSL for load balancing and security.
 
 ## NGINX Reverse Proxy + SSL setup

@@ -4,6 +4,10 @@ title: Deploy on AWS
 sidebar_label: Deploy on AWS
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 You can set up a PayString server on AWS (Amazon Web Services) setting up your own virtual Linux server. Alternatively, you can set up a PayString server using [AWS Lambda][aws-lambda-deploy].
 
 When you have deployed a PayString server, you can then set up [NGINX Reverse Proxy and SSL](nginx-ssl-deploy) for load bearing and security.

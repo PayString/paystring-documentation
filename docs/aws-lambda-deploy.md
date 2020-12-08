@@ -5,7 +5,7 @@ sidebar_label: Deploy on AWS Lambda
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 You can deploy a PayString server on AWS Lambda, a setup that allows you to run code without having to deploy or manage a server.

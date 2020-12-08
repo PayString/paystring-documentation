@@ -5,7 +5,7 @@ sidebar_label: Local PayString Server
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 To familiarize yourself and experiment with PayString, you can set up a local PayString server. Here is a simple method. For more options, including PayString deployment for production environments, see [Deployment Overview](intro-deploy).

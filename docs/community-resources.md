@@ -5,7 +5,7 @@ sidebar_label: Community Resources
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 Members of the PayString community have created useful resources for using and learning about PayString.

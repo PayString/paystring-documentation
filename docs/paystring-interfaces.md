@@ -4,6 +4,10 @@ title: Interfaces
 sidebar_label: Interfaces
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 See also: [PayString API Reference](https://api.paystring.org).
 
 The PayString protocol includes the following interface definitions.

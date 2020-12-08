@@ -5,7 +5,7 @@ sidebar_label: Overview
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 PayString is a simple, web-based protocol designed to make it as easy to send someone money as it is to send them an email. This guide walks you through the following.
@@ -43,6 +43,10 @@ RippleX Dev Kit provides the ability to work with PayString. It provides three l
 - [Swift](https://github.com/xpring-eng/xpringkit)
 
 These libraries help you connect your application to PayString without having to worry about the specifics of PayString. Try [Get Started With RippleX Dev Kit and PayString](ripplex-dev-kit-paystring-get-started).
+
+## Best Practices for App Development
+
+[Follow these guidelines](paystring-best-practices.pdf) for incorporating PayString into your app.
 
 ## Learn More
 

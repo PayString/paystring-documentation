@@ -5,7 +5,7 @@ sidebar_label: Deploy Locally Without Docker
 ---
 
 :::note
-PayString was previously known as PayID, and some references remain.
+PayString was previously known as PayID.
 :::
 
 ## Basic requirements

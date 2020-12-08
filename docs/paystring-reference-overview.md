@@ -4,6 +4,10 @@ title: Reference Implementation Overview
 sidebar_label: Reference Implementation Overview
 ---
 
+:::note
+PayString was previously known as PayID.
+:::
+
 [PayString.org](https://paystring.org) provides a reference implementation of the PayString Protocol. If you want to use PayString, you can use this reference implementation, or you can make changes to it, or you can create your own solution entirely, as long as you follow the PayString Protocol.
 
 ## PayString reference specifications
