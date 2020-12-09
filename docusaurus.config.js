@@ -9,6 +9,8 @@ function getPayStringURL() {
       return 'https://stage.paystring.org'
     case 'prod':
       return 'https://paystring.org'
+    case 'psprod':
+      return 'https://paystring.org'
     default:
       return 'http://localhost:8000'
   }
@@ -22,6 +24,8 @@ function getDocsURL() {
       return 'https://stage.docs.paystring.org'
     case 'prod':
       return 'https://docs.paystring.org'
+    case 'psprod':
+      return 'https://docs.paystring.org'
     default:
       return 'http://localhost:3000'
   }
@@ -33,6 +37,8 @@ function getSegmentId() {
       return 'fY65tW4oAAvTElIHzrXQ2plf99qDjjAe'
     case 'prod':
       return 'eGcENJL6ghTAXTAdzOrmd4oqxDlRorz1'
+    case 'psprod':
+      return 'eGcENJL6ghTAXTAdzOrmd4oqxDlRorz1'
     default:
       return '5KojrihxpEBJvAn3u0JXi9hlhzMh5b1M'
   }
@@ -43,6 +49,8 @@ function getSegmentHost() {
     case 'stage':
       return 'https://segment.ripplex.io/ana_stg.js'
     case 'prod':
+      return 'https://segment.ripplex.io/ana_prod.js'
+    case 'psprod':
       return 'https://segment.ripplex.io/ana_prod.js'
     default:
       return 'https://segment.ripplex.io/ana_dev.js'
