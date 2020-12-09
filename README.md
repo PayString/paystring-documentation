@@ -1,6 +1,6 @@
 # PayString Documentation
 
-Welcome to the PayString Documentation Repo
+Welcome to the PayString Documentation
 
 ### Installation
 
