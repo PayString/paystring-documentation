@@ -8,7 +8,7 @@ export default [
     url: 'https://crypto.com/en/index.html',
   },
   {
-    text: 'A simple platform that offers the easiest way to get a PayID.',
+    text: 'A simple platform that offers the easiest way to get a PayString.',
     logo: '/img/docs/home/logo/payme-plus.svg',
     logoWhite: '/img/docs/home/logo/payme-plus-white.svg',
     banner: '/img/docs/home/banners/payme-plus.png',

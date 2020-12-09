@@ -21,9 +21,9 @@ const homeCards = [
     url: '/getting-started',
   },
   {
-    title: 'Deploy PayID',
+    title: 'Deploy PayString',
     description:
-      'Check the deployment options page to integrate PayID in your project.',
+      'Check the deployment options page to integrate PayString in your project.',
     icon: '/img/docs/home/deploy.svg',
     whiteIcon: '/img/docs/home/deploy-white.svg',
     url: '/intro-deploy',
@@ -33,7 +33,7 @@ const homeCards = [
     description: 'Here you can find API Reference, Security and Metrics.',
     icon: '/img/docs/home/reference.svg',
     whiteIcon: '/img/docs/home/reference-white.svg',
-    url: '/payid-reference-overview',
+    url: '/paystring-reference-overview',
   },
 ]
 
@@ -79,9 +79,9 @@ const Home = () => {
     <>
       <div className="row">
         <div className="col col--6">
-          <div className="markdown greetings">
-            <h1 className="markdown-title">Start building with PayID</h1>
-            <p>Explore how easily you can build with PayID</p>
+          <div className="markdown greetings center">
+            <h1 className="markdown-title">Start building with PayString</h1>
+            <p>Explore how easily you can build with PayString</p>
             <a href={customFields.sandboxUrl} target="_blank">
               <button className="button">Sign Up for Sandbox</button>
             </a>
@@ -118,7 +118,7 @@ const Home = () => {
           )
         })}
       </div>
-      <div className="markdown">
+      <div className="markdown center">
         <h2>Built by Developers</h2>
         <p>Explore what our developers are building.</p>
       </div>
@@ -166,8 +166,8 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="markdown">
-        <h2>Get PayID Today</h2>
+      <div className="markdown center">
+        <h2>Get PayString Today</h2>
       </div>
       <div className="banner-container">
         <div className="banner-cards">
@@ -211,7 +211,7 @@ const Home = () => {
               <img src={useBaseUrl(currentBanner.logoWhite)} />
               <p className="banner-text">{currentBanner.text}</p>
               <a href={currentBanner.url} target="_blank">
-                <button className="button">Get a PayID</button>
+                <button className="button">Get a PayString</button>
               </a>
             </div>
             <div
@@ -239,7 +239,7 @@ const Home = () => {
             <img src={useBaseUrl(currentBanner.logoWhite)} />
             <p className="banner-small-text">{currentBanner.text}</p>
             <Link to="/getting-started">
-              <button className="button">Get a PayID</button>
+              <button className="button">Get a PayString</button>
             </Link>
           </div>
         </div>

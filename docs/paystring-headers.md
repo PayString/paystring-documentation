@@ -1,16 +1,20 @@
 ---
-id: payid-headers
+id: paystring-headers
 title: Headers
 sidebar_label: Headers
 ---
 
-See also: [PayID API Reference](https://api.payid.org).
+:::note
+PayString was previously known as PayID.
+:::
 
-The PayID protocol has specific header requirements for requests and responses.
+See also: [PayString API Reference](https://api.paystring.org).
+
+The PayString protocol has specific header requirements for requests and responses.
 
 ### Request headers
 
-When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayID is therefore capable of returning a user's address information for any network in which that user participates.
+When you make a request, the HTTP `Accept` header of the request specifies the payment network and environment, and PayString is therefore capable of returning a user's address information for any network in which that user participates.
 
 An example request has this form.
 
@@ -32,18 +36,18 @@ Some different header options are shown here, with example values.
 If you create your own Accept header for another currency:
 
 1. Follow the pattern for BTC Accept headers and use the currency code for the currency, as shown.
-2. Consider creating a [PR on the PayID docs site](https://github.com/payid-org/payid-documentation) to update this list.
-3. Consider updating [IANA registration section in the PayID protocol RFC for supported Media-types](https://github.com/payid-org/rfcs/blob/master/dist/spec/payid-protocol.txt#L1162) by sending an email to <rfcs@payid.org>.
+2. Consider creating a [PR on the PayString docs site](https://github.com/paystring/paystring-documentation) to update this list.
+3. Consider updating [IANA registration section in the PayString protocol RFC for supported Media-types](https://github.com/paystring/rfcs/blob/master/dist/spec/payid-protocol.txt#L1162) by sending an email to <rfcs@paystring.org>.
 
 ## Headers for GET requests
 
-This launch of PayID includes those headers specific to the XRPL community. Each payment network is free to establish its own standard headers. These headers should be submitted with every GET request, but not POST.
+This launch of PayString includes those headers specific to the XRPL community. Each payment network is free to establish its own standard headers. These headers should be submitted with every GET request, but not POST.
 
 ### Header for all addresses
 
-|      Accept header       |            Description            |
-| :----------------------: | :-------------------------------: |
-| `application/payid+json` | Returns all addresses for a PayID |
+|      Accept header       |              Description              |
+| :----------------------: | :-----------------------------------: |
+| `application/payid+json` | Returns all addresses for a PayString |
 
 ### Headers for XRP
 

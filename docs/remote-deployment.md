@@ -4,9 +4,13 @@ title: Deploy on AWS
 sidebar_label: Deploy on AWS
 ---
 
-You can set up a PayID server on AWS (Amazon Web Services) setting up your own virtual Linux server. Alternatively, you can set up a PayID server using [AWS Lambda][aws-lambda-deploy].
+:::note
+PayString was previously known as PayID.
+:::
 
-When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy and SSL](nginx-ssl-deploy) for load bearing and security.
+You can set up a PayString server on AWS (Amazon Web Services) setting up your own virtual Linux server. Alternatively, you can set up a PayString server using [AWS Lambda][aws-lambda-deploy].
+
+When you have deployed a PayString server, you can then set up [NGINX Reverse Proxy and SSL](nginx-ssl-deploy) for load bearing and security.
 
 ## Requirements
 
@@ -18,12 +22,12 @@ When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy 
 1. Initialize a `t2.micro` instance on AWS running Ubuntu 18.04m with a minimum of 8 GB SSD. For the purposes of this demo, you can use AWS Free Tier.
    See [Getting Started with Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) for more information about setting up your instance.
 2. Get an elastic IP address and associate it with your AWS `t2.micro` instance, as described in [Step 1, part 10](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance).
-3. Update the DNS for your PayID domain as shown in the following table. Add any other subdomain you would like to use as a PayID as well.
+3. Update the DNS for your PayString domain as shown in the following table. Add any other subdomain you would like to use as a PayString as well.
 
-| Type | Name                | Value             | TTL         |
-| ---- | ------------------- | ----------------- | ----------- |
-| A    | @                   | _your-ip-address_ | 600 seconds |
-| A    | _your-payID-domain_ | _your-ip-address_ | 1/2 Hour    |
+| Type | Name                    | Value             | TTL         |
+| ---- | ----------------------- | ----------------- | ----------- |
+| A    | @                       | _your-ip-address_ | 600 seconds |
+| A    | _your-payString-domain_ | _your-ip-address_ | 1/2 Hour    |
 
 4. Set your instance's firewall/security group.
    - Port 80 (TCP) open for all address
@@ -41,17 +45,17 @@ When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy 
    sudo apt-get update
    sudo apt install docker.io docker-compose
    ```
-9. Clone the payid Github repository: `git clone git@github.com:payid-org/payid.git`
+9. Clone the Github repository: `git clone git@github.com:paystring/paystring.git`
 10. Set the docker port to 80 by modifying the `docker-compose.yml`:
-    - Open the script editor: `nano payid/docker-compose.yml`
+    - Open the script editor: `nano paystring/docker-compose.yml`
     - Go to the `ports` property, and change: `8080:8080` to `80:8080`
-11. Run this script to start PayID with a Postgres database: `npm run devEnvUp`
+11. Run this script to start PayString with a Postgres database: `npm run devEnvUp`
 
     - To bring this down, run `npm run devDown`
 
-12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://ripplex.money/).
-13. Load up your desired PayID to the database using the [Admin API](https://api.payid.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
-    **Note:** You can add PayIDs for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayID.
+12. Check your IP address and the website in your browser to confirm the server is running. You should see a success page that looks like [this](https://xpring.money/).
+13. Load up your desired PayString to the database using the [Admin API](https://api.paystring.org/?version=latest#7a19329b-80eb-451f-bbb8-d9656892a788). If you use a subdomain rather than a path, then you must set up a DNS record for the subdomain as described in step 3.
+    **Note:** You can add PayStrings for each (pay_id, network, environment) tuple. Use this cURL command to set up a PayString.
     ```bash
     curl --location --request POST 'http://127.0.0.1:8081/users' \
     --header 'PayID-API-Version: 2020-06-16' \
@@ -67,19 +71,19 @@ When you have deployed a PayID server, you can then set up [NGINX Reverse Proxy 
      }]
     }'
     ```
-14. From your local computer, run a cURL command to fetch your PayID. For example:
+14. From your local computer, run a cURL command to fetch your PayString. For example:
 
 ```
 curl -X GET 'https://<domain.com/user>' --header 'Accept: application/xrpl-mainnet+json' --header 'PayID-version: 1.0'
 ```
 
-For other PayID API methods, see [PayID API Reference](https://api.payid.org).
+For other PayString API methods, see [PayString API Reference](https://api.paystring.org).
 
-To convert a PayID address to a URL endpoint, follow these patterns:
+To convert a PayString address to a URL endpoint, follow these patterns:
 
 - `user$wallet.com` converts to `https://wallet.com/user`
 - `user$subdomain.wallet.com/payid` converts to `https://subdomain.wallet.com/payid/user`
 
 **Note:** Public API requests hit port 80 and Admin API requests hit port 8081 per the config in step 10. Make sure that 8081 is limited so that outsiders cannot modify your server’s database.
 
-For additional network formats, see the [API Reference](https://api.payid.org/?version=latest).
+For additional network formats, see the [API Reference](https://api.paystring.org/?version=latest).

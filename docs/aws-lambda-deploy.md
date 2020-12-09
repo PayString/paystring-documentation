@@ -4,16 +4,20 @@ title: Deploy on AWS Lambda
 sidebar_label: Deploy on AWS Lambda
 ---
 
-You can deploy a PayID server on AWS Lambda, a setup that allows you to run code without having to deploy or manage a server.
+:::note
+PayString was previously known as PayID.
+:::
+
+You can deploy a PayString server on AWS Lambda, a setup that allows you to run code without having to deploy or manage a server.
 
 ## Requirements
 
-To deploy PayID server on AWS Lambda, you need the following:
+To deploy PayString server on AWS Lambda, you need the following:
 
 - An AWS account.
-- A domain, which you control, to use for your PayIDs. This domain will be part of each PayID. **After you add the stack**, you must update your domain to use Amazon's name servers in the Route53 hosted zone that's created for you.
+- A domain, which you control, to use for your PayStrings. This domain will be part of each PayString. **After you add the stack**, you must update your domain to use Amazon's name servers in the Route53 hosted zone that's created for you.
 - A certificate imported into Amazon Certificate Manager (ACM) in the `us-east-1` region. If you do not have such a certificate, you can use ACM to request one.
-- If you have existing PayIDs to import, a `json` file containing the PayIDs that you want to upload to the S3 (Amazon Simple Storage Service) bucket created by the stack.
+- If you have existing PayStrings to import, a `json` file containing the PayStrings that you want to upload to the S3 (Amazon Simple Storage Service) bucket created by the stack.
 
 For more information about AWS Lambda and AWS CloudFormation, see:
 
@@ -26,7 +30,7 @@ If you do not already have a certificate, then you will need to request one in A
 
 ### Step 1: Open ACM in the AWS console in us-east-1
 
-You **must** use the `US East (N. Virginia) us-east-1` region to open ACM and request or import your certificate, or CloudFormation will not create your stack/PayID server correctly. AWS Lambda uses API Gateway for HTTP access which leverages a Cloudfront distribution for pointing a domain to it, and Cloudfront distributions require ACM certificates to exist in `us-east-1`. See: [AWS ACM regions documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-regions.html).
+You **must** use the `US East (N. Virginia) us-east-1` region to open ACM and request or import your certificate, or CloudFormation will not create your stack/PayString server correctly. AWS Lambda uses API Gateway for HTTP access which leverages a Cloudfront distribution for pointing a domain to it, and Cloudfront distributions require ACM certificates to exist in `us-east-1`. See: [AWS ACM regions documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-regions.html).
 
 - Open the [ACM console](https://console.aws.amazon.com/acm/home?region=us-east-1).
 - Below **Provision Certificates**, click **Get Started**.
@@ -81,7 +85,7 @@ This ARN appears on the page where your certificate is issued, as shown here.
 
 ![certificate arn](/img/docs/request-cert-step-8.png)
 
-## Update your domain's nameservers for your PayID domain
+## Update your domain's nameservers for your PayString domain
 
 When you finish creating the CloudFormation Stack using our template, you next update your nameserver settings on your registrar to use Amazon's.
 
@@ -127,18 +131,18 @@ Paste the values you saw in the previous step into wherever your registrar allow
 
 ![registrar nameservers](/img/docs/registrar-nameservers.png)
 
-## Test your PayID server
+## Test your PayString server
 
-Use [PayID Validator](https://payidvalidator.com/) to test your PayIDs.
+Use [PayString Validator](https://paystringvalidator.com/) to test your PayStrings.
 
 ## Launch with AWS Lambda using scripts
 
-If you prefer not to use the AWS CLI, you can use these scripts to request a AWS certificate for your PayID domain and launch the payid lambda stack on your domain.
+If you prefer not to use the AWS CLI, you can use these scripts to request a AWS certificate for your PayString domain and launch the lambda stack on your domain.
 
 - [request-certificate.sh](https://github.com/xpring-eng/payid-lambda/blob/master/request-certificate.sh) - Request a certificate via AWS certificate manager for a given domain.
-- [create-stack.sh](https://github.com/xpring-eng/payid-lambda/blob/master/create-stack.sh) - Create the payid lambda stack on your account for a given domain.
+- [create-stack.sh](https://github.com/xpring-eng/payid-lambda/blob/master/create-stack.sh) - Create the PayString lambda stack on your account for a given domain.
 
-### Prequisites
+### Prerequisites
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
 - Make sure `aws configure` has been configured with an Access Key created via [IAM--Your Security Credentials](https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials).
@@ -164,7 +168,7 @@ When the certificate request is completed, create the CNAME for your domain as s
 
 Wait for AWS Certificate Manager to issue your certificate before proceeding to the next command.
 
-#### Launch the PayID Lambda stack
+#### Launch the PayString Lambda stack
 
 Command: `./create-stack.sh <domain-name>`
 
@@ -189,13 +193,13 @@ nameserver4	ns-8.awsdns-01.com
 
 Once completed, update the nameservers for your domain to the ones specified in the output, as described in [Step 3 and 4](#step-3-find-the-nameservers).
 
-## Add PayIDs to your Amazon S3 bucket
+## Add PayStrings to your Amazon S3 bucket
 
 When the stack is created, an Amazon S3 bucket titled `{name of stack}-s3bucket-{unique hash}` is also created.
 
-You can add PayIDs by uploading `json` files to this bucket, each of which contains a single user that conforms to [the PayID schema](payid-schemas#example-single-user-schema). You can upload new files to the bucket via the [Amazon S3 console](https://s3.console.aws.amazon.com/s3/buckets/).
+You can add PayStrings by uploading `json` files to this bucket, each of which contains a single user that conforms to [the PayString schema](paystring-schemas#example-single-user-schema). You can upload new files to the bucket via the [Amazon S3 console](https://s3.console.aws.amazon.com/s3/buckets/).
 
-When the stack is created, a test account is provided at `testaccount.json`. The name of the file used to resolve the PayID--`testaccount.json`--is resolved by `mydomain.tld/testaccount`.
+When the stack is created, a test account is provided at `testaccount.json`. The name of the file used to resolve the PayString--`testaccount.json`--is resolved by `mydomain.tld/testaccount`.
 
 ```
 {
@@ -216,7 +220,7 @@ When the stack is created, a test account is provided at `testaccount.json`. The
 
 To see if there is a release with an upgraded AWS Lambda function, look for [releases](https://github.com/xpring-eng/payid-lambda/releases) with the file `payid-stack.yaml` attached.
 
-The version you have installed is visible in the description of the stack in CloudFormation (for example, `[v1.0] PayID Lambda Server and API Gateway front end`) and also in the `Outputs` of the stack under the name `PayIdLambdaStackVersion`.
+The version you have installed is visible in the description of the stack in CloudFormation (for example, `[v1.0] PayString Lambda Server and API Gateway front end`) and also in the `Outputs` of the stack under the name `PayIdLambdaStackVersion`.
 
 To perform an update, click the `Update` button when viewing the stack and upload the version of `payid-stack.yaml` to which you want to upgrade.
 
