@@ -112,8 +112,8 @@ module.exports = {
       },
     },
     algolia: {
-      apiKey: 'a88df26bddf797de70ffeb1e55475513',
-      indexName: 'payid',
+      apiKey: 'b76027cd12db96b0735f12e2281f824d',
+      indexName: 'paystring',
     },
   },
   presets: [
