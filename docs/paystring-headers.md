@@ -26,12 +26,13 @@ Accept: application/xrpl-testnet+json
 
 Some different header options are shown here, with example values.
 
-| Currency | Header                          | Address payload                                                   |
-| :------- | :------------------------------ | :---------------------------------------------------------------- |
-| BTC      | `application/btc-mainnet+json`  | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                      |
-| XRP      | `application/xrpl-mainnet+json` | { address: "rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg", tag: "67298042"} |
-| ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                   |
-| All      | `application/payid+json`        | Variable, depending on the contents of each address               |
+| Currency | Header                          | Address payload                                                              |
+| :------- | :------------------------------ | :--------------------------------------------------------------------------- |
+| BTC      | `application/btc-mainnet+json`  | { address: '1BvBMSEYstWetAu4m4GFg7xJaNVN2' }                                 |
+| XRP      | `application/xrpl-mainnet+json` | { address: "rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg", tag: "67298042"}            |
+| ACH      | `application/ach+json`          | { account: '363023456079',routing: '011302838'}                              |
+| CRO      | `application/cro-mainnet+json`  | { address: "cro1w2kvwrzp23aq54n3amwav4yy4a9ahq2kz2wtmj", memo: "3979714512"} |
+| All      | `application/payid+json`        | Variable, depending on the contents of each address                          |
 
 If you create your own Accept header for another currency:
 
@@ -87,3 +88,10 @@ Ethernet has a number of different testnets. Refer to [EIP 155](https://github.c
 | :------------------------------------: | :---------------------: |
 | `application/interledger-mainnet+json` | Returns mainnet address |
 | `application/interledger-testnet+json` | Returns testnet address |
+
+### Headers for CRO
+
+|         Accept header         |                     Description                    |
+| :---------------------------: | :------------------------------------------------: |
+| `application/cro-mainnet+json`| Returns CRO mainnet address (and memo if provided) |
+| `application/cro-testnet+json`| Returns CRO testnet address (and memo if provided) |
