@@ -91,7 +91,7 @@ Ethernet has a number of different testnets. Refer to [EIP 155](https://github.c
 
 ### Headers for CRO
 
-|         Accept header         |                     Description                    |
-| :---------------------------: | :------------------------------------------------: |
-| `application/cro-mainnet+json`| Returns CRO mainnet address (and memo if provided) |
-| `application/cro-testnet+json`| Returns CRO testnet address (and memo if provided) |
+|         Accept header          |                    Description                     |
+| :----------------------------: | :------------------------------------------------: |
+| `application/cro-mainnet+json` | Returns CRO mainnet address (and memo if provided) |
+| `application/cro-testnet+json` | Returns CRO testnet address (and memo if provided) |
