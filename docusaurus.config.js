@@ -112,7 +112,7 @@ module.exports = {
       },
     },
     algolia: {
-      apiKey: 'b76027cd12db96b0735f12e2281f824d',
+      apiKey: 'a88df26bddf797de70ffeb1e55475513',
       indexName: 'paystring',
     },
   },
