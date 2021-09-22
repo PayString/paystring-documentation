@@ -130,5 +130,16 @@
         "pullRequestUrl": "https://github.com/PayString/paystring-documentation/pull/140"
       }
     ]
+  },
+  "fix-prettier": {
+    "apps": [
+      {
+        "name": "review-apps",
+        "headCommitId": "247210adaf6230fa97d099fc84c60c4e53ed84fc",
+        "updatedAt": "2021-09-22T19:25:12.007Z",
+        "href": "review-apps/fix-prettier/247210",
+        "pullRequestUrl": "https://github.com/PayString/paystring-documentation/pull/141"
+      }
+    ]
   }
 }
