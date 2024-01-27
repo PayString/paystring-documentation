@@ -26,5 +26,6 @@
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
+"files.trimTrailingWhitespace": true,
+"workbench.iconTheme": "vs-seti",
 }
